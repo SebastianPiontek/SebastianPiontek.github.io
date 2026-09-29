@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aura Applications – Offizielle App-Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. 100 % Datenschutz ohne Tracking.">
     
-    <!-- Open Graph Vorschau (für WhatsApp, Telegram & Co.) -->
+    <!-- Open Graph Vorschau -->
     <meta property="og:title" content="Aura Applications – Erstklassige Apps für deinen Alltag">
-    <meta property="og:description" content="100 % offline-fähige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
-    <meta property="og:image" content="Bilder-Fotos/1000194726.png">
+    <meta property="og:description" content="Erstklassige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
+    <meta property="og:image" content="Bilder-Fotos/Aura Applications.png">
     <meta property="og:type" content="website">
 
-    <!-- Favicon / Browser-Tab Icon -->
-    <link rel="icon" type="image/png" href="Bilder-Fotos/1000194726.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Bilder-Fotos/Aura Applications.png">
 
     <title>Aura Applications – Erstklassige Apps für deinen Alltag</title>
 
@@ -48,7 +48,7 @@
             padding: 20px;
         }
 
-        /* KLASSISCHER PREMIUM SPLIT-HEADER (MIT EDLER GOLDRANDUNG) */
+        /* KLASSISCHER PREMIUM SPLIT-HEADER */
         .header-nav {
             display: flex;
             justify-content: space-between;
@@ -80,7 +80,7 @@
         }
 
         .nav-links a {
-            color: var(--text-muted);
+            color: var(--gold-light);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
@@ -89,6 +89,7 @@
 
         .nav-links a:hover {
             color: var(--gold-primary);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
         }
 
         .btn-header-cta {
@@ -98,6 +99,7 @@
             font-weight: 700 !important;
             border-radius: 20px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-shadow: none !important;
         }
 
         .btn-header-cta:hover {
@@ -105,7 +107,7 @@
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
-        /* HERO SECTION MIT GROSSEM LOGO-EMBLEM OBEN */
+        /* HERO SECTION */
         .hero {
             text-align: center;
             padding: 20px 20px 40px 20px;
@@ -113,14 +115,15 @@
 
         .hero-logo-emblem {
             width: 100%;
-            max-width: 220px;
+            max-width: 200px;
             height: auto;
             margin: 0 auto 20px auto;
             display: block;
-            border-radius: 50%;
+            border-radius: 24px;
             border: 2px solid var(--border-gold);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
             transition: transform 0.4s ease;
+            object-fit: cover;
         }
 
         .hero-logo-emblem:hover {
@@ -174,7 +177,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
-        /* USP HIGHLIGHTS (MIT GOLD-RAHMEN) */
+        /* USP HIGHLIGHTS */
         .usp-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -359,6 +362,48 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
+        /* FAQ SECTION */
+        .faq-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            border-radius: 24px;
+            padding: 35px;
+            margin: 50px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .faq-box h2 {
+            color: var(--gold-light);
+            font-size: 1.8rem;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-item h4 {
+            color: #FFFFFF;
+            font-size: 1.05rem;
+            margin: 0 0 8px 0;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
         /* LEGAL SECTION */
         .legal-box {
             background: var(--card-bg);
@@ -439,22 +484,22 @@
 
 <div class="wrapper">
 
-    <!-- NAVIGATION (KLASSISCHER PREMIUM SPLIT-HEADER) -->
+    <!-- NAVIGATION -->
     <header class="header-nav">
         <a href="#" class="brand-text">Aura Applications</a>
         <nav class="nav-links">
             <a href="#vorteile">Vorteile</a>
             <a href="#entwickler">Über den Entwickler</a>
+            <a href="#faq">FAQ</a>
             <a href="#impressum">Impressum</a>
             <a href="#datenschutz">Datenschutz</a>
             <a href="#apps" class="btn-header-cta">Apps entdecken ➔</a>
         </nav>
     </header>
 
-    <!-- HERO SECTION MIT EMBLEM GANZ OBEN -->
+    <!-- HERO SECTION -->
     <section class="hero">
-        <!-- Großes Studio-Emblem -->
-        <img src="Bilder-Fotos/1000194726.png" alt="Aura Applications Marken-Logo" class="hero-logo-emblem">
+        <img src="Bilder-Fotos/Aura Applications.png" alt="Aura Applications Marken-Logo" class="hero-logo-emblem">
 
         <div class="badge">✦ Offizielle App-Manufaktur</div>
 
@@ -462,7 +507,7 @@
         <p>Entdecke schlanke, hochpräzise Android-Applikationen im edlen AMOLED-Gold-Design. 100 % offline-fähig, datenschutzsicher und ohne lästige Abofallen.</p>
         
         <div class="guarantee-box">
-            <span>✔ 100 % Offline-fähig</span>
+            <span>✔ Höchste Präzision</span>
             <span>✔ Null Tracking & Werbung</span>
             <span>✔ Abo-frei & Fair</span>
         </div>
@@ -495,16 +540,19 @@
     <!-- DEVELOPER PROFILE SECTION -->
     <section class="dev-profile" id="entwickler">
         <div class="dev-avatar-box">
-            <img src="Bilder-Fotos/sebastian.png" alt="Sebastian Piontek – Gründer & Chefentwickler" class="dev-avatar">
+            <img src="Bilder-Fotos/sebastian.png" alt="Sebastian Piontek – Gründer & Entwickler" class="dev-avatar">
             <h4 class="dev-name">Sebastian Piontek</h4>
-            <span class="dev-role">Gründer & Chefentwickler</span>
+            <span class="dev-role">Gründer & Entwickler</span>
         </div>
         
         <div class="dev-text">
             <span class="badge">Echt. Lokal. Unabhängig.</span>
             <h3>Software ohne Datenhunger 🔒</h3>
-            <p>Viele moderne Apps sind vollgestopft mit Server-Anbindungen, Tracking-Code und unnötigem Ballast, der den Akku leert und Ladezeiten verlängert. Bei Aura Applications gehe ich einen konsequent anderen Weg.</p>
-            <p>Jede App entsteht nach dem Prinzip <strong>„Local First“</strong>: Schlanker Code, direkte Ausführung auf dem Smartphone-Prozessor und volle Funktionalität – selbst im Flugmodus. So erhältst du maximale Geschwindigkeit, 100 % Datenschutz und ein edles Erscheinungsbild ohne versteckte Kosten.</p>
+            <p><strong>Guten Tag,</strong></p>
+            <p>mein Name ist Sebastian Piontek. Als Gründer und Entwickler von Aura Applications stehe ich persönlich hinter jeder einzelnen Applikation, die unser Haus verlässt.</p>
+            <p>In einer Zeit, in der Software oft mit unnötigem Ballast, intransparenten Abofallen und aggressivem Tracking überladen wird, gehe ich einen konsequent anderen Weg. Ich entwickle Apps so, wie ich sie selbst auf meinem Smartphone sehen möchte: <strong>Durchdacht, zuverlässig, fair bepreist und mit einem edlen, ruhigen Design.</strong></p>
+            <p>Ob offline-fokussiert oder mit notwendiger Internet-Anbindung für Live-Dienste wie Wetter und Navigation: Bei mir steht der Schutz Ihrer Privatsphäre an erster Stelle. Als Einzelunternehmer arbeite ich komplett ohne eigene Server oder Clouds, lege höchsten Wert auf Datensparsamkeit und biete Ihnen erstklassige Werkzeuge für den Alltag – ohne monatliche Dauerkosten.</p>
+            <p><strong>Qualität aus einer Hand. Dafür bürge ich mit meinem Namen.</strong></p>
         </div>
     </section>
 
@@ -598,7 +646,40 @@
         </div>
     </section>
 
-    <hr>
+    <!-- FAQ SECTION -->
+    <section class="faq-box" id="faq">
+        <h2>Hinter den Kulissen – FAQ</h2>
+        
+        <div class="faq-item">
+            <h4>1. Wer steckt eigentlich hinter Aura Applications?</h4>
+            <p>Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>2. Warum sind Ihre Apps im fairen Einmalkauf statt im Abo erhältlich?</h4>
+            <p>Weil ich nichts von monatlichen Dauerkosten für einfache Alltags-Tools halte. Sie kaufen eine App einmal fair und transparent – und sie gehört dauerhaft Ihnen, ganz ohne versteckte Kostenfallen.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>3. Brauchen alle Aura-Apps eine Internetverbindung?</h4>
+            <p>Nein, aber dort, wo es funktional sinnvoll ist (wie bei Wetter- oder Navigationsdiensten), wird sie gezielt genutzt. Wo immer es geht, minimieren wir Datenabflüsse und arbeiten konsequent datenschutzfreundlich.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>4. Nutzen Sie eigene Server oder Cloud-Speicher für meine Daten?</h4>
+            <p>Nein. Aura Applications betreibt keine eigenen Backend-Server oder Cloud-Infrastrukturen. Ihre persönlichen Daten bleiben dort, wo sie hingehören – geschützt auf Ihrem eigenen Endgerät.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>5. Warum legen Sie so großen Wert auf das edle AMOLED-Gold-Design?</h4>
+            <p>Weil ein dunkles Echtschwarz-Design nicht nur extrem elegant aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und die Augen schützt.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>6. Sind in Zukunft weitere Apps und Erweiterungen geplant?</h4>
+            <p>Definitiv. Ich arbeite kontinuierlich an neuen Projekten und habe derzeit bereits über 25 Apps und Prompts in der Entwicklung. Diese werden Stück für Stück in den kommenden Monaten veröffentlicht, um das Portfolio konsequent auszubauen.</p>
+        </div>
+    </section>
 
     <!-- LEGAL CONTAINER -->
     <div class="legal-box">
