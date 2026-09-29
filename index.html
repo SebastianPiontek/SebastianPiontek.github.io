@@ -26,9 +26,9 @@
             --gold-light: #F3E5AB;
             --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
             --bg-dark: #050505;
-            --card-bg: rgba(18, 22, 28, 0.8);
+            --card-bg: rgba(18, 22, 28, 0.95);
             --text-muted: #A0AAB8;
-            --border-gold: rgba(212, 175, 55, 0.2);
+            --border-gold: rgba(212, 175, 55, 0.35);
         }
 
         body {
@@ -51,24 +51,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 25px;
-            background: rgba(15, 18, 24, 0.8);
+            padding: 15px 30px;
+            background: rgba(15, 18, 24, 0.9);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-gold);
             border-radius: 50px;
             margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
         .brand-logo img {
-            height: 40px;
+            height: 60px;
+            width: auto;
             display: block;
+            object-fit: contain;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
             margin-left: 20px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
@@ -84,17 +88,17 @@
 
         .badge {
             display: inline-block;
-            padding: 6px 14px;
-            background: rgba(212, 175, 55, 0.1);
+            padding: 6px 16px;
+            background: rgba(212, 175, 55, 0.12);
             border: 1px solid var(--border-gold);
             border-radius: 20px;
             color: var(--gold-light);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             margin-bottom: 15px;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -118,10 +122,11 @@
             align-items: center;
             gap: 30px;
             background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-gold);
             border-radius: 20px;
             padding: 30px;
             margin: 40px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
         .dev-avatar-box {
@@ -130,12 +135,13 @@
         }
 
         .dev-avatar {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             border: 2px solid var(--gold-primary);
             object-fit: cover;
             margin-bottom: 10px;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
         }
 
         .dev-name {
@@ -170,8 +176,8 @@
         }
 
         .usp-card {
-            background: rgba(15, 18, 24, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(15, 18, 24, 0.8);
+            border: 1px solid var(--border-gold);
             border-radius: 16px;
             padding: 20px;
             text-align: center;
@@ -210,25 +216,13 @@
 
         .app-card {
             background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-gold);
             border-radius: 20px;
             padding: 25px;
             position: relative;
             display: flex;
             flex-direction: column;
-        }
-
-        .app-tag {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(212, 175, 55, 0.15);
-            border: 1px solid var(--border-gold);
-            color: var(--gold-light);
-            font-size: 0.7rem;
-            padding: 3px 10px;
-            border-radius: 12px;
-            text-transform: uppercase;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
         .app-header {
@@ -239,14 +233,15 @@
         }
 
         .app-header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
+            width: 65px;
+            height: 65px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .app-header h3 {
             margin: 0;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
 
         .app-card p {
@@ -273,9 +268,9 @@
             align-items: center;
             justify-content: center;
             gap: 6px;
-            padding: 8px 12px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-gold);
             border-radius: 10px;
             color: var(--text-muted);
             text-decoration: none;
@@ -284,7 +279,7 @@
         }
 
         .btn-store:hover {
-            background: rgba(212, 175, 55, 0.15);
+            background: rgba(212, 175, 55, 0.2);
             border-color: var(--gold-primary);
             color: #FFFFFF;
         }
@@ -320,11 +315,12 @@
 
         /* LEGAL SECTION */
         .legal-box {
-            background: rgba(12, 15, 20, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(12, 15, 20, 0.95);
+            border: 1px solid var(--border-gold);
             border-radius: 16px;
             padding: 30px;
             margin-top: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
         .legal-box h2 {
@@ -374,11 +370,11 @@
             }
             .header-nav {
                 flex-direction: column;
-                gap: 10px;
-                border-radius: 20px;
+                gap: 15px;
+                border-radius: 25px;
             }
             .nav-links a {
-                margin: 0 10px;
+                margin: 0 8px;
             }
             .store-buttons-grid {
                 grid-template-columns: 1fr;
@@ -461,7 +457,6 @@
             
             <!-- App 1: Aura Rechner Pro -->
             <div class="app-card">
-                <span class="app-tag">Flaggschiff</span>
                 <div class="app-header">
                     <img src="Bilder-Fotos/Aura Rechner Pro.png" alt="Aura Rechner Pro Logo">
                     <h3>Aura Rechner Pro</h3>
@@ -490,7 +485,6 @@
 
             <!-- App 2: Aura PDF Scanner -->
             <div class="app-card">
-                <span class="app-tag">Beliebt</span>
                 <div class="app-header">
                     <img src="Bilder-Fotos/Aura PDF Scanner.png" alt="Aura PDF Scanner Logo">
                     <h3>Aura PDF Scanner</h3>
@@ -519,7 +513,6 @@
 
             <!-- App 3: Aura QR Scanner -->
             <div class="app-card">
-                <span class="app-tag">Neu</span>
                 <div class="app-header">
                     <img src="Bilder-Fotos/Aura Qr und Barcode Scanner.png" alt="Aura QR Scanner Logo">
                     <h3>Aura QR Scanner</h3>
