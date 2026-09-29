@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aura Applications – Offizielle App-Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Design. 100 % Datenschutz ohne Tracking.">
+    <meta name="description" content="Aura Applications – Offizielle App-Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. 100 % Datenschutz ohne Tracking.">
     
     <!-- Open Graph Vorschau (für WhatsApp, Telegram & Co.) -->
     <meta property="og:title" content="Aura Applications – Erstklassige Apps für deinen Alltag">
-    <meta property="og:description" content="100 % offline-fähige Android-Apps im AMOLED-Prism-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
+    <meta property="og:description" content="100 % offline-fähige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
     <meta property="og:image" content="Bilder-Fotos/1000194726.png">
     <meta property="og:type" content="website">
 
@@ -22,15 +22,14 @@
         }
 
         :root {
-            --cyan-accent: #00F2FE;
             --gold-primary: #D4AF37;
             --gold-light: #F3E5AB;
-            --amber-orange: #FF7B00;
-            --gradient-prism: linear-gradient(135deg, #00F2FE 0%, #D4AF37 50%, #FF7B00 100%);
+            --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
             --bg-dark: #000000;
-            --card-bg: rgba(15, 15, 18, 0.75);
-            --text-muted: #A0AAB8;
-            --border-glow: linear-gradient(135deg, rgba(0, 242, 254, 0.4), rgba(212, 175, 55, 0.4));
+            --card-bg: rgba(12, 12, 12, 0.95);
+            --text-muted: #B0B0B0;
+            --border-gold: rgba(212, 175, 55, 0.4);
+            --border-gold-hover: rgba(212, 175, 55, 0.8);
         }
 
         body {
@@ -43,57 +42,32 @@
             overflow-x: hidden;
         }
 
-        /* Ambient Lighting Effects im Hintergrund */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, transparent 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        body::after {
-            content: '';
-            position: absolute;
-            top: 200px;
-            right: 10%;
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
         .wrapper {
             max-width: 1050px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* KLASSISCHER PREMIUM SPLIT-HEADER */
+        /* KLASSISCHER PREMIUM SPLIT-HEADER (MIT EDLER GOLDRANDUNG) */
         .header-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 25px;
-            background: rgba(10, 10, 12, 0.85);
+            padding: 18px 30px;
+            background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid var(--border-gold);
             border-radius: 50px;
             margin-bottom: 40px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 25px rgba(212, 175, 55, 0.1);
         }
 
         .brand-text {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 800;
             letter-spacing: 3px;
             text-transform: uppercase;
-            background: var(--gradient-prism);
+            background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
@@ -101,7 +75,7 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 22px;
             align-items: center;
         }
 
@@ -114,12 +88,12 @@
         }
 
         .nav-links a:hover {
-            color: var(--cyan-accent);
+            color: var(--gold-primary);
         }
 
         .btn-header-cta {
             padding: 8px 18px;
-            background: var(--gradient-prism);
+            background: var(--gold-gradient);
             color: #000000 !important;
             font-weight: 700 !important;
             border-radius: 20px;
@@ -128,40 +102,42 @@
 
         .btn-header-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
-        /* HERO SECTION WITH LARGE LOGO EMBLEM */
+        /* HERO SECTION MIT GROSSEM LOGO-EMBLEM OBEN */
         .hero {
             text-align: center;
             padding: 20px 20px 40px 20px;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 6px 18px;
-            background: rgba(0, 242, 254, 0.08);
-            border: 1px solid rgba(0, 242, 254, 0.3);
-            border-radius: 20px;
-            color: var(--cyan-accent);
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-        }
-
         .hero-logo-emblem {
             width: 100%;
-            max-width: 280px;
+            max-width: 220px;
             height: auto;
-            margin: 10px auto 25px auto;
+            margin: 0 auto 20px auto;
             display: block;
-            filter: drop-shadow(0 0 25px rgba(0, 242, 254, 0.25));
+            border-radius: 50%;
+            border: 2px solid var(--border-gold);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
             transition: transform 0.4s ease;
         }
 
         .hero-logo-emblem:hover {
             transform: scale(1.03);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 18px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            color: var(--gold-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
 
         .hero h1 {
@@ -172,7 +148,7 @@
         }
 
         .hero h1 span {
-            background: var(--gradient-prism);
+            background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -187,14 +163,54 @@
         .guarantee-box {
             display: inline-flex;
             gap: 20px;
-            background: rgba(20, 22, 28, 0.8);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
             padding: 10px 25px;
             border-radius: 30px;
             font-size: 0.85rem;
             color: var(--gold-light);
             flex-wrap: wrap;
             justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* USP HIGHLIGHTS (MIT GOLD-RAHMEN) */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 50px 0;
+        }
+
+        .usp-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            border-radius: 18px;
+            padding: 22px;
+            text-align: center;
+            transition: border-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .usp-card:hover {
+            border-color: var(--border-gold-hover);
+        }
+
+        .usp-card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .usp-card h4 {
+            margin: 0 0 8px 0;
+            color: #FFFFFF;
+        }
+
+        .usp-card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
         /* DEVELOPER PROFILE SECTION */
@@ -204,11 +220,11 @@
             gap: 30px;
             background: var(--card-bg);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 1px solid var(--border-gold);
             border-radius: 24px;
             padding: 35px;
             margin: 50px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
         }
 
         .dev-avatar-box {
@@ -234,7 +250,7 @@
 
         .dev-role {
             font-size: 0.8rem;
-            color: var(--cyan-accent);
+            color: var(--gold-light);
         }
 
         .dev-text h3 {
@@ -249,50 +265,12 @@
             margin-bottom: 12px;
         }
 
-        /* USP HIGHLIGHTS */
-        .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 50px 0;
-        }
-
-        .usp-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 18px;
-            padding: 22px;
-            text-align: center;
-            transition: border-color 0.3s ease;
-        }
-
-        .usp-card:hover {
-            border-color: var(--cyan-accent);
-        }
-
-        .usp-card .icon {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .usp-card h4 {
-            margin: 0 0 8px 0;
-            color: #FFFFFF;
-        }
-
-        .usp-card p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
         /* APP SHOWCASE */
         .section-title {
             text-align: center;
             font-size: 2rem;
             margin-bottom: 35px;
-            color: #FFFFFF;
+            color: var(--gold-light);
             font-weight: 700;
         }
 
@@ -305,18 +283,18 @@
         .app-card {
             background: var(--card-bg);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.35);
+            border: 1px solid var(--border-gold);
             border-radius: 24px;
             padding: 30px;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .app-card:hover {
             transform: translateY(-5px);
-            border-color: var(--cyan-accent);
+            border-color: var(--border-gold-hover);
         }
 
         .app-header {
@@ -330,7 +308,7 @@
             width: 65px;
             height: 65px;
             border-radius: 16px;
-            border: 1px solid rgba(0, 242, 254, 0.3);
+            border: 1px solid var(--border-gold);
         }
 
         .app-header h3 {
@@ -345,13 +323,6 @@
             margin-bottom: 25px;
         }
 
-        .store-selector-title {
-            font-size: 0.8rem;
-            color: var(--gold-light);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
         .store-buttons-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -364,8 +335,8 @@
             justify-content: center;
             gap: 6px;
             padding: 10px 12px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-gold);
             border-radius: 12px;
             color: var(--text-muted);
             text-decoration: none;
@@ -374,14 +345,14 @@
         }
 
         .btn-store:hover {
-            background: rgba(0, 242, 254, 0.15);
-            border-color: var(--cyan-accent);
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold-primary);
             color: #FFFFFF;
         }
 
         .btn-store.primary-store {
             grid-column: span 2;
-            background: var(--gradient-prism);
+            background: var(--gold-gradient);
             color: #000000;
             font-weight: 700;
             border: none;
@@ -390,12 +361,12 @@
 
         /* LEGAL SECTION */
         .legal-box {
-            background: rgba(10, 10, 12, 0.95);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
             border-radius: 20px;
             padding: 35px;
             margin-top: 50px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
         }
 
         .legal-box h2 {
@@ -416,7 +387,7 @@
         }
 
         .legal-box a {
-            color: var(--cyan-accent);
+            color: var(--gold-primary);
             text-decoration: none;
         }
 
@@ -427,7 +398,7 @@
         hr {
             border: 0;
             height: 1px;
-            background: rgba(212, 175, 55, 0.3);
+            background: var(--border-gold);
             margin: 40px 0;
         }
 
@@ -477,19 +448,18 @@
             <a href="#impressum">Impressum</a>
             <a href="#datenschutz">Datenschutz</a>
             <a href="#apps" class="btn-header-cta">Apps entdecken ➔</a>
-        <
-av>
+        </nav>
     </header>
 
-    <!-- HERO SECTION WITH EMBLEM -->
+    <!-- HERO SECTION MIT EMBLEM GANZ OBEN -->
     <section class="hero">
-        <div class="badge">✦ Offizielle App-Manufaktur</div>
-        
         <!-- Großes Studio-Emblem -->
         <img src="Bilder-Fotos/1000194726.png" alt="Aura Applications Marken-Logo" class="hero-logo-emblem">
 
+        <div class="badge">✦ Offizielle App-Manufaktur</div>
+
         <h1>Erstklassige Apps <span>für deinen Alltag</span>.</h1>
-        <p>Entdecke schlanke, hochpräzise Android-Applikationen im edlen AMOLED-Design. 100 % offline-fähig, datenschutzsicher und ohne lästige Abofallen.</p>
+        <p>Entdecke schlanke, hochpräzise Android-Applikationen im edlen AMOLED-Gold-Design. 100 % offline-fähig, datenschutzsicher und ohne lästige Abofallen.</p>
         
         <div class="guarantee-box">
             <span>✔ 100 % Offline-fähig</span>
@@ -512,8 +482,8 @@ av>
         </div>
         <div class="usp-card">
             <span class="icon">✨</span>
-            <h4>Prism AMOLED Design</h4>
-            <p>Echtschwarz kombiniert mit edlen Cyan- und Gold-Lichtreflexen.</p>
+            <h4>AMOLED Gold Design</h4>
+            <p>Echtschwarz kombiniert mit edlen Metallic- und Gold-Akzenten.</p>
         </div>
         <div class="usp-card">
             <span class="icon">🌐</span>
@@ -552,7 +522,6 @@ av>
                 </div>
                 <p>Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.</p>
                 
-                <div class="store-selector-title">Bezugsquelle wählen (Abo-frei):</div>
                 <div class="store-buttons-grid">
                     <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.calculator" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
                         <span>▶</span> Google Play Store
@@ -580,7 +549,6 @@ av>
                 </div>
                 <p>Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.</p>
                 
-                <div class="store-selector-title">Bezugsquelle wählen (Faires Gratis-Modell):</div>
                 <div class="store-buttons-grid">
                     <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
                         <span>▶</span> Google Play Store
@@ -608,7 +576,6 @@ av>
                 </div>
                 <p>Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.</p>
                 
-                <div class="store-selector-title">Bezugsquelle wählen (Kostenlos starten):</div>
                 <div class="store-buttons-grid">
                     <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
                         <span>▶</span> Google Play Store
