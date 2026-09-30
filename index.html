@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aura Applications – Offizielle App-Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. 100 % Datenschutz ohne Tracking.">
     
-    <!-- Open Graph Vorschau -->
-    <meta property="og:title" content="Aura Applications – Erstklassige Apps für deinen Alltag">
+    <!-- Open Graph Vorschau für WhatsApp, Facebook & Social Media -->
+    <meta property="og:title" content="Aura Applications – Offizielle App-Manufaktur">
     <meta property="og:description" content="Erstklassige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
-    <meta property="og:image" content="Bilder-Fotos/Aura Applications.png">
+    <meta property="og:image" content="https://sebastianpiontek.github.io/Bilder-Fotos/Aura%20Applications.png">
+    <meta property="og:url" content="https://sebastianpiontek.github.io">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
@@ -107,23 +108,23 @@
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION & LOGO-FIX (Keine schwarzen Balken mehr) */
         .hero {
             text-align: center;
             padding: 20px 20px 40px 20px;
         }
 
         .hero-logo-emblem {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
+            width: 180px;
+            height: 180px;
             margin: 0 auto 20px auto;
             display: block;
             border-radius: 24px;
             border: 2px solid var(--border-gold);
             box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
             transition: transform 0.4s ease;
-            object-fit: cover;
+            object-fit: cover; /* Füllt den quadratischen Rahmen perfekt aus und schneidet Briefkasten-Ränder ab */
+            background-color: #000;
         }
 
         .hero-logo-emblem:hover {
@@ -312,6 +313,7 @@
             height: 65px;
             border-radius: 16px;
             border: 1px solid var(--border-gold);
+            object-fit: cover;
         }
 
         .app-header h3 {
@@ -699,7 +701,7 @@
             <h3>Kontakt:</h3>
             <p>
                 Telefon: +49 174 6222586<br>
-                E-Mail: sebastianpiontek@gmail.com
+                E-Mail: SebastianPiontek79@gmail.com
             </p>
 
             <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h3>
@@ -727,7 +729,7 @@
             Ruhrorter Straße 86<br>
             47059 Duisburg<br>
             Deutschland<br>
-            E-Mail: sebastianpiontek@gmail.com</p>
+            E-Mail: SebastianPiontek79@gmail.com</p>
 
             <h3>2. Lokale Datenverarbeitung (On-Device-Architektur)</h3>
             <p>Sämtliche Kernfunktionen unserer Applikationen verarbeiten Eingaben, Berechnungen und Einstellungen ausschließlich lokal auf Deinem Endgerät (unter Verwendung von Technologien wie localStorage und IndexedDB). Es findet zu keinem Zeitpunkt eine Übertragung Deiner eingegebenen Inhaltsdaten an eigene Server oder Cloud-Infrastrukturen von Aura Applications statt.</p>
