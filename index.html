@@ -1,766 +1,1095 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aura Applications – Offizielle App-Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. 100 % Datenschutz ohne Tracking.">
-    
-    <!-- Open Graph Vorschau für WhatsApp, Facebook & Social Media -->
-    <meta property="og:title" content="Aura Applications – Offizielle App-Manufaktur">
-    <meta property="og:description" content="Erstklassige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
-    <meta property="og:image" content="https://sebastianpiontek.github.io/Bilder-Fotos/Aura%20Applications.png">
-    <meta property="og:url" content="https://sebastianpiontek.github.io">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Applications | Premium Mobile Apps & Business Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-black: #050505;
+      --card-bg: #121212;
+      --card-border: #222222;
+      
+      /* Visuelle Farb-Hierarchie */
+      --gold-bright: #F3E5AB; /* Strahlendes Champagner-Gold für Hauptüberschriften */
+      --gold-primary: #D4AF37; /* Edles Messing-Gold für Unterpunkte, Borders & Accents */
+      --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #AA771C);
+      
+      --text-white: #FFFFFF;
+      --text-body: #E0E0E0; /* Augenschonendes Hellgrau für Fließtexte */
+      --text-muted: #A0A0A0;
+      
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Bilder-Fotos/Aura Applications.png">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <title>Aura Applications – Erstklassige Apps für deinen Alltag</title>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-body);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        :root {
-            --gold-primary: #D4AF37;
-            --gold-light: #F3E5AB;
-            --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-            --bg-dark: #000000;
-            --card-bg: rgba(12, 12, 12, 0.95);
-            --text-muted: #B0B0B0;
-            --border-gold: rgba(212, 175, 55, 0.4);
-            --border-gold-hover: rgba(212, 175, 55, 0.8);
-        }
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(5, 5, 5, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--card-border);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
 
-        body {
-            background-color: var(--bg-dark);
-            color: #FFFFFF;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .wrapper {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
 
-        /* KLASSISCHER PREMIUM SPLIT-HEADER */
-        .header-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 30px;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--border-gold);
-            border-radius: 50px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 25px rgba(212, 175, 55, 0.1);
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
 
-        .brand-text {
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-decoration: none;
-        }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 22px;
-            align-items: center;
-        }
+    .nav-links a:hover {
+      color: var(--gold-bright);
+    }
 
-        .nav-links a {
-            color: var(--gold-light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+    .lang-select {
+      background: #1a1a1a;
+      color: var(--gold-primary);
+      border: 1px solid var(--gold-primary);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      outline: none;
+    }
 
-        .nav-links a:hover {
-            color: var(--gold-primary);
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-        }
+    .btn-b2b-nav {
+      background: var(--gold-gradient);
+      color: #000 !important;
+      font-weight: 700;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      transition: var(--transition);
+    }
 
-        .btn-header-cta {
-            padding: 8px 18px;
-            background: var(--gold-gradient);
-            color: #000000 !important;
-            font-weight: 700 !important;
-            border-radius: 20px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-shadow: none !important;
-        }
+    .btn-b2b-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
 
-        .btn-header-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
+    /* Layout Sections */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        /* HERO SECTION & LOGO-FIX (Keine schwarzen Balken mehr) */
-        .hero {
-            text-align: center;
-            padding: 20px 20px 40px 20px;
-        }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+    }
 
-        .hero-logo-emblem {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 20px auto;
-            display: block;
-            border-radius: 24px;
-            border: 2px solid var(--border-gold);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
-            transition: transform 0.4s ease;
-            object-fit: cover; /* Füllt den quadratischen Rahmen perfekt aus und schneidet Briefkasten-Ränder ab */
-            background-color: #000;
-        }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--gold-bright);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
 
-        .hero-logo-emblem:hover {
-            transform: scale(1.03);
-        }
+    .hero h1 span {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        .badge {
-            display: inline-block;
-            padding: 6px 18px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--border-gold);
-            border-radius: 20px;
-            color: var(--gold-light);
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-body);
+      max-width: 750px;
+      margin: 0 auto 2.5rem;
+    }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-        .hero h1 span {
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .btn-primary {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 700;
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-        .hero p {
-            max-width: 680px;
-            margin: 0 auto 25px auto;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
+    .btn-secondary {
+      background: transparent;
+      color: var(--gold-primary);
+      border: 2px solid var(--gold-primary);
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-        .guarantee-box {
-            display: inline-flex;
-            gap: 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            color: var(--gold-light);
-            flex-wrap: wrap;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
+    .btn-primary:hover, .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    }
 
-        /* USP HIGHLIGHTS */
-        .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 50px 0;
-        }
+    /* Trust Badges */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 3.5rem;
+      padding: 1.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+    }
 
-        .usp-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 18px;
-            padding: 22px;
-            text-align: center;
-            transition: border-color 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: var(--text-white);
+      font-size: 0.95rem;
+    }
 
-        .usp-card:hover {
-            border-color: var(--border-gold-hover);
-        }
+    /* Headings */
+    .section-title {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      color: var(--gold-bright);
+      margin-bottom: 1rem;
+    }
 
-        .usp-card .icon {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            display: block;
-        }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
 
-        .usp-card h4 {
-            margin: 0 0 8px 0;
-            color: #FFFFFF;
-        }
+    /* Cards Grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
 
-        .usp-card p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 2rem;
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
 
-        /* DEVELOPER PROFILE SECTION */
-        .dev-profile {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-gold);
-            border-radius: 24px;
-            padding: 35px;
-            margin: 50px 0;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-        }
+    .card:hover {
+      border-color: var(--gold-primary);
+      transform: translateY(-5px);
+    }
 
-        .dev-avatar-box {
-            text-align: center;
-            flex-shrink: 0;
-        }
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
-        .dev-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 2px solid var(--gold-primary);
-            object-fit: cover;
-            margin-bottom: 10px;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
-        }
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--gold-primary);
+    }
 
-        .dev-name {
-            margin: 0;
-            font-size: 1.1rem;
-            color: #FFFFFF;
-        }
+    .card p {
+      color: var(--text-body);
+      font-size: 0.95rem;
+    }
 
-        .dev-role {
-            font-size: 0.8rem;
-            color: var(--gold-light);
-        }
+    /* B2B Section */
+    .b2b-section {
+      background: linear-gradient(180deg, rgba(18,18,18,0.6) 0%, rgba(5,5,5,1) 100%);
+      border: 1px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
 
-        .dev-text h3 {
-            margin-top: 5px;
-            font-size: 1.35rem;
-            color: #FFFFFF;
-        }
+    /* Form Styles */
+    .b2b-form {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
 
-        .dev-text p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 
-        /* APP SHOWCASE */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 35px;
-            color: var(--gold-light);
-            font-weight: 700;
-        }
+    .form-group.full-width {
+      grid-column: span 2;
+    }
 
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gold-bright);
+    }
 
-        .app-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-gold);
-            border-radius: 24px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
+    input, select, textarea {
+      background: #181818;
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition);
+    }
 
-        .app-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--border-gold-hover);
-        }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--gold-primary);
+    }
 
-        .app-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
 
-        .app-header img {
-            width: 65px;
-            height: 65px;
-            border-radius: 16px;
-            border: 1px solid var(--border-gold);
-            object-fit: cover;
-        }
+    .btn-submit {
+      grid-column: span 2;
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 1rem;
+    }
 
-        .app-header h3 {
-            margin: 0;
-            font-size: 1.3rem;
-        }
+    .btn-submit:hover {
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+      transform: translateY(-2px);
+    }
 
-        .app-card p {
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            flex-grow: 1;
-            margin-bottom: 25px;
-        }
+    /* FAQ Akkordeon System (<details>) */
+    details.faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+      transition: var(--transition);
+    }
 
-        .store-buttons-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
+    details.faq-item[open] {
+      border-color: var(--gold-primary);
+      background: #161616;
+    }
 
-        .btn-store {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 10px 12px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-gold);
-            border-radius: 12px;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: all 0.2s ease;
-        }
+    summary {
+      font-weight: 600;
+      color: var(--gold-bright);
+      font-size: 1.05rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
 
-        .btn-store:hover {
-            background: rgba(212, 175, 55, 0.15);
-            border-color: var(--gold-primary);
-            color: #FFFFFF;
-        }
+    summary::-webkit-details-marker {
+      display: none;
+    }
 
-        .btn-store.primary-store {
-            grid-column: span 2;
-            background: var(--gold-gradient);
-            color: #000000;
-            font-weight: 700;
-            border: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
+    summary::after {
+      content: '+';
+      color: var(--gold-primary);
+      font-size: 1.4rem;
+      font-weight: 300;
+      transition: transform 0.3s ease;
+    }
 
-        /* FAQ SECTION */
-        .faq-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 24px;
-            padding: 35px;
-            margin: 50px 0;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-        }
+    details[open] summary::after {
+      content: '−';
+    }
 
-        .faq-box h2 {
-            color: var(--gold-light);
-            font-size: 1.8rem;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 30px;
-        }
+    details p {
+      margin-top: 1rem;
+      color: var(--text-body);
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1rem;
+    }
 
-        .faq-item {
-            margin-bottom: 25px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            padding-bottom: 20px;
-        }
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #181818;
+      color: var(--gold-primary);
+      border: 1px solid var(--gold-primary);
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
 
-        .faq-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
 
-        .faq-item h4 {
-            color: #FFFFFF;
-            font-size: 1.05rem;
-            margin: 0 0 8px 0;
-        }
+    .back-to-top:hover {
+      background: var(--gold-gradient);
+      color: #000;
+      transform: translateY(-4px);
+    }
 
-        .faq-item p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin: 0;
-        }
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 3rem 2rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
 
-        /* LEGAL SECTION */
-        .legal-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 20px;
-            padding: 35px;
-            margin-top: 50px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-        }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
 
-        .legal-box h2 {
-            color: var(--gold-light);
-            font-size: 1.3rem;
-            margin-top: 0;
-        }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
 
-        .legal-box h3 {
-            color: #FFFFFF;
-            font-size: 1rem;
-            margin-top: 20px;
-        }
+    .footer-links a:hover {
+      color: var(--gold-primary);
+    }
 
-        .legal-box p, .legal-box li {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .legal-box a {
-            color: var(--gold-primary);
-            text-decoration: none;
-        }
-
-        .legal-box a:hover {
-            text-decoration: underline;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: var(--border-gold);
-            margin: 40px 0;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .header-nav {
-                flex-direction: column;
-                gap: 15px;
-                border-radius: 25px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .dev-profile {
-                flex-direction: column;
-                text-align: center;
-            }
-            .store-buttons-grid {
-                grid-template-columns: 1fr;
-            }
-            .btn-store.primary-store {
-                grid-column: span 1;
-            }
-            .hero h1 {
-                font-size: 2.1rem;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .b2b-form { grid-template-columns: 1fr; }
+      .form-group.full-width, .btn-submit { grid-column: span 1; }
+      .nav-links { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="wrapper">
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">AURA APPLICATIONS</a>
+      <ul class="nav-links">
+        <li><a href="#vorteile" data-i18n="nav_vorteile">Vorteile</a></li>
+        <li><a href="#b2b" data-i18n="nav_b2b">Für Unternehmen</a></li>
+        <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+        <li>
+          <select class="lang-select" id="langSelect" onchange="changeLanguage(this.value)">
+            <option value="de">🇩🇪 DE</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="es">🇪🇸 ES</option>
+            <option value="it">🇮🇹 IT</option>
+            <option value="pt">🇵🇹 PT</option>
+            <option value="pl">🇵🇱 PL</option>
+          </select>
+        </li>
+        <li><a href="#b2b-form" class="btn-b2b-nav" data-i18n="nav_cta">Projekt anfragen</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <!-- NAVIGATION -->
-    <header class="header-nav">
-        <a href="#" class="brand-text">Aura Applications</a>
-        <nav class="nav-links">
-            <a href="#vorteile">Vorteile</a>
-            <a href="#entwickler">Über den Entwickler</a>
-            <a href="#faq">FAQ</a>
-            <a href="#impressum">Impressum</a>
-            <a href="#datenschutz">Datenschutz</a>
-            <a href="#apps" class="btn-header-cta">Apps entdecken ➔</a>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="Bilder-Fotos/Aura Applications.png" alt="Aura Applications Marken-Logo" class="hero-logo-emblem">
-
-        <div class="badge">✦ Offizielle App-Manufaktur</div>
-
-        <h1>Erstklassige Apps <span>für deinen Alltag</span>.</h1>
-        <p>Entdecke schlanke, hochpräzise Android-Applikationen im edlen AMOLED-Gold-Design. 100 % offline-fähig, datenschutzsicher und ohne lästige Abofallen.</p>
-        
-        <div class="guarantee-box">
-            <span>✔ Höchste Präzision</span>
-            <span>✔ Null Tracking & Werbung</span>
-            <span>✔ Abo-frei & Fair</span>
-        </div>
-    </section>
-
-    <!-- USP HIGHLIGHTS -->
-    <div class="usp-grid" id="vorteile">
-        <div class="usp-card">
-            <span class="icon">⚡</span>
-            <h4>Blitzschnell & Leicht</h4>
-            <p>Minimale App-Größe, startet ohne Verzögerung und schont deinen Akku.</p>
-        </div>
-        <div class="usp-card">
-            <span class="icon">🔒</span>
-            <h4>100% On-Device</h4>
-            <p>Deine Daten verbleiben ausschließlich lokal auf deinem Smartphone.</p>
-        </div>
-        <div class="usp-card">
-            <span class="icon">✨</span>
-            <h4>AMOLED Gold Design</h4>
-            <p>Echtschwarz kombiniert mit edlen Metallic- und Gold-Akzenten.</p>
-        </div>
-        <div class="usp-card">
-            <span class="icon">🌐</span>
-            <h4>Freiheit bei der Bezugsquelle</h4>
-            <p>Erhältlich auf Google Play, Samsung, Xiaomi, Aptoide & Uptodown.</p>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 data-i18n="hero_title">High-End Android Software & <span>B2B Maßanfertigungen</span></h1>
+    <p data-i18n="hero_subtitle">Perfektion im AMOLED Rich-Black Design. High-Performance Mobile Apps für Endverbraucher und maßgeschneiderte, 100% ausfallsichere Offline-Lösungen für Unternehmen.</p>
+    <div class="hero-buttons">
+      <a href="#b2b" class="btn-primary" data-i18n="hero_btn_b2b">B2B Lösungen entdecken</a>
+      <a href="#vorteile" class="btn-secondary" data-i18n="hero_btn_b2c">Apps entdecken</a>
     </div>
 
-    <!-- DEVELOPER PROFILE SECTION -->
-    <section class="dev-profile" id="entwickler">
-        <div class="dev-avatar-box">
-            <img src="Bilder-Fotos/sebastian.png" alt="Sebastian Piontek – Gründer & Entwickler" class="dev-avatar">
-            <h4 class="dev-name">Sebastian Piontek</h4>
-            <span class="dev-role">Gründer & Entwickler</span>
-        </div>
-        
-        <div class="dev-text">
-            <span class="badge">Echt. Lokal. Unabhängig.</span>
-            <h3>Software ohne Datenhunger 🔒</h3>
-            <p><strong>Guten Tag,</strong></p>
-            <p>mein Name ist Sebastian Piontek. Als Gründer und Entwickler von Aura Applications stehe ich persönlich hinter jeder einzelnen Applikation, die unser Haus verlässt.</p>
-            <p>In einer Zeit, in der Software oft mit unnötigem Ballast, intransparenten Abofallen und aggressivem Tracking überladen wird, gehe ich einen konsequent anderen Weg. Ich entwickle Apps so, wie ich sie selbst auf meinem Smartphone sehen möchte: <strong>Durchdacht, zuverlässig, fair bepreist und mit einem edlen, ruhigen Design.</strong></p>
-            <p>Ob offline-fokussiert oder mit notwendiger Internet-Anbindung für Live-Dienste wie Wetter und Navigation: Bei mir steht der Schutz Ihrer Privatsphäre an erster Stelle. Als Einzelunternehmer arbeite ich komplett ohne eigene Server oder Clouds, lege höchsten Wert auf Datensparsamkeit und biete Ihnen erstklassige Werkzeuge für den Alltag – ohne monatliche Dauerkosten.</p>
-            <p><strong>Qualität aus einer Hand. Dafür bürge ich mit meinem Namen.</strong></p>
-        </div>
-    </section>
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="badge-item">🇩🇪 <span data-i18n="badge_1">Made in Duisburg</span></div>
+      <div class="badge-item">🔒 <span data-i18n="badge_2">100% DSGVO-konform</span></div>
+      <div class="badge-item">⚡ <span data-i18n="badge_3">100% Ausfallsicher (Kein Cloud-Zwang)</span></div>
+    </div>
+  </section>
 
-    <!-- APP SHOWCASE -->
-    <section id="apps">
-        <h2 class="section-title">Unsere Applikationen</h2>
+  <!-- Key Principles / Features -->
+  <section id="vorteile">
+    <h2 class="section-title" data-i18n="sec_vorteile_title">Unsere Grundsätze</h2>
+    <p class="section-subtitle" data-i18n="sec_vorteile_subtitle">Aura Applications steht für unkompromisslose Qualität, maximale Privatsphäre und verlässliche Software-Architektur.</p>
+    
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🖤</div>
+        <h3 data-i18n="feat_1_title">AMOLED Rich-Black Aesthetic</h3>
+        <p data-i18n="feat_1_desc">Optimiert für moderne OLED-Displays. Akkuschonendes, tiefes Schwarz kombiniert mit edlen Gold-Akzenten für höchste Ansprüche.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3 data-i18n="feat_2_title">Faire Transparenz & Datenschutz</h3>
+        <p data-i18n="feat_2_desc">Faire, nutzergesteuerte Werbung oder 100% werbefrei im Pro-Kauf. Ihre Daten bleiben lokal auf Ihrem Gerät geschützt.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3 data-i18n="feat_3_title">100% Offline-Ausfallsicherheit</h3>
+        <p data-i18n="feat_3_desc">Keine Abhängigkeit von teuren Cloud-Servern oder Internetverbindungen. Volle Performance im tiefsten Keller wie im Außendienst.</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="app-grid">
-            
-            <!-- App 1: Aura Rechner Pro -->
-            <div class="app-card">
-                <div class="app-header">
-                    <img src="Bilder-Fotos/Aura Rechner Pro.png" alt="Aura Rechner Pro Logo">
-                    <h3>Aura Rechner Pro</h3>
-                </div>
-                <p>Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.</p>
-                
-                <div class="store-buttons-grid">
-                    <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.calculator" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
-                        <span>▶</span> Google Play Store
-                    </a>
-                    <a href="samsungapps://ProductDetail/com.aurasolutions.calculator" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>📱</span> Samsung
-                    </a>
-                    <a href="mimarket://details?id=com.aurasolutions.calculator" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🟠</span> Xiaomi
-                    </a>
-                    <a href="https://aura-rechner-pro.de.aptoide.com" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🅰</span> Aptoide
-                    </a>
-                    <a href="https://aura-rechner-pro.uptodown.com/android" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🟢</span> Uptodown
-                    </a>
-                </div>
-            </div>
+  <!-- B2B Section & Pricing Models -->
+  <section id="b2b" class="b2b-section">
+    <h2 class="section-title" data-i18n="b2b_title">Maßgeschneiderte Business-Software</h2>
+    <p class="section-subtitle" data-i18n="b2b_subtitle">Wir entwickeln individuelle, datensichere Android-Anwendungen für Handwerk, Praxis-Teams, Logistik und Außendienst.</p>
 
-            <!-- App 2: Aura PDF Scanner -->
-            <div class="app-card">
-                <div class="app-header">
-                    <img src="Bilder-Fotos/Aura PDF Scanner.png" alt="Aura PDF Scanner Logo">
-                    <h3>Aura PDF Scanner</h3>
-                </div>
-                <p>Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.</p>
-                
-                <div class="store-buttons-grid">
-                    <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
-                        <span>▶</span> Google Play Store
-                    </a>
-                    <a href="samsungapps://ProductDetail/com.aurasolutions.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>📱</span> Samsung
-                    </a>
-                    <a href="mimarket://details?id=com.aurasolutions.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🟠</span> Xiaomi
-                    </a>
-                    <a href="https://aura-pdf-scanner.de.aptoide.com" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🅰</span> Aptoide
-                    </a>
-                    <a href="https://aura-pdf-scanner.uptodown.com/android" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🟢</span> Uptodown
-                    </a>
-                </div>
-            </div>
-
-            <!-- App 3: Aura QR Scanner -->
-            <div class="app-card">
-                <div class="app-header">
-                    <img src="Bilder-Fotos/Aura Qr und Barcode Scanner.png" alt="Aura QR Scanner Logo">
-                    <h3>Aura QR & Barcode Scanner</h3>
-                </div>
-                <p>Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.</p>
-                
-                <div class="store-buttons-grid">
-                    <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
-                        <span>▶</span> Google Play Store
-                    </a>
-                    <a href="samsungapps://ProductDetail/com.aurasolutions.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>📱</span> Samsung
-                    </a>
-                    <a href="mimarket://details?id=com.aurasolutions.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🟠</span> Xiaomi
-                    </a>
-                    <a href="https://aura-qr-scanner.de.aptoide.com" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🅰</span> Aptoide
-                    </a>
-                    <a href="https://aura-qr-scanner.uptodown.com/android" target="_blank" rel="noopener noreferrer" class="btn-store">
-                        <span>🟢</span> Uptodown
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq-box" id="faq">
-        <h2>Hinter den Kulissen – FAQ</h2>
-        
-        <div class="faq-item">
-            <h4>1. Wer steckt eigentlich hinter Aura Applications?</h4>
-            <p>Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>2. Warum sind Ihre Apps im fairen Einmalkauf statt im Abo erhältlich?</h4>
-            <p>Weil ich nichts von monatlichen Dauerkosten für einfache Alltags-Tools halte. Sie kaufen eine App einmal fair und transparent – und sie gehört dauerhaft Ihnen, ganz ohne versteckte Kostenfallen.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>3. Brauchen alle Aura-Apps eine Internetverbindung?</h4>
-            <p>Nein, aber dort, wo es funktional sinnvoll ist (wie bei Wetter- oder Navigationsdiensten), wird sie gezielt genutzt. Wo immer es geht, minimieren wir Datenabflüsse und arbeiten konsequent datenschutzfreundlich.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>4. Nutzen Sie eigene Server oder Cloud-Speicher für meine Daten?</h4>
-            <p>Nein. Aura Applications betreibt keine eigenen Backend-Server oder Cloud-Infrastrukturen. Ihre persönlichen Daten bleiben dort, wo sie hingehören – geschützt auf Ihrem eigenen Endgerät.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>5. Warum legen Sie so großen Wert auf das edle AMOLED-Gold-Design?</h4>
-            <p>Weil ein dunkles Echtschwarz-Design nicht nur extrem elegant aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und die Augen schützt.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>6. Sind in Zukunft weitere Apps und Erweiterungen geplant?</h4>
-            <p>Definitiv. Ich arbeite kontinuierlich an neuen Projekten und habe derzeit bereits über 25 Apps und Prompts in der Entwicklung. Diese werden Stück für Stück in den kommenden Monaten veröffentlicht, um das Portfolio konsequent auszubauen.</p>
-        </div>
-    </section>
-
-    <!-- LEGAL CONTAINER -->
-    <div class="legal-box">
-        
-        <!-- IMPRESSUM -->
-        <section id="impressum">
-            <h2>IMPRESSUM</h2>
-            <p><strong>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</strong></p>
-            <p>
-                Aura Applications<br>
-                Inhaber: Sebastian Piontek<br>
-                Ruhrorter Straße 86<br>
-                47059 Duisburg<br>
-                Deutschland
-            </p>
-
-            <h3>Kontakt:</h3>
-            <p>
-                Telefon: +49 174 6222586<br>
-                E-Mail: SebastianPiontek79@gmail.com
-            </p>
-
-            <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h3>
-            <p>Sebastian Piontek, Ruhrorter Straße 86, 47059 Duisburg</p>
-
-            <h3>Verbraucherstreitbeilegung / Universalschlichtungsstelle:</h3>
-            <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-        </section>
-        <hr>
-
-        <!-- DATENSCHUTZERKLÄRUNG -->
-        <section id="datenschutz">
-            <h2>DATENSCHUTZERKLÄRUNG</h2>
-
-            <h3>0. Website-Hosting &amp; Bereitstellung (GitHub Pages)</h3>
-            <p>Unsere Website wird über den Hosting-Dienst <strong>GitHub Pages</strong> (bereitgestellt durch GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA, ein Unternehmen der Microsoft Corporation) gehostet.</p>
-            <p>Wenn Du unsere Website besuchst, erfasst GitHub automatisch technische Daten in sogenannten Server-Logfiles (z. B. IP-Adresse, Browser-Typ, Betriebssystem, Referrer-URL und Uhrzeit des Zugriffs). Dies ist technisch zwingend erforderlich, um Dir die Website sicher, fehlerfrei und stabil anzuzeigen.</p>
-            <p>Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an einer sicheren und performanten Bereitstellung unserer Webpräsenz (Art. 6 Abs. 1 lit. f DSGVO). Daten können in die USA übertragen werden; GitHub bzw. Microsoft ist unter dem EU-US Data Privacy Framework (DPF) zertifiziert. Weitere Informationen findest Du in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.</p>
-
-            <h3>1. Allgemeine Hinweise &amp; Verantwortlicher</h3>
-            <p>Der Schutz Deiner persönlichen Daten ist uns ein wichtiges Anliegen. Die Anwendungen von „Aura Applications“ arbeiten nach dem Grundsatz der Datensparsamkeit.</p>
-            <p><strong>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO):</strong><br>
-            Aura Applications<br>
-            Sebastian Piontek<br>
-            Ruhrorter Straße 86<br>
-            47059 Duisburg<br>
-            Deutschland<br>
-            E-Mail: SebastianPiontek79@gmail.com</p>
-
-            <h3>2. Lokale Datenverarbeitung (On-Device-Architektur)</h3>
-            <p>Sämtliche Kernfunktionen unserer Applikationen verarbeiten Eingaben, Berechnungen und Einstellungen ausschließlich lokal auf Deinem Endgerät (unter Verwendung von Technologien wie localStorage und IndexedDB). Es findet zu keinem Zeitpunkt eine Übertragung Deiner eingegebenen Inhaltsdaten an eigene Server oder Cloud-Infrastrukturen von Aura Applications statt.</p>
-
-            <h3>3. Einbindung von Drittanbieter-Diensten</h3>
-            
-            <p><strong>a) Werbeeinblendungen via Google AdMob (Google Ireland Limited):</strong><br>
-            Zur Finanzierung unserer kostenfreien Apps nutzen wir den Werbedienst Google AdMob. Google AdMob verarbeitet technische Informationen wie Deine IP-Adresse, Geräte-Identifikatoren (z. B. Android-Werbe-ID) sowie Nutzungsdaten, um Anzeigen bereitzustellen und deren Leistung zu messen. Die Verarbeitung erfolgt auf Grundlage Deiner ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die beim ersten App-Start über unser Einwilligungs-Banner abgefragt wird.<br>
-            Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
-
-            <p><strong>b) Abwicklung von In-App-Käufen via RevenueCat (RevenueCat, Inc.):</strong><br>
-            Sofern Du Dich für den Kauf einer kostenpflichtigen Erweiterung (z. B. Lifetime Pass) entscheidest, wird die Transaktion über den jeweiligen App Store (z. B. Google Play, Samsung Galaxy Store) und den Dienstleister RevenueCat zur Freischaltung der Funktion verifiziert. Hierbei werden anonymisierte Transaktions-IDs verarbeitet. Die Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Daten können an den Anbieter in die USA übertragen werden; RevenueCat ist unter dem EU-US Data Privacy Framework zertifiziert. Es werden keine Zahlungsdaten auf unseren Systemen gespeichert.<br>
-            Datenschutzerklärung von RevenueCat: <a href="https://revenuecat.com" target="_blank" rel="noopener noreferrer">https://revenuecat.com</a></p>
-
-            <h3>4. App-Berechtigungen</h3>
-            <p>Sollte eine Applikation Zugriff auf Hardware-Funktionen (z. B. Kamera für den PDF/QR-Scanner) anfordern, erfolgt dieser Zugriff ausschließlich zur unmittelbaren Ausführung der von Dir gestarteten Funktion. Es werden keine Audio- oder Bilddaten extern gespeichert oder übertragen.</p>
-
-            <h3>5. Deine Rechte</h3>
-            <p>Du hast im Rahmen der geltenden gesetzlichen Bestimmungen (DSGVO) das Recht auf kostenfreie Auskunft über Deine verarbeiteten Daten sowie auf Berichtigung, Sperrung oder Löschung. Da wir keine personenbezogenen Inhaltsdaten auf externen Servern speichern, kannst Du lokal gespeicherte App-Daten jederzeit selbst durch das Löschen des App-Caches oder die Deinstallation der App vollständig entfernen.</p>
-
-            <h3>6. Kontaktaufnahme per E-Mail oder Telefon</h3>
-            <p>Wenn Du uns per E-Mail oder Telefon kontaktierst, wird Deine Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (z. B. Name, E-Mail-Adresse, Anliegen) zum Zwecke der Bearbeitung Deines Anliegens bei uns gespeichert und verarbeitet. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
-        </section>
-
+    <!-- 3-Tier B2B Architecture -->
+    <div class="grid-3" style="margin-bottom: 4rem;">
+      <div class="card">
+        <h3 data-i18n="b2b_mod_1_title">1. Basis-Entwicklung</h3>
+        <p data-i18n="b2b_mod_1_desc">Einmaliger Festpreis für die komplette Entwicklung Ihrer gewünschten App-Logik und On-Device-Datenbank.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="b2b_mod_2_title">2. Whitelabeling & Branding</h3>
+        <p data-i18n="b2b_mod_2_desc">Anpassung der App an Ihr Corporate Design – inklusive Firmenlogo, Hausfarben und individueller Benutzeroberfläche.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="b2b_mod_3_title">3. Sorgenfrei-Wartung</h3>
+        <p data-i18n="b2b_mod_3_desc">Optionale Betreuung für jährliche Android-Kompatibilitäts-Updates, Sicherheitsanpassungen und bevorzugten Support.</p>
+      </div>
     </div>
 
-    <footer>
-        <p>© 2026 Aura Applications. Alle Rechte vorbehalten.</p>
-    </footer>
+    <!-- B2B Form (Formspree Integration) -->
+    <div id="b2b-form">
+      <h3 style="text-align: center; color: var(--gold-bright); margin-bottom: 1.5rem;" data-i18n="form_heading">Unverbindliche B2B-Projektanfrage</h3>
+      
+      <form action="https://formspree.io/f/DEINE_FORMSPREE_ID" method="POST" class="b2b-form">
+        
+        <div class="form-group">
+          <label for="name" data-i18n="lbl_name">Name / Ansprechpartner *</label>
+          <input type="text" id="name" name="name" required placeholder="z. B. Max Mustermann">
+        </div>
 
-</div>
+        <div class="form-group">
+          <label for="company" data-i18n="lbl_company">Firmenname *</label>
+          <input type="text" id="company" name="company" required placeholder="z. B. Mustermann Logistik GmbH">
+        </div>
 
+        <div class="form-group">
+          <label for="email" data-i18n="lbl_email">Geschäftliche E-Mail *</label>
+          <input type="email" id="email" name="email" required placeholder="name@firma.de">
+        </div>
+
+        <div class="form-group">
+          <label for="phone" data-i18n="lbl_phone">Telefonnummer (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+49 123 456789">
+        </div>
+
+        <div class="form-group">
+          <label for="industry" data-i18n="lbl_industry">Branche</label>
+          <select id="industry" name="industry">
+            <option value="handwerk" data-i18n="opt_handwerk">Handwerk & Bau</option>
+            <option value="gesundheit" data-i18n="opt_gesundheit">Gesundheit & Praxis</option>
+            <option value="aussendienst" data-i18n="opt_aussendienst">Außendienst & Vertrieb</option>
+            <option value="logistik" data-i18n="opt_logistik">Logistik & Handel</option>
+            <option value="sonstiges" data-i18n="opt_sonstiges">Sonstiges</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="devices" data-i18n="lbl_devices">Geplante Geräteanzahl</label>
+          <select id="devices" name="devices">
+            <option value="1-5">1 – 5 Geräte</option>
+            <option value="6-20">6 – 20 Geräte</option>
+            <option value="21-50">21 – 50 Geräte</option>
+            <option value="50+">50+ Geräte</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="whitelabel" data-i18n="lbl_whitelabel">Wünschen Sie eigenes Firmen-Branding (Logo & Hausfarben)?</label>
+          <select id="whitelabel" name="whitelabel">
+            <option value="ja" data-i18n="opt_yes">Ja, individuelles Whitelabeling gewünscht</option>
+            <option value="nein" data-i18n="opt_no">Nein, Standard-Design ausreichend</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="message" data-i18n="lbl_message">Projektziel / Welche Aufgabe soll die App lösen? *</label>
+          <textarea id="message" name="message" required placeholder="Beschreiben Sie kurz Ihre Anforderungen..." data-i18n="ph_message"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" data-i18n="btn_submit">Projektanfrage absenden</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Akkordeon-System) -->
+  <section id="faq">
+    <h2 class="section-title" data-i18n="faq_title">Häufig gestellte Fragen (FAQ)</h2>
+    <p class="section-subtitle" data-i18n="faq_subtitle">Transparente Antworten für Verbraucher und Firmenkunden.</p>
+
+    <details class="faq-item">
+      <summary data-i18n="faq_1_q">Benötigen die Apps eine dauerhafte Internetverbindung?</summary>
+      <p data-i18n="faq_1_a">Nein. Alle Kernfunktionen sind zu 100 % lokal auf dem Gerät nutzbar. Das garantiert höchste Geschwindigkeit, Unabhängigkeit von Funklöchern und maximale Datensicherheit.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary data-i18n="faq_2_q">Wie wird Werbung und Monetarisierung gehandhabt?</summary>
+      <p data-i18n="faq_2_a">Wir setzen auf faire, nutzergesteuerte Werbung oder 100% werbefreie Pro-Käufe. Sensible Unternehmensdaten in B2B-Projekten sind absolut frei von jeglicher Werbung oder externem Tracking.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary data-i18n="faq_3_q">Wie viele Projekte befinden sich in der Entwicklung?</summary>
+      <p data-i18n="faq_3_a">Aktuell befinden sich bereits über 25 Apps, Projekte und innovative Konzepte in unserer aktiven Entwicklungspipeline.</p>
+    </details>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#vorteile" data-i18n="nav_vorteile">Vorteile</a>
+      <a href="#b2b" data-i18n="nav_b2b">Für Unternehmen</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#" data-i18n="ftr_impressum">Impressum</a>
+      <a href="#" data-i18n="ftr_datenschutz">Datenschutz</a>
+    </div>
+    <p>&copy; 2026 Aura Applications | Sebastian Piontek &bull; Duisburg, Germany</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Nach oben scrollen" onclick="scrollToTop()">↑</button>
+
+  <!-- Multilingual & Interactive JS -->
+  <script>
+    const translations = {
+      de: {
+        nav_vorteile: "Vorteile",
+        nav_b2b: "Für Unternehmen",
+        nav_faq: "FAQ",
+        nav_cta: "Projekt anfragen",
+        hero_title: "High-End Android Software & <span>B2B Maßanfertigungen</span>",
+        hero_subtitle: "Perfektion im AMOLED Rich-Black Design. High-Performance Mobile Apps für Endverbraucher und maßgeschneiderte, 100% ausfallsichere Offline-Lösungen für Unternehmen.",
+        hero_btn_b2b: "B2B Lösungen entdecken",
+        hero_btn_b2c: "Apps entdecken",
+        badge_1: "Made in Duisburg",
+        badge_2: "100% DSGVO-konform",
+        badge_3: "100% Ausfallsicher (Kein Cloud-Zwang)",
+        sec_vorteile_title: "Unsere Grundsätze",
+        sec_vorteile_subtitle: "Aura Applications steht für unkompromisslose Qualität, maximale Privatsphäre und verlässliche Software-Architektur.",
+        feat_1_title: "AMOLED Rich-Black Aesthetic",
+        feat_1_desc: "Optimiert für moderne OLED-Displays. Akkuschonendes, tiefes Schwarz kombiniert mit edlen Gold-Akzenten für höchste Ansprüche.",
+        feat_2_title: "Faire Transparenz & Datenschutz",
+        feat_2_desc: "Faire, nutzergesteuerte Werbung oder 100% werbefrei im Pro-Kauf. Ihre Daten bleiben lokal auf Ihrem Gerät geschützt.",
+        feat_3_title: "100% Offline-Ausfallsicherheit",
+        feat_3_desc: "Keine Abhängigkeit von teuren Cloud-Servern oder Internetverbindungen. Volle Performance im tiefsten Keller wie im Außendienst.",
+        b2b_title: "Maßgeschneiderte Business-Software",
+        b2b_subtitle: "Wir entwickeln individuelle, datensichere Android-Anwendungen für Handwerk, Praxis-Teams, Logistik und Außendienst.",
+        b2b_mod_1_title: "1. Basis-Entwicklung",
+        b2b_mod_1_desc: "Einmaliger Festpreis für die komplette Entwicklung Ihrer gewünschten App-Logik und On-Device-Datenbank.",
+        b2b_mod_2_title: "2. Whitelabeling & Branding",
+        b2b_mod_2_desc: "Anpassung der App an Ihr Corporate Design – inklusive Firmenlogo, Hausfarben und individueller Benutzeroberfläche.",
+        b2b_mod_3_title: "3. Sorgenfrei-Wartung",
+        b2b_mod_3_desc: "Optionale Betreuung für jährliche Android-Kompatibilitäts-Updates, Sicherheitsanpassungen und bevorzugten Support.",
+        form_heading: "Unverbindliche B2B-Projektanfrage",
+        lbl_name: "Name / Ansprechpartner *",
+        lbl_company: "Firmenname *",
+        lbl_email: "Geschäftliche E-Mail *",
+        lbl_phone: "Telefonnummer (optional)",
+        lbl_industry: "Branche",
+        opt_handwerk: "Handwerk & Bau",
+        opt_gesundheit: "Gesundheit & Praxis",
+        opt_aussendienst: "Außendienst & Vertrieb",
+        opt_logistik: "Logistik & Handel",
+        opt_sonstiges: "Sonstiges",
+        lbl_devices: "Geplante Geräteanzahl",
+        lbl_whitelabel: "Wünschen Sie eigenes Firmen-Branding (Logo & Hausfarben)?",
+        opt_yes: "Ja, individuelles Whitelabeling gewünscht",
+        opt_no: "Nein, Standard-Design ausreichend",
+        lbl_message: "Projektziel / Welche Aufgabe soll die App lösen? *",
+        ph_message: "Beschreiben Sie kurz Ihre Anforderungen...",
+        btn_submit: "Projektanfrage absenden",
+        faq_title: "Häufig gestellte Fragen (FAQ)",
+        faq_subtitle: "Transparente Antworten für Verbraucher und Firmenkunden.",
+        faq_1_q: "Benötigen die Apps eine dauerhafte Internetverbindung?",
+        faq_1_a: "Nein. Alle Kernfunktionen sind zu 100 % lokal auf dem Gerät nutzbar. Das garantiert höchste Geschwindigkeit, Unabhängigkeit von Funklöchern und maximale Datensicherheit.",
+        faq_2_q: "Wie wird Werbung und Monetarisierung gehandhabt?",
+        faq_2_a: "Wir setzen auf faire, nutzergesteuerte Werbung oder 100% werbefreie Pro-Käufe. Sensible Unternehmensdaten in B2B-Projekten sind absolut frei von jeglicher Werbung oder externem Tracking.",
+        faq_3_q: "Wie viele Projekte befinden sich in der Entwicklung?",
+        faq_3_a: "Aktuell befinden sich bereits über 25 Apps, Projekte und innovative Konzepte in unserer aktiven Entwicklungspipeline.",
+        ftr_impressum: "Impressum",
+        ftr_datenschutz: "Datenschutz"
+      },
+      en: {
+        nav_vorteile: "Features",
+        nav_b2b: "For Business",
+        nav_faq: "FAQ",
+        nav_cta: "Inquire Project",
+        hero_title: "High-End Android Software & <span>B2B Custom Solutions</span>",
+        hero_subtitle: "Perfection in AMOLED Rich-Black Design. High-Performance Mobile Apps for consumers and tailor-made, 100% offline fail-safe solutions for businesses.",
+        hero_btn_b2b: "Explore B2B Solutions",
+        hero_btn_b2c: "Explore Apps",
+        badge_1: "Made in Duisburg",
+        badge_2: "100% GDPR Compliant",
+        badge_3: "100% Offline Fail-Safe (No Cloud Required)",
+        sec_vorteile_title: "Our Core Principles",
+        sec_vorteile_subtitle: "Aura Applications stands for uncompromising quality, maximum privacy, and reliable software architecture.",
+        feat_1_title: "AMOLED Rich-Black Aesthetic",
+        feat_1_desc: "Optimized for modern OLED displays. Battery-friendly deep black combined with elegant gold accents for highest standards.",
+        feat_2_title: "Fair Transparency & Privacy",
+        feat_2_desc: "Fair, user-controlled ads or 100% ad-free Pro purchase. Your data remains protected locally on your device.",
+        feat_3_title: "100% Offline Fail-Safety",
+        feat_3_desc: "No dependency on expensive cloud servers or internet connections. Full performance in basements or field ops.",
+        b2b_title: "Tailor-Made Business Software",
+        b2b_subtitle: "We develop individual, data-secure Android applications for crafts, medical practices, logistics, and field service.",
+        b2b_mod_1_title: "1. Core Development",
+        b2b_mod_1_desc: "One-time fixed price for full development of your required app logic and on-device database.",
+        b2b_mod_2_title: "2. Whitelabeling & Branding",
+        b2b_mod_2_desc: "App customization to match your corporate identity – including company logo, brand colors, and tailored UI.",
+        b2b_mod_3_title: "3. Carefree Maintenance",
+        b2b_mod_3_desc: "Optional maintenance for annual Android compatibility updates, security tweaks, and priority support.",
+        form_heading: "Non-Binding B2B Inquiry",
+        lbl_name: "Name / Contact Person *",
+        lbl_company: "Company Name *",
+        lbl_email: "Business Email *",
+        lbl_phone: "Phone Number (optional)",
+        lbl_industry: "Industry",
+        opt_handwerk: "Crafts & Construction",
+        opt_gesundheit: "Healthcare & Practice",
+        opt_aussendienst: "Field Service & Sales",
+        opt_logistik: "Logistics & Trade",
+        opt_sonstiges: "Other",
+        lbl_devices: "Planned Device Count",
+        lbl_whitelabel: "Do you require custom branding (Logo & Colors)?",
+        opt_yes: "Yes, custom whitelabeling desired",
+        opt_no: "No, standard design is sufficient",
+        lbl_message: "Project Goal / What task should the app solve? *",
+        ph_message: "Briefly describe your requirements...",
+        btn_submit: "Send Project Inquiry",
+        faq_title: "Frequently Asked Questions (FAQ)",
+        faq_subtitle: "Transparent answers for consumers and business clients.",
+        faq_1_q: "Do the apps require a permanent internet connection?",
+        faq_1_a: "No. All core features work 100% locally on the device. This guarantees maximum speed, independence from cellular dead zones, and top data safety.",
+        faq_2_q: "How are ads and monetization handled?",
+        faq_2_a: "We rely on fair, user-controlled ads or 100% ad-free Pro purchases. Sensitive business data in B2B projects is completely free of ads or tracking.",
+        faq_3_q: "How many projects are currently under development?",
+        faq_3_a: "Currently, over 25 apps, projects, and innovative concepts are in our active development pipeline.",
+        ftr_impressum: "Legal Notice",
+        ftr_datenschutz: "Privacy Policy"
+      },
+      fr: {
+        nav_vorteile: "Avantages",
+        nav_b2b: "Entreprises",
+        nav_faq: "FAQ",
+        nav_cta: "Demander un projet",
+        hero_title: "Applications Android Haut de Gamme & <span>Solutions B2B</span>",
+        hero_subtitle: "Perfection du design AMOLED Noir Pur. Applications mobiles haute performance pour particuliers et solutions B2B 100% hors-ligne.",
+        hero_btn_b2b: "Solutions B2B",
+        hero_btn_b2c: "Découvrir les Apps",
+        badge_1: "Fabriqué à Duisbourg",
+        badge_2: "100% Conforme RGPD",
+        badge_3: "100% Fonctionnel Hors-Ligne",
+        sec_vorteile_title: "Nos Principes",
+        sec_vorteile_subtitle: "Aura Applications incarne une qualité sans compromis et une confidentialité maximale.",
+        feat_1_title: "Esthétique AMOLED Noir Pur",
+        feat_1_desc: "Optimisé pour les écrans OLED. Noir profond économisant la batterie et détails dorés élégants.",
+        feat_2_title: "Transparence & Confidentialité",
+        feat_2_desc: "Publicité équitable contrôlée par l'utilisateur ou version Pro 100% sans pub. Vos données restent locales.",
+        feat_3_title: "Fiabilité 100% Hors-Ligne",
+        feat_3_desc: "Aucune dépendance aux serveurs cloud. Performance maximale partout, même sans réseau.",
+        b2b_title: "Logiciels B2B Sur Mesure",
+        b2b_subtitle: "Applications Android sécurisées pour l'artisanat, le secteur médical, la logistique et les services sur le terrain.",
+        b2b_mod_1_title: "1. Développement De Base",
+        b2b_mod_1_desc: "Prix fixe unique pour le développement complet de la logique de l'application.",
+        b2b_mod_2_title: "2. Marque Blanche & Branding",
+        b2b_mod_2_desc: "Personnalisation complète aux couleurs et au logo de votre entreprise.",
+        b2b_mod_3_title: "3. Maintenance Sérénité",
+        b2b_mod_3_desc: "Support optionnel pour les mises à jour annuelles Android et l'assistance prioritaire.",
+        form_heading: "Demande de Projet B2B",
+        lbl_name: "Nom / Contact *",
+        lbl_company: "Nom de l'entreprise *",
+        lbl_email: "E-mail professionnel *",
+        lbl_phone: "Téléphone (optionnel)",
+        lbl_industry: "Secteur d'activité",
+        opt_handwerk: "Artisanat & BTP",
+        opt_gesundheit: "Santé & Médical",
+        opt_aussendienst: "Service Client & Vente",
+        opt_logistik: "Logistique & Commerce",
+        opt_sonstiges: "Autre",
+        lbl_devices: "Nombre d'appareils",
+        lbl_whitelabel: "Souhaitez-vous un branding personnalisé ?",
+        opt_yes: "Oui, marque blanche personnalisée",
+        opt_no: "Non, design standard suffisant",
+        lbl_message: "Objectif du projet *",
+        ph_message: "Décrivez brièvement vos besoins...",
+        btn_submit: "Envoyer la demande",
+        faq_title: "Foire Aux Questions (FAQ)",
+        faq_subtitle: "Réponses transparentes pour utilisateurs et entreprises.",
+        faq_1_q: "Les applications nécessitent-elles une connexion Internet ?",
+        faq_1_a: "Non. Toutes les fonctionnalités clés marchent 100% en local pour une vitesse et une sécurité maximales.",
+        faq_2_q: "Comment sont gérées les publicités ?",
+        faq_2_a: "Publicité équitable ou version Pro sans pub. Les données B2B sont totalement exemptes de tracking.",
+        faq_3_q: "Combien de projets sont en cours ?",
+        faq_3_a: "Plus de 25 applications et projets sont actuellement dans notre pipeline de développement.",
+        ftr_impressum: "Mentions Légales",
+        ftr_datenschutz: "Confidentialité"
+      },
+      es: {
+        nav_vorteile: "Ventajas",
+        nav_b2b: "Para Empresas",
+        nav_faq: "FAQ",
+        nav_cta: "Consultar Proyecto",
+        hero_title: "Software Android de Alto Nivel y <span>Soluciones B2B</span>",
+        hero_subtitle: "Perfección en diseño AMOLED Negro Puro. Apps móviles de alto rendimiento y soluciones offline 100% a prueba de fallos.",
+        hero_btn_b2b: "Soluciones B2B",
+        hero_btn_b2c: "Descubrir Apps",
+        badge_1: "Hecho en Duisburgo",
+        badge_2: "100% Conforme a RGPD",
+        badge_3: "100% Operativo Sin Conexión",
+        sec_vorteile_title: "Nuestros Principios",
+        sec_vorteile_subtitle: "Aura Applications representa calidad sin concesiones y máxima privacidad.",
+        feat_1_title: "Estética AMOLED Negro Puro",
+        feat_1_desc: "Optimizado para pantallas OLED. Ahorro de batería con negros profundos y elegantes acentos dorados.",
+        feat_2_title: "Transparencia y Privacidad",
+        feat_2_desc: "Anuncios justos controlados por el usuario o compras Pro 100% sin publicidad.",
+        feat_3_title: "Fiabilidad 100% Offline",
+        feat_3_desc: "Sin dependencia de servidores en la nube. Máximo rendimiento en cualquier lugar.",
+        b2b_title: "Software Empresarial a Medida",
+        b2b_subtitle: "Desarrollamos aplicaciones Android seguras para artesanía, salud, logística y ventas.",
+        b2b_mod_1_title: "1. Desarrollo Base",
+        b2b_mod_1_desc: "Precio fijo por el desarrollo completo de la lógica de su aplicación.",
+        b2b_mod_2_title: "2. Marca Blanca y Diseño",
+        b2b_mod_2_desc: "Adaptación completa al diseño corporativo y logotipo de su empresa.",
+        b2b_mod_3_title: "3. Mantenimiento Integral",
+        b2b_mod_3_desc: "Soporte opcional para actualizaciones anuales de Android y soporte prioritario.",
+        form_heading: "Consulta de Proyecto B2B",
+        lbl_name: "Nombre / Contacto *",
+        lbl_company: "Empresa *",
+        lbl_email: "Correo Profesional *",
+        lbl_phone: "Teléfono (opcional)",
+        lbl_industry: "Sector",
+        opt_handwerk: "Construcción y Artesanía",
+        opt_gesundheit: "Salud y Medicina",
+        opt_aussendienst: "Ventas y Servicios",
+        opt_logistik: "Logística y Comercio",
+        opt_sonstiges: "Otro",
+        lbl_devices: "Número de dispositivos",
+        lbl_whitelabel: "¿Desea marca blanca personalizada?",
+        opt_yes: "Sí, marca blanca personalizada",
+        opt_no: "No, diseño estándar es suficiente",
+        lbl_message: "Objetivo del proyecto *",
+        ph_message: "Describa brevemente sus requisitos...",
+        btn_submit: "Enviar Consulta",
+        faq_title: "Preguntas Frecuentes (FAQ)",
+        faq_subtitle: "Respuestas transparentes para usuarios y empresas.",
+        faq_1_q: "¿Las aplicaciones requieren conexión a Internet?",
+        faq_1_a: "No. Todas las funciones principales operan 100% localmente para máxima velocidad y seguridad.",
+        faq_2_q: "¿Cómo se gestiona la publicidad?",
+        faq_2_a: "Anuncios transparentes o compras Pro sin publicidad. Los proyectos B2B están libres de rastreo.",
+        faq_3_q: "¿Cuántos proyectos están en desarrollo?",
+        faq_3_a: "Actualmente hay más de 25 aplicaciones y proyectos en nuestra fase activa de desarrollo.",
+        ftr_impressum: "Aviso Legal",
+        ftr_datenschutz: "Privacidad"
+      },
+      it: {
+        nav_vorteile: "Vantaggi",
+        nav_b2b: "Per Le Imprese",
+        nav_faq: "FAQ",
+        nav_cta: "Richiedi Progetto",
+        hero_title: "Software Android High-End e <span>Soluzioni B2B</span>",
+        hero_subtitle: "Perfezione nel design AMOLED Nero Puro. App mobili ad alte prestazioni e soluzioni offline sicure al 100%.",
+        hero_btn_b2b: "Scopri Soluzioni B2B",
+        hero_btn_b2c: "Scopri le App",
+        badge_1: "Prodotto a Duisburg",
+        badge_2: "100% Conforme GDPR",
+        badge_3: "100% Funzionamento Offline",
+        sec_vorteile_title: "I Nostri Principi",
+        sec_vorteile_subtitle: "Aura Applications significa qualità senza compromessi e massima privacy.",
+        feat_1_title: "Estetica AMOLED Nero Puro",
+        feat_1_desc: "Ottimizzato per schermi OLED. Nero profondo a risparmio energetico e dettagli in oro elegante.",
+        feat_2_title: "Trasparenza e Privacy",
+        feat_2_desc: "Pubblicità equa e controllata dall'utente o versione Pro al 100% senza pubblicità.",
+        feat_3_title: "Affidabilità Offline al 100%",
+        feat_3_desc: "Nessuna dipendenza da server cloud. Massime prestazioni ovunque.",
+        b2b_title: "Software Aziendale Su Misura",
+        b2b_subtitle: "Sviluppiamo app Android sicure per artigianato, sanità, logistica e servizi sul campo.",
+        b2b_mod_1_title: "1. Sviluppo Base",
+        b2b_mod_1_desc: "Prezzo fisso per lo sviluppo completo della logica dell'applicazione.",
+        b2b_mod_2_title: "2. Whitelabeling e Branding",
+        b2b_mod_2_desc: "Personalizzazione con logo e colori aziendali della tua impresa.",
+        b2b_mod_3_title: "3. Manutenzione Senza Pensieri",
+        b2b_mod_3_desc: "Assistenza opzionale per aggiornamenti annuali Android e supporto prioritario.",
+        form_heading: "Richiesta Progetto B2B",
+        lbl_name: "Nome / Contatto *",
+        lbl_company: "Nome Azienda *",
+        lbl_email: "E-mail Aziendale *",
+        lbl_phone: "Telefono (opzionale)",
+        lbl_industry: "Settore",
+        opt_handwerk: "Artigianato e Edilizia",
+        opt_gesundheit: "Sanità e Medicina",
+        opt_aussendienst: "Vendite e Servizi",
+        opt_logistik: "Logistica e Commercio",
+        opt_sonstiges: "Altro",
+        lbl_devices: "Numero di dispositivi",
+        lbl_whitelabel: "Desideri un branding personalizzato?",
+        opt_yes: "Sì, whitelabel personalizzato",
+        opt_no: "No, design standard sufficiente",
+        lbl_message: "Obiettivo del progetto *",
+        ph_message: "Descrivi brevemente i tuoi requisiti...",
+        btn_submit: "Invia Richiesta",
+        faq_title: "Domande Frequenti (FAQ)",
+        faq_subtitle: "Risposte trasparenti per utenti e clienti aziendali.",
+        faq_1_q: "Le app richiedono una connessione Internet permanente?",
+        faq_1_a: "No. Tutte le funzioni funzionano al 100% in locale sul dispositivo.",
+        faq_2_q: "Come viene gestita la pubblicità?",
+        faq_2_a: "Pubblicità trasparente o acquisti Pro senza pubblicità. I progetti B2B sono totalmente privi di tracciamento.",
+        faq_3_q: "Quanti progetti sono in fase di sviluppo?",
+        faq_3_a: "Attualmente abbiamo oltre 25 app e progetti in fase di sviluppo attivo.",
+        ftr_impressum: "Note Legali",
+        ftr_datenschutz: "Privacy Policy"
+      },
+      pt: {
+        nav_vorteile: "Vantagens",
+        nav_b2b: "Para Empresas",
+        nav_faq: "FAQ",
+        nav_cta: "Solicitar Projeto",
+        hero_title: "Software Android High-End e <span>Soluções B2B</span>",
+        hero_subtitle: "Perfeição em design AMOLED Preto Puro. Aplicativos móveis de alto desempenho e soluções offline 100% seguras.",
+        hero_btn_b2b: "Explorar Soluções B2B",
+        hero_btn_b2c: "Explorar Apps",
+        badge_1: "Feito em Duisburg",
+        badge_2: "100% Em Conformidade GDPR",
+        badge_3: "100% Operacional Offline",
+        sec_vorteile_title: "Nossos Princípios",
+        sec_vorteile_subtitle: "Aura Applications representa qualidade inflexível e privacidade máxima.",
+        feat_1_title: "Estética AMOLED Preto Puro",
+        feat_1_desc: "Otimizado para telas OLED. Economia de bateria com preto profundo e detalhes em ouro elegante.",
+        feat_2_title: "Transparência e Privacidade",
+        feat_2_desc: "Anúncios justos ou versão Pro 100% sem anúncios. Seus dados permanecem locais.",
+        feat_3_title: "Confiabilidade 100% Offline",
+        feat_3_desc: "Sem dependência de servidores em nuvem. Desempenho máximo em qualquer lugar.",
+        b2b_title: "Software Empresarial sob Medida",
+        b2b_subtitle: "Desenvolvemos aplicativos Android seguros para construção, saúde, logística e vendas.",
+        b2b_mod_1_title: "1. Desenvolvimento Base",
+        b2b_mod_1_desc: "Preço fixo para o desenvolvimento completo da lógica do seu aplicativo.",
+        b2b_mod_2_title: "2. Marca Branca e Branding",
+        b2b_mod_2_desc: "Personalização completa com as cores e o logotipo da sua empresa.",
+        b2b_mod_3_title: "3. Manutenção Tranquila",
+        b2b_mod_3_desc: "Suporte opcional para atualizações anuais do Android e atendimento prioritário.",
+        form_heading: "Consulta de Projeto B2B",
+        lbl_name: "Nome / Contato *",
+        lbl_company: "Empresa *",
+        lbl_email: "E-mail Comercial *",
+        lbl_phone: "Telefone (opcional)",
+        lbl_industry: "Setor",
+        opt_handwerk: "Construção e Artesanato",
+        opt_gesundheit: "Saúde e Medicina",
+        opt_aussendienst: "Vendas e Serviços",
+        opt_logistik: "Logística e Comércio",
+        opt_sonstiges: "Outro",
+        lbl_devices: "Número de dispositivos",
+        lbl_whitelabel: "Deseja marca branca personalizada?",
+        opt_yes: "Sim, marca branca personalizada",
+        opt_no: "Não, design padrão é suficiente",
+        lbl_message: "Objetivo do projeto *",
+        ph_message: "Descreva brevemente suas necessidades...",
+        btn_submit: "Enviar Consulta",
+        faq_title: "Perguntas Frequentes (FAQ)",
+        faq_subtitle: "Respostas transparentes para usuários e empresas.",
+        faq_1_q: "Os aplicativos precisam de conexão com a Internet?",
+        faq_1_a: "Não. Todos os recursos funcionam 100% localmente no dispositivo.",
+        faq_2_q: "Como a publicidade é gerenciada?",
+        faq_2_a: "Anúncios transparentes ou compras Pro sem anúncios. Projetos B2B não possuem rastreamento.",
+        faq_3_q: "Quantos projetos estão em desenvolvimento?",
+        faq_3_a: "Atualmente temos mais de 25 aplicativos e projetos em nosso pipeline ativo.",
+        ftr_impressum: "Aviso Legal",
+        ftr_datenschutz: "Privacidade"
+      },
+      pl: {
+        nav_vorteile: "Zalety",
+        nav_b2b: "Dla Firm",
+        nav_faq: "FAQ",
+        nav_cta: "Zapytaj o Projekt",
+        hero_title: "Oprogramowanie Android & <span>Rozwiązania B2B</span>",
+        hero_subtitle: "Perfekcja w designie AMOLED Głęboka Czerń. Wysokowydajne aplikacje mobilne oraz niezawodne rozwiązania offline B2B.",
+        hero_btn_b2b: "Odkryj Rozwiązania B2B",
+        hero_btn_b2c: "Odkryj Aplikacje",
+        badge_1: "Stworzono w Duisburgu",
+        badge_2: "100% Zgodność z RODO",
+        badge_3: "100% Działanie Offline",
+        sec_vorteile_title: "Nasze Zasady",
+        sec_vorteile_subtitle: "Aura Applications oznacza bezkompromisową jakość i maksymalną prywatność.",
+        feat_1_title: "Estetyka AMOLED Głęboka Czerń",
+        feat_1_desc: "Optymalizacja dla ekranów OLED. Oszczędność baterii i eleganckie złote akcenty.",
+        feat_2_title: "Przejrzystość i Prywatność",
+        feat_2_desc: "Uczciwe reklamy lub wersja Pro 100% bez reklam. Twoje dane pozostają na urządzeniu.",
+        feat_3_title: "100% Niezawodność Offline",
+        feat_3_desc: "Brak zależności od serwerów w chmurze. Pełna wydajność w każdych warunkach.",
+        b2b_title: "Oprogramowanie B2B na Zamówienie",
+        b2b_subtitle: "Tworzymy bezpieczne aplikacje Android dla budownictwa, medycyny, logistyki i handlu.",
+        b2b_mod_1_title: "1. Tworzenie Bazy",
+        b2b_mod_1_desc: "Stała cena za kompletne stworzenie logiki aplikacji i bazy danych.",
+        b2b_mod_2_title: "2. Whitelabeling i Branding",
+        b2b_mod_2_desc: "Dopasowanie aplikacji do identyfikacji wizualnej i logo Twojej firmy.",
+        b2b_mod_3_title: "3. Spokojne Utrzymanie",
+        b2b_mod_3_desc: "Opcjonalne wsparcie dla corocznych aktualizacji systemu Android i priorytetowa pomoc.",
+        form_heading: "Zapytanie o Projekt B2B",
+        lbl_name: "Imię i Nazwisko / Kontakt *",
+        lbl_company: "Nazwa Firmy *",
+        lbl_email: "E-mail Służbowy *",
+        lbl_phone: "Numer Telefonu (opcjonalnie)",
+        lbl_industry: "Branża",
+        opt_handwerk: "Budownictwo i Rzemiosło",
+        opt_gesundheit: "Zdrowie i Medycyna",
+        opt_aussendienst: "Sprzedaż i Usługi",
+        opt_logistik: "Logistyka i Handel",
+        opt_sonstiges: "Inne",
+        lbl_devices: "Liczba urządzeń",
+        lbl_whitelabel: "Czy chcesz własny branding firmy?",
+        opt_yes: "Tak, własny whitelabeling",
+        opt_no: "Nie, standardowy wygląd wystarczy",
+        lbl_message: "Cel projektu *",
+        ph_message: "Opisz krótko swoje wymagania...",
+        btn_submit: "Wyślij Zapytanie",
+        faq_title: "Często Zadawane Pytania (FAQ)",
+        faq_subtitle: "Przejrzyste odpowiedzi dla użytkowników i firm.",
+        faq_1_q: "Czy aplikacje wymagają stałego połączenia z Internetem?",
+        faq_1_a: "Nie. Wszystkie kluczowe funkcje działają w 100% lokalnie na urządzeniu.",
+        faq_2_q: "Jak wygląda kwestia reklam?",
+        faq_2_a: "Uczciwe reklamy lub wersja Pro bez reklam. Projekty B2B są całkowicie wolne od śledzenia.",
+        faq_3_q: "Ile projektów jest obecnie w przygotowaniu?",
+        faq_3_a: "Obecnie w naszym aktywnym procesie tworzenia znajduje się ponad 25 aplikacji i projektów.",
+        ftr_impressum: "Nota Prawna",
+        ftr_datenschutz: "Prywatność"
+      }
+    };
+
+    function changeLanguage(lang) {
+      if (!translations[lang]) return;
+      
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = translations[lang][key];
+          } else {
+            element.innerHTML = translations[lang][key];
+          }
+        }
+      });
+
+      document.documentElement.lang = lang;
+      localStorage.setItem('aura_selected_lang', lang);
+    }
+
+    /* Back to Top Logic */
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    /* Initial Load */
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('aura_selected_lang');
+      const userLang = navigator.language.slice(0, 2);
+      const initialLang = savedLang || (translations[userLang] ? userLang : 'de');
+
+      document.getElementById('langSelect').value = initialLang;
+      changeLanguage(initialLang);
+    });
+  </script>
 </body>
 </html>
