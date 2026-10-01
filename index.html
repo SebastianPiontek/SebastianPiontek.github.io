@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google" content="notranslate">
 <!-- SEO & Metadata -->
-<meta name="description" content="Aura Applications Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. 100% Datenschutz ohne Tracking.">
-<meta property="og:title" content="Aura Applications App-Manufaktur">
-<meta property="og:description" content="Erstklassige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
+<meta name="description" content="Aura Applications Manufaktur für schlanke, offline-fähige Android-Apps & moderne Webauftritte im edlen AMOLED-Gold-Design. 100% Datenschutz ohne Tracking.">
+<meta property="og:title" content="Aura Applications App-Manufaktur & Webdesign">
+<meta property="og:description" content="Erstklassige Android-Apps & Webauftritte im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
 <meta property="og:image" content="https://sebastianpiontek.github.io/Bilder-Fotos/Aura%20Applications.png">
 <meta property="og:url" content="https://sebastianpiontek.github.io">
 <meta property="og:type" content="website">
@@ -26,6 +26,7 @@
     --gold-champagne: #F3E5AB;
     --gold-primary: #D4AF37;
     --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    --gold-gradient-animated: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
     --text-body: #E0E0E0;
     --text-muted: #B0B0B0;
     --border-gold: rgba(212, 175, 55, 0.35);
@@ -44,6 +45,14 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+
+/* KEYFRAMES FOR ANIMATIONS */
+@keyframes goldFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* CUSTOM SCROLLBAR */
 ::-webkit-scrollbar {
     width: 8px;
@@ -146,6 +155,8 @@ body {
     color: #FFFFFF;
 }
 .btn-header-cta {
+    position: relative;
+    overflow: hidden;
     padding: 8px 18px;
     background: var(--gold-gradient);
     color: #000000 !important;
@@ -158,7 +169,7 @@ body {
 }
 .btn-header-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 18px rgba(212, 175, 55, 0.4);
 }
 
 /* HERO SECTION */
@@ -198,13 +209,18 @@ body {
     font-size: 2.8rem;
     margin-bottom: 15px;
     font-weight: 800;
-    color: var(--gold-champagne);
     letter-spacing: -0.5px;
 }
-.hero h1 span {
-    background: var(--gold-gradient);
+/* FLIESSENDER GOLD-VERLAUF FÜR ERSTKLASSIGE APPS */
+.gold-animated {
+    background: var(--gold-gradient-animated);
+    background-size: 300% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: goldFlow 7s ease infinite;
+}
+.text-champagne {
+    color: var(--gold-champagne);
 }
 .hero p {
     max-width: 680px;
@@ -226,7 +242,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* USP HIGHLIGHTS GRID */
+/* USP HIGHLIGHTS GRID MIT GLANZ-EFFEKT (SHIMMER SWEEP) */
 .usp-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -234,16 +250,33 @@ body {
     margin: 50px 0;
 }
 .usp-card {
+    position: relative;
+    overflow: hidden;
     background: var(--card-bg);
     border: 1px solid var(--border-gold);
     border-radius: var(--radius);
     padding: 22px;
     text-align: center;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.usp-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.12) 50%, transparent 70%);
+    transform: rotate(25deg) translateX(-100%);
+    transition: transform 0.8s ease;
 }
 .usp-card:hover {
     border-color: var(--border-gold-hover);
+    transform: translateY(-3px);
+}
+.usp-card:hover::after {
+    transform: rotate(25deg) translateX(100%);
 }
 .usp-card .icon {
     font-size: 1.8rem;
@@ -262,7 +295,7 @@ body {
     color: var(--text-muted);
 }
 
-/* DEVELOPER PROFILE SECTION */
+/* DEVELOPER PROFILE SECTION MIT MOBILE-TOUCH EFFECT */
 .dev-profile {
     display: flex;
     align-items: center;
@@ -274,6 +307,13 @@ body {
     padding: 35px;
     margin: 50px 0;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+}
+.dev-profile:active {
+    transform: scale(0.985);
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
 }
 .dev-avatar-box {
     text-align: center;
@@ -412,6 +452,22 @@ body {
     font-weight: 700;
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.btn-store.primary-store::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+    transform: rotate(25deg) translateX(-100%);
+    transition: transform 0.6s ease;
+}
+.btn-store.primary-store:hover::after {
+    transform: rotate(25deg) translateX(100%);
 }
 
 /* FAQ AKKORDEON SECTION */
@@ -617,11 +673,11 @@ footer {
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION MIT FLIESSENDEM GOLD-VERLAUF -->
     <section class="hero">
         <img src="Bilder-Fotos/Aura Applications.png" alt="Aura Applications Marken-Logo" class="hero-logo-emblem">
         <div class="badge-hero" data-i18n="hero_badge">Offizielle App-Manufaktur</div>
-        <h1><span data-i18n="hero_title_1">Erstklassige Apps</span> <span data-i18n="hero_title_2">für deinen Alltag.</span></h1>
+        <h1><span class="gold-animated" data-i18n="hero_title_1">Erstklassige Apps</span> <span class="text-champagne" data-i18n="hero_title_2">für deinen Alltag.</span></h1>
         <p data-i18n="hero_sub">Entdecke schlanke, hochpräzise Android-Applikationen im edlen AMOLED-Gold-Design. 100% offline-fähig, datenschutzsicher und ohne lästige Abofallen.</p>
         <div class="guarantee-box">
             <span data-i18n="feat_1">✓ Höchste Präzision</span>
@@ -630,7 +686,7 @@ footer {
         </div>
     </section>
 
-    <!-- USP HIGHLIGHTS -->
+    <!-- USP HIGHLIGHTS MIT GLANZ-EFFEKT (SHIMMER) -->
     <div class="usp-grid">
         <div class="usp-card">
             <span class="icon"><i class="fa-solid fa-bolt"></i></span>
@@ -654,7 +710,7 @@ footer {
         </div>
     </div>
 
-    <!-- DEVELOPER PROFILE SECTION -->
+    <!-- DEVELOPER PROFILE SECTION (NEUER KOMPAKTER BEGRÜSSUNGSTEXT) -->
     <section class="dev-profile" id="entwickler">
         <div class="dev-avatar-box">
             <img src="Bilder-Fotos/sebastian.png" alt="Sebastian Piontek Gründer & Entwickler" class="dev-avatar">
@@ -667,12 +723,9 @@ footer {
                 <span class="dev-badge">App & Web aus einer Hand</span>
                 <span class="dev-badge">Echt, lokal & unabhängig</span>
             </div>
-            <h3 data-i18n="dev_headline">Software ohne Datenhunger</h3>
-            <p><strong>Guten Tag,</strong></p>
-            <p>mein Name ist Sebastian Piontek. Als Gründer und Entwickler von Aura Applications stehe ich persönlich hinter jeder Zeile Code – vom Algorithmus unserer Android-Apps bis hin zum Design dieser Website.</p>
-            <p>In einer Zeit, in der Software oft mit unnötigem Ballast, intransparenten Abofallen und aggressivem Tracking überladen wird, gehe ich einen konsequent anderen Weg. Ich entwickle Werkzeuge so, wie ich sie selbst nutzen möchte: <strong>Durchdacht, verlässlich, fair bepreist und in einem edlen, ruhigen AMOLED-Design.</strong></p>
-            <p>Ob schlanke Offline-Tools oder vernetzte Live-Dienste: Bei mir steht der Schutz Deiner Privatsphäre an erster Stelle. Als unabhängiger Einzelunternehmer verzichte ich komplett auf externe Server-Infrastrukturen oder Daten-Handel. Du erhältst erstklassige Werkzeuge für den Alltag ohne versteckte Kosten und ohne Datenhunger.</p>
-            <p><strong>Qualität und Design aus einer Hand. Dafür stehe ich mit meinem Namen.</strong></p>
+            <h3 data-i18n="dev_headline">Software & Webdesign ohne Datenhunger</h3>
+            <p data-i18n="dev_p1">Guten Tag, mein Name ist <strong>Sebastian Piontek</strong>. Ich entwickle Apps und moderne Webauftritte persönlich und transparent – fair bepreist, verlässlich und im edlen Design.</p>
+            <p data-i18n="dev_p2">Ob schlanke Smartphone-Tools oder maßgeschneiderte Systeme für Selbstständige und Unternehmen: Der Schutz der Privatsphäre steht an erster Stelle. Ohne Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes Handwerk aus einer Hand.</p>
         </div>
     </section>
 
@@ -760,32 +813,32 @@ footer {
         </div>
     </section>
 
-    <!-- FAQ AKKORDEON SECTION -->
+    <!-- FAQ AKKORDEON SECTION (NEU OPTIMIERTE ANTWORT 2) -->
     <section class="faq-box" id="faq">
         <h2 class="section-title" data-i18n="faq_title">Hinter den Kulissen (FAQ)</h2>
         <details class="faq-item">
             <summary class="faq-summary">1. Wer steckt eigentlich hinter Aura Applications?</summary>
-            <p>Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).</p>
+            <p data-i18n="faq_1_ans">Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).</p>
         </details>
         <details class="faq-item">
             <summary class="faq-summary">2. Warum sind Ihre Apps im fairen Einmalkauf statt im Abo erhältlich?</summary>
-            <p>Weil ich nichts von monatlichen Dauerkosten für einfache Alltags-Tools halte. Sie kaufen eine App einmal fair und transparent und sie gehört dauerhaft Ihnen, ganz ohne versteckte Kostenfallen.</p>
+            <p data-i18n="faq_2_ans">Aus Überzeugung und für maximale Transparenz. Ich halte nichts von monatlichen Dauerkosten für clevere Alltags-Tools. Bei Aura gilt: Einmal fair bezahlen, dauerhaft unbegrenzt nutzen – ohne versteckte Kostenfallen.</p>
         </details>
         <details class="faq-item">
             <summary class="faq-summary">3. Brauchen alle Aura-Apps eine Internetverbindung?</summary>
-            <p>Nein, aber dort, wo es funktional sinnvoll ist (wie bei Wetter- oder Navigationsdiensten), wird sie gezielt genutzt. Wo immer es geht, minimieren wir Datenabflüsse und arbeiten konsequent datenschutzfreundlich.</p>
+            <p data-i18n="faq_3_ans">Nein, aber dort, wo es funktional sinnvoll ist (wie bei Wetter- oder Navigationsdiensten), wird sie gezielt genutzt. Wo immer es geht, minimieren wir Datenabflüsse und arbeiten konsequent datenschutzfreundlich.</p>
         </details>
         <details class="faq-item">
             <summary class="faq-summary">4. Nutzen Sie eigene Server oder Cloud-Speicher für meine Daten?</summary>
-            <p>Nein. Aura Applications betreibt keine eigenen Backend-Server oder Cloud-Infrastrukturen. Ihre persönlichen Daten bleiben dort, wo sie hingehören: geschützt auf Ihrem eigenen Endgerät.</p>
+            <p data-i18n="faq_4_ans">Nein. Aura Applications betreibt keine eigenen Backend-Server oder Cloud-Infrastrukturen. Ihre persönlichen Daten bleiben dort, wo sie hingehören: geschützt auf Ihrem eigenen Endgerät.</p>
         </details>
         <details class="faq-item">
             <summary class="faq-summary">5. Warum legen Sie so großen Wert auf das edle AMOLED-Gold-Design?</summary>
-            <p>Weil ein dunkles Echtschwarz-Design nicht nur extrem elegant aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und die Augen schützt.</p>
+            <p data-i18n="faq_5_ans">Weil ein dunkles Echtschwarz-Design nicht nur extrem elegant aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und die Augen schützt.</p>
         </details>
         <details class="faq-item">
             <summary class="faq-summary">6. Sind in Zukunft weitere Apps und Erweiterungen geplant?</summary>
-            <p>Definitiv. Ich arbeite kontinuierlich an neuen Projekten und habe derzeit bereits über 25 Apps und neue Konzepte in der Entwicklung. Diese werden Stück für Stück in den kommenden Monaten veröffentlicht, um das Portfolio konsequent auszubauen.</p>
+            <p data-i18n="faq_6_ans">Definitiv. Ich arbeite kontinuierlich an neuen Projekten und habe derzeit bereits über 25 Apps und neue Konzepte in der Entwicklung. Diese werden Stück für Stück in den kommenden Monaten veröffentlicht, um das Portfolio konsequent auszubauen.</p>
         </details>
     </section>
 
@@ -884,12 +937,15 @@ const translations = {
         usp_4_title: "Freiheit bei der Bezugsquelle",
         usp_4_desc: "Erhältlich auf Google Play, Samsung, Xiaomi, Aptoide & Uptodown.",
         dev_role: "Gründer, App- & Web-Entwickler",
-        dev_headline: "Software ohne Datenhunger",
+        dev_headline: "Software & Webdesign ohne Datenhunger",
+        dev_p1: "Guten Tag, mein Name ist Sebastian Piontek. Ich entwickle Apps und moderne Webauftritte persönlich und transparent – fair bepreist, verlässlich und im edlen Design.",
+        dev_p2: "Ob schlanke Smartphone-Tools oder maßgeschneiderte Systeme für Selbstständige und Unternehmen: Der Schutz der Privatsphäre steht an erster Stelle. Ohne Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes Handwerk aus einer Hand.",
         apps_title: "Unsere Applikationen",
         app1_desc: "Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.",
         app2_desc: "Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.",
         app3_desc: "Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.",
-        faq_title: "Hinter den Kulissen (FAQ)"
+        faq_title: "Hinter den Kulissen (FAQ)",
+        faq_2_ans: "Aus Überzeugung und für maximale Transparenz. Ich halte nichts von monatlichen Dauerkosten für clevere Alltags-Tools. Bei Aura gilt: Einmal fair bezahlen, dauerhaft unbegrenzt nutzen – ohne versteckte Kostenfallen."
     },
     en: {
         nav_apps: "Discover Apps",
@@ -913,12 +969,15 @@ const translations = {
         usp_4_title: "Multiple Store Options",
         usp_4_desc: "Available on Google Play, Samsung, Xiaomi, Aptoide & Uptodown.",
         dev_role: "Founder, App & Web Developer",
-        dev_headline: "Software without data hunger",
+        dev_headline: "Software & Web design without data hunger",
+        dev_p1: "Hello, my name is Sebastian Piontek. I develop apps and modern web presence personally and transparently – fairly priced, reliable, and in an elegant design.",
+        dev_p2: "Whether sleek mobile tools or tailored systems for freelancers and companies: Privacy protection comes first. Without cloud infrastructures and data hunger, you get clean craftsmanship from a single source.",
         apps_title: "Our Applications",
         app1_desc: "The elegant calculator for your daily needs. Guarantees accurate calculations, discount tools, and budget control.",
         app2_desc: "Your pocket office. Scan documents, trim neatly, sign directly on screen, and send immediately.",
         app3_desc: "Blazing fast scanner without clutter. Reads links, connects to Wi-Fi, or compares prices with one click.",
-        faq_title: "Behind the Scenes (FAQ)"
+        faq_title: "Behind the Scenes (FAQ)",
+        faq_2_ans: "Out of conviction and for maximum transparency. I don't believe in monthly recurring costs for clever everyday tools. At Aura: Pay fairly once, use indefinitely – without hidden traps."
     },
     es: {
         nav_apps: "Descubrir apps",
@@ -942,12 +1001,15 @@ const translations = {
         usp_4_title: "Múltiples tiendas",
         usp_4_desc: "Disponible en Google Play, Samsung, Xiaomi, Aptoide y Uptodown.",
         dev_role: "Fundador, Desarrollador App y Web",
-        dev_headline: "Software respetuoso con tus datos",
+        dev_headline: "Software y diseño web respetuosos con tus datos",
+        dev_p1: "Hola, mi nombre es Sebastian Piontek. Desarrollo aplicaciones y sitios web modernos de forma personal y transparente.",
+        dev_p2: "Ya sean herramientas móviles o sistemas a medida para empresas: la privacidad es lo primero, sin infraestructuras en la nube ni abuso de datos.",
         apps_title: "Nuestras Aplicaciones",
         app1_desc: "La elegante calculadora para tu día a día. Garantiza precisión, ayuda con descuentos y controla tu presupuesto.",
         app2_desc: "Tu oficina móvil. Escanea documentos, recorta, firma en pantalla y envía al instante.",
         app3_desc: "Escáner ultrarrápido sin complicaciones. Lee enlaces, conecta al Wi-Fi o compara precios.",
-        faq_title: "Preguntas frecuentes (FAQ)"
+        faq_title: "Preguntas frecuentes (FAQ)",
+        faq_2_ans: "Por convicción y máxima transparencia. No creo en costes mensuales para herramientas diarias inteligentes. En Aura: Paga una vez de forma justa y úsala para siempre."
     },
     fr: {
         nav_apps: "Découvrir les apps",
@@ -971,12 +1033,15 @@ const translations = {
         usp_4_title: "Disponible partout",
         usp_4_desc: "Disponible sur Google Play, Samsung, Xiaomi, Aptoide et Uptodown.",
         dev_role: "Fondateur & Développeur",
-        dev_headline: "Des logiciels éthiques et privés",
+        dev_headline: "Logiciels et Webdesign éthiques",
+        dev_p1: "Bonjour, je m'appelle Sebastian Piontek. Je développe des applications et des sites web modernes de manière personnelle et transparente.",
+        dev_p2: "Qu'il s'agisse d'outils mobiles ou de systèmes sur mesure pour entreprises : la protection de la vie privée est la priorité.",
         apps_title: "Nos Applications",
         app1_desc: "La calculatrice élégante du quotidien. Précision garantie, calcul de réductions et suivi du budget.",
         app2_desc: "Votre bureau mobile. Numérisez, découpez, signez à l'écran et envoyez vos documents instantanément.",
         app3_desc: "Scanner rapide sans superflu. Lit les liens, connecte au Wi-Fi et compare les prix.",
-        faq_title: "Foire aux questions (FAQ)"
+        faq_title: "Foire aux questions (FAQ)",
+        faq_2_ans: "Par conviction et pour une transparence maximale. Un seul paiement équitable pour une utilisation illimitée, sans frais cachés."
     }
 };
 
