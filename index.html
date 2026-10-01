@@ -64,6 +64,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 /* HEADER & NAVIGATION */
 .header-nav {
     display: flex;
@@ -75,6 +76,11 @@ body {
     border-radius: 50px;
     margin-bottom: 40px;
     box-shadow: 0 4px 25px rgba(212, 175, 55, 0.1);
+}
+.header-brand-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .brand-text {
     font-family: 'Montserrat', sans-serif;
@@ -104,6 +110,11 @@ body {
     gap: 15px;
     align-items: center;
 }
+.nav-text-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
 .nav-links a {
     color: var(--gold-champagne);
     text-decoration: none;
@@ -114,6 +125,11 @@ body {
 .nav-links a:hover {
     color: var(--gold-primary);
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+.nav-btn-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .lang-select {
     background: rgba(255, 255, 255, 0.05);
@@ -137,11 +153,14 @@ body {
     border-radius: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-shadow: none !important;
+    display: inline-block;
+    text-align: center;
 }
 .btn-header-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
+
 /* HERO SECTION */
 .hero {
     padding: 20px 20px 40px 20px;
@@ -206,6 +225,7 @@ body {
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
+
 /* USP HIGHLIGHTS GRID */
 .usp-grid {
     display: grid;
@@ -241,6 +261,7 @@ body {
     font-size: 0.85rem;
     color: var(--text-muted);
 }
+
 /* DEVELOPER PROFILE SECTION */
 .dev-profile {
     display: flex;
@@ -303,6 +324,7 @@ body {
     font-size: 0.95rem;
     margin-bottom: 12px;
 }
+
 /* SEKTIONS-ÜBERSCHRIFTEN */
 .section-title {
     font-family: 'Montserrat', sans-serif;
@@ -312,6 +334,7 @@ body {
     color: var(--gold-champagne);
     font-weight: 700;
 }
+
 /* APP SHOWCASE GRID */
 .app-grid {
     display: grid;
@@ -390,6 +413,7 @@ body {
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
+
 /* FAQ AKKORDEON SECTION */
 .faq-box {
     background: var(--card-bg);
@@ -441,6 +465,7 @@ body {
     margin-bottom: 0;
     line-height: 1.6;
 }
+
 /* LEGAL CONTAINER (IMPRESSUM & DATENSCHUTZ) */
 .legal-box {
     background: var(--card-bg);
@@ -479,23 +504,71 @@ hr {
     background: var(--border-gold);
     margin: 40px 0;
 }
+
+/* FOOTER & BACK TO TOP */
 footer {
     text-align: center;
     font-size: 0.85rem;
     color: var(--text-muted);
-    margin-top: 40px;
+    margin-top: 30px;
     padding-bottom: 20px;
 }
-/* RESPONSIVE DESIGN */
+.scroll-top-wrapper {
+    text-align: center;
+    margin-top: 25px;
+}
+.btn-scroll-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-gold);
+    border-radius: 25px;
+    color: var(--gold-champagne);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.btn-scroll-top:hover {
+    background: var(--gold-gradient);
+    color: #000000;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE DESIGN (SMARTPHONE-OPTIMIERUNG) */
 @media (max-width: 768px) {
     .header-nav {
         flex-direction: column;
         gap: 15px;
         border-radius: 25px;
+        padding: 18px 20px;
+    }
+    .header-brand-box {
+        width: 100%;
+        justify-content: space-between;
     }
     .nav-links {
-        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    .nav-text-group {
+        width: 100%;
         justify-content: center;
+        gap: 20px;
+    }
+    .nav-btn-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .btn-header-cta {
+        width: 100%;
+        box-sizing: border-box;
     }
     .dev-profile {
         flex-direction: column;
@@ -517,22 +590,30 @@ footer {
 </style>
 </head>
 <body>
-<div class="wrapper">
-    <!-- NAVIGATION (Entwickler & FAQ links | Apps & Für Unternehmen rechts) -->
+<div class="wrapper" id="top">
+    <!-- NAVIGATION (Auf dem Smartphone mit perfekter 3-Ebenen-Aufteilung) -->
     <header class="header-nav">
-        <a href="#" class="brand-text">Aura Applications</a>
-        <nav class="nav-links">
-            <a href="#entwickler" data-i18n="nav_dev">Über den Entwickler</a>
-            <a href="#faq" data-i18n="nav_faq">FAQ</a>
-            <a href="#apps" data-i18n="nav_apps" class="btn-header-cta">Apps entdecken</a>
-            <a href="unternehmen.html" data-i18n="nav_b2b" class="btn-header-cta">Für Unternehmen</a>
-            <!-- SPRACHAUSWAHL (Ohne jegliche Artefakte) -->
+        <!-- Ebene 1: Logo links, Sprachumwandler rechts daneben -->
+        <div class="header-brand-box">
+            <a href="#" class="brand-text">Aura Applications</a>
             <select class="lang-select" aria-label="Sprache wählen" onchange="changeLanguage(this.value)">
                 <option value="de" selected>DE</option>
                 <option value="en">EN</option>
                 <option value="es">ES</option>
                 <option value="fr">FR</option>
             </select>
+        </div>
+        <nav class="nav-links">
+            <!-- Ebene 2: Über den Entwickler & FAQ nebeneinander -->
+            <div class="nav-text-group">
+                <a href="#entwickler" data-i18n="nav_dev">Über den Entwickler</a>
+                <a href="#faq" data-i18n="nav_faq">FAQ</a>
+            </div>
+            <!-- Ebene 3: Apps entdecken & Für Unternehmen übereinander -->
+            <div class="nav-btn-group">
+                <a href="#apps" data-i18n="nav_apps" class="btn-header-cta">Apps entdecken</a>
+                <a href="unternehmen.html" data-i18n="nav_b2b" class="btn-header-cta">Für Unternehmen</a>
+            </div>
         </nav>
     </header>
 
@@ -758,12 +839,19 @@ footer {
             Sofern Du Dich für den Kauf einer kostenpflichtigen Erweiterung (z. B. Lifetime Pass) entscheidest, wird die Transaktion über den jeweiligen App Store (z. B. Google Play, Samsung Galaxy Store) und den Dienstleister RevenueCat zur Freischaltung der Funktion verifiziert. Hierbei werden anonymisierte Transaktions-IDs verarbeitet. Die Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Daten können an den Anbieter in die USA übertragen werden; RevenueCat ist unter dem EU-US Data Privacy Framework zertifiziert. Es werden keine Zahlungsdaten auf unseren Systemen gespeichert.<br>
             Datenschutzerklärung von RevenueCat: <a href="https://revenuecat.com" target="_blank" rel="noopener noreferrer">https://revenuecat.com</a></p>
             <h3>4. App-Berechtigungen</h3>
-            <p>Sollte eine Applikation Zugriff auf Hardware-Funktionen (z. B. Kamera für den PDF/QR-Scanner) anfordern, erfolgt dieser Zugriff ausschließlich zur unmittelbaren Ausführung der von Dir gestarteten Funktion. Es werden keine Audio- or Bilddaten extern gespeichert oder übertragen.</p>
+            <p>Sollte eine Applikation Zugriff auf Hardware-Funktionen (z. B. Kamera für den PDF/QR-Scanner) anfordern, erfolgt dieser Zugriff ausschließlich zur unmittelbaren Ausführung der von Dir gestarteten Funktion. Es werden keine Audio- oder Bilddaten extern gespeichert oder übertragen.</p>
             <h3>5. Deine Rechte</h3>
             <p>Du hast im Rahmen der geltenden gesetzlichen Bestimmungen (DSGVO) das Recht auf kostenfreie Auskunft über Deine verarbeiteten Daten sowie auf Berichtigung, Sperrung oder Löschung. Da wir keine personenbezogenen Inhaltsdaten auf externen Servern speichern, kannst Du lokal gespeicherte App-Daten jederzeit selbst durch das Löschen des App-Caches oder die Deinstallation der App vollständig entfernen.</p>
             <h3>6. Kontaktaufnahme per E-Mail oder Telefon</h3>
             <p>Wenn Du uns per E-Mail oder Telefon kontaktierst, wird Deine Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (z. B. Name, E-Mail-Adresse, Anliegen) zum Zwecke der Bearbeitung Deines Anliegens bei uns gespeichert und verarbeitet. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
         </section>
+
+        <!-- BACK TO TOP BUTTON -->
+        <div class="scroll-top-wrapper">
+            <a href="#top" class="btn-scroll-top">
+                <i class="fa-solid fa-arrow-up"></i> <span data-i18n="btn_scroll_top">Nach oben</span>
+            </a>
+        </div>
     </div>
 
     <footer>
@@ -779,6 +867,7 @@ const translations = {
         nav_dev: "Über den Entwickler",
         nav_faq: "FAQ",
         nav_b2b: "Für Unternehmen",
+        btn_scroll_top: "Nach oben",
         hero_badge: "Offizielle App-Manufaktur",
         hero_title_1: "Erstklassige Apps",
         hero_title_2: "für deinen Alltag.",
@@ -807,6 +896,7 @@ const translations = {
         nav_dev: "About Developer",
         nav_faq: "FAQ",
         nav_b2b: "For Business",
+        btn_scroll_top: "Back to top",
         hero_badge: "Official App Factory",
         hero_title_1: "First-class apps",
         hero_title_2: "for your everyday life.",
@@ -835,6 +925,7 @@ const translations = {
         nav_dev: "Sobre el autor",
         nav_faq: "FAQ",
         nav_b2b: "Para empresas",
+        btn_scroll_top: "Ir arriba",
         hero_badge: "Fábrica oficial de aplicaciones",
         hero_title_1: "Aplicaciones prémium",
         hero_title_2: "para tu día a día.",
@@ -863,6 +954,7 @@ const translations = {
         nav_dev: "À propos",
         nav_faq: "FAQ",
         nav_b2b: "Pour entreprises",
+        btn_scroll_top: "Haut de page",
         hero_badge: "Manufacture d'applications",
         hero_title_1: "Applications d'exception",
         hero_title_2: "pour votre quotidien.",
