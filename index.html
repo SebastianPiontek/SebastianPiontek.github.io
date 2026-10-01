@@ -64,7 +64,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-/* HEADER & NAVIGATION (Kein Sticky-Verhalten mehr, wandert nicht mehr mit) */
+/* HEADER & NAVIGATION */
 .header-nav {
     display: flex;
     justify-content: space-between;
@@ -89,7 +89,6 @@ body {
     position: relative;
     display: inline-block;
 }
-/* Voller goldener Unterstrich über die gesamte Textbreite */
 .brand-text::after {
     content: '';
     position: absolute;
@@ -391,22 +390,6 @@ body {
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
-/* B2B / UNTERNEHMEN SECTION */
-.b2b-section {
-    background: var(--card-bg);
-    border: 1px solid var(--border-gold);
-    border-radius: 24px;
-    padding: 35px;
-    margin: 50px 0;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-}
-.b2b-section h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--gold-champagne);
-    font-size: 1.6rem;
-    margin-top: 0;
-}
 /* FAQ AKKORDEON SECTION */
 .faq-box {
     background: var(--card-bg);
@@ -535,23 +518,22 @@ footer {
 </head>
 <body>
 <div class="wrapper">
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION (Entwickler & FAQ links | Apps & Für Unternehmen rechts) -->
     <header class="header-nav">
         <a href="#" class="brand-text">Aura Applications</a>
         <nav class="nav-links">
-            <a href="#apps" data-i18n="nav_apps" class="btn-header-cta">Apps entdecken</a>
-            <a href="#b2b" data-i18n="nav_b2b" class="btn-header-cta">Für Unternehmen</a>
             <a href="#entwickler" data-i18n="nav_dev">Über den Entwickler</a>
             <a href="#faq" data-i18n="nav_faq">FAQ</a>
-            <!-- NATIVE SPRACHAUSWAHL -->
+            <a href="#apps" data-i18n="nav_apps" class="btn-header-cta">Apps entdecken</a>
+            <a href="unternehmen.html" data-i18n="nav_b2b" class="btn-header-cta">Für Unternehmen</a>
+            <!-- SPRACHAUSWAHL (Ohne jegliche Artefakte) -->
             <select class="lang-select" aria-label="Sprache wählen" onchange="changeLanguage(this.value)">
                 <option value="de" selected>DE</option>
                 <option value="en">EN</option>
                 <option value="es">ES</option>
                 <option value="fr">FR</option>
             </select>
-        <
-av>
+        </nav>
     </header>
 
     <!-- HERO SECTION -->
@@ -697,13 +679,6 @@ av>
         </div>
     </section>
 
-    <!-- B2B / UNTERNEHMEN SECTION -->
-    <section id="b2b" class="b2b-section">
-        <h3 data-i18n="b2b_title">Maßgeschneiderte Lösungen für Unternehmen</h3>
-        <p data-i18n="b2b_desc">Du suchst nach maßgeschneiderten, hochperformanten Android-Lösungen für dein Unternehmen oder benötigst angepasste App-Bausteine im edlen Design? Wir realisieren individuelle Kundenprojekte mit höchstem Qualitätsanspruch "Made in Germany".</p>
-        <a href="mailto:SebastianPiontek79@gmail.com" class="btn-header-cta" style="display: inline-block; margin-top: 15px;" data-i18n="b2b_cta">Unverbindlich anfragen →</a>
-    </section>
-
     <!-- FAQ AKKORDEON SECTION -->
     <section class="faq-box" id="faq">
         <h2 class="section-title" data-i18n="faq_title">Hinter den Kulissen (FAQ)</h2>
@@ -825,9 +800,6 @@ const translations = {
         app1_desc: "Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.",
         app2_desc: "Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.",
         app3_desc: "Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.",
-        b2b_title: "Maßgeschneiderte Lösungen für Unternehmen",
-        b2b_desc: "Du suchst nach maßgeschneiderten, hochperformanten Android-Lösungen für dein Unternehmen oder benötigst angepasste App-Bausteine im edlen Design? Wir realisieren individuelle Kundenprojekte mit höchstem Qualitätsanspruch \"Made in Germany\".",
-        b2b_cta: "Unverbindlich anfragen →",
         faq_title: "Hinter den Kulissen (FAQ)"
     },
     en: {
@@ -856,9 +828,6 @@ const translations = {
         app1_desc: "The elegant calculator for your daily needs. Guarantees accurate calculations, discount tools, and budget control.",
         app2_desc: "Your pocket office. Scan documents, trim neatly, sign directly on screen, and send immediately.",
         app3_desc: "Blazing fast scanner without clutter. Reads links, connects to Wi-Fi, or compares prices with one click.",
-        b2b_title: "Tailored Solutions for Business",
-        b2b_desc: "Looking for customized, high-performance Android solutions or sleek app components? We build tailor-made B2B projects with top engineering quality.",
-        b2b_cta: "Inquire Now →",
         faq_title: "Behind the Scenes (FAQ)"
     },
     es: {
@@ -887,9 +856,6 @@ const translations = {
         app1_desc: "La elegante calculadora para tu día a día. Garantiza precisión, ayuda con descuentos y controla tu presupuesto.",
         app2_desc: "Tu oficina móvil. Escanea documentos, recorta, firma en pantalla y envía al instante.",
         app3_desc: "Escáner ultrarrápido sin complicaciones. Lee enlaces, conecta al Wi-Fi o compara precios.",
-        b2b_title: "Soluciones a medida para empresas",
-        b2b_desc: "¿Buscas soluciones Android personalizadas o componentes de alto nivel? Desarrollamos proyectos B2B con la máxima calidad.",
-        b2b_cta: "Consultar ahora →",
         faq_title: "Preguntas frecuentes (FAQ)"
     },
     fr: {
@@ -918,9 +884,6 @@ const translations = {
         app1_desc: "La calculatrice élégante du quotidien. Précision garantie, calcul de réductions et suivi du budget.",
         app2_desc: "Votre bureau mobile. Numérisez, découpez, signez à l'écran et envoyez vos documents instantanément.",
         app3_desc: "Scanner rapide sans superflu. Lit les liens, connecte au Wi-Fi et compare les prix.",
-        b2b_title: "Solutions sur mesure pour entreprises",
-        b2b_desc: "Vous recherchez des applications Android sur mesure pour votre entreprise? Nous réalisons vos projets B2B avec rigueur et précision.",
-        b2b_cta: "Contactez-nous →",
         faq_title: "Foire aux questions (FAQ)"
     }
 };
