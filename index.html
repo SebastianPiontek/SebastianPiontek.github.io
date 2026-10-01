@@ -64,20 +64,17 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-/* HEADER & NAVIGATION */
+/* HEADER & NAVIGATION (Kein Sticky-Verhalten mehr, wandert nicht mehr mit) */
 .header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 30px;
-    background: #0a0a0a; /* Solider Hintergrund, damit nichts durchscheint */
+    background: #0a0a0a;
     border: 1px solid var(--border-gold);
     border-radius: 50px;
     margin-bottom: 40px;
     box-shadow: 0 4px 25px rgba(212, 175, 55, 0.1);
-    position: sticky;
-    top: 15px;
-    z-index: 100;
 }
 .brand-text {
     font-family: 'Montserrat', sans-serif;
@@ -92,20 +89,20 @@ body {
     position: relative;
     display: inline-block;
 }
-/* Kurzer, schmaler goldener Unterstrich für Aura Applications */
+/* Voller goldener Unterstrich über die gesamte Textbreite */
 .brand-text::after {
     content: '';
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 35px;
+    width: 100%;
     height: 2px;
     background: var(--gold-gradient);
     border-radius: 2px;
 }
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
 }
 .nav-links a {
@@ -543,17 +540,18 @@ footer {
         <a href="#" class="brand-text">Aura Applications</a>
         <nav class="nav-links">
             <a href="#apps" data-i18n="nav_apps" class="btn-header-cta">Apps entdecken</a>
+            <a href="#b2b" data-i18n="nav_b2b" class="btn-header-cta">Für Unternehmen</a>
             <a href="#entwickler" data-i18n="nav_dev">Über den Entwickler</a>
             <a href="#faq" data-i18n="nav_faq">FAQ</a>
-            <a href="#b2b" data-i18n="nav_b2b" class="btn-header-cta">Für Unternehmen</a>
-            <!-- NATIVE SPRACHAUSWAHL (DE, EN, ES, FR - IT, PT, PL gelöscht) -->
+            <!-- NATIVE SPRACHAUSWAHL -->
             <select class="lang-select" aria-label="Sprache wählen" onchange="changeLanguage(this.value)">
                 <option value="de" selected>DE</option>
                 <option value="en">EN</option>
                 <option value="es">ES</option>
                 <option value="fr">FR</option>
             </select>
-        </nav>
+        <
+av>
     </header>
 
     <!-- HERO SECTION -->
