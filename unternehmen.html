@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google" content="notranslate">
 <!-- SEO & Metadata -->
-<meta name="description" content="Aura Applications Manufaktur für schlanke, offline-fähige Android-Apps & moderne Webauftritte im edlen AMOLED-Gold-Design. 100% Datenschutz ohne Tracking.">
-<meta property="og:title" content="Aura Applications App-Manufaktur & Webdesign">
-<meta property="og:description" content="Erstklassige Android-Apps & Webauftritte im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
+<meta name="description" content="Aura Applications B2B
+Maßgeschneiderte Webseiten & Apps für den Mittelstand. DSGVO-konform,
+blitzschnell, ausfallsicher & ohne teure Cloud-Abos.">
+<meta property="og:title" content="Aura Applications | Web & App-Entwicklung für Unternehmen">
+<meta property="og:description" content="Digitale Entlastung für Handwerk, Pflege, Kfz & Mittelstand. Transparente Festpreise ohne versteckte Kosten.">
 <meta property="og:image" content="https://sebastianpiontek.github.io/Bilder-Fotos/Aura%20Applications.png">
-<meta property="og:url" content="https://sebastianpiontek.github.io">
+<meta property="og:url" content="https://sebastianpiontek.github.io/unternehmen.html">
 <meta property="og:type" content="website">
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="Bilder-Fotos/Aura Applications.png">
@@ -18,1050 +20,1141 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<title>Aura Applications | Erstklassige Apps für deinen Alltag</title>
+<title>Aura Applications | Digitalisierung & Webdesign für Unternehmen</title>
 <style>
 :root {
-  --bg-black: #050505;
-  --card-bg: rgba(18, 18, 18, 0.95);
-  --gold-champagne: #F3E5AB;
-  --gold-primary: #D4AF37;
-  --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-  --gold-gradient-animated: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
-  --text-body: #E0E0E0;
-  --text-muted: #B0B0B0;
-  --border-gold: rgba(212, 175, 55, 0.35);
-  --border-gold-hover: rgba(212, 175, 55, 0.8);
-  --radius: 18px;
+  --bg-black: #050505;
+  --card-bg: rgba(18, 18, 18, 0.95);
+  --gold-champagne: #F3E5AB;
+  --gold-primary: #D4AF37;
+  --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  --gold-gradient-animated: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C, #BF953F);
+  --text-body: #E0E0E0;
+  --text-muted: #B0B0B0;
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-gold-hover: rgba(212, 175, 55, 0.8);
+  --radius: 18px;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-  background-color: var(--bg-black);
-  color: var(--text-body);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  overflow-x: hidden;
+  background-color: var(--bg-black);
+  color: var(--text-body);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 /* KEYFRAMES FOR ANIMATIONS */
 @keyframes goldFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 /* CUSTOM SCROLLBAR */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-black);
+  background: var(--bg-black);
 }
 ::-webkit-scrollbar-thumb {
-  background: #332a15;
-  border-radius: 4px;
-  border: 1px solid var(--border-gold);
+  background: #332a15;
+  border-radius: 4px;
+  border: 1px solid var(--border-gold);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-primary);
+  background: var(--gold-primary);
 }
 .wrapper {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
 }
-/* HEADER & NAVIGATION */
+/* NORMAL HEADER */
 .header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 30px;
-  background: #0a0a0a;
-  border: 1px solid var(--border-gold);
-  border-radius: 50px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 25px rgba(212, 175, 55, 0.1);
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid var(--border-gold);
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
 }
 .header-brand-box {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .brand-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
 }
 .brand-text::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--gold-gradient);
-  border-radius: 2px;
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold-gradient);
+  border-radius: 2px;
 }
 .nav-links {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.nav-text-group {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
 .nav-links a {
-  color: var(--gold-champagne);
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: var(--gold-champagne);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 .nav-links a:hover {
-  color: var(--gold-primary);
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-}
-.nav-btn-group {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  color: var(--gold-primary);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
 .lang-select {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--gold-champagne);
-  border: 1px solid var(--border-gold);
-  border-radius: 12px;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--gold-champagne);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
 }
 .lang-select option {
-  background: #121212;
-  color: #FFFFFF;
+  background: #121212;
+  color: #FFFFFF;
 }
 .btn-header-cta {
-  position: relative;
-  overflow: hidden;
-  padding: 8px 18px;
-  background: var(--gold-gradient);
-  color: #000000 !important;
-  font-weight: 700 !important;
-  border-radius: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-shadow: none !important;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  padding: 8px 18px;
+  background: var(--gold-gradient);
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border-radius: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-shadow: none !important;
+  display: inline-block;
+  text-align: center;
 }
 .btn-header-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.4);
 }
-/* HERO SECTION */
+/* HERO B2B SECTION */
 .hero {
-  padding: 20px 20px 40px 20px;
-  text-align: center;
-}
-.hero-logo-emblem {
-  width: 170px;
-  height: 170px;
-  margin: 0 auto 20px auto;
-  display: block;
-  border-radius: 24px;
-  border: 2px solid var(--border-gold);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
-  transition: transform 0.4s ease;
-  object-fit: cover;
-  background-color: #000;
-}
-.hero-logo-emblem:hover {
-  transform: scale(1.03);
+  padding: 20px 20px 40px 20px;
+  text-align: center;
 }
 .badge-hero {
-  display: inline-block;
-  padding: 6px 18px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid var(--border-gold);
-  border-radius: 20px;
-  color: var(--gold-champagne);
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  color: var(--gold-champagne);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 .hero h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+  font-weight: 800;
+  line-height: 1.25;
 }
 .gold-animated {
-  background: var(--gold-gradient-animated);
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: goldFlow 7s ease infinite;
+  background: var(--gold-gradient-animated);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldFlow 7s ease infinite;
 }
 .text-champagne {
-  color: var(--gold-champagne);
+  color: var(--gold-champagne);
 }
 .hero p {
-  max-width: 680px;
-  margin: 0 auto 25px auto;
-  color: var(--text-body);
-  font-size: 1.05rem;
+  max-width: 750px;
+  margin: 0 auto 30px auto;
+  color: var(--text-body);
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
-.guarantee-box {
-  display: inline-flex;
-  gap: 20px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-gold);
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  color: var(--gold-champagne);
-  flex-wrap: wrap;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+/* 3-SCHRITTE ABLAUF */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 30px 0 50px 0;
 }
-/* USP HIGHLIGHTS GRID MIT GLANZ-EFFEKT (SHIMMER SWEEP) & GOLD-GRADIENT */
-.usp-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin: 50px 0;
+.step-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius);
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
-.usp-card {
-  position: relative;
-  overflow: hidden;
-  background: var(--card-bg);
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius);
-  padding: 22px;
-  text-align: center;
-  transition: border-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--gold-gradient);
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
-.usp-card::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.12) 50%, transparent 70%);
-  transform: rotate(25deg) translateX(-100%);
-  transition: transform 0.8s ease;
+.step-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gold-champagne);
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
 }
-.usp-card:hover {
-  border-color: var(--border-gold-hover);
-  transform: translateY(-3px);
+.step-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
-.usp-card:hover::after {
-  transform: rotate(25deg) translateX(100%);
+/* ZWEI SÄULEN SECTION */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 50px 0;
 }
-.usp-card .icon {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--gold-primary);
+.pillar-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
 }
-.usp-card h4 {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0 0 8px 0;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.pillar-badge {
+  align-self: flex-start;
+  padding: 4px 12px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  color: var(--gold-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
-.usp-card p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+.pillar-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gold-champagne);
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
 }
-/* DEVELOPER PROFILE SECTION MIT SHIMMER & LIFT-EFFEKT */
-.dev-profile {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  gap: 35px;
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-gold);
-  border-radius: 24px;
-  padding: 35px;
-  margin: 50px 0;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
+.pillar-card p {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
 }
-.dev-profile::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.12) 50%, transparent 70%);
-  transform: rotate(25deg) translateX(-100%);
-  transition: transform 0.8s ease;
-  pointer-events: none;
+.pillar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.dev-profile:hover {
-  transform: translateY(-3px);
-  border-color: var(--border-gold-hover);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+.pillar-list li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.dev-profile:hover::after {
-  transform: rotate(25deg) translateX(100%);
+.pillar-list li i {
+  color: var(--gold-primary);
 }
-.dev-avatar-box {
-  text-align: center;
-  flex-shrink: 0;
-}
-.dev-avatar {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 2px solid var(--gold-primary);
-  object-fit: cover;
-  margin-bottom: 12px;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
-}
-.dev-name {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  font-size: 1.15rem;
-  color: #FFFFFF;
-}
-.dev-role {
-  font-size: 0.82rem;
-  color: var(--gold-primary);
-  font-weight: 600;
-}
-.badge-group {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-}
-.dev-badge {
-  font-size: 0.78rem;
-  padding: 4px 12px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid var(--border-gold);
-  border-radius: 15px;
-  color: var(--gold-champagne);
-}
-.dev-text h3 {
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 5px;
-  font-size: 1.4rem;
-  color: var(--gold-champagne);
-}
-.dev-text p {
-  color: var(--text-body);
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-}
-/* SEKTIONS-ÜBERSCHRIFTEN */
+/* BRANCHEN GRID */
 .section-title {
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 35px;
-  color: var(--gold-champagne);
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 15px;
+  color: var(--gold-champagne);
+  font-weight: 700;
 }
-/* APP SHOWCASE GRID */
-.app-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+  font-size: 0.95rem;
 }
-.app-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-gold);
-  border-radius: 24px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
 }
-.app-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--border-gold-hover);
+.branch-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
-.app-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
+.branch-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-gold-hover);
 }
-.app-header img {
-  width: 65px;
-  height: 65px;
-  border-radius: 16px;
-  border: 1px solid var(--border-gold);
-  object-fit: cover;
+.branch-icon {
+  font-size: 1.8rem;
+  color: var(--gold-primary);
+  margin-bottom: 12px;
+  display: block;
 }
-.app-header h3 {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  font-size: 1.3rem;
-  color: var(--gold-primary);
+.branch-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gold-champagne);
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
 }
-.app-card p {
-  color: var(--text-body);
-  font-size: 0.92rem;
-  flex-grow: 1;
-  margin-bottom: 25px;
+.branch-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
-.store-buttons-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+/* VERGLEICHSTABELLE */
+.comparison-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 35px;
+  margin: 60px 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  overflow-x: auto;
 }
-.btn-store {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-gold);
-  border-radius: 12px;
-  color: var(--text-body);
-  text-decoration: none;
-  font-size: 0.8rem;
-  transition: all 0.2s ease;
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
 }
-.btn-store:hover {
-  background: rgba(212, 175, 55, 0.15);
-  border-color: var(--gold-primary);
-  color: #FFFFFF;
+.comparison-table th,
+.comparison-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  font-size: 0.9rem;
 }
-.btn-store.primary-store {
-  grid-column: span 2;
-  background: var(--gold-gradient);
-  color: #000000;
-  font-weight: 700;
-  border: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
+.comparison-table th {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gold-primary);
+  font-size: 1.05rem;
 }
-.btn-store.primary-store::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
-  transform: rotate(25deg) translateX(-100%);
-  transition: transform 0.6s ease;
+.comparison-table th:nth-child(2) {
+  color: #FF6B6B;
 }
-.btn-store.primary-store:hover::after {
-  transform: rotate(25deg) translateX(100%);
+.comparison-table th:nth-child(3) {
+  color: var(--gold-champagne);
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 12px 12px 0 0;
 }
-/* FAQ AKKORDEON SECTION */
+.comparison-table td:nth-child(3) {
+  background: rgba(212, 175, 55, 0.05);
+  font-weight: 600;
+  color: #FFFFFF;
+}
+/* KATEGORIE PREIS-STRUKTUR */
+.pricing-category-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.35rem;
+  color: var(--gold-champagne);
+  margin: 35px 0 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-gold);
+  padding-bottom: 8px;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+.pricing-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+.pricing-card.featured {
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
+}
+.card-badge {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-champagne);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pricing-card.featured .card-badge {
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold-gradient);
+  color: #000000;
+  font-weight: 800;
+}
+.pricing-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gold-champagne);
+  font-size: 1.35rem;
+  margin: 10px 0 6px 0;
+}
+.price-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  margin-bottom: 10px;
+}
+.price-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: -6px;
+  margin-bottom: 15px;
+  display: block;
+}
+.card-explanation {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border-radius: 12px;
+  border-left: 3px solid var(--gold-primary);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+.pricing-card ul li {
+  font-size: 0.86rem;
+  color: var(--text-body);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.pricing-card ul li i {
+  color: var(--gold-primary);
+  margin-top: 3px;
+}
+/* B2B EXPRESS FORMULAR */
+.form-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 40px;
+  margin: 60px 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-group.full-width {
+  grid-column: span 2;
+}
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gold-champagne);
+}
+.form-control {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+}
+select.form-control option {
+  background: #121212;
+  color: #FFFFFF;
+}
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+.btn-submit-b2b {
+  width: 100%;
+  padding: 16px;
+  background: var(--gold-gradient);
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+.btn-submit-b2b:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+}
+.trust-anchor {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--gold-champagne);
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+/* FAQ AKKORDEON B2B */
 .faq-box {
-  background: var(--card-bg);
-  border: 1px solid var(--border-gold);
-  border-radius: 24px;
-  padding: 35px;
-  margin: 50px 0;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 35px;
+  margin: 50px 0;
 }
 .faq-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-gold);
-  border-radius: 14px;
-  margin-bottom: 12px;
-  padding: 16px 20px;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-.faq-item[open] {
-  background: rgba(212, 175, 55, 0.05);
-  border-color: var(--gold-primary);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-gold);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  padding: 16px 20px;
 }
 .faq-summary {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: var(--gold-champagne);
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--gold-champagne);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.faq-summary::-webkit-details-marker {
-  display: none;
-}
+.faq-summary::-webkit-details-marker { display: none; }
 .faq-summary::after {
-  content: '+';
-  font-size: 1.1rem;
-  color: var(--gold-primary);
-  transition: transform 0.3s ease;
+  content: '+';
+  font-size: 1.1rem;
+  color: var(--gold-primary);
 }
-.faq-item[open] .faq-summary::after {
-  transform: rotate(45deg);
-}
+.faq-item[open] .faq-summary::after { transform: rotate(45deg); }
 .faq-item p {
-  color: var(--text-body);
-  font-size: 0.92rem;
-  margin-top: 12px;
-  margin-bottom: 0;
-  line-height: 1.6;
+  color: var(--text-body);
+  font-size: 0.92rem;
+  margin-top: 12px;
+  margin-bottom: 0;
 }
-/* LEGAL CONTAINER (IMPRESSUM & DATENSCHUTZ) */
-.legal-box {
-  background: var(--card-bg);
-  border: 1px solid var(--border-gold);
-  border-radius: 20px;
-  padding: 35px;
-  margin-top: 50px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+/* LEGAL SECTIONS & FOOTER */
+.legal-embedded-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 40px;
+  margin: 60px 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
 }
-.legal-box h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--gold-champagne);
-  font-size: 1.4rem;
-  margin-top: 0;
+.legal-embedded-section h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gold-champagne);
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-gold);
+  padding-bottom: 10px;
 }
-.legal-box h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--gold-primary);
-  font-size: 1.05rem;
-  margin-top: 20px;
+.legal-embedded-section h4 {
+  color: var(--gold-primary);
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
-.legal-box p, .legal-box li {
-  font-size: 0.88rem;
-  color: var(--text-body);
+.legal-embedded-section p, .legal-embedded-section li {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.6;
 }
-.legal-box a {
-  color: var(--gold-primary);
-  text-decoration: none;
-}
-.legal-box a:hover {
-  text-decoration: underline;
-}
-hr {
-  border: 0;
-  height: 1px;
-  background: var(--border-gold);
-  margin: 40px 0;
-}
-/* FOOTER & BACK TO TOP */
 footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 30px;
-  padding-bottom: 20px;
-}
-.scroll-top-wrapper {
-  text-align: center;
-  margin-top: 25px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 40px;
+  padding-bottom: 25px;
 }
 .btn-scroll-top {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-gold);
-  border-radius: 25px;
-  color: var(--gold-champagne);
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 25px;
+  color: var(--gold-champagne);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 .btn-scroll-top:hover {
-  background: var(--gold-gradient);
-  color: #000000;
-  border-color: transparent;
-  transform: translateY(-2px);
+  background: var(--gold-gradient);
+  color: #000000;
 }
-/* RESPONSIVE DESIGN (SMARTPHONE-OPTIMIERUNG) */
+.footer-legal-links {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.footer-legal-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.2s ease;
+}
+.footer-legal-links a:hover {
+  color: var(--gold-champagne);
+}
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .header-nav {
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 25px;
-    padding: 18px 20px;
-  }
-  .header-brand-box {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-  }
-  .nav-text-group {
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-  }
-  .nav-btn-group {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-  .btn-header-cta {
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .dev-profile {
-    flex-direction: column;
-    text-align: center;
-  }
-  .badge-group {
-    justify-content: center;
-  }
-  .store-buttons-grid {
-    grid-template-columns: 1fr;
-  }
-  .btn-store.primary-store {
-    grid-column: span 1;
-  }
-  .hero h1 {
-    font-size: 2.1rem;
-  }
+  .header-nav {
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 25px;
+    padding: 18px 20px;
+  }
+  .header-brand-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
 </style>
 </head>
 <body>
 <div class="wrapper" id="top">
-<!-- NAVIGATION -->
+<!-- HEADER -->
 <header class="header-nav">
-  <div class="header-brand-box">
-    <a href="#" class="brand-text">Aura Applications</a>
-    <select class="lang-select" aria-label="Sprache wählen" onchange="changeLanguage(this.value)">
-      <option value="de" selected>DE</option>
-      <option value="en">EN</option>
-      <option value="es">ES</option>
-      <option value="fr">FR</option>
-    </select>
-  </div>
-  <nav class="nav-links">
-    <div class="nav-text-group">
-      <a href="#entwickler" data-i18n="nav dev">Über den Entwickler</a>
-      <a href="#faq" data-i18n="nav_faq">FAQ</a>
-    </div>
-    <div class="nav-btn-group">
-      <a href="#apps" data-i18n="nav_apps" class="btn-header-cta">Apps entdecken</a>
-      <a href="unternehmen.html" data-i18n="nav_b2b" class="btn-header-cta">Für Unternehmen</a>
-    </div>
-  </nav>
+<div class="header-brand-box">
+<a href="index.html" class="brand-text">Aura Applications</a>
+<select class="lang-select" aria-label="Sprache wählen" onchange="changeLanguage(this.value)">
+<option value="de" selected>DE</option>
+<option value="en">EN</option>
+<option value="es">ES</option>
+<option value="fr">FR</option>
+</select>
+</div>
+<nav class="nav-links">
+<a href="index.html" data-i18n="nav home">Hauptseite</a>
+<a href="#faq">FAQ</a>
+<a href="#anfrage" class="btn-header-cta" data-i18n="nav cta">Projekt anfragen</a>
+</nav>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO B2B SECTION ("Ich"-Branding) -->
 <section class="hero">
-  <img src="Bilder-Fotos/Aura Applications.png" alt="Aura Applications Marken-Logo" class="hero-logo-emblem">
-  <div class="badge-hero" data-i18n="hero badge">Offizielle App-Manufaktur</div>
-  <h1><span class="gold-animated" data-i18n="hero title 1">Meine erstklassigen Apps</span> <span class="text-champagne" data-i18n="hero title 2">für deinen Alltag.</span></h1>
-  <p data-i18n="hero sub">Entdecke meine schlanken, hochpräzisen Android-Applikationen im edlen AMOLED-Gold-Design. 100% offline-fähig, datenschutzsicher und ohne lästige Abofallen.</p>
-  <div class="guarantee-box">
-    <span data-i18n="feat 1">Höchste Präzision</span>
-    <span data-i18n="feat 2">Null Tracking & Werbung</span>
-    <span data-i18n="feat 3">Abo-frei & Fair</span>
-  </div>
+<div class="badge-hero" data-i18n="hero badge">B2B Digitalisierung & Webdesign</div>
+<h1>
+<span class="gold-animated" data-i18n="hero_title 1">Maßgeschneiderte Web & App-Entwicklung</span><br>
+<span class="text-champagne" data-i18n="hero_title 2">für den Mittelstand.</span>
+</h1>
+<p data-i18n="hero sub">Ausfallsicher, DSGVO-konform und ohne teure Cloud-Abos. Ich baue hochperformante Websites für die Neukundengewinnung und intuitive Betriebssysteme für Deinen Alltag.</p>
 </section>
 
-<!-- USP HIGHLIGHTS MIT GOLD-GRADIENT & SHIMMER -->
-<div class="usp-grid">
-  <div class="usp-card">
-    <span class="icon"><i class="fa-solid fa-bolt"></i></span>
-    <h4 data-i18n="usp_1 title">Blitzschnell & Leicht</h4>
-    <p data-i18n="usp_1 desc">Minimale App-Größe, startet ohne Verzögerung und schont deinen Akku.</p>
-  </div>
-  <div class="usp-card">
-    <span class="icon"><i class="fa-solid fa-shield-halved"></i></span>
-    <h4 data-i18n="usp 2 title">100% On-Device</h4>
-    <p data-i18n="usp 2_desc">Deine Daten verbleiben ausschließlich lokal auf deinem Smartphone.</p>
-  </div>
-  <div class="usp-card">
-    <span class="icon"><i class="fa-solid fa-gem"></i></span>
-    <h4 data-i18n="usp 3 title">AMOLED Gold Design</h4>
-    <p data-i18n="usp 3 desc">Echtschwarz kombiniert mit edlen Metallic- und Gold-Akzenten.</p>
-  </div>
-  <div class="usp-card">
-    <span class="icon"><i class="fa-solid fa-store"></i></span>
-    <h4 data-i18n="usp 4 title">Freiheit bei der Bezugsquelle</h4>
-    <p data-i18n="usp 4 desc">Erhältlich auf Google Play, Samsung, Xiaomi, Aptoide & Uptodown.</p>
-  </div>
+<!-- 3-SCHRITTE ABLAUF ("Ich"-Branding) -->
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-number">1</div>
+<h3 data-i18n="step1 title">Express-Anfrage</h3>
+<p data-i18n="step1_desc">Sende mir Deine Anforderungen über das kurze B2B-Formular. Dauert nur 2 Minuten.</p>
+</div>
+<div class="step-card">
+<div class="step-number">2</div>
+<h3 data-i18n="step2_title">Kostenloses Erstgespräch</h3>
+<p data-i18n="step2 desc">Ich bespreche Dein Projekt auf Augenhöhe und Du erhältst ein klares Festpreis-Angebot.</p>
+</div>
+<div class="step-card">
+<div class="step-number">3</div>
+<h3 data-i18n="step3 title">Schnelle Umsetzung</h3>
+<p data-i18n="step3 desc">Deine maßgeschneiderte Lösung geht ohne Stress und ohne Ausfallzeiten im Betrieb live.</p>
+</div>
 </div>
 
-<!-- DEVELOPER PROFILE SECTION MIT SHIMMER-EFFEKT -->
-<section class="dev-profile" id="entwickler">
-  <div class="dev-avatar-box">
-    <img src="Bilder-Fotos/sebastian.png" alt="Sebastian Piontek Gründer & Entwickler" class="dev-avatar">
-    <h4 class="dev-name">Sebastian Piontek</h4>
-    <span class="dev-role" data-i18n="dev role">Gründer, App- & Web-Entwickler</span>
-  </div>
-  <div class="dev-text">
-    <div class="badge-group">
-      <span class="dev-badge">100% Inhabergeführt</span>
-      <span class="dev-badge">App & Web aus einer Hand</span>
-      <span class="dev-badge">Echt, lokal & unabhängig</span>
-    </div>
-    <h3 data-i18n="dev headline">Software & Webdesign ohne Datenhunger</h3>
-    <p data-i18n="dev pl">Guten Tag, mein Name ist <strong>Sebastian Piontek</strong>. Ich entwickle meine Apps und modernen Webauftritte persönlich, fair bepreist, verlässlich und im edlen Design.</p>
-    <p data-i18n="dev p2">Ob schlanke Smartphone-Tools oder maßgeschneiderte Systeme für Selbstständige und Unternehmen: Der Schutz deiner Privatsphäre steht an erster Stelle. Ohne Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes Handwerk aus einer Hand.</p>
-  </div>
+<!-- DIE ZWEI SÄULEN -->
+<section class="pillars-grid">
+<div class="pillar-card">
+<span class="pillar-badge" data-i18n="pillar1 badge">Säule A: Betrieb & Prozesse</span>
+<h2 data-i18n="pillar1_title">Inhouse-Apps & Offline-Systeme</h2>
+<p data-i18n="pillar1_sub">Schlanke Smartphone & Tablet-Lösungen für Deine Mitarbeiter im Feld oder in der Werkstatt.</p>
+<ul class="pillar-list">
+<li><i class="fa-solid fa-check"></i> 100% Offline-fähig – funktioniert auch im Funkloch</li>
+<li><i class="fa-solid fa-check"></i> Keine Fremd-Server & volle Datenkontrolle</li>
+<li><i class="fa-solid fa-check"></i> Einfachste Bedienung ohne Schulungsaufwand</li>
+</ul>
+</div>
+<div class="pillar-card">
+<span class="pillar-badge" data-i18n="pillar2 badge">Säule B: Neukunden & Markt</span>
+<h2 data-i18n="pillar2_title">High-Performance Webauftritte</h2>
+<p data-i18n="pillar2 sub">Moderne, blitzschnelle Firmen-Websites im AMOLED-Gold-Stil, die Besucher zu Kunden machen.</p>
+<ul class="pillar-list">
+<li><i class="fa-solid fa-check"></i> Maximale Ladegeschwindigkeit (PageSpeed 95+)</li>
+<li><i class="fa-solid fa-check"></i> Rechtssicher & DSGVO-konform ohne Abmahnrisiko</li>
+<li><i class="fa-solid fa-check"></i> Perfekt optimiert für Mobilgeräte & Google</li>
+</ul>
+</div>
 </section>
 
-<!-- APP SHOWCASE -->
-<section id="apps">
-  <h2 class="section-title" data-i18n="apps title">Meine Applikationen</h2>
-  <div class="app-grid">
-    <!-- App 1: Aura Rechner Pro -->
-    <div class="app-card">
-      <div class="app-header">
-        <img src="Bilder-Fotos/Aura Rechner Pro.png" alt="Aura Rechner Pro Logo">
-        <h3>Aura Rechner Pro</h3>
-      </div>
-      <p data-i18n="app1 desc">Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.</p>
-      <div class="store-buttons-grid">
-        <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.calculator" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
-          Play Store <i class="fa-brands fa-google-play"></i> Google
-        </a>
-        <a href="samsungapps://ProductDetail/com.aurasolutions.calculator" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Samsung</span>
-        </a>
-        <a href="mimarket://details?id=com.aurasolutions.calculator" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Xiaomi</span>
-        </a>
-        <a href="https://aura-rechner-pro.de.aptoide.com" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Aptoide</span>
-        </a>
-        <a href="https://aura-rechner-pro.uptodown.com/android" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Uptodown</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- App 2: Aura PDF Scanner -->
-    <div class="app-card">
-      <div class="app-header">
-        <img src="Bilder-Fotos/Aura PDF Scanner.png" alt="Aura PDF Scanner Logo">
-        <h3>Aura PDF Scanner</h3>
-      </div>
-      <p data-i18n="app2 desc">Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.</p>
-      <div class="store-buttons-grid">
-        <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
-          Play Store <i class="fa-brands fa-google-play"></i> Google
-        </a>
-        <a href="samsungapps://ProductDetail/com.aurasolutions.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Samsung</span>
-        </a>
-        <a href="mimarket://details?id=com.aurasolutions.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Xiaomi</span>
-        </a>
-        <a href="https://aura-pdf-scanner.de.aptoide.com" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Aptoide</span>
-        </a>
-        <a href="https://aura-pdf-scanner.uptodown.com/android" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Uptodown</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- App 3: Aura QR Scanner -->
-    <div class="app-card">
-      <div class="app-header">
-        <img src="Bilder-Fotos/Aura Qr und Barcode Scanner.png" alt="Aura QR Scanner Logo">
-        <h3>Aura QR & Barcode Scanner</h3>
-      </div>
-      <p data-i18n="app3_desc">Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.</p>
-      <div class="store-buttons-grid">
-        <a href="https://play.google.com/store/apps/details?id=com.aurasolutions.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store primary-store">
-          Play Store <i class="fa-brands fa-google-play"></i> Google
-        </a>
-        <a href="samsungapps://ProductDetail/com.aurasolutions.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Samsung</span>
-        </a>
-        <a href="mimarket://details?id=com.aurasolutions.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Xiaomi</span>
-        </a>
-        <a href="https://aura-qr-scanner.de.aptoide.com" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Aptoide</span>
-        </a>
-        <a href="https://aura-qr-scanner.uptodown.com/android" target="_blank" rel="noopener noreferrer" class="btn-store">
-          <span>Uptodown</span>
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- BRANCHEN GRID ("Ich"-Branding & bereinigter Text) -->
+<section>
+<h2 class="section-title" data-i18n="branches title">Branchenlösungen aus der Praxis</h2>
+<p class="section-subtitle" data-i18n="branches_sub">Egal ob lokale Dienstleister, Handwerksbetriebe oder Praxen – ich kenne die digitalen Herausforderungen Deines Alltags.</p>
+<div class="branches-grid">
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-wrench"></i></span>
+<h4 data-i18n="b1 title">Kfz-Werkstätten</h4>
+<p data-i18n="b1_desc">Digitale Annahme-Protokolle, schnelle Schadens-Dokumentation & saubere Kunden-Websites.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-user-nurse"></i></span>
+<h4 data-i18n="b2 title">Ambulante Pflegedienste</h4>
+<p data-i18n="b2 desc">Offline-fähige Tourenhilfe, einfache Erfassungen & DSGVO-sichere Team-Kommunikation.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-hammer"></i></span>
+<h4 data-i18n="b3 title">Handwerksbetriebe</h4>
+<p data-i18n="b3 desc">Zeitersparnis bei Baustellen-Protokollen, digitale Unterschrift & moderne Web-Visitenkarten.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-dumbbell"></i></span>
+<h4 data-i18n="b4_title">Fitnessstudios & Clubs</h4>
+<p data-i18n="b4_desc">Mitglieder-Einstieg, Kursübersichten & blitzschnelle Probetermin-Formulare.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-apple-whole"></i></span>
+<h4 data-i18n="b5_title">Hofläden & Regionalläden</h4>
+<p data-i18n="b5 desc">Sortiments-Präsentation, Öffnungszeiten-Anzeige & direkte Kundenanfragen ohne Hürden.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-paw"></i></span>
+<h4 data-i18n="b6 title">Tierarztpraxen</h4>
+<p data-i18n="b6 desc">Termin-Anfragen, Notdienst-Hinweise & Vertrauen schaffender Online-Auftritt.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-briefcase"></i></span>
+<h4 data-i18n="b7 title">Dienstleister & Berater</h4>
+<p data-i18n="b7 desc">Gezieltes Lead-Formular, klare Leistungs-Architektur & seriöses Branding.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-house-chimney"></i></span>
+<h4 data-i18n="b8 title">Immobilienmakler</h4>
+<p data-i18n="b8_desc">Hochwertige Objekt-Präsentation, Exposé-Anforderung & exklusives Erscheinungsbild.</p>
+</div>
+<div class="branch-card">
+<span class="branch-icon"><i class="fa-solid fa-broom"></i></span>
+<h4 data-i18n="b9_title">Gebäudereiniger</h4>
+<p data-i18n="b9_desc">Einfache Objekt-Checklisten für Teams & transparente Angebot-Anfragen für Neukunden.</p>
+</div>
+</div>
 </section>
 
-<!-- FAQ AKKORDEON SECTION -->
+<!-- VERGLEICHSTABELLE -->
+<section class="comparison-box">
+<h2 class="section-title" data-i18n="comp_title">Warum Aura Applications?</h2>
+<table class="comparison-table">
+<thead>
+<tr>
+<th data-i18n="th kriterium">Kriterium</th>
+<th data-i18n="th agentur">Klassische Digitalagentur</th>
+<th data-i18n="th aura">Aura Applications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-i18n="td1 k">Kostenstruktur</td>
+<td data-i18n="td1_a">Teure Laufzeit-Verträge & versteckte Gebühren</td>
+<td data-i18n="td1_au">Transparenter Einmal-Festpreis</td>
+</tr>
+<tr>
+<td data-i18n="td2 k">Datenschutz & Server</td>
+<td data-i18n="td2_a">Häufig US-Cloud-Zwang & viele Dritt-Tracker</td>
+<td data-i18n="td2_au">100% DSGVO-konform & On-Device wo möglich</td>
+</tr>
+<tr>
+<td data-i18n="td3 k">Ladegeschwindigkeit</td>
+<td data-i18n="td3_a">Überladene WordPress-Baukästen (oft zäh)</td>
+<td data-i18n="td3_au">Handgeschriebener High-Speed-Code</td>
+</tr>
+<tr>
+<td data-i18n="td4 k">Vertragslaufzeit</td>
+<td data-i18n="td4_a">Oft 12–24 Monate Knebelverträge</td>
+<td data-i18n="td4_au">Monatlich kündbare Betreuung (Volle Freiheit)</td>
+</tr>
+<tr>
+<td data-i18n="td5 k">Ansprechpartner</td>
+<td data-i18n="td5_a">Wechselnde Projektmanager & Callcenter</td>
+<td data-i18n="td5_au">Persönlich durch Gründer Sebastian Piontek</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- PREISE & PAKETE -->
+<section>
+<h2 class="section-title" data-i18n="pricing_title">Transparente Festpreise</h2>
+<p class="section-subtitle" data-i18n="pricing_sub">Einfach erklärt und ohne Fachchinesisch. Wähle genau die Lösung, die zu Deinem Betrieb passt.</p>
+<!-- KATEGORIE A: WEBSEITEN -->
+<div class="pricing-category-title">
+<i class="fa-solid fa-globe"></i> <span>Kategorie 1: Webseiten zur Kundengewinnung</span>
+</div>
+<div class="pricing-grid">
+<!-- Typ A -->
+<div class="pricing-card">
+<span class="card-badge">Web-Einstieg</span>
+<h3>Web-Visitenkarte</h3>
+<div class="price-tag">400 € – 800 €</div>
+<span class="price-sub">Einmalige Investition</span>
+<div class="card-explanation">
+<strong>Was ist das?</strong> Eine kompakte, moderne Ein-Seiten-Website (One-Pager). Perfekt für kleine Betriebe, die schnell, günstig und seriös im Internet gefunden werden wollen.
+</div>
+<ul>
+<li><i class="fa-solid fa-check"></i> <strong>Kompakte Übersicht:</strong> Alle Kontaktdaten, Leistungen & Öffnungszeiten auf einen Blick</li>
+<li><i class="fa-solid fa-check"></i> <strong>Direkte Anfragen:</strong> Integriertes Kontaktformular & interaktiver Anfahrtsweg</li>
+<li><i class="fa-solid fa-check"></i> <strong>Smartphone-Perfekt:</strong> 100% optimiert für Mobilgeräte</li>
+</ul>
+</div>
+<!-- Typ B (Featured) -->
+<div class="pricing-card featured">
+<span class="card-badge">Empfehlung Mittelstand</span>
+<h3>Firmen-Website</h3>
+<div class="price-tag">1.200 € – 2.500 €</div>
+<span class="price-sub">Einmalige Investition</span>
+<div class="card-explanation">
+<strong>Was ist das?</strong> Ein vollständiger, professioneller Internetauftritt über mehrere Unterseiten. Entwickelt, um Vertrauen aufzubauen und kontinuierlich Neukunden sowie Mitarbeiter zu gewinnen.
+</div>
+<ul>
+<li><i class="fa-solid fa-check"></i> <strong>Mehrere Unterseiten:</strong> Eigene Seiten für Leistungen, Über Uns, Karriere & Kontakt</li>
+<li><i class="fa-solid fa-check"></i> <strong>Exklusives Design:</strong> Edler AMOLED-Gold-Look nach Deinen Markenfarben</li>
+<li><i class="fa-solid fa-check"></i> <strong>B2B-Express-Formular:</strong> Gezielte Vorab-Qualifizierung von Anfragen</li>
+<li><i class="fa-solid fa-check"></i> <strong>Google-Optimiert:</strong> Saubere SEO-Struktur für regionale Auffindbarkeit</li>
+</ul>
+</div>
+</div>
+
+<!-- KATEGORIE B: APPS & SOFTWARE -->
+<div class="pricing-category-title">
+<i class="fa-solid fa-mobile-screen-button"></i>
+<span>Kategorie 2: Inhouse-Apps & Betriebssysteme</span>
+</div>
+<div class="pricing-grid">
+<!-- Branchenmodule -->
+<div class="pricing-card">
+<span class="card-badge">Digitaler Helfer</span>
+<h3>Branchen-App Modul</h3>
+<div class="price-tag">300 € – 600 €</div>
+<span class="price-sub">Einmalige Investition</span>
+<div class="card-explanation">
+<strong>Was ist das?</strong> Eine maßgeschneiderte App für Smartphone & Tablet, die einen konkreten Ablauf in Deinem Betriebsalltag vereinfacht und Zettelwirtschaft abschafft.
+</div>
+<ul>
+<li><i class="fa-solid fa-check"></i> <strong>Praxis-Helfer:</strong> Z. B. digitale Baustellen-Protokolle, Stundenerfassungen oder Rechner</li>
+<li><i class="fa-solid fa-check"></i> <strong>100% Offline-fähig:</strong> Funktioniert ohne Internet direkt auf dem Gerät</li>
+<li><i class="fa-solid fa-check"></i> <strong>Kein Schulungsaufwand:</strong> Kinderleicht und intuitiv bedienbar</li>
+</ul>
+</div>
+<!-- Whitelabel -->
+<div class="pricing-card">
+<span class="card-badge">Maßgeschneiderte Vollversion</span>
+<h3>Whitelabel System</h3>
+<div class="price-tag">1.500 € – 4.000 €</div>
+<span class="price-sub">Einmalige Investition</span>
+<div class="card-explanation">
+<strong>Was heißt Whitelabel?</strong> Eine komplette, eigenständige App-Software, die exakt nach Deinen Wünschen inklusive Deinem Firmenlogo, Deinen Farben und voller Datenhoheit gebaut wird.
+</div>
+<ul>
+<li><i class="fa-solid fa-check"></i> <strong>Dein Brand:</strong> App tritt zu 100% unter Deinem Firmennamen & Logo auf</li>
+<li><i class="fa-solid fa-check"></i> <strong>Volles Urheberrecht:</strong> Der gesamte Code gehört nach Fertigstellung Dir</li>
+<li><i class="fa-solid fa-check"></i> <strong>Team-Funktionen:</strong> Rechteverwaltung für mehrere Mitarbeiter & Anbindung an Deine Software</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- B2B EXPRESS FORMULAR (Mit integrierter DSGVO-Checkbox & "Ich"-Anpassung) -->
+<section class="form-section" id="anfrage">
+<h2 class="section-title" data-i18n="form_title">B2B Express-Anfrage</h2>
+<p class="section-subtitle" data-i18n="form_sub">Beschreibe kurz Dein Anliegen. Ich melde mich innerhalb von 24 Stunden mit einer Ersteinschätzung.</p>
+<!-- Formspree Integration -->
+<form action="https://formspree.io/f/xbjnqpyz" method="POST">
+<div class="form-grid">
+<div class="form-group">
+<label for="name" data-i18n="f name">Name / Ansprechpartner *</label>
+<input type="text" id="name" name="name" class="form-control" placeholder="z. B. Max Mustermann" required>
+</div>
+<div class="form-group">
+<label for="company" data-i18n="f_company">Firmenname *</label>
+<input type="text" id="company" name="company" class="form-control" placeholder="z. B. Mustermann Kfz GmbH" required>
+</div>
+<div class="form-group">
+<label for="email" data-i18n="f email">E-Mail Adresse *</label>
+<input type="email" id="email" name="email" class="form-control" placeholder="name@firma.de" required>
+</div>
+<div class="form-group">
+<label for="phone" data-i18n="f_phone">Telefonnummer</label>
+<input type="tel" id="phone" name="phone" class="form-control" placeholder="+49 170 1234567">
+</div>
+<div class="form-group">
+<label for="project_type">Gewünschte Leistung *</label>
+<select id="project_type" name="project_type" class="form-control" required>
+<option value="Firmen-Website">Neue Firmen-Website (Neukunden)</option>
+<option value="Web-Visitenkarte">Kompakte Web-Visitenkarte</option>
+<option value="Inhouse-App">Inhouse-App / Prozessoptimierung</option>
+<option value="Whitelabel-System">Whitelabel Software-System</option>
+<option value="Sonstiges">Sonstiges / Erstberatung</option>
+</select>
+</div>
+<div class="form-group">
+<label for="branch" data-i18n="f_branch">Deine Branche</label>
+<select id="branch" name="branch" class="form-control">
+<option value="Handwerk">Handwerk & Bau</option>
+<option value="Pflege">Pflege & Gesundheit</option>
+<option value="Kfz">Kfz & Werkstatt</option>
+<option value="Dienstleistung">Dienstleistung & Beratung</option>
+<option value="Gastronomie">Gastronomie & Handel</option>
+<option value="Sonstiges">Sonstige Branche</option>
+</select>
+</div>
+<div class="form-group full-width">
+<label for="team_scope">Betriebsgröße / Umfang</label>
+<select id="team_scope" name="team_scope" class="form-control">
+<option value="Einzelunternehmen">Einzelunternehmen / Selbstständig</option>
+<option value="2-10 Mitarbeiter">Kleine Firma (2–10 Mitarbeiter)</option>
+<option value="11-50 Mitarbeiter">Mittelstand (11–50 Mitarbeiter)</option>
+<option value="50+ Mitarbeiter">Großbetrieb (50+ Mitarbeiter)</option>
+</select>
+</div>
+<div class="form-group full-width">
+<label for="message" data-i18n="f message">Welches Problem möchtest Du lösen? *</label>
+<textarea id="message" name="message" class="form-control" placeholder="Beispiel: Wir sind eine Kfz-Werkstatt mit 5 Mitarbeitern. Unsere aktuelle Website ist veraltet und Terminanfragen landen im Chaos. Ich suche eine einfache Lösung..." required></textarea>
+</div>
+<!-- NEU: DSGVO Pflicht-Checkbox -->
+<div class="form-group full-width" style="display: flex; align-items: flex-start; gap: 12px; margin-top: 5px; background: rgba(255,255,255,0.02); padding: 14px; border: 1px solid var(--border-gold); border-radius: 12px;">
+<input type="checkbox" id="dsgvo_check" name="dsgvo_check" required style="margin-top: 3px; accent-color: var(--gold-primary); width: 18px; height: 18px; cursor: pointer;">
+<label for="dsgvo_check" style="font-size: 0.85rem; color: var(--text-body); font-weight: normal; cursor: pointer; line-height: 1.4;">
+Ich habe die <a href="#datenschutz" style="color: var(--gold-champagne); text-decoration: underline;">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und für Rückfragen dauerhaft bzw. zweckgebunden gespeichert werden. <strong style="color: var(--gold-primary);">(Pflichtfeld)</strong> *
+</label>
+</div>
+</div>
+<button type="submit" class="btn-submit-b2b" data-i18n="f submit">Unverbindliche Anfrage absenden</button>
+<div class="trust-anchor">
+<i class="fa-solid fa-lock"></i> <span data-i18n="f trust">100% datensicher & unverbindlich. Ihre Daten werden nicht weitergegeben.</span>
+</div>
+</form>
+</section>
+
+<!-- B2B FAQ ("Ich"-Branding Anpassung) -->
 <section class="faq-box" id="faq">
-  <h2 class="section-title" data-i18n="faq_title">Hinter den Kulissen (FAQ)</h2>
-  <details class="faq-item">
-    <summary class="faq-summary">1. Wer steckt eigentlich hinter Aura Applications?</summary>
-    <p data-i18n="faq_1_ans">Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).</p>
-  </details>
-  <details class="faq-item">
-    <summary class="faq-summary">2. Warum sind meine Apps im fairen Einmalkauf statt im Abo erhältlich?</summary>
-    <p data-i18n="faq_2_ans">Aus Überzeugung und für maximale Transparenz. Ich halte nichts von monatlichen Dauerkosten für clevere Alltags-Tools. Bei Aura gilt: Einmal fair bezahlen, dauerhaft unbegrenzt nutzen ohne versteckte Kostenfallen.</p>
-  </details>
-  <details class="faq-item">
-    <summary class="faq-summary">3. Brauchen alle Aura-Apps eine Internetverbindung?</summary>
-    <p data-i18n="faq_3_ans">Nein, aber dort, wo es funktional sinnvoll ist (wie bei Wetter- oder Navigationsdiensten), wird sie gezielt genutzt. Wo immer es geht, minimieren wir Datenabflüsse und arbeiten konsequent datenschutzfreundlich.</p>
-  </details>
-  <details class="faq-item">
-    <summary class="faq-summary">4. Nutze ich eigene Server oder Cloud-Speicher für deine Daten?</summary>
-    <p data-i18n="faq_4_ans">Nein. Aura Applications betreibt keine eigenen Backend-Server oder Cloud-Infrastrukturen. Deine persönlichen Daten bleiben dort, wo sie hingehören: geschützt auf deinem eigenen Endgerät.</p>
-  </details>
-  <details class="faq-item">
-    <summary class="faq-summary">5. Warum lege ich so großen Wert auf das edle AMOLED-Gold-Design?</summary>
-    <p data-i18n="faq_5_ans">Weil ein dunkles Echtschwarz-Design nicht nur extrem elegant aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und die Augen schützt.</p>
-  </details>
-  <details class="faq-item">
-    <summary class="faq-summary">6. Sind in Zukunft weitere Apps und Erweiterungen geplant?</summary>
-    <p data-i18n="faq_6 ans">Ja, auf jeden Fall! Ich tüftle ständig an neuen Ideen und Konzepten. Neue Apps und nützliche Erweiterungen werden Schritt für Schritt veröffentlicht, um mein Angebot stetig zu erweitern.</p>
-  </details>
+<h2 class="section-title" data-i18n="faq_b2b_title">Häufige Fragen von Unternehmen</h2>
+<details class="faq-item">
+<summary class="faq-summary">Muss ich mich nach der Fertigstellung um Server oder Technik kümmern?</summary>
+<p>Nein. Ich übergebe ihnen ein schlüsselfertiges System. Wenn sie möchten, übernehme ich auch die dauerhafte technische Betreuung – monatlich flexibel kündbar.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-summary">Wie schnell ist ein Projekt in der Regel umgesetzt?</summary>
+<p>Eine klassische Web-Visitenkarte steht meist innerhalb von 3 bis 5 Werktagen. Komplexe Firmen-Websites oder Apps dauern in der Regel 2 bis 3 Wochen.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-summary">Gibt es versteckte Folgekosten oder laufende Abos?</summary>
+<p>Nein. Bei Aura Applications arbeiten sie mit transparenten Festpreisen. Sie besitzten ihr System zu 100 %.</p>
+</details>
 </section>
 
-<!-- IMPRESSUM -->
-<section id="impressum" class="legal-box">
-  <h2>IMPRESSUM</h2>
-  <p><strong>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</strong></p>
-  <p>
-    Aura Applications<br>
-    Inhaber: Sebastian Piontek<br>
-    Ruhrorter Straße 86<br>
-    47059 Duisburg<br>
-    Deutschland
-  </p>
-  <h3>Umsatzsteuer-ID:</h3>
-  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: <em>In Beantragung</em></p>
-  <p>Die Fakturierung erfolgt gemäß § 19 Umsatzsteuergesetz als Kleinunternehmer (ohne Ausweis der Umsatzsteuer).</p>
+<!-- DIREKT EINGEBUNDENES IMPRESSUM (Rechtssicher ohne externe Umleitung) -->
+<section class="legal-embedded-section" id="impressum">
+<h3>Impressum</h3>
+<p><strong>Angaben gemäß § 5 TMG:</strong></p>
+<p>
+Sebastian Piontek<br>
+Aura Applications<br>
+[Ruhrorter Straße & 86]<br>
+[47059 & Duisburg]<br>
+Deutschland
+</p>
 
-  <h3>Kontakt:</h3>
-  <p>
-    Telefon: +49 174 6222586<br>
-    E-Mail: sebastianpiontek79@gmail.com
-  </p>
-  <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h3>
-  <p>Sebastian Piontek, Ruhrorter Straße 86, 47059 Duisburg</p>
-  <h3>Verbraucherstreitbeilegung / Universalschlichtungsstelle:</h3>
-  <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+<h4>Kontakt:</h4>
+<p>
+E-Mail: [Deine E-Mail-Adresse]<br>
+Telefon: [Deine Telefonnummer]
+</p>
+
+<h4>Umsatzsteuer-ID:</h4>
+<p>
+Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: In Beantragung. Bis zur Zuteilung erfolgt die Fakturierung gemäß § 19 UStG als Kleinunternehmer.
+</p>
+
+<h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
+<p>
+Sebastian Piontek<br>
+[Anschrift wie oben]
+</p>
 </section>
 
-<hr>
+<!-- DIREKT EINGEBUNDENE DATENSCHUTZERKLÄRUNG (DSGVO-Konform) -->
+<section class="legal-embedded-section" id="datenschutz">
+<h3>Datenschutzerklärung</h3>
+<p><strong>1. Datenschutz auf einen Blick</strong></p>
+<p><strong>Allgemeine Hinweise</strong><br>
+Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
 
-<!-- DATENSCHUTZERKLÄRUNG -->
-<section id="datenschutz" class="legal-box">
-  <h2>DATENSCHUTZERKLÄRUNG</h2>
-  <h3>1. Website-Hosting & Bereitstellung (GitHub Pages)</h3>
-  <p>Meine Website wird über den Hosting-Dienst <strong>GitHub Pages</strong> (bereitgestellt durch GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA, ein Unternehmen der Microsoft Corporation) gehostet.</p>
-  <p>Wenn du meine Website besuchst, erfasst GitHub automatisch technische Daten in sogenannten Server-Logfiles (z. B. IP-Adresse, Browser-Typ, Betriebssystem, Referrer-URL und Uhrzeit des Zugriffs). Dies ist technisch zwingend erforderlich, um dir die Website sicher, fehlerfrei und stabil anzuzeigen.</p>
-  <h3>2. Allgemeine Hinweise & Verantwortlicher</h3>
-  <p>Der Schutz deiner persönlichen Daten ist mir ein wichtiges Anliegen. Die Anwendungen von „Aura Applications" arbeiten nach dem Grundsatz der Datensparsamkeit.</p>
-  <p><strong>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO):</strong><br>
-  Aura Applications<br>
-  Sebastian Piontek<br>
-  Ruhrorter Straße 86<br>
-  47059 Duisburg<br>
-  Deutschland<br>
-  E-Mail: sebastianpiontek79@gmail.com</p>
-  <h3>3. Lokale Datenverarbeitung (On-Device-Architektur)</h3>
-  <p>Sämtliche Kernfunktionen meiner Applikationen verarbeiten Eingaben, Berechnungen und Einstellungen ausschließlich lokal auf deinem Endgerät. Es findet zu keinem Zeitpunkt eine Übertragung deiner eingegebenen Inhaltsdaten an eigene Server oder Cloud-Infrastrukturen statt.</p>
-  <h3>4. Einbindung von Drittanbieter-Diensten</h3>
-  <p><strong>a) Werbeeinblendungen via Google AdMob (Google Ireland Limited):</strong><br>
-  Zur Finanzierung meiner kostenfreien Apps nutze ich den Werbedienst Google AdMob. Google AdMob verarbeitet technische Informationen wie IP-Adresse und Geräte-Identifikatoren (z. B. Android-Werbe-ID) sowie Nutzungsdaten, um Anzeigen bereitzustellen und deren Leistung zu messen. Die Verarbeitung erfolgt auf Grundlage deiner ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die beim ersten App-Start über mein Einwilligungs-Banner abgefragt wird. Du kannst diese in den App-Einstellungen jederzeit widerrufen.<br>
-  Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
-  <p><strong>b) Abwicklung von In-App-Käufen via RevenueCat (RevenueCat, Inc.):</strong><br>
-  Sofern du dich für den Kauf einer kostenpflichtigen Erweiterung (z. B. Lifetime Pass) entscheidest, wird die Transaktion über den jeweiligen App Store und den Dienstleister RevenueCat zur Freischaltung der Funktion verifiziert. Hierbei werden anonymisierte Transaktions-IDs verarbeitet. Die Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Daten können an den Anbieter in die USA übertragen werden; RevenueCat ist unter dem EU-US Data Privacy Framework zertifiziert. Es werden keine Zahlungsdaten auf meinen Systemen gespeichert.<br>
-  Datenschutzerklärung von RevenueCat: <a href="https://revenuecat.com" target="_blank" rel="noopener noreferrer">https://revenuecat.com</a></p>
-  <h3>5. App-Berechtigungen</h3>
-  <p>Sollte eine Applikation Zugriff auf Hardware-Funktionen anfordern, erfolgt dieser ausschließlich zur unmittelbaren Ausführung der von dir gestarteten Funktion.</p>
-  <h3>6. Deine Rechte</h3>
-  <p>Du hast im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf Auskunft, Berichtigung und Löschung.</p>
-  <h3>7. Kontaktaufnahme per E-Mail oder Telefon</h3>
-  <p>Wenn du mich per E-Mail oder Telefon kontaktierst, wird deine Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (z. B. Name, E-Mail-Adresse, Anliegen) zum Zwecke der Bearbeitung deines Anliegens bei mir gespeichert und verarbeitet. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf meinem berechtigten Interesse an der effektiven Bearbeitung der an mich gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
+<p><strong>2. Datenerfassung auf dieser Website</strong></p>
+<p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Impressum“ auf dieser Website entnehmen.</p>
+
+<p><strong>Wie erfassen wir Ihre Daten?</strong><br>
+Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z. B. über das B2B-Express-Formular). Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst (z. B. Technische Daten wie Browser, Uhrzeit des Seitenaufrufs).</p>
+
+<p><strong>Wofür nutzen wir Ihre Daten?</strong><br>
+Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten (wie Ihre Anfrage im Formular) können zur Bearbeitung Ihres Anliegens und für mögliche Anschlussfragen genutzt werden.</p>
+
+<p><strong>3. SSL- bzw. TLS-Verschlüsselung</strong><br>
+Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte (wie zum Beispiel Anfragen, die Sie an mich als Betreiber senden) eine SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
 </section>
 
-<!-- BACK TO TOP BUTTON -->
-<div class="scroll-top-wrapper">
-  <a href="#top" class="btn-scroll-top">
-    <i class="fa-solid fa-arrow-up"></i> <span data-i18n="btn scroll top">Nach oben</span>
-  </a>
-</div>
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Aura Applications. Alle Rechte vorbehalten.</p>
+<div style="margin-bottom: 20px;">
+<a href="#top" class="btn-scroll-top">
+<i class="fa-solid fa-arrow-up"></i> <span data-i18n="btn_scroll_top">Nach oben</span>
+</a>
+</div>
+<p>© 2026 Aura Applications | Sebastian Piontek. Alle Rechte vorbehalten.</p>
 </footer>
 </div>
 
-<!-- JAVASCRIPT FÜR MEHRSPRACHIGKEIT -->
+<!-- MEHRSPRACHIGKEIT (B2B DICTIONARY - "Ich"-Branding angepasst) -->
 <script>
 const translations = {
-  de: {
-    nav_apps: "Apps entdecken",
-    "nav dev": "Über den Entwickler",
-    nav_faq: "FAQ",
-    nav_b2b: "Für Unternehmen",
-    "btn scroll top": "Nach oben",
-    "hero badge": "Offizielle App-Manufaktur",
-    "hero title 1": "Meine erstklassigen Apps",
-    "hero title 2": "für deinen Alltag.",
-    "hero sub": "Entdecke meine schlanken, hochpräzisen Android-Applikationen im edlen AMOLED-Gold-Design. 100% offline-fähig, datenschutzsicher und ohne lästige Abofallen.",
-    "feat 1": "Höchste Präzision",
-    "feat 2": "Null Tracking & Werbung",
-    "feat 3": "Abo-frei & Fair",
-    "usp_1 title": "Blitzschnell & Leicht",
-    "usp_1 desc": "Minimale App-Größe, startet ohne Verzögerung und schont deinen Akku.",
-    "usp 2 title": "100% On-Device",
-    "usp 2_desc": "Deine Daten verbleiben ausschließlich lokal auf deinem Smartphone.",
-    "usp 3 title": "AMOLED Gold Design",
-    "usp 3 desc": "Echtschwarz kombiniert mit edlen Metallic- und Gold-Akzenten.",
-    "usp 4 title": "Freiheit bei der Bezugsquelle",
-    "usp 4 desc": "Erhältlich auf Google Play, Samsung, Xiaomi, Aptoide & Uptodown.",
-    "dev role": "Gründer, App- & Web-Entwickler",
-    "dev headline": "Software & Webdesign ohne Datenhunger",
-    "dev pl": "Guten Tag, mein Name ist Sebastian Piontek. Ich entwickle meine Apps und modernen Webauftritte persönlich, fair bepreist, verlässlich und im edlen Design.",
-    dev_p2: "Ob schlanke Smartphone-Tools oder maßgeschneiderte Systeme für Selbstständige und Unternehmen: Der Schutz deiner Privatsphäre steht an erster Stelle. Ohne Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes Handwerk aus einer Hand.",
-    "apps title": "Meine Applikationen",
-    "app1 desc": "Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.",
-    "app2 desc": "Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.",
-    app3_desc: "Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.",
-    faq_title: "Hinter den Kulissen (FAQ)",
-    "faq_6 ans": "Ja, auf jeden Fall! Ich tüftle ständig an neuen Ideen und Konzepten. Neue Apps und nützliche Erweiterungen werden Schritt für Schritt veröffentlicht, um mein Angebot stetig zu erweitern."
-  },
-  en: {
-    nav_apps: "Discover Apps",
-    "nav dev": "About Developer",
-    nav_faq: "FAQ",
-    nav_b2b: "For Businesses",
-    "btn scroll top": "Back to top",
-    "hero badge": "Official App Manufactory",
-    "hero title 1": "My Premium Apps",
-    "hero title 2": "for your daily life.",
-    "hero sub": "Discover my lightweight, highly precise Android apps in elegant AMOLED gold design. 100% offline-capable, privacy-focused, and without subscription traps.",
-    "feat 1": "Highest Precision",
-    "feat 2": "Zero Tracking & Ads",
-    "feat 3": "Subscription-free & Fair",
-    "usp_1 title": "Lightning Fast & Light",
-    "usp_1 desc": "Minimal app size, launches instantly, and saves battery life.",
-    "usp 2 title": "100% On-Device",
-    "usp 2_desc": "Your data stays strictly local on your smartphone.",
-    "usp 3 title": "AMOLED Gold Design",
-    "usp 3 desc": "True black combined with refined metallic and gold accents.",
-    "usp 4 title": "Store Choice Freedom",
-    "usp 4 desc": "Available on Google Play, Samsung, Xiaomi, Aptoide & Uptodown.",
-    "dev role": "Founder, App & Web Developer",
-    "dev headline": "Software & Web Design without Data Hunger",
-    "dev pl": "Hello, my name is Sebastian Piontek. I develop my apps and modern websites personally, fairly priced, reliable, and in an elegant design.",
-    dev_p2: "Whether lightweight smartphone tools or tailored systems for businesses: protecting your privacy comes first. Without cloud infrastructure, you get clean craftsmanship from a single source.",
-    "apps title": "My Applications",
-    "app1 desc": "The elegant calculator for your daily routine. Guaranteed error-free calculations, helps you save discounts while shopping, and keeps track of your budget.",
-    "app2 desc": "Your pocket mobile office. Easily scan documents and contracts, crop neatly, sign directly on display, and send immediately.",
-    app3_desc: "Lightning-fast scanner without fluff. Reads links, connects to Wi-Fi instantly, or compares product prices in one click.",
-    faq_title: "Behind the Scenes (FAQ)",
-    "faq_6 ans": "Yes, absolutely! I am constantly working on new ideas and concepts. New apps and useful extensions will be released step by step."
-  },
-  es: {
-    nav_apps: "Descubrir Apps",
-    "nav dev": "Sobre el desarrollador",
-    nav_faq: "Preguntas frecuentes",
-    nav_b2b: "Para empresas",
-    "btn scroll top": "Volver arriba",
-    "hero badge": "Taller oficial de aplicaciones",
-    "hero title 1": "Mis aplicaciones premium",
-    "hero title 2": "para tu día a día.",
-    "hero sub": "Descubre mis aplicaciones ligeras de Android en un elegante diseño dorado AMOLED. 100% sin conexión, seguras para la privacidad y sin suscripciones.",
-    "feat 1": "Máxima precisión",
-    "feat 2": "Sin seguimiento ni anuncios",
-    "feat 3": "Sin suscripciones y justo",
-    "usp_1 title": "Ultrarrápido y ligero",
-    "usp_1 desc": "Tamaño mínimo de app, se inicia sin demora y ahorra batería.",
-    "usp 2 title": "100% En el dispositivo",
-    "usp 2_desc": "Tus datos permanecen exclusivamente en tu teléfono inteligente.",
-    "usp 3 title": "Diseño Dorado AMOLED",
-    "usp 3 desc": "Negro puro combinado con elegantes acentos metálicos y dorados.",
-    "usp 4 title": "Libertad de descarga",
-    "usp 4 desc": "Disponible en Google Play, Samsung, Xiaomi, Aptoide y Uptodown.",
-    "dev role": "Fundador, desarrollador web y app",
-    "dev headline": "Software y diseño web sin recopilación de datos",
-    "dev pl": "Hola, mi nombre es Sebastian Piontek. Desarrollo mis aplicaciones y sitios web de forma personal, a un precio justo y con un diseño elegante.",
-    dev_p2: "Ya sean herramientas ligeras o sistemas a medida para empresas: la protección de tu privacidad es lo primero. Trabajo limpio de una sola fuente.",
-    "apps title": "Mis Aplicaciones",
-    "app1 desc": "La elegante calculadora para tu día a día. Cálculos precisos, te ayuda a ahorrar con descuentos y mantiene tu presupuesto bajo control.",
-    "app2 desc": "Tu oficina móvil de bolsillo. Fotografía fácilmente documentos, fírmalos en pantalla y envíalos de inmediato.",
-    app3_desc: "Escaneo ultrarrápido sin complicaciones. Lee enlaces, se conecta al Wi-Fi o compara precios con un solo clic.",
-    faq_title: "Preguntas frecuentes (FAQ)",
-    "faq_6 ans": "¡Sí, por supuesto! Trabajo constantemente en nuevas ideas y conceptos que se irán publicando paso a paso."
-  },
-  fr: {
-    nav_apps: "Découvrir les apps",
-    "nav dev": "À propos",
-    nav_faq: "FAQ",
-    nav_b2b: "Pour les entreprises",
-    "btn scroll top": "Haut de page",
-    "hero badge": "Manufacture officielle d'applications",
-    "hero title 1": "Mes applications premium",
-    "hero title 2": "pour votre quotidien.",
-    "hero sub": "Découvrez mes applications Android au design doré AMOLED. 100% hors ligne, respectueuses de la vie privée et sans abonnement.",
-    "feat 1": "Haute précision",
-    "feat 2": "Zéro suivi & publicité",
-    "feat 3": "Sans abonnement & équitable",
-    "usp_1 title": "Ultra rapide & léger",
-    "usp_1 desc": "Taille minimale, lancement instantané et économie de batterie.",
-    "usp 2 title": "100% Sur l'appareil",
-    "usp 2_desc": "Vos données restent exclusivement locales sur votre smartphone.",
-    "usp 3 title": "Design Doré AMOLED",
-    "usp 3 desc": "Noir pur combiné à de nobles accents métalliques et dorés.",
-    "usp 4 title": "Liberté de téléchargement",
-    "usp 4 desc": "Disponible sur Google Play, Samsung, Xiaomi, Aptoide & Uptodown.",
-    "dev role": "Fondateur, développeur web & apps",
-    "dev headline": "Logiciels & Webdesign sans collecte de données",
-    "dev pl": "Bonjour, je m'appelle Sebastian Piontek. Je développe mes applications et sites web personnellement, à un prix équitable et au design élégant.",
-    dev_p2: "Qu'il s'agisse d'outils légers ou de systèmes sur mesure : la protection de votre vie privée est la priorité. Un travail propre d'une seule source.",
-    "apps title": "Mes Applications",
-    "app1 desc": "La calculatrice élégante pour votre quotidien. Calculs précis, gestion de budget et calcul de remises lors de vos achats.",
-    "app2 desc": "Votre bureau mobile de poche. Numérisez des documents, signez directement sur l'écran et envoyez immédiatement.",
-    app3_desc: "Numérisation ultra rapide. Lit les liens, connecte au Wi-Fi ou compare les prix des produits en un clic.",
-    faq_title: "Foire aux questions (FAQ)",
-    "faq_6 ans": "Oui, absolument ! Je travaille constamment sur de nouvelles idées qui seront publiées étape par étape."
-  }
+  de: {
+    "nav home": "Hauptseite",
+    "nav cta": "Projekt anfragen",
+    "hero badge": "B2B Digitalisierung & Webdesign",
+    "hero_title 1": "Maßgeschneiderte Web & App-Entwicklung",
+    "hero_title 2": "für den Mittelstand.",
+    "hero sub": "Ausfallsicher, DSGVO-konform und ohne teure Cloud-Abos. Ich baue hochperformante Websites für die Neukundengewinnung und intuitive Betriebssysteme für ihren Alltag.",
+    "step1 title": "Express-Anfrage",
+    "step1_desc": "Senden Sie mir Ihre Anforderungen über das kurze B2B-Formular. Dauert nur 2 Minuten.",
+    "step2_title": "Kostenloses Erstgespräch",
+    "step2 desc": "Ich bespreche ihr Projekt auf Augenhöhe und sie erhälten ein klares Festpreis-Angebot.",
+    "step3 title": "Schnelle Umsetzung",
+    "step3 desc": "Ihre maßgeschneiderte Lösung geht ohne Stress und ohne Ausfallzeiten im Betrieb live.",
+    "pillar1 badge": "Säule A: Betrieb & Prozesse",
+    "pillar1_title": "Inhouse-Apps & Offline-Systeme",
+    "pillar1_sub": "Schlanke Smartphone & Tablet-Lösungen für ihre Mitarbeiter im Feld oder in der Werkstatt.",
+    "pillar2 badge": "Säule B: Neukunden & Markt",
+    "pillar2 title": "High-Performance Webauftritte",
+    "pillar2 sub": "Moderne, blitzschnelle Firmen-Websites im AMOLED-Gold-Stil, die Besucher zu Kunden machen.",
+    "branches title": "Branchenlösungen aus der Praxis",
+    "branches_sub": "Egal ob lokale Dienstleister, Handwerksbetriebe oder Praxen – ich kenne die digitalen Herausforderungen ihres Alltags.",
+    "comp_title": "Warum Aura Applications?",
+    "pricing_title": "Transparente Festpreise",
+    "form title": "B2B Express-Anfrage",
+    "f trust": "100% datensicher & unverbindlich. Ihre Daten werden nicht weitergegeben.",
+    "btn scroll top": "Nach oben"
+  }
 };
-
 function changeLanguage(lang) {
-  if (!translations[lang]) return;
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      element.textContent = translations[lang][key];
-    }
-  });
+  if (!translations[lang]) return;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
 }
 </script>
 </body>
 </html>
- 
