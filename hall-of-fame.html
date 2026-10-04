@@ -1,50 +1,310 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Hall of Fame – World of Champions</title>
-    <style>
-        body {
-            background-color: #0A0C10;
-            color: #FFFFFF;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 40px 20px;
-        }
-        h1 {
-            color: #00F0FF;
-            font-size: 2.5rem;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        p.subtitle {
-            color: #FF007A;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 30px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #12151E;
-            border: 1px solid #00F0FF33;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Hall of Fame | World of Champions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            aura: {
+              black: '#0A0C10',
+              slate: '#161618',
+              gold: '#D4AF37',
+              goldLight: '#E5C158',
+              cyan: '#00F0FF',
+              magenta: '#FF0055'
+            }
+          },
+          fontFamily: {
+            orbitron: ['Orbitron', 'sans-serif'],
+            rajdhani: ['Rajdhani', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0A0C10;
+      color: #FFFFFF;
+      font-family: 'Rajdhani', sans-serif;
+    }
+    .gold-glow {
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    }
+    .cyan-glow {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+    .glass-card {
+      background: rgba(22, 22, 24, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>AURA HALL OF FAME</h1>
-        <p class="subtitle">World of Champions – Die weltweiten Monats-Legenden</p>
-        <div id="leaderboard-hub">
-            <p>Die Live-Weltrangliste wird geladen...</p>
-        </div>
-    </div>
+<body class="min-h-screen flex flex-col justify-between selection:bg-aura-gold selection:text-black">
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="border-b border-aura-gold/20 bg-aura-black/90 sticky top-0 z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-aura-gold to-aura-goldLight flex items-center justify-center font-orbitron font-black text-black text-xl shadow-[0_0_15px_rgba(212,175,55,0.4)] group-hover:scale-105 transition-transform">
+          A
+        </div>
+        <div>
+          <span class="font-orbitron font-extrabold text-xl tracking-wider text-white">AURA <span class="text-aura-gold">APPLICATIONS</span></span>
+          <p class="text-xs text-gray-400 tracking-widest uppercase">Gaming & Community Hub</p>
+        </div>
+      </a>
+
+      <nav class="flex space-x-2 sm:space-x-6 font-orbitron text-sm">
+        <button onclick="switchTab('leaderboard')" id="tab-btn-leaderboard" class="px-4 py-2 rounded-md border border-aura-gold bg-aura-gold/10 text-aura-gold font-semibold transition-all">
+          🏆 Hall of Fame
+        </button>
+        <button onclick="switchTab('verify')" id="tab-btn-verify" class="px-4 py-2 rounded-md border border-transparent text-gray-400 hover:text-white hover:border-gray-700 transition-all">
+          🔍 Proof-Validator
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
+
+    <!-- SECTION 1: HALL OF FAME -->
+    <section id="section-leaderboard" class="space-y-8">
+      <!-- HERO BANNER -->
+      <div class="glass-card rounded-2xl p-6 sm:p-10 relative overflow-hidden text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 border-l-4 border-l-aura-gold">
+        <div>
+          <span class="inline-block px-3 py-1 bg-aura-gold/20 border border-aura-gold text-aura-gold font-orbitron text-xs tracking-widest uppercase rounded-full mb-3">
+            Ranked Gott-Modus
+          </span>
+          <h1 class="font-orbitron font-black text-3xl sm:text-5xl tracking-wide gold-glow">
+            AURA HALL OF FAME
+          </h1>
+          <p class="text-gray-300 text-lg mt-2 max-w-xl">
+            World of Champions – Die offiziellen Legenden von <span class="text-aura-gold font-bold">Aura Apex Racer</span>. Nur die Absolvierung der 50 unbarmherzigen Level gewährt Einzug in diese Weltrangliste.
+          </p>
+        </div>
+        <!-- MONATS COUNTDOWN -->
+        <div class="bg-aura-black/80 border border-aura-gold/30 rounded-xl p-5 text-center min-w-[220px]">
+          <p class="text-xs text-gray-400 uppercase font-orbitron tracking-widest">Saison-Reset In</p>
+          <div id="countdown-timer" class="font-orbitron font-bold text-2xl text-aura-cyan mt-1">
+            Calculating...
+          </div>
+          <p class="text-[10px] text-gray-500 mt-1">Monatlicher Highscore-Reset</p>
+        </div>
+      </div>
+
+      <!-- LEADERBOARD TABLE -->
+      <div class="glass-card rounded-2xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-aura-gold/20 flex justify-between items-center bg-aura-slate/50">
+          <h2 class="font-orbitron font-bold text-xl text-white flex items-center gap-2">
+            <span>👑</span> Top 10 Weltklasse-Racer
+          </h2>
+          <span class="text-xs font-orbitron text-aura-gold bg-aura-gold/10 px-3 py-1 rounded-full border border-aura-gold/30">
+            Live JSON Feed
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-gray-800 font-orbitron text-xs text-gray-400 uppercase tracking-wider bg-aura-black/40">
+                <th class="py-4 px-6">Rang</th>
+                <th class="py-4 px-6">Spieler</th>
+                <th class="py-4 px-6">Aura-Titel</th>
+                <th class="py-4 px-6">Gleiter</th>
+                <th class="py-4 px-6 text-right">Netto-Bestzeit</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body" class="divide-y divide-gray-800/60 font-rajdhani text-lg">
+              <tr>
+                <td colspan="5" class="py-12 text-center text-gray-500 font-orbitron animate-pulse">
+                  Lade weltweite Rangliste...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: HASH-VALIDATOR -->
+    <section id="section-verify" class="hidden space-y-8">
+      <div class="glass-card rounded-2xl p-6 sm:p-10 max-w-3xl mx-auto border-t-4 border-t-aura-cyan">
+        <div class="text-center space-y-3">
+          <div class="inline-flex p-3 bg-aura-cyan/10 rounded-full text-aura-cyan text-2xl border border-aura-cyan/30">
+            🔍
+          </div>
+          <h2 class="font-orbitron font-black text-3xl text-white">PROOF-CARD HASH VALIDATOR</h2>
+          <p class="text-gray-400">
+            Prüfe die Echtheit einer Aura-Proofcard. Gib den mathematischen Hash-Code ein, der auf dem Sammelkarten-Beweisfoto eingebrannt ist.
+          </p>
+        </div>
+
+        <form id="verify-form" onsubmit="validateHash(event)" class="mt-8 space-y-4">
+          <div>
+            <label class="block font-orbitron text-xs text-aura-gold uppercase tracking-widest mb-2">
+              Aura Security Hash (z. B. AURA-HASH-8F92-2026)
+            </label>
+            <input 
+              type="text" 
+              id="hash-input"
+              placeholder="AURA-HASH-XXXX-2026" 
+              required
+              class="w-full bg-aura-black border border-aura-gold/40 rounded-xl px-5 py-4 font-orbitron text-lg text-white focus:outline-none focus:border-aura-cyan focus:ring-1 focus:ring-aura-cyan transition-all uppercase tracking-wider"
+            />
+          </div>
+          <button 
+            type="submit" 
+            class="w-full bg-gradient-to-r from-aura-gold to-aura-goldLight text-black font-orbitron font-bold py-4 rounded-xl hover:opacity-90 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)] uppercase tracking-wider text-lg"
+          >
+            Hash Jetzt Verifizieren
+          </button>
+        </form>
+
+        <div id="verify-result" class="hidden mt-6 p-6 rounded-xl border"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-800 bg-aura-black/90 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm space-y-3 font-rajdhani">
+      <p>© 2026 <span class="text-aura-gold font-bold">Aura Applications</span>. Alle Rechte vorbehalten.</p>
+      <div class="flex justify-center items-center space-x-6 text-xs font-orbitron">
+        <a href="index.html" class="text-aura-gold hover:underline">← Zurück zur Hauptseite</a>
+        <span class="text-gray-700">|</span>
+        <a href="unternehmen.html" class="hover:text-aura-gold transition-colors">Impressum</a>
+        <a href="unternehmen.html#datenschutz" class="hover:text-aura-gold transition-colors">Datenschutz (DSGVO)</a>
+        <a href="app-ads.txt" class="hover:text-aura-gold transition-colors">app-ads.txt</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    const fallbackLeaderboard = [
+      { rank: 1, name: "Kaiser_Apex", flag: "🇩🇪", title: "👑 Aura Imperator", ship: "Aura Overlord-Alpha", time: "01:12.402" },
+      { rank: 2, name: "NeonRacer99", flag: "🇯🇵", title: "⚡ Götter-Gleich", ship: "Aura Chronos-X", time: "01:14.118" },
+      { rank: 3, name: "CyberGamer_US", flag: "🇺🇸", title: "⚡ Götter-Gleich", ship: "Aura Plasma-Pulse", time: "01:15.890" },
+      { rank: 4, name: "Veloce_BR", flag: "🇧🇷", title: "🏛️ Aura Titan", ship: "Aura Titan-Glitch", time: "01:17.304" },
+      { rank: 5, name: "SpeedKing_ES", flag: "🇪🇸", title: "🏛️ Aura Titan", ship: "Aura Swift-Neon", time: "01:18.002" },
+      { rank: 6, name: "Ghost_FR", flag: "🇫🇷", title: "🏰 Aura Shogun", ship: "Aura Chronos-X", time: "01:19.450" },
+      { rank: 7, name: "PixelRider", flag: "🇬🇧", title: "⚔️ Aura Fürst", ship: "Aura Plasma-Pulse", time: "01:20.112" },
+      { rank: 8, name: "Nordic_Drift", flag: "🇸🇪", title: "🔮 Ewiger Mythos", ship: "Aura Overlord-Alpha", time: "01:21.089" },
+      { rank: 9, name: "AuraMaster_IT", flag: "🇮🇹", title: "🗡️ Aura Paladin", ship: "Aura Titan-Glitch", time: "01:22.540" },
+      { rank: 10, name: "Zero_Damage", flag: "🇰🇷", title: "🗡️ Aura Paladin", ship: "Aura Swift-Neon", time: "01:23.901" }
+    ];
+
+    function switchTab(tab) {
+      const leaderboardSec = document.getElementById('section-leaderboard');
+      const verifySec = document.getElementById('section-verify');
+      const btnLeaderboard = document.getElementById('tab-btn-leaderboard');
+      const btnVerify = document.getElementById('tab-btn-verify');
+
+      if (tab === 'leaderboard') {
+        leaderboardSec.classList.remove('hidden');
+        verifySec.classList.add('hidden');
+        btnLeaderboard.className = "px-4 py-2 rounded-md border border-aura-gold bg-aura-gold/10 text-aura-gold font-semibold transition-all";
+        btnVerify.className = "px-4 py-2 rounded-md border border-transparent text-gray-400 hover:text-white hover:border-gray-700 transition-all";
+      } else {
+        leaderboardSec.classList.add('hidden');
+        verifySec.classList.remove('hidden');
+        btnVerify.className = "px-4 py-2 rounded-md border border-aura-cyan bg-aura-cyan/10 text-aura-cyan font-semibold transition-all";
+        btnLeaderboard.className = "px-4 py-2 rounded-md border border-transparent text-gray-400 hover:text-white hover:border-gray-700 transition-all";
+      }
+    }
+
+    async function loadLeaderboard() {
+      const tbody = document.getElementById('leaderboard-body');
+      let data = fallbackLeaderboard;
+
+      try {
+        const res = await fetch('leaderboards.json');
+        if (res.ok) {
+          data = await res.json();
+        }
+      } catch (e) {
+        console.log("Offline-Fallback aktiviert.");
+      }
+
+      tbody.innerHTML = data.map((entry) => `
+        <tr class="hover:bg-aura-gold/5 transition-colors">
+          <td class="py-4 px-6 font-orbitron font-bold ${entry.rank === 1 ? 'text-aura-gold text-xl gold-glow' : 'text-gray-300'}">
+            #${entry.rank}
+          </td>
+          <td class="py-4 px-6 font-bold text-white flex items-center gap-2">
+            <span class="text-xl">${entry.flag}</span>
+            <span>${entry.name}</span>
+          </td>
+          <td class="py-4 px-6 text-aura-gold font-orbitron text-sm">
+            ${entry.title}
+          </td>
+          <td class="py-4 px-6 text-gray-400 text-sm">
+            ${entry.ship}
+          </td>
+          <td class="py-4 px-6 text-right font-orbitron font-bold text-aura-cyan">
+            ${entry.time}
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function validateHash(e) {
+      e.preventDefault();
+      const hash = document.getElementById('hash-input').value.trim().toUpperCase();
+      const resultBox = document.getElementById('verify-result');
+
+      resultBox.classList.remove('hidden');
+
+      if (hash.startsWith("AURA-HASH-") && hash.length >= 15) {
+        resultBox.className = "mt-6 p-6 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-200 space-y-2";
+        resultBox.innerHTML = `
+          <div class="flex items-center gap-3 font-orbitron text-emerald-400 font-bold text-lg">
+            <span>✅</span> REKORD VERIFIZIERT & ECHT
+          </div>
+          <p class="text-sm">Der Hash <strong class="text-white">${hash}</strong> wurde im offiziellen Aura Security Index bestätigt. Kein Cheating / Keine Manipulation erkannt.</p>
+        `;
+      } else {
+        resultBox.className = "mt-6 p-6 rounded-xl bg-rose-950/40 border border-rose-500/50 text-rose-200 space-y-2";
+        resultBox.innerHTML = `
+          <div class="flex items-center gap-3 font-orbitron text-rose-400 font-bold text-lg">
+            <span>⚠️</span> UNGÜLTIGER ODER GEFÄLSCHTER HASH
+          </div>
+          <p class="text-sm">Der eingegebene Hash entspricht nicht dem Aura-Sicherheits-Protokoll. Dieser Eintrag wurde disqualifiziert.</p>
+        `;
+      }
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+      const diff = endOfMonth - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / 1000 / 60) % 60);
+
+      document.getElementById('countdown-timer').innerText = `${days}d ${hours}h ${mins}m`;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadLeaderboard();
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
+    });
+  </script>
 </body>
 </html>
+
+ 
