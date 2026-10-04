@@ -1,1 +1,94 @@
+[
+  {
+    "rank": 1,
+    "name": "Kaiser_Apex",
+    "flag": "🇩🇪",
+    "title": "👑 Aura Imperator",
+    "ship": "Aura Overlord-Alpha",
+    "time": "01:12.402",
+    "hash": "AURA-HASH-8F92-2026"
+  },
+  {
+    "rank": 2,
+    "name": "NeonRacer99",
+    "flag": "🇯🇵",
+    "title": "⚡ Götter-Gleich",
+    "ship": "Aura Chronos-X",
+    "time": "01:14.118",
+    "hash": "AURA-HASH-7E81-2026"
+  },
+  {
+    "rank": 3,
+    "name": "CyberGamer_US",
+    "flag": "🇺🇸",
+    "title": "⚡ Götter-Gleich",
+    "ship": "Aura Plasma-Pulse",
+    "time": "01:15.890",
+    "hash": "AURA-HASH-6D70-2026"
+  },
+  {
+    "rank": 4,
+    "name": "Veloce_BR",
+    "flag": "🇧🇷",
+    "title": "🏛️ Aura Titan",
+    "ship": "Aura Titan-Glitch",
+    "time": "01:17.304",
+    "hash": "AURA-HASH-5C69-2026"
+  },
+  {
+    "rank": 5,
+    "name": "SpeedKing_ES",
+    "flag": "🇪🇸",
+    "title": "🏛️ Aura Titan",
+    "ship": "Aura Swift-Neon",
+    "time": "01:18.002",
+    "hash": "AURA-HASH-4B58-2026"
+  },
+  {
+    "rank": 6,
+    "name": "Ghost_FR",
+    "flag": "🇫🇷",
+    "title": "🏰 Aura Shogun",
+    "ship": "Aura Chronos-X",
+    "time": "01:19.450",
+    "hash": "AURA-HASH-3A47-2026"
+  },
+  {
+    "rank": 7,
+    "name": "PixelRider",
+    "flag": "🇬🇧",
+    "title": "⚔️ Aura Fürst",
+    "ship": "Aura Plasma-Pulse",
+    "time": "01:20.112",
+    "hash": "AURA-HASH-2936-2026"
+  },
+  {
+    "rank": 8,
+    "name": "Nordic_Drift",
+    "flag": "🇸🇪",
+    "title": "🔮 Ewiger Mythos",
+    "ship": "Aura Overlord-Alpha",
+    "time": "01:21.089",
+    "hash": "AURA-HASH-1825-2026"
+  },
+  {
+    "rank": 9,
+    "name": "AuraMaster_IT",
+    "flag": "🇮🇹",
+    "title": "🗡️ Aura Paladin",
+    "ship": "Aura Titan-Glitch",
+    "time": "01:22.540",
+    "hash": "AURA-HASH-0714-2026"
+  },
+  {
+    "rank": 10,
+    "name": "Zero_Damage",
+    "flag": "🇰🇷",
+    "title": "🗡️ Aura Paladin",
+    "ship": "Aura Swift-Neon",
+    "time": "01:23.901",
+    "hash": "AURA-HASH-9603-2026"
+  }
+]
 
+ 
