@@ -507,61 +507,37 @@ body {
   max-width: 600px;
   margin: 0 auto 25px auto;
 }
-
-/* ECHTE PREMIUM GOLD-MEDAILLEN MIT BESCHREIBUNG IM FOOTER */
-.gold-medals-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 18px;
-  margin: 35px 0 25px 0;
-  padding: 0 10px;
-}
-
-.gold-medal-card {
-  background: linear-gradient(145deg, rgba(18, 16, 8, 0.95), rgba(6, 5, 2, 0.98));
-  border: 1px solid var(--gold-primary);
-  border-radius: 20px;
-  padding: 18px 12px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.15);
-  transition: all 0.35s ease;
-}
-
-.gold-medal-card:hover {
-  border-color: #ffdf73;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4), inset 0 1px 3px rgba(255, 255, 255, 0.3);
-}
-
-.gold-medal-icon {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto 10px auto;
-  background: var(--gold-gradient);
-  border-radius: 50%;
+/* AURA TRUST BADGES (FOOTER MEDAILLEN) */
+.trust-badges-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #050505;
-  font-size: 1.3rem;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0 15px 0;
+  padding: 0 15px;
 }
-
-.gold-medal-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
   color: var(--gold-champagne);
-  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
-
-.gold-medal-desc {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-  margin: 0;
+.trust-badge i {
+  color: var(--gold-primary);
+  font-size: 0.85rem;
 }
-
+.trust-badge:hover {
+  border-color: var(--border-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
+}
 .legal-box {
   border-radius: 20px;
   padding: 35px;
@@ -900,41 +876,33 @@ Datenschutzerklärung von RevenueCat: <a href="https://revenuecat.com" target="_
 <i class="fa-solid fa-arrow-up"></i> <span data-i18n="btn_scroll_top">Nach oben</span>
 </a>
 </div>
-
-<!-- FOOTER MIT DEN 5 ERKLÄRTEN GOLD-MEDAILLEN -->
+<!-- FOOTER MIT DEN 5 EDLEN TRUST-BADGES -->
 <footer>
-<div class="gold-medals-grid">
-  <div class="gold-medal-card">
-    <div class="gold-medal-icon"><i class="fa-solid fa-code"></i></div>
-    <div class="gold-medal-title">W3C Valid Code</div>
-    <p class="gold-medal-desc">Fehlerfreier & standardkonformer Programmcode.</p>
+<div class="trust-badges-container">
+  <div class="trust-badge">
+    <i class="fa-solid fa-code"></i>
+    <span>W3C Valid Code</span>
   </div>
-  <div class="gold-medal-card">
-    <div class="gold-medal-icon"><i class="fa-solid fa-bolt"></i></div>
-    <div class="gold-medal-title">GTmetrix Grade A</div>
-    <p class="gold-medal-desc">Maximale Ladezeit & Top-Performance (100%).</p>
+  <div class="trust-badge">
+    <i class="fa-solid fa-bolt"></i>
+    <span>GTmetrix Grade A (100%)</span>
   </div>
-  <div class="gold-medal-card">
-    <div class="gold-medal-icon"><i class="fa-solid fa-universal-access"></i></div>
-    <div class="gold-medal-title">WAVE Accessibility</div>
-    <p class="gold-medal-desc">Perfekte Barrierefreiheit für alle Nutzer.</p>
+  <div class="trust-badge">
+    <i class="fa-solid fa-universal-access"></i>
+    <span>WAVE 10/10 Accessibility</span>
   </div>
-  <div class="gold-medal-card">
-    <div class="gold-medal-icon"><i class="fa-solid fa-search"></i></div>
-    <div class="gold-medal-title">Google PageSpeed</div>
-    <p class="gold-medal-desc">Optimale SEO-Bewertung & Best Practices (100).</p>
+  <div class="trust-badge">
+    <i class="fa-solid fa-search"></i>
+    <span>Google PageSpeed 100</span>
   </div>
-  <div class="gold-medal-card">
-    <div class="gold-medal-icon"><i class="fa-solid fa-lock"></i></div>
-    <div class="gold-medal-title">SSL Labs A+ Security</div>
-    <p class="gold-medal-desc">Höchste Verschlüsselungssicherheit & Datenschutz.</p>
+  <div class="trust-badge">
+    <i class="fa-solid fa-lock"></i>
+    <span>SSL Labs A+ Security</span>
   </div>
 </div>
-
 <p>© 2026 Aura Applications. Alle Rechte vorbehalten.</p>
 </footer>
 </div>
-
 <!-- JAVASCRIPT FÜR MEHRSPRACHIGKEIT -->
 <script>
 const translations = {
@@ -1140,5 +1108,4 @@ function changeLanguage(lang) {
 </script>
 </body>
 </html>
-
  
