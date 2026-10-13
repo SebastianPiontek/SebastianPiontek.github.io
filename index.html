@@ -507,46 +507,36 @@ body {
   max-width: 600px;
   margin: 0 auto 25px auto;
 }
-/* AURA TRUST BADGES (ECHTE RUNDE SCHWARZ-GOLD-MEDAILLEN IM FOOTER) */
+/* AURA TRUST BADGES (FOOTER MEDAILLEN) */
 .trust-badges-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin: 25px 0 20px 0;
+  gap: 12px;
+  margin: 25px 0 15px 0;
   padding: 0 15px;
 }
 .trust-badge {
-  width: 105px;
-  height: 105px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #1a1a1a 0%, #080808 100%);
-  border: 2px solid var(--gold-primary);
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25), inset 0 0 12px rgba(212, 175, 55, 0.12);
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: var(--gold-champagne);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
-  position: relative;
 }
 .trust-badge i {
   color: var(--gold-primary);
-  font-size: 1.25rem;
-  margin-bottom: 4px;
-}
-.trust-badge span {
-  font-size: 0.62rem;
-  color: var(--gold-champagne);
-  line-height: 1.1;
-  font-weight: 600;
+  font-size: 0.85rem;
 }
 .trust-badge:hover {
-  border-color: var(--gold-champagne);
-  transform: scale(1.06);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45), inset 0 0 18px rgba(212, 175, 55, 0.25);
+  border-color: var(--border-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
 }
 .legal-box {
   border-radius: 20px;
@@ -814,7 +804,7 @@ Play Store <i class="fa-brands fa-google-play"></i> Google
 <h2 data-i18n="feedback_title">Deine Meinung ist mir wichtig</h2>
 <p data-i18n="feedback_desc">Hast du Fragen, Verbesserungsvorschläge oder Feedback zu meinen Apps? Schreib mir direkt – ich freue mich über jede Nachricht.</p>
 <div style="display: inline-block;">
-<a href="mailto:Aura-applications@web.de?subject=Feedback%20zu%20Aura%20Applications&body=Hallo%20Sebastian,%0A%0Aich%20habe%20folgendes%20Anliegen%20zu%20deinen%20Apps:%0A" class="btn-store" style="width: auto; padding: 12px 30px;" data-i18n="feedback_btn">
+<a href="mailto:Aura-applications@web.de?subject=Feedback%20zu%20Aura%20Applications" class="btn-store" style="width: auto; padding: 12px 30px;" data-i18n="feedback_btn">
 Feedback per E-Mail senden <i class="fa-solid fa-paper-plane"></i>
 </a>
 </div>
@@ -887,28 +877,28 @@ Datenschutzerklärung von RevenueCat: <a href="https://revenuecat.com" target="_
 <i class="fa-solid fa-arrow-up"></i> <span data-i18n="btn_scroll_top">Nach oben</span>
 </a>
 </div>
-<!-- FOOTER MIT DEN 5 RUNDEN SCHWARZ-GOLD-MEDAILLEN -->
+<!-- FOOTER MIT DEN 5 EDLEN TRUST-BADGES -->
 <footer>
 <div class="trust-badges-container">
   <div class="trust-badge">
     <i class="fa-solid fa-code"></i>
-    <span>W3C Valid</span>
+    <span>W3C Valid Code</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-bolt"></i>
-    <span>GTmetrix 100%</span>
+    <span>GTmetrix Grade A (100%)</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-universal-access"></i>
-    <span>WAVE 10/10</span>
+    <span>WAVE 10/10 Accessibility</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-search"></i>
-    <span>PageSpeed 100</span>
+    <span>Google PageSpeed 100</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-lock"></i>
-    <span>SSL A+ Sec</span>
+    <span>SSL Labs A+ Security</span>
   </div>
 </div>
 <p>© 2026 Aura Applications. Alle Rechte vorbehalten.</p>
@@ -1119,5 +1109,3 @@ function changeLanguage(lang) {
 </script>
 </body>
 </html>
-
- 
