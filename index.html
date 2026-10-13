@@ -507,36 +507,46 @@ body {
   max-width: 600px;
   margin: 0 auto 25px auto;
 }
-/* AURA TRUST BADGES (FOOTER MEDAILLEN) */
+/* AURA TRUST BADGES (ECHTE RUNDE SCHWARZ-GOLD-MEDAILLEN IM FOOTER) */
 .trust-badges-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin: 25px 0 15px 0;
+  gap: 15px;
+  margin: 25px 0 20px 0;
   padding: 0 15px;
 }
 .trust-badge {
-  display: inline-flex;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1a1a1a 0%, #080808 100%);
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-gold);
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  color: var(--gold-champagne);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25), inset 0 0 12px rgba(212, 175, 55, 0.12);
   transition: all 0.3s ease;
+  position: relative;
 }
 .trust-badge i {
   color: var(--gold-primary);
-  font-size: 0.85rem;
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+.trust-badge span {
+  font-size: 0.62rem;
+  color: var(--gold-champagne);
+  line-height: 1.1;
+  font-weight: 600;
 }
 .trust-badge:hover {
-  border-color: var(--border-gold-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
+  border-color: var(--gold-champagne);
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45), inset 0 0 18px rgba(212, 175, 55, 0.25);
 }
 .legal-box {
   border-radius: 20px;
@@ -669,7 +679,8 @@ footer {
 <div class="nav-btn-group">
 <a href="#apps" data-i18n="nav_apps" class="btn-header-cta">Apps entdecken</a>
 </div>
-</nav>
+<
+av>
 </header>
 <!-- HERO SECTION -->
 <section class="hero">
@@ -861,7 +872,7 @@ E-Mail: Aura-applications@web.de</p>
 Zur Finanzierung meiner kostenfreien Apps nutze ich den Werbedienst Google AdMob. Google AdMob verarbeitet technische Informationen wie IP-Adresse und Geräte-Identifikatoren (z. B. Android-Werbe-ID) sowie Nutzungsdaten, um Anzeigen bereitzustellen und deren Leistung zu messen. Die Verarbeitung erfolgt auf Grundlage deiner ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die beim ersten App-Start über mein Einwilligungs-Banner abgefragt wird. Du kannst diese in den App-Einstellungen jederzeit widerrufen.<br>
 Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
 <p><strong>b) Abwicklung von In-App-Käufen via RevenueCat (RevenueCat, Inc.):</strong><br>
-Sofern du dich für den Kauf einer kostenpflichtigen Erweiterung (z. B. Lifetime Pass) entscheidest, wird die Transaktion über den jeweiligen App Store und den Dienstleister RevenueCat zur Freischaltung der Funktion verifiziert. Hierbei werden anonymisierte Transaktions-IDs verarbeitet. Die Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Daten können an den Anbieter in die USA übertragen werden; RevenueCat is unter dem EU-US Data Privacy Framework zertifiziert. Es werden keine Zahlungsdaten auf meinen Systemen gespeichert.<br>
+Sofern du dich für den Kauf einer kostenpflichtigen Erweiterung (z. B. Lifetime Pass) entscheidest, wird die Transaktion über den jeweiligen App Store und den Dienstleister RevenueCat zur Freischaltung der Funktion verifiziert. Hierbei werden anonymisierte Transaktions-IDs verarbeitet. Die Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO). Daten können an den Anbieter in die USA übertragen werden; RevenueCat ist unter dem EU-US Data Privacy Framework zertifiziert. Es werden keine Zahlungsdaten auf meinen Systemen gespeichert.<br>
 Datenschutzerklärung von RevenueCat: <a href="https://revenuecat.com" target="_blank" rel="noopener noreferrer">https://revenuecat.com</a></p>
 <h3>6. App-Berechtigungen</h3>
 <p>Sollte eine Applikation Zugriff auf Hardware-Funktionen anfordern, erfolgt dieser ausschließlich zur unmittelbaren Ausführung der von dir gestarteten Funktion.</p>
@@ -876,28 +887,28 @@ Datenschutzerklärung von RevenueCat: <a href="https://revenuecat.com" target="_
 <i class="fa-solid fa-arrow-up"></i> <span data-i18n="btn_scroll_top">Nach oben</span>
 </a>
 </div>
-<!-- FOOTER MIT DEN 5 EDLEN TRUST-BADGES -->
+<!-- FOOTER MIT DEN 5 RUNDEN SCHWARZ-GOLD-MEDAILLEN -->
 <footer>
 <div class="trust-badges-container">
   <div class="trust-badge">
     <i class="fa-solid fa-code"></i>
-    <span>W3C Valid Code</span>
+    <span>W3C Valid</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-bolt"></i>
-    <span>GTmetrix Grade A (100%)</span>
+    <span>GTmetrix 100%</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-universal-access"></i>
-    <span>WAVE 10/10 Accessibility</span>
+    <span>WAVE 10/10</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-search"></i>
-    <span>Google PageSpeed 100</span>
+    <span>PageSpeed 100</span>
   </div>
   <div class="trust-badge">
     <i class="fa-solid fa-lock"></i>
-    <span>SSL Labs A+ Security</span>
+    <span>SSL A+ Sec</span>
   </div>
 </div>
 <p>© 2026 Aura Applications. Alle Rechte vorbehalten.</p>
@@ -937,5 +948,176 @@ const translations = {
     app2_desc: "Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.",
     app3_desc: "Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.",
     faq_title: "Hinter den Kulissen (FAQ)",
-    faq_1_q: "1.
+    faq_1_q: "1. Wer steckt eigentlich hinter Aura Applications?",
+    faq_1_ans: "Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).",
+    faq_2_q: "2. Warum sind meine Apps im fairen Einmalkauf statt im Abo erhältlich?",
+    faq_2_ans: "Aus Überzeugung und für maximale Transparenz. Ich halte nichts von monatlichen Dauerkosten für clevere Alltags-Tools. Bei Aura gilt: Einmal fair bezahlen, dauerhaft unbegrenzt nutzen ohne versteckte Kostenfallen.",
+    faq_3_q: "3. Brauchen alle Aura-Apps eine Internetverbindung?",
+    faq_3_ans: "Nein, aber dort, wo es funktional sinnvoll ist (wie bei Werbediensten oder Online-Diensten), wird sie gezielt genutzt. Wo immer es geht, minimieren wir Datenabflüsse und arbeiten konsequent datenschutzfreundlich.",
+    faq_4_q: "4. Nutze ich eigene Server oder Cloud-Speicher für deine Daten?",
+    faq_4_ans: "Nein. Aura Applications betreibt keine eigenen Backend-Server oder Cloud-Infrastrukturen. Deine persönlichen Daten bleiben dort, wo sie hingehören: geschützt auf deinem eigenen Endgerät.",
+    faq_5_q: "5. Warum lege ich so großen Wert auf das edle AMOLED-Gold-Design?",
+    faq_5_ans: "Weil ein dunkles Echtschwarz-Design nicht nur extrem elegant aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und die Augen schützt.",
+    faq_6_q: "6. Sind in Zukunft weitere Apps und Erweiterungen geplant?",
+    faq_6_ans: "Ja, auf jeden Fall! Ich tüftle ständig an neuen Ideen und Konzepten. Neue Apps und nützliche Erweiterungen werden Schritt für Schritt veröffentlicht, um mein Angebot stetig zu erweitern.",
+    feedback_title: "Deine Meinung ist mir wichtig",
+    feedback_desc: "Hast du Fragen, Verbesserungsvorschläge oder Feedback zu meinen Apps? Schreib mir direkt – ich freue mich über jede Nachricht.",
+    feedback_btn: "Feedback per E-Mail senden"
+  },
+  en: {
+    nav_impressum: "Imprint",
+    nav_datenschutz: "Privacy",
+    nav_apps: "Discover Apps",
+    nav_dev: "About Developer",
+    nav_faq: "FAQ",
+    btn_scroll_top: "Back to top",
+    hero_badge: "Official App Manufactory",
+    hero_title_1: "Premium Apps",
+    hero_title_2: "for your daily life.",
+    hero_sub: "Discover lightweight, highly precise Android apps in elegant AMOLED gold design. Privacy-focused and without subscription traps.",
+    feat_1: "Highest Precision",
+    feat_2: "Fair Monetization",
+    feat_3: "Subscription-free & Fair",
+    usp_1_title: "Lightning Fast & Light",
+    usp_1_desc: "Minimal app size, launches instantly, and saves battery life.",
+    usp_2_title: "100% On-Device",
+    usp_2_desc: "Your data stays strictly local on your smartphone.",
+    usp_3_title: "AMOLED Gold Design",
+    usp_3_desc: "True black combined with refined metallic and gold accents.",
+    usp_4_title: "Official Play Store",
+    usp_4_desc: "Securely available via the official Google Play Store.",
+    dev_role: "Founder & App Developer",
+    dev_headline: "Android Apps without Data Hunger",
+    dev_p1: "Hello, my name is Sebastian Piontek. I develop my applications personally, fairly priced, reliable, and in an elegant design.",
+    dev_p2: "Whether smart utility tools or mobile scanners: protecting your privacy comes first. Without unnecessary cloud infrastructures, you get clean craftsmanship from Duisburg.",
+    apps_title: "My Applications",
+    app1_desc: "The elegant calculator for your daily routine. Guaranteed error-free calculations, helps you save discounts while shopping, and keeps track of your budget.",
+    app2_desc: "Your pocket mobile office. Easily scan documents and contracts, crop neatly, sign directly on display, and send immediately.",
+    app3_desc: "Lightning-fast scanner without fluff. Reads links, connects to Wi-Fi instantly, or compares product prices in one click.",
+    faq_title: "Behind the Scenes (FAQ)",
+    faq_1_q: "1. Who is behind Aura Applications?",
+    faq_1_ans: "No anonymous corporation, but pure handcraft. As a solo entrepreneur, I design, code, and maintain all apps personally right here in Germany (Duisburg).",
+    faq_2_q: "2. Why are my apps available for a fair one-time purchase instead of a subscription?",
+    faq_2_ans: "Out of conviction and for maximum transparency. I don't believe in monthly ongoing costs for clever everyday tools. At Aura: Pay once, use unlimited without hidden trap costs.",
+    faq_3_q: "3. Do all Aura apps require an internet connection?",
+    faq_3_ans: "No, but wherever functionally useful (like for ads or online services), it is used purposefully. Wherever possible, we minimize data outflows and work privacy-friendly.",
+    faq_4_q: "4. Do I use my own servers or cloud storage for your data?",
+    faq_4_ans: "No. Aura Applications does not operate its own backend servers or cloud infrastructures. Your personal data stays where it belongs: protected on your own device.",
+    faq_5_q: "5. Why do I place such high value on the elegant AMOLED Gold design?",
+    faq_5_ans: "Because a dark true-black design not only looks extremely elegant, but also noticeably saves battery on modern OLED displays and protects your eyes.",
+    faq_6_q: "6. Are further apps and extensions planned for the future?",
+    faq_6_ans: "Yes, absolutely! I am constantly working on new ideas and concepts. New apps and useful extensions will be released step by step to expand my portfolio.",
+    feedback_title: "Your opinion matters to me",
+    feedback_desc: "Do you have questions, suggestions, or feedback about my apps? Write to me directly – I look forward to every message.",
+    feedback_btn: "Send feedback via email"
+  },
+  es: {
+    nav_impressum: "Aviso legal",
+    nav_datenschutz: "Privacidad",
+    nav_apps: "Descubrir Apps",
+    nav_dev: "Desarrollador",
+    nav_faq: "FAQ",
+    btn_scroll_top: "Volver arriba",
+    hero_badge: "Taller oficial de aplicaciones",
+    hero_title_1: "Apps de primera",
+    hero_title_2: "para tu día a día.",
+    hero_sub: "Descubre aplicaciones ligeras de Android en elegante diseño AMOLED. Seguras para la privacidad y sin suscripciones.",
+    feat_1: "Máxima precisión",
+    feat_2: "Monetización justa",
+    feat_3: "Sin suscripciones y justo",
+    usp_1_title: "Ultrarrápido y ligero",
+    usp_1_desc: "Tamaño mínimo de app, se inicia sin demora y ahorra batería.",
+    usp_2_title: "100% En el dispositivo",
+    usp_2_desc: "Tus datos permanecen exclusivamente en tu teléfono inteligente.",
+    usp_3_title: "Diseño Dorado AMOLED",
+    usp_3_desc: "Negro puro combinado con elegantes acentos metálicos y dorados.",
+    usp_4_title: "Google Play Store",
+    usp_4_desc: "Disponible de forma segura en Google Play Store.",
+    dev_role: "Fundador y desarrollador",
+    dev_headline: "Apps de Android sin recopilación de datos",
+    dev_p1: "Hola, mi nombre es Sebastian Piontek. Desarrollo mis aplicaciones de forma personal, a un precio justo y con un diseño elegante.",
+    dev_p2: "Ya sean herramientas o escáneres móviles: la protección de tu privacidad es lo primero. Sin infraestructuras de nube innecesarias y con trabajo limpio desde Duisburg.",
+    apps_title: "Mis Aplicaciones",
+    app1_desc: "La elegante calculadora para tu día a día. Cálculos precisos, te ayuda a ahorrar con descuentos y mantiene tu presupuesto bajo control.",
+    app2_desc: "Tu oficina móvil de bolsillo. Fotografía fácilmente documentos, fírmalos en pantalla y envíalos de inmediato.",
+    app3_desc: "Escaneo ultrarrápido sin complicaciones. Lee enlaces, se conecta al Wi-Fi o compara precios con un solo clic.",
+    faq_title: "Preguntas frecuentes (FAQ)",
+    faq_1_q: "1. ¿Quién está detrás de Aura Applications?",
+    faq_1_ans: "Ninguna corporación anónima, sino pura artesanía. Como autónomo, diseño, programo y mantengo todas las apps personalmente aquí en Alemania (Duisburg).",
+    faq_2_q: "2. ¿Por qué mis apps están disponibles en compra única y justa en lugar de suscripción?",
+    faq_2_ans: "Por convicción y máxima transparencia. No creo en los costos mensuales para herramientas cotidianas. En Aura: Paga una vez, usa ilimitado sin trampas ocultas.",
+    faq_3_q: "3. ¿Todas las apps de Aura necesitan conexión a internet?",
+    faq_3_ans: "No, pero donde sea funcionalmente útil (como para anuncios o servicios en línea), se utiliza de forma específica. Minimizamos la salida de datos.",
+    faq_4_q: "4. ¿Utilizo servidores propios o almacenamiento en la nube para tus datos?",
+    faq_4_ans: "No. Aura Applications no opera servidores backend ni infraestructuras de nube. Tus datos personales permanecen protegidos en tu propio dispositivo.",
+    faq_5_q: "5. ¿Por qué doy tanta importancia al elegante diseño AMOLED Gold?",
+    faq_5_ans: "Porque un diseño negro puro no solo es elegante, sino que en pantallas OLED ahorra batería notablemente y protege tus ojos.",
+    faq_6_q: "6. ¿Hay planes de futuras aplicaciones y extensiones?",
+    faq_6_ans: "¡Sí, por supuesto! Trabajo constantemente en nuevas ideas y conceptos. Se lanzarán nuevas apps y extensiones paso a paso.",
+    feedback_title: "Tu opinión es importante para mí",
+    feedback_desc: "¿Tienes preguntas, sugerencias o comentarios sobre mis apps? Escríbeme directamente – me alegro de cada mensaje.",
+    feedback_btn: "Enviar comentarios por correo"
+  },
+  fr: {
+    nav_impressum: "Mentions légales",
+    nav_datenschutz: "Confidentialité",
+    nav_apps: "Découvrir les apps",
+    nav_dev: "Développeur",
+    nav_faq: "FAQ",
+    btn_scroll_top: "Haut de page",
+    hero_badge: "Manufacture officielle d'applications",
+    hero_title_1: "Applications de premier choix",
+    hero_title_2: "pour votre quotidien.",
+    hero_sub: "Découvrez mes applications Android au design doré AMOLED. Respectueuses de la vie privée et sans abonnement.",
+    feat_1: "Haute précision",
+    feat_2: "Monétisation équitable",
+    feat_3: "Sans abonnement & équitable",
+    usp_1_title: "Ultra rapide & léger",
+    usp_1_desc: "Taille minimale, lancement instantané et économie de batterie.",
+    usp_2_title: "100% Sur l'appareil",
+    usp_2_desc: "Vos données restent exclusivement locales sur votre smartphone.",
+    usp_3_title: "Design Doré AMOLED",
+    usp_3_desc: "Noir pur combiné à de nobles accents métalliques et dorés.",
+    usp_4_title: "Google Play Store",
+    usp_4_desc: "Disponible en toute sécurité sur le Google Play Store.",
+    dev_role: "Fondateur & développeur",
+    dev_headline: "Apps Android sans collecte de données",
+    dev_p1: "Bonjour, je m'appelle Sebastian Piontek. Je développe mes applications personnellement, à un prix équitable et au design élégant.",
+    dev_p2: "Qu'il s'agisse d'outils ou de scanners mobiles : la protection de votre vie privée est la priorité. Sans infrastructures cloud inutiles et avec un travail propre de Duisburg.",
+    apps_title: "Mes Applications",
+    app1_desc: "La calculatrice élégante pour votre quotidien. Calculs précis, gestion de budget et calcul de remises lors de vos achats.",
+    app2_desc: "Votre bureau mobile de poche. Numérisez des documents, signez directement sur l'écran et envoyez immédiatement.",
+    app3_desc: "Numérisation ultra rapide. Lit les liens, connecte au Wi-Fi ou compare les prix des produits en un clic.",
+    faq_title: "Foire aux questions (FAQ)",
+    faq_1_q: "1. Qui se cache derrière Aura Applications ?",
+    faq_1_ans: "Aucune grande entreprise anonyme, mais de l'artisanat pur. En tant qu'entrepreneur individuel, je conçois, code et gère toutes les apps moi-même en Allemagne (Duisburg).",
+    faq_2_q: "2. Pourquoi mes applications sont-elles proposées en achat unique équitable plutôt qu'en abonnement ?",
+    faq_2_ans: "Par conviction et transparence maximale. Je ne crois pas aux coûts mensuels. Chez Aura : Payez une fois, utilisez sans limite ni piège caché.",
+    faq_3_q: "3. Toutes les applications Aura nécessitent-elles une connexion Internet ?",
+    faq_3_ans: "Non, mais là où c'est utile (comme pour les annonces ou services), elle est utilisée de manière ciblée. Nous minimisons la sortie des données.",
+    faq_4_q: "4. Est-ce que j'utilise mes propres serveurs ou un cloud pour vos données ?",
+    faq_4_ans: "Non. Aura Applications n'exploite pas de serveurs backend ou d'infrastructures cloud. Vos données personnelles restent là où elles doivent être : sur votre appareil.",
+    faq_5_q: "5. Pourquoi est-ce que j'accorde autant d'importance au design AMOLED Gold ?",
+    faq_5_ans: "Parce qu'un design noir pur n'est pas seulement élégant, il économise aussi visiblement la batterie sur les écrans OLED et protège vos yeux.",
+    faq_6_q: "6. D'autres applications et extensions sont-elles prévues ?",
+    faq_6_ans: "Oui, absolument ! Je travaille constamment sur de nouvelles idées. De nouvelles apps et extensions seront publiées étape par étape.",
+    feedback_title: "Votre avis m'importe",
+    feedback_desc: "Avez-vous des questions, des suggestions ou des commentaires sur mes apps ? Écrivez-moi directement – je me réjouis de chaque message.",
+    feedback_btn: "Envoyer un feedback par e-mail"
+  }
+};
+function changeLanguage(lang) {
+  if (!translations[lang]) return;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+}
+</script>
+</body>
+</html>
+
  
