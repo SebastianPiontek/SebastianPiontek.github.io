@@ -1,0 +1,21 @@
+# =========================================================================================
+# AURA APPWORKS - ROBOTS.TXT FOR SEBASTIANPIONTEK.GITHUB.IO
+# =========================================================================================
+
+# Erlaube allen vertrauenswürdigen Suchmaschinen das vollständige Crawlen
+User-agent: *
+Allow: /
+
+# Blockiere sensible System-, Asset- und Cache-Ordner zur Performance-Schonung
+Disallow: /dist/
+# Hier kannst du kuenftige private Bereiche sperren (z. B. Admin-Panels der Web-Tools)
+# Disallow: /admin/
+
+# Schütze deine Web-Werkzeuge vor aggressiven KI-Scrapern (optional, falls gewünscht)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+
+# Verweis auf deine offizielle Sitemap (Zwingend fuer Google & Bing)
+Sitemap: https://github.io

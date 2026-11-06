@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ========================================================================================= -->
+<!-- AURA APPWORKS - SITEMAP.XML FOR SEBASTIANPIONTEK.GITHUB.IO                                -->
+<!-- ========================================================================================= -->
+<urlset xmlns="http://sitemaps.org">
+
+  <!-- Deine Haupt-Landingpage (Höchste Priorität) -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Wenn du demnaechst separate Unterseiten fuer deine Tools baust, fügst du sie so ein: -->
+  <!--
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+
+  <!-- Rechtliche Seiten (Niedrigere Priorität, aber wichtig für die Indexierung) -->
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
