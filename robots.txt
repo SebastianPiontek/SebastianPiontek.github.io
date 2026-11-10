@@ -18,4 +18,5 @@ Disallow: /dist/
 # Disallow: /
 
 # Verweis auf deine offizielle Sitemap (Zwingend fuer Google & Bing)
-Sitemap: https://github.io
+Sitemap: https://sebastianpiontek.github.io/sitemap.xml
+
