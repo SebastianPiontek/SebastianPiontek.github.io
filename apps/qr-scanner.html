@@ -162,6 +162,7 @@
         .btn-group {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 16px;
             flex-wrap: wrap;
             margin-bottom: 40px;
@@ -201,12 +202,13 @@
             padding: 14px 26px;
             border-radius: 12px;
             text-decoration: none;
-            transition: background 0.2s ease, border-color 0.2s ease;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.12);
             border-color: var(--gold-primary);
+            transform: translateY(-2px);
         }
 
         /* Trust Badges */
@@ -347,7 +349,7 @@
         @media (max-width: 640px) {
             h1 { font-size: 2rem; }
             .hero { padding: 40px 0 24px; }
-            .btn-group { flex-direction: column; }
+            .btn-group { flex-direction: column; width: 100%; }
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
             .trust-row { gap: 16px; }
         }
@@ -380,6 +382,9 @@
                 <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.277-.523-.69-.523-1.157V2.971c0-.467.195-.88.522-1.157zM15.207 13.414l2.457 2.457-11.45 6.467 8.993-8.924zm0-2.828L6.214 1.662l11.45 6.467-2.457 2.457zm1.414 1.414l3.197 1.808c.783.443.783 1.168 0 1.611l-3.197 1.808-2.283-2.283 2.283-2.544z"/></svg>
                     Im Google Play Store laden
+                </a>
+                <a href="../index.html#apps" class="btn-secondary">
+                    🌐 Auf Hauptseite ansehen
                 </a>
                 <a href="#vorteile" class="btn-secondary">
                     Funktionen entdecken
@@ -473,4 +478,3 @@
 
 </body>
 </html>
-
