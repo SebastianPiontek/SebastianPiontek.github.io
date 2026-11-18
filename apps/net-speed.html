@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Net Speed Pro – Präziser Internet-Speedtest & Ping-Messer für Android | Aura Appworks</title>
-    <meta name="description" content="Der professionelle Internet-Geschwindigkeitstest für Android. Misst Download, Upload, Ping und Jitter mit höchster Genauigkeit. Reines AMOLED-Design, WLAN-Analyse ohne Abo.">
-    <meta name="keywords" content="Speedtest Android, Internet Geschwindigkeit messen, Ping Test App, WLAN Signalstärke messen, Speed Test ohne Werbung, Aura Appworks">
-    <meta name="author" content="Aura Appworks">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://sebastianpiontek.github.io/apps/net-speed.html">
-
-    <!-- Open Graph für Social Media & Google -->
-    <meta property="og:title" content="Aura Net Speed Pro – Aura Appworks">
-    <meta property="og:description" content="Präzise Bandbreitenmessung: Download, Upload, Ping und WLAN-Stabilität in edlem Champagner-Gold.">
-    <meta property="og:image" content="../Bilder-Fotos/Aura-Net-Speed.webp">
+    <title>Aura Net Speed Pro – Professioneller Speedtest & WLAN-Analyse für Android | Aura Appworks</title>
+    <meta name="description" content="High-End Netzwerkanalyse für Android: Download, Upload, Ping, Jitter, Bufferbloat-Note, akustischer WLAN-Peilsender, Grundriss-Heatmap, DNS-Vergleich und PDF-Störungsprotokoll. 100% lokal.">
+    
+    <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Aura Net Speed Pro – Speedtest, Bufferbloat & WLAN-Labor">
+    <meta property="og:description" content="Präziser Speedtest gegen Edge-Server, Bufferbloat-Noten A+ bis F, akustischer Funkloch-Finder, Grundriss-WLAN-Wetterkarte und PDF-Messprotokoll.">
+    <meta property="og:image" content="../Bilder-Fotos/Aura%20Netspeed%20pro.webp">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -60,91 +57,91 @@
             width: 700px;
             height: 450px;
             background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
-            pointer-events: none;
             z-index: 0;
+            pointer-events: none;
         }
 
         .container {
             max-width: 1080px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 24px 20px 80px;
             position: relative;
             z-index: 1;
         }
 
+        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 40px;
         }
 
         .back-link {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
             transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .back-link:hover {
-            color: var(--gold-light);
-            transform: translateX(-3px);
+            color: #FFFFFF;
+            transform: translateX(-4px);
         }
 
         .brand-badge {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
             letter-spacing: 2px;
-            color: var(--gold-light);
-            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
         }
 
+        /* Hero */
         .hero {
-            padding: 60px 0 40px;
             text-align: center;
+            padding: 30px 0 60px;
         }
 
         .app-icon {
-            width: 110px;
-            height: 110px;
-            border-radius: 26px;
+            width: 128px;
+            height: 128px;
+            border-radius: 28px;
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.25);
             margin: 0 auto 24px;
-            border: 2px solid var(--border-gold);
-            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.25);
-            background: #000000;
             display: block;
             object-fit: cover;
+            background-color: #0d0d0d;
         }
 
         .hero-tag {
             display: inline-block;
-            padding: 6px 16px;
-            border-radius: 50px;
-            background: rgba(212, 175, 55, 0.08);
-            border: 1px solid var(--border-gold);
+            background: rgba(212, 175, 55, 0.1);
             color: var(--gold-light);
+            padding: 4px 14px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            border: 1px solid var(--border-gold);
             margin-bottom: 16px;
         }
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 2.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 16px;
+            font-weight: 700;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
         .hero-subtitle {
@@ -152,198 +149,252 @@
             color: var(--text-muted);
             max-width: 680px;
             margin: 0 auto 32px;
-            font-weight: 400;
+            font-weight: 300;
         }
 
+        /* Buttons */
         .btn-group {
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
         }
 
         .btn-primary {
+            background: var(--gold-gradient);
+            color: #000000;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--gold-gradient);
-            color: #000000;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 14px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.45);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.5);
         }
 
         .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gold-light);
+            font-weight: 600;
+            padding: 14px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: 1px solid var(--border-gold);
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-gold);
-            color: var(--gold-light);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 14px 26px;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+            gap: 8px;
+            transition: all 0.2s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(212, 175, 55, 0.12);
+            background: rgba(212, 175, 55, 0.1);
             border-color: var(--gold-primary);
-            transform: translateY(-2px);
+            color: #FFFFFF;
         }
 
+        /* Trust Row */
         .trust-row {
             display: flex;
             justify-content: center;
-            gap: 32px;
+            gap: 24px;
             flex-wrap: wrap;
-            padding: 20px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            margin-bottom: 60px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            max-width: 860px;
+            margin: 0 auto;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
         .trust-item {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 0.88rem;
-            color: var(--text-muted);
+            gap: 6px;
         }
 
         .trust-item span {
             color: var(--gold-primary);
-            font-weight: 700;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            margin-top: 70px;
         }
 
         .section-title {
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.8rem;
-            font-weight: 700;
+            color: var(--gold-light);
+            text-align: center;
             margin-bottom: 12px;
-            color: var(--text-main);
         }
 
         .section-desc {
             text-align: center;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto 40px;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
-        .features-grid {
+        /* Feature Cards */
+        .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 22px;
-            margin-bottom: 70px;
+            gap: 24px;
         }
 
-        .feature-card {
+        .card {
             background: var(--card-black);
             border: 1px solid var(--border-gold);
-            border-radius: 18px;
+            border-radius: 16px;
             padding: 28px;
-            backdrop-filter: blur(12px);
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            backdrop-filter: blur(10px);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .feature-card:hover {
+        .card:hover {
             transform: translateY(-4px);
             border-color: var(--border-gold-hover);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
         }
 
-        .feature-icon {
+        .card-icon {
             font-size: 2rem;
             margin-bottom: 16px;
             display: inline-block;
         }
 
-        .feature-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
+        .card h3 {
+            font-size: 1.25rem;
             color: var(--gold-light);
             margin-bottom: 10px;
+            font-family: 'Cinzel', serif;
         }
 
-        .feature-card p {
+        .card p {
             color: var(--text-muted);
             font-size: 0.92rem;
             line-height: 1.55;
         }
 
-        .faq-section {
-            background: rgba(12, 12, 12, 0.6);
+        .card ul {
+            list-style: none;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card li {
+            font-size: 0.85rem;
+            color: #d1d1d1;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        /* Tech Spec Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-black);
             border: 1px solid var(--border-gold);
-            border-radius: 20px;
-            padding: 40px 32px;
-            margin-bottom: 70px;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 24px;
         }
 
-        .faq-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 20px 0;
-        }
-
-        .faq-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .faq-item h4 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--gold-light);
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            color: var(--text-muted);
+        .specs-table th, .specs-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
             font-size: 0.92rem;
         }
 
+        .specs-table th {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+        }
+
+        .specs-table td:first-child {
+            color: var(--gold-light);
+            font-weight: 600;
+            width: 38%;
+        }
+
+        .specs-table td:last-child {
+            color: var(--text-muted);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .faq-q {
+            color: var(--gold-light);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        /* Footer */
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 40px 0;
+            margin-top: 90px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-gold);
             text-align: center;
-            color: #666666;
+            color: var(--text-muted);
             font-size: 0.85rem;
         }
 
         footer a {
-            color: var(--gold-primary);
+            color: var(--gold-light);
             text-decoration: none;
-            margin: 0 10px;
+            transition: color 0.2s;
         }
 
         footer a:hover {
-            color: var(--gold-light);
+            color: #FFFFFF;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 2rem; }
-            .hero { padding: 40px 0 24px; }
-            .btn-group { flex-direction: column; width: 100%; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .btn-group { flex-direction: column; }
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
-            .trust-row { gap: 16px; }
+            .trust-row { flex-direction: column; gap: 8px; }
+            .specs-table td:first-child { width: 50%; }
         }
     </style>
 </head>
@@ -362,16 +413,15 @@
 
         <!-- Hero -->
         <header class="hero">
-            <img src="../Bilder-Fotos/Aura-Net-Speed.webp" alt="Aura Net Speed Pro App Icon" class="app-icon" onerror="this.style.display='none'">
-            <div class="hero-tag">Android Werkzeuge · v1.0 Pro</div>
+            <img src="../Bilder-Fotos/Aura%20Netspeed%20pro.webp" alt="Aura Net Speed Pro App Icon" class="app-icon" onerror="this.src='../Bilder-Fotos/Aura-Appworks.webp'">
+            <div class="hero-tag">Android Netzwerk-Labor &amp; Speedtest · v1.0 Pro</div>
             <h1>Aura Net Speed Pro</h1>
             <p class="hero-subtitle">
-                Echtzeit-Netzwerkanalyse in Vollendung. 
-                Misst Download, Upload, Latenz und WLAN-Signalstärke mit maximaler Präzision – 100 % werbefrei als Einmalkauf.
+                Echtzeit-Netzwerkanalyse in Studio-Präzision. Multi-Chunk Download- &amp; Upload-Messung, Waveform-Bufferbloat-Noten (A+ bis F), akustischer WLAN-Peilsender, Grundriss-Wetterkarte und PDF-Störungsprotokoll. 100 % lokal ohne Abo.
             </p>
 
             <div class="btn-group">
-                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <a href="https://play.google.com/store/apps/details?id=de.auraappworks.netspeed" target="_blank" rel="noopener noreferrer" class="btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.277-.523-.69-.523-1.157V2.971c0-.467.195-.88.522-1.157zM15.207 13.414l2.457 2.457-11.45 6.467 8.993-8.924zm0-2.828L6.214 1.662l11.45 6.467-2.457 2.457zm1.414 1.414l3.197 1.808c.783.443.783 1.168 0 1.611l-3.197 1.808-2.283-2.283 2.283-2.544z"/></svg>
                     Im Google Play Store laden
                 </a>
@@ -385,74 +435,174 @@
 
             <!-- Trust Badges -->
             <div class="trust-row">
-                <div class="trust-item"><span>✓</span> Multi-Server Speedtest</div>
-                <div class="trust-item"><span>✓</span> Ping & Jitter Analyse</div>
-                <div class="trust-item"><span>✓</span> WLAN-Signalmeter</div>
-                <div class="trust-item"><span>✓</span> Fairer Einmalkauf</div>
+                <div class="trust-item"><span>✓</span> Reale Cloudflare Edge-Messung</div>
+                <div class="trust-item"><span>✓</span> Bufferbloat-Note nach Waveform-Skala</div>
+                <div class="trust-item"><span>✓</span> Akustischer WLAN-Peilsender</div>
+                <div class="trust-item"><span>✓</span> PDF-Störungsbericht für Provider</div>
             </div>
         </header>
 
         <!-- Vorteile / Features -->
         <section id="vorteile">
-            <h2 class="section-title">High-Speed Netzwerk-Diagnose</h2>
-            <p class="section-desc">Erkenne WLAN-Funklöcher, teste LTE/5G-Geschwindigkeiten und optimiere deine Verbindungen.</p>
+            <h2 class="section-title">Professionelle Netzwerkanalyse auf deinem Smartphone</h2>
+            <p class="section-desc">Entwickelt für Gamer, Streamer, Homeoffice-Profis und Hifi-Netzwerkenthusiasten, die ihre Internetverbindung bis ins Detail verstehen und optimieren wollen.</p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Präziser Bandbreitentest</h3>
-                    <p>Ermittelt die echte Download- und Upload-Rate deines Internetanschlusses mit optimierten Testdatenpaketen für maximale Genauigkeit.</p>
+            <div class="grid-3">
+                <!-- Feature 1: Speed & Bufferbloat -->
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Speedtest &amp; Bufferbloat</h3>
+                    <p>Messe Download, Upload, Latenz und Jitter gegen ungedrosselte Edge-Server. Die integrierte Bufferbloat-Analyse deckt Latenzsprünge unter Volllast schonungslos auf.</p>
+                    <ul>
+                        <li>Offizielle Waveform-Notenskala von A+ bis F</li>
+                        <li>Jitter- &amp; Paketverlust-Messung für Gaming</li>
+                        <li>Live-Wellenvisualisierung mit Neon-Gold-Glanz</li>
+                        <li>Synth-Akkord &amp; haptischer Meilenstein-Impuls</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">⏱️</div>
-                    <h3>Gamer & Streaming Latenz</h3>
-                    <p>Misst Ping (Reaktionszeit), Jitter (Verbindungsschwankungen) und Paketverlust für Gaming, Video-Calls und verzögerungsfreies Streaming.</p>
+                <!-- Feature 2: Akustischer Peilsender -->
+                <div class="card">
+                    <div class="card-icon">🔊</div>
+                    <h3>Akustischer WLAN-Peilsender</h3>
+                    <p>Finde den perfekten Router- oder Repeater-Standort ganz ohne Blick aufs Display. Der akustische Peilsender arbeitet wie ein akustischer Geigerzähler im Sekundentakt.</p>
+                    <ul>
+                        <li>Heller harmonischer Ton bei hervorragendem Empfang</li>
+                        <li>Tiefer werdender Ton bei Signalverschlechterung</li>
+                        <li>Absolute Stille im Funkloch – sofortige Ortung</li>
+                        <li>Akustischer Alarm bei plötzlichem Verbindungsabbruch</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📡</div>
-                    <h3>WLAN-Signalstärke (dBm)</h3>
-                    <p>Finde den besten Standort für deinen Router oder Repeater dank visuellem Echtzeit-Signalmeter mit genauer dBm-Anzeige.</p>
+                <!-- Feature 3: Dead-Zone-Mapper -->
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Grundriss-Heatmap (Wetterkarte)</h3>
+                    <p>Lade ein Foto deines Wohnungs- oder Hausgrundrisses hoch. Tippe auf einzelne Räume und miss die Geschwindigkeit – die App zeichnet eine farbige WLAN-Wetterkarte.</p>
+                    <ul>
+                        <li>Farbcodierte Signalwolken (Grün, Gold, Rot)</li>
+                        <li>Mustergrundriss für schnelle Tests direkt enthalten</li>
+                        <li>Dead-Spots und Schwachstellen auf einen Blick erkennen</li>
+                        <li>100 % lokal auf deinem Smartphone gespeichert</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Lückenlose Mess-Historie</h3>
-                    <p>Vergleiche frühere Messungen direkt auf dem Gerät. Erkenne sofort, ob dein Internetanbieter die vertraglich zugesagte Leistung liefert.</p>
+                <!-- Feature 4: Praxis-Checks -->
+                <div class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Praxis-Checks &amp; Puffer-Simulator</h3>
+                    <p>Schluss mit kryptischen Zahlen. Die App übersetzt deine Leitungswerte in vier konkrete Alltagstests und prognostiziert reale Downloadzeiten.</p>
+                    <ul>
+                        <li>Eignungs-Checks für Gaming, Zoom/Teams, 4K und Social Media</li>
+                        <li>Puffer-Simulator: Sekunden bis 4K-UHD-Streaming startet</li>
+                        <li>Ladezeit-Berechnung für 1 GB, 10 GB und 50 GB Downloads</li>
+                        <li>Node-Kette: Latenzen von Handy bis Cloudflare-Edge</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Detaillierte IP- & Provider-Infos</h3>
-                    <p>Zeigt deine externe IP-Adresse, den aktuellen Internet-Provider, den Verbindungstyp (WLAN, 4G, 5G) sowie DNS-Server an.</p>
+                <!-- Feature 5: DNS- & Kanal-Labor -->
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>DNS-Speed &amp; Kanal-Berater</h3>
+                    <p>Optimiere die Reaktionszeiten deines Browsers. Vergleiche freie DNS-Anbieter und konfiguriere deine Router-Kanäle ohne Störungen von Nachbar-WLANs.</p>
+                    <ul>
+                        <li>Dreifach-Reaktionszeittest für Cloudflare, Google, Quad9 &amp; OpenDNS</li>
+                        <li>Kürt den schnellsten DNS-Server für deinen Standort</li>
+                        <li>Empfehlung überlappungsfreier Kanäle für 2,4 GHz &amp; 5 GHz</li>
+                        <li>Erweiterte IP- &amp; ISP-Diagnose (Öffentliche IP, Provider, Knoten)</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">👑</div>
-                    <h3>Echtes AMOLED-Dashboard</h3>
-                    <p>Goldenes Tachometer-Design auf tiefschwarzem Hintergrund. Akkusparend, elegant und ohne nervige Vollbild-Werbeunterbrechungen.</p>
+                <!-- Feature 6: PDF-Störungsbericht -->
+                <div class="card">
+                    <div class="card-icon">📄</div>
+                    <h3>PDF-Störungsbericht für Provider</h3>
+                    <p>Du erreichst nicht die vertraglich vereinbarte Bandbreite deines Providers? Exportiere deine Messungen als manipulationssicheres PDF-Messprotokoll.</p>
+                    <ul>
+                        <li>Detaillierter Briefkopf mit Zeitstempel, IP und Server</li>
+                        <li>Nachweis von Download-, Upload- und Latenzwerten</li>
+                        <li>CSV-Export für Tabellenkalkulationen</li>
+                        <li>100 % werbefrei mit fairem Lifetime-Pass (Kein Abo)</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- Technische Daten -->
+        <section id="specs">
+            <h2 class="section-title">Technische Exzellenz</h2>
+            <p class="section-desc">Entwickelt für exakte, unverfälschte Messwerte ohne Werbe-Überlastung.</p>
+
+            <table class="specs-table">
+                <tr>
+                    <td>Messinfrastruktur</td>
+                    <td>Globale Anycast-Edge-Server von Cloudflare (CORS, ungedrosseltes Multi-Streaming)</td>
+                </tr>
+                <tr>
+                    <td>Bufferbloat-Klassifizierung</td>
+                    <td>Waveform-Standard (A+ bis F basierend auf Zusatzlatenz unter Volllast)</td>
+                </tr>
+                <tr>
+                    <td>Akustischer Peilsender</td>
+                    <td>WebAudio-Synthese (220 Hz bis 1200 Hz), amplituden- und frequenzmoduliert</td>
+                </tr>
+                <tr>
+                    <td>DNS-Prüfung</td>
+                    <td>Multi-Ping gegen 1.1.1.1, 8.8.8.8, 9.9.9.9 und 208.67.222.222</td>
+                </tr>
+                <tr>
+                    <td>Kanal-Empfehlung</td>
+                    <td>2,4 GHz (Kanäle 1, 6, 11) &amp; 5 GHz (Kanäle 36, 40, 44, 48)</td>
+                </tr>
+                <tr>
+                    <td>Bericht-Export</td>
+                    <td>Druckfertiges PDF-Messprotokoll + strukturierte CSV-Historie</td>
+                </tr>
+                <tr>
+                    <td>Datenschutz &amp; Cloud</td>
+                    <td>100 % lokal · Messdaten bleiben auf dem Gerät · Keine Benutzer-Accounts</td>
+                </tr>
+            </table>
+        </section>
+
         <!-- FAQ -->
-        <section class="faq-section">
-            <h2 class="section-title" style="margin-bottom: 24px;">Häufig gestellte Fragen (FAQ)</h2>
+        <section id="faq">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <p class="section-desc">Alles, was du über Aura Net Speed Pro und die Messmethoden wissen musst.</p>
 
             <div class="faq-item">
-                <h4>Wie zuverlässig sind die Messergebnisse von Aura Net Speed Pro?</h4>
-                <p>Sehr genau. Die App testet parallel gegen schnelle Hochleistungs-Server, um Messverfälschungen durch lokale Engpässe zu vermeiden. Die Werte spiegeln deine tatsächliche Verbindungsrate wider.</p>
+                <div class="faq-q">Was bedeutet „Bufferbloat" und warum ist es so wichtig?</div>
+                <div class="faq-a">
+                    Bufferbloat beschreibt das Phänomen, dass Router Datenpakete in übermäßig großen Puffern zwischenspeichern, wenn die Leitung ausgelastet ist (z. B. während eines Downloads oder wenn ein Familienmitglied streamt). Dadurch schnellt die Latenz (Ping) dramatisch in die Höhe – bei Online-Games kommt es zu spürbaren Rucklern (Lags) und Zoom-Gespräche frieren ein. Aura Net Speed Pro misst die Latenz exakt unter Last und vergibt eine transparente Schulnote von A+ bis F.
+                </div>
             </div>
 
             <div class="faq-item">
-                <h4>Werden meine IP-Adresse und Messdaten weiterverkauft?</h4>
-                <p>Nein. Im Gegensatz zu vielen bekannten Speedtest-Portalen verkauft Aura Appworks keine Nutzerprofile oder Standortdaten an Drittanbieter oder Werbenetzwerke.</p>
+                <div class="faq-q">Wie funktioniert der akustische WLAN-Peilsender?</div>
+                <div class="faq-a">
+                    Der Peilsender sendet kontinuierlich Pings an das Gateway und wandelt die gemessene Signalqualität in akustische Töne um. Je besser die Verbindung, desto höher und klarer ist der harmonische Sinuston. Verschlechtert sich das Signal, sinkt die Frequenz deutlich ab – und im Funkloch verstummt die App völlig. So kannst du durch deine Wohnung gehen und Repeater oder Arbeitsplätze akustisch orten, ohne ständig auf das Display starren zu müssen.
+                </div>
             </div>
 
             <div class="faq-item">
-                <h4>Funktioniert der Test auch im Mobilfunknetz (LTE / 5G)?</h4>
-                <p>Ja, die App erkennt automatisch, ob du über WLAN, LTE oder 5G verbunden bist, und passt die Test-Parameter für eine optimale Messung an.</p>
+                <div class="faq-q">Wie hilft mir die Grundriss-Heatmap (Dead-Zone-Mapper)?</div>
+                <div class="faq-a">
+                    Mit dem Dead-Zone-Mapper fotografierst du den Grundriss deiner Wohnung und tippst beim Durchlaufen einfach auf die jeweilige Stelle im Bild. Die App führt eine kurze Messung durch und markiert den Ort mit einer farbigen Signalwolke. So entsteht Schritt für Schritt eine visuelle Wetterkarte deines Heimes, auf der du Funklöcher und dicke Wände sofort erkennst.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Kann ich das PDF-Messprotokoll bei meinem Internetanbieter einreichen?</div>
+                <div class="faq-a">
+                    Ja. Das generierte PDF-Protokoll enthält alle technischen Parameter (Datum, Uhrzeit, Server-Colo, Download, Upload, Ping und Bufferbloat) in übersichtlicher Form mit offiziellem Briefkopf. Es dient als strukturierter schriftlicher Nachweis bei Bandbreiteneinbrüchen und Störungstickets.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Gibt es in Aura Net Speed Pro ein Abonnement?</div>
+                <div class="faq-a">
+                    Nein. Aura Appworks verzichtet konsequent auf wiederkehrende Abos. Die Basisfunktionen sind dauerhaft kostenlos nutzbar, und der optionale Lifetime-Pass schaltet alle Profi-Werkzeuge ein für alle Mal frei.
+                </div>
             </div>
         </section>
 
@@ -470,4 +620,3 @@
 
 </body>
 </html>
-
