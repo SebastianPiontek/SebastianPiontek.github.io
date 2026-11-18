@@ -1,1 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Währungsrechner Pro – Smarter Devisenrechner für Urlaub & Reisen | Aura Appworks</title>
+    <meta name="description" content="Der professionelle Währungsrechner für Android. 100% Offline-fähig ohne Roaming, Multi-Währungs-Grid, Restgeld-Tracker, Kurs-Charts und einzigartiger Bazar-Feilschmodus. Kein Abo.">
+    <meta name="keywords" content="Währungsrechner Android, Offline Devisenrechner, Wechselkurse App, Feilschmodus Basar, Reise Währungsrechner ohne Roaming, Aura Appworks">
+    <meta name="author" content="Aura Appworks">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sebastianpiontek.github.io/apps/waehrungsrechner.html">
+
+    <!-- Open Graph für Social Media & Google -->
+    <meta property="og:title" content="Aura Währungsrechner Pro – Aura Appworks">
+    <meta property="og:description" content="Erstklassige Urlaubs-Finanzen: 100% Offline-Kurse, Multi-Grid, Restgeld-Tracker und Bazar-Modus in Champagner-Gold.">
+    <meta property="og:image" content="../Bilder-Fotos/Aura-Währungsrechner.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-black: #000000;
+            --surface-black: #070707;
+            --card-black: rgba(18, 18, 18, 0.75);
+            --gold-primary: #D4AF37;
+            --gold-light: #F4E4A6;
+            --gold-dark: #997A15;
+            --gold-gradient: linear-gradient(135deg, #F4E4A6 0%, #D4AF37 50%, #997A15 100%);
+            --text-main: #FFFFFF;
+            --text-muted: #A3A3A3;
+            --border-gold: rgba(212, 175, 55, 0.25);
+            --border-gold-hover: rgba(212, 175, 55, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--gold-light);
+            transform: translateX(-3px);
+        }
+
+        .brand-badge {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: var(--gold-light);
+            text-transform: uppercase;
+        }
+
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 110px;
+            height: 110px;
+            border-radius: 26px;
+            margin: 0 auto 24px;
+            border: 2px solid var(--border-gold);
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.25);
+            background: #000000;
+            display: block;
+            object-fit: cover;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 32px;
+            font-weight: 400;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold-gradient);
+            color: #000000;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.45);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-light);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 14px 26px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.12);
+            border-color: var(--gold-primary);
+            transform: translateY(-2px);
+        }
+
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 60px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .trust-item span {
+            color: var(--gold-primary);
+            font-weight: 700;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 40px;
+            font-size: 0.98rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 22px;
+            margin-bottom: 70px;
+        }
+
+        .feature-card {
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 18px;
+            padding: 28px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-gold-hover);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .faq-section {
+            background: rgba(12, 12, 12, 0.6);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            padding: 40px 32px;
+            margin-bottom: 70px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold-light);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 40px 0;
+            text-align: center;
+            color: #666666;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--gold-light);
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2rem; }
+            .hero { padding: 40px 0 24px; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .trust-row { gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html" class="back-link">
+                ← Zurück zur Übersicht
+            </a>
+            <div class="brand-badge">AURA APPWORKS</div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <img src="../Bilder-Fotos/Aura-Währungsrechner.webp" alt="Aura Währungsrechner Pro App Icon" class="app-icon" onerror="this.src='../Bilder-Fotos/Aura-Waehrungsrechner.webp'">
+            <div class="hero-tag">Android Werkzeuge · v1.0 Pro</div>
+            <h1>Aura Währungsrechner Pro</h1>
+            <p class="hero-subtitle">
+                Erstklassige Urlaubs- und Devisen-Finanzen. 
+                100 % offline-fähig ohne Roaming, Multi-Währungs-Shopping-Grid und einzigartiger Bazar-Feilschmodus – ohne Abo.
+            </p>
+
+            <div class="btn-group">
+                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.277-.523-.69-.523-1.157V2.971c0-.467.195-.88.522-1.157zM15.207 13.414l2.457 2.457-11.45 6.467 8.993-8.924zm0-2.828L6.214 1.662l11.45 6.467-2.457 2.457zm1.414 1.414l3.197 1.808c.783.443.783 1.168 0 1.611l-3.197 1.808-2.283-2.283 2.283-2.544z"/></svg>
+                    Im Google Play Store laden
+                </a>
+                <a href="../index.html#apps" class="btn-secondary">
+                    🌐 Auf Hauptseite ansehen
+                </a>
+                <a href="#vorteile" class="btn-secondary">
+                    Funktionen entdecken
+                </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-row">
+                <div class="trust-item"><span>✓</span> 100% Offline-Kurse</div>
+                <div class="trust-item"><span>✓</span> Keine Roaming-Kosten</div>
+                <div class="trust-item"><span>✓</span> Einzigartiger Bazar-Modus</div>
+                <div class="trust-item"><span>✓</span> Fairer Einmalkauf</div>
+            </div>
+        </header>
+
+        <!-- Vorteile / Features -->
+        <section id="vorteile">
+            <h2 class="section-title">Reise-Finanzen der Luxusklasse</h2>
+            <p class="section-desc">Entwickelt für Weltenbummler, Urlauber und Geschäftsreisende mit maximalem Schutz vor teuren Wechselkurs-Fallen.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Innovativer Bazar- & Feilschmodus</h3>
+                    <p>Die obere Hälfte des Bildschirms dreht sich um 180° auf den Kopf für den Händler, während du unten tippst. Zeige dein Angebot im Urlaub auf Märkten sofort lesbar in Landeswährung.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👛</div>
+                    <h3>Reise-Geldbeutel & Restgeld-Tracker</h3>
+                    <p>Verwalte Münzen und Scheine aus vergangenen Urlauben in einer Sammelmappe. Erfahre auf den Cent genau, wie viel dein Restgeld aktuell in Euro wert ist.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Multi-Währungs-Shopping-Grid</h3>
+                    <p>Tippe einen Betrag ein und sieh ihn zeitgleich in all deinen favorisierten Währungen umgerechnet. Ideal bei Reisen durch mehrere Länder oder beim Online-Shopping.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Goldene Kurs-Charts & Verlauf</h3>
+                    <p>Verfolge historische Kurse auf einen Blick. Erkenne sofort, ob der aktuelle Wechselkurs für deinen Urlaub günstig oder ungünstig steht.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smarter Wunschkurs-Alarm</h3>
+                    <p>Lege deinen Ziel-Wechselkurs fest. Die App informiert dich zuverlässig per Benachrichtigung, sobald die gewünschte Marke erreicht ist.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✈️</div>
+                    <h3>100% Offline ohne Roaming</h3>
+                    <p>Alle Kurse werden im lokalen Speicher gesichert. Rechne im Flugzeug, auf einsamen Inseln oder auf Märkten ohne mobile Daten und ohne Roaming-Kosten.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2 class="section-title" style="margin-bottom: 24px;">Häufig gestellte Fragen (FAQ)</h2>
+
+            <div class="faq-item">
+                <h4>Funktioniert der Währungsrechner auch ohne Internet im Ausland?</h4>
+                <p>Ja, zu 100 %. Sobald die Kurse einmal geladen sind, bleiben sie sicher auf deinem Smartphone gespeichert. Du kannst die App während deiner gesamten Urlaubsreise ohne Internet und ohne teure Roaming-Gebühren nutzen.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Was genau bewirkt der Bazar-Modus?</h4>
+                <p>Der Bazar-Modus ist eine Weltneuheit: Er teilt den Bildschirm in zwei Hälften. Du tippst deinen Betrag unten ein, und auf der oberen Hälfte wird dein Gegenangebot um 180° gedreht riesig in Landeswährung angezeigt, sodass du dem Händler das Display einfach entgegenhalten kannst.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Wie oft werden die Wechselkurse aktualisiert?</h4>
+                <p>Sobald eine Internetverbindung besteht, zieht die App offizielle, tagesaktuelle Referenzkurse ein und vermerkt mit Zeitstempel genau, wann die letzte Aktualisierung stattfand.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2027 Aura Appworks · Inhaber: Sebastian Piontek</p>
+            <p style="margin-top: 8px;">
+                <a href="../index.html">Startseite</a> ·
+                <a href="../index.html#impressum">Impressum</a> ·
+                <a href="../index.html#datenschutz">Datenschutz</a> ·
+                <a href="mailto:aura-appworks@web.de">Kontakt</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
 
