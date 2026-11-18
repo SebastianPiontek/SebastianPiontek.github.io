@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura PDF Scanner & Konverter Pro – Dokumente scannen & umwandeln für Android | Aura Appworks</title>
-    <meta name="description" content="Der mobile Dokumenten-Scanner & PDF-Konverter für Android. Fotos in PDF umwandeln, automatische Kantenerkennung, OCR-Texterkennung und 100% Datenschutz ohne Cloud. Kein Abo.">
-    <meta name="keywords" content="PDF Scanner Android, PDF Konverter App, JPG in PDF umwandeln, Dokumentenscanner ohne Abo, OCR Scanner Deutsch, Offline PDF Konverter, Aura Appworks">
-    <meta name="author" content="Aura Appworks">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://sebastianpiontek.github.io/apps/pdf-scanner.html">
-
-    <!-- Open Graph für Social Media & Google -->
-    <meta property="og:title" content="Aura PDF Scanner & Konverter Pro – Aura Appworks">
-    <meta property="og:description" content="Mobiles Büro in Perfektion: Dokumente scannen, Bilder in PDF konvertieren und OCR nutzen – 100% lokal & vertraulich.">
-    <meta property="og:image" content="../Bilder-Fotos/Aura-PDF-Scanner.webp">
+    <title>Aura PDF Scanner & Konverter – Mobiles Dokumenten-Studio für Android | Aura Appworks</title>
+    <meta name="description" content="Das mobile Dokumenten-Studio für Android: 5 Scan-Modi, 2-in-1 Ausweis-Scan, lokale OCR-Texterkennung, durchsuchbare PDFs, Mergen, Splitten, Tintensparer, Passwortschutz und biometrischer Tresor. 100% lokal.">
+    
+    <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Aura PDF Scanner & Konverter – Dokumente scannen, bearbeiten & schützen">
+    <meta property="og:description" content="5 Scan-Modi, 4-Ecken-Perspektivkorrektur, 12 Konvertierungs-Tools, lokale OCR-Texterkennung, durchsuchbare PDFs und biometrischer Tresor. 100% offline.">
+    <meta property="og:image" content="../Bilder-Fotos/Aura%20PDF%20Scanner.webp">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -60,184 +57,187 @@
             width: 700px;
             height: 450px;
             background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
-            pointer-events: none;
             z-index: 0;
+            pointer-events: none;
         }
 
         .container {
             max-width: 1080px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 24px 20px 80px;
             position: relative;
             z-index: 1;
         }
 
+        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 40px;
         }
 
         .back-link {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
             transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .back-link:hover {
-            color: var(--gold-light);
-            transform: translateX(-3px);
+            color: #FFFFFF;
+            transform: translateX(-4px);
         }
 
         .brand-badge {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
             letter-spacing: 2px;
-            color: var(--gold-light);
-            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
         }
 
+        /* Hero */
         .hero {
-            padding: 60px 0 40px;
             text-align: center;
+            padding: 30px 0 60px;
         }
 
         .app-icon {
-            width: 110px;
-            height: 110px;
-            border-radius: 26px;
+            width: 128px;
+            height: 128px;
+            border-radius: 28px;
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.25);
             margin: 0 auto 24px;
-            border: 2px solid var(--border-gold);
-            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.25);
-            background: #000000;
             display: block;
             object-fit: cover;
+            background-color: #0d0d0d;
         }
 
         .hero-tag {
             display: inline-block;
-            padding: 6px 16px;
-            border-radius: 50px;
-            background: rgba(212, 175, 55, 0.08);
-            border: 1px solid var(--border-gold);
+            background: rgba(212, 175, 55, 0.1);
             color: var(--gold-light);
+            padding: 4px 14px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            border: 1px solid var(--border-gold);
             margin-bottom: 16px;
         }
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 2.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 16px;
+            font-weight: 700;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
         .hero-subtitle {
             font-size: 1.15rem;
             color: var(--text-muted);
-            max-width: 720px;
+            max-width: 680px;
             margin: 0 auto 32px;
-            font-weight: 400;
+            font-weight: 300;
         }
 
+        /* Buttons */
         .btn-group {
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
         }
 
         .btn-primary {
+            background: var(--gold-gradient);
+            color: #000000;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--gold-gradient);
-            color: #000000;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 14px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.45);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.5);
         }
 
         .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gold-light);
+            font-weight: 600;
+            padding: 14px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: 1px solid var(--border-gold);
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-gold);
-            color: var(--gold-light);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 14px 26px;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+            gap: 8px;
+            transition: all 0.2s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(212, 175, 55, 0.12);
+            background: rgba(212, 175, 55, 0.1);
             border-color: var(--gold-primary);
-            transform: translateY(-2px);
+            color: #FFFFFF;
         }
 
+        /* Trust Row */
         .trust-row {
             display: flex;
             justify-content: center;
-            gap: 32px;
+            gap: 24px;
             flex-wrap: wrap;
-            padding: 20px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            margin-bottom: 60px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            max-width: 860px;
+            margin: 0 auto;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
         .trust-item {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 0.88rem;
-            color: var(--text-muted);
+            gap: 6px;
         }
 
         .trust-item span {
             color: var(--gold-primary);
-            font-weight: 700;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            margin-top: 70px;
         }
 
         .section-title {
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.8rem;
-            font-weight: 700;
+            color: var(--gold-light);
+            text-align: center;
             margin-bottom: 12px;
-            color: var(--text-main);
         }
 
         .section-desc {
@@ -245,105 +245,156 @@
             color: var(--text-muted);
             max-width: 620px;
             margin: 0 auto 40px;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
-        .features-grid {
+        /* Feature Cards */
+        .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 22px;
-            margin-bottom: 70px;
+            gap: 24px;
         }
 
-        .feature-card {
+        .card {
             background: var(--card-black);
             border: 1px solid var(--border-gold);
-            border-radius: 18px;
+            border-radius: 16px;
             padding: 28px;
-            backdrop-filter: blur(12px);
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            backdrop-filter: blur(10px);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .feature-card:hover {
+        .card:hover {
             transform: translateY(-4px);
             border-color: var(--border-gold-hover);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
         }
 
-        .feature-icon {
+        .card-icon {
             font-size: 2rem;
             margin-bottom: 16px;
             display: inline-block;
         }
 
-        .feature-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
+        .card h3 {
+            font-size: 1.25rem;
             color: var(--gold-light);
             margin-bottom: 10px;
+            font-family: 'Cinzel', serif;
         }
 
-        .feature-card p {
+        .card p {
             color: var(--text-muted);
             font-size: 0.92rem;
             line-height: 1.55;
         }
 
-        .faq-section {
-            background: rgba(12, 12, 12, 0.6);
+        .card ul {
+            list-style: none;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card li {
+            font-size: 0.85rem;
+            color: #d1d1d1;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        /* Tech Spec Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-black);
             border: 1px solid var(--border-gold);
-            border-radius: 20px;
-            padding: 40px 32px;
-            margin-bottom: 70px;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 24px;
         }
 
-        .faq-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 20px 0;
-        }
-
-        .faq-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .faq-item h4 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--gold-light);
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            color: var(--text-muted);
+        .specs-table th, .specs-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
             font-size: 0.92rem;
         }
 
+        .specs-table th {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+        }
+
+        .specs-table td:first-child {
+            color: var(--gold-light);
+            font-weight: 600;
+            width: 38%;
+        }
+
+        .specs-table td:last-child {
+            color: var(--text-muted);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .faq-q {
+            color: var(--gold-light);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        /* Footer */
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 40px 0;
+            margin-top: 90px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-gold);
             text-align: center;
-            color: #666666;
+            color: var(--text-muted);
             font-size: 0.85rem;
         }
 
         footer a {
-            color: var(--gold-primary);
+            color: var(--gold-light);
             text-decoration: none;
-            margin: 0 10px;
+            transition: color 0.2s;
         }
 
         footer a:hover {
-            color: var(--gold-light);
+            color: #FFFFFF;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 2rem; }
-            .hero { padding: 40px 0 24px; }
-            .btn-group { flex-direction: column; width: 100%; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .btn-group { flex-direction: column; }
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
-            .trust-row { gap: 16px; }
+            .trust-row { flex-direction: column; gap: 8px; }
+            .specs-table td:first-child { width: 50%; }
         }
     </style>
 </head>
@@ -362,16 +413,15 @@
 
         <!-- Hero -->
         <header class="hero">
-            <img src="../Bilder-Fotos/Aura-PDF-Scanner.webp" alt="Aura PDF Scanner & Konverter Pro App Icon" class="app-icon" onerror="this.style.display='none'">
-            <div class="hero-tag">Android Werkzeuge · v1.0 Pro</div>
-            <h1>Aura PDF Scanner & Konverter</h1>
+            <img src="../Bilder-Fotos/Aura%20PDF%20Scanner.webp" alt="Aura PDF Scanner &amp; Konverter Pro App Icon" class="app-icon" onerror="this.src='../Bilder-Fotos/Aura-Appworks.webp'">
+            <div class="hero-tag">Android Dokumenten-Studio &amp; Scanner · v1.0 Pro</div>
+            <h1>Aura PDF Scanner &amp; Konverter</h1>
             <p class="hero-subtitle">
-                Dein mobiles Büro für die Hosentasche. 
-                Dokumente scannen, Bilder blitzschnell in PDF umwandeln und vertraulich verwalten – 100 % lokal ohne Cloud-Zwang und ohne Abo.
+                Dein mobiles Büro für die Hosentasche. 5 Scan-Modi mit automatischer Kantenkorrektur, 2-in-1 Ausweis-Scan, lokale OCR-Texterkennung, durchsuchbare PDFs, Mergen, Splitten und biometrischer Tresor. 100 % lokal ohne Cloud-Zwang.
             </p>
 
             <div class="btn-group">
-                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <a href="https://play.google.com/store/apps/details?id=de.auraappworks.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.277-.523-.69-.523-1.157V2.971c0-.467.195-.88.522-1.157zM15.207 13.414l2.457 2.457-11.45 6.467 8.993-8.924zm0-2.828L6.214 1.662l11.45 6.467-2.457 2.457zm1.414 1.414l3.197 1.808c.783.443.783 1.168 0 1.611l-3.197 1.808-2.283-2.283 2.283-2.544z"/></svg>
                     Im Google Play Store laden
                 </a>
@@ -385,74 +435,178 @@
 
             <!-- Trust Badges -->
             <div class="trust-row">
-                <div class="trust-item"><span>✓</span> Scanner & Konverter in einem</div>
-                <div class="trust-item"><span>✓</span> 100% On-Device (Kein Cloud-Zwang)</div>
-                <div class="trust-item"><span>✓</span> Integriertes OCR</div>
-                <div class="trust-item"><span>✓</span> Fairer Einmalkauf</div>
+                <div class="trust-item"><span>✓</span> Automatische 4-Ecken-Perspektivkorrektur</div>
+                <div class="trust-item"><span>✓</span> Lokale OCR &amp; Durchsuchbares PDF</div>
+                <div class="trust-item"><span>✓</span> 2-in-1 Ausweis- &amp; Stapel-Scan</div>
+                <div class="trust-item"><span>✓</span> Biometrischer Dokumenten-Tresor</div>
             </div>
         </header>
 
         <!-- Vorteile / Features -->
         <section id="vorteile">
-            <h2 class="section-title">Scannen, Konvertieren, Verwalten</h2>
-            <p class="section-desc">Entwickelt für höchste Bildqualität, kompromisslosen Datenschutz und blitzschnelle Format-Konvertierung.</p>
+            <h2 class="section-title">Dokumenten-Management in Perfektion</h2>
+            <p class="section-desc">Entwickelt für Selbstständige, Studenten, Geschäftsreisende und alle, die Verträge, Belege und Ausweise digitalisieren wollen – absolut sicher und vertraulich.</p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Intelligenter PDF-Konverter</h3>
-                    <p>Wandelt Fotos, Quittungen und Galerie-Bilder (JPG, PNG) mit einem Klick in saubere PDF-Dokumente um – oder exportiert PDF-Seiten zurück als hochauflösende Bilder.</p>
+            <div class="grid-3">
+                <!-- Feature 1: Intelligenter Scanner -->
+                <div class="card">
+                    <div class="card-icon">📷</div>
+                    <h3>5 Spezialisierte Scan-Modi</h3>
+                    <p>Wähle den passenden Modus für jede Lebenslage: Einzelseite, Stapel-Scan für Verträge, Buch-Doppelseiten oder Belege. Die automatische Randerkennung richtet schiefe Aufnahmen sofort gerade aus.</p>
+                    <ul>
+                        <li>Otsu-Algorithmus zur automatischen Papiererkennung</li>
+                        <li>3×3-Homographie für millimetergenaue Entzerrung</li>
+                        <li>Kontinuierlicher Stapel-Scan ohne Klick-Pausen</li>
+                        <li>Magic Enhance für tiefschwarze Schrift auf Reinweiß</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📐</div>
-                    <h3>Präzise Kantenerkennung</h3>
-                    <p>Erkennt Buch-, Quittungs- und Dokumentränder vollautomatisch in Echtzeit. Richtet verzogene Seiten automatisch gerade und korrigiert die Perspektive.</p>
+                <!-- Feature 2: 2-in-1 Ausweis-Scan -->
+                <div class="card">
+                    <div class="card-icon">🪪</div>
+                    <h3>2-in-1 Ausweis- &amp; Karten-Scan</h3>
+                    <p>Scanne Vorder- und Rückseite von Personalausweis, Führerschein oder Krankenkassenkarte nacheinander. Die App setzt beide Seiten automatisch auf eine einzige A4-Druckseite.</p>
+                    <ul>
+                        <li>Vorder- und Rückseite auf einem Dokument vereint</li>
+                        <li>Wahlweise im Hoch- oder Querformat (Side-by-Side)</li>
+                        <li>Perfekt für Behörden, Banken und Mietverträge</li>
+                        <li>Inklusive Wasserzeichen-Schutz (*„Kopie für Bank“*)</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔤</div>
-                    <h3>Lokale OCR Texterkennung</h3>
-                    <p>Verwandelt gescannte Papiere und Fotos in durchsuchbaren, kopierbaren Text. Arbeitet zu 100 % offline auf deinem Prozessor ohne Datenversand.</p>
+                <!-- Feature 3: OCR & Durchsuchbares PDF -->
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Lokale OCR &amp; Volltextsuche</h3>
+                    <p>Erkenne gedruckten Text direkt auf deinem Smartphone (DE, EN, FR, ES). Erzeuge aus Fotos echte durchsuchbare PDF-Dateien mit unsichtbarer Textebene.</p>
+                    <ul>
+                        <li>100 % On-Device Tesseract-Engine ohne Server-Upload</li>
+                        <li>Text in jedem PDF-Viewer markieren &amp; herauskopieren</li>
+                        <li>Volltextsuche in archivierten Dokumenten</li>
+                        <li>Konvertiert Scans direkt in bearbeitbaren Text</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Multi-Seiten-Stapelscan</h3>
-                    <p>Scanne mehrseitige Verträge oder ganze Ordner in Rekordzeit zusammen. Seiten kinderleicht neu anordnen, drehen oder nachbearbeiten.</p>
+                <!-- Feature 4: 12 Konvertierungs-Tools -->
+                <div class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>12 Studio- &amp; PDF-Werkzeuge</h3>
+                    <p>Ein vollwertiges Dokumentenlabor: Verbinde mehrere PDFs, trenne Seitenbereiche heraus, komprimiere Dokumente oder schütze sie mit Passwörtern.</p>
+                    <ul>
+                        <li>PDFs mergen (zusammenfügen) &amp; flexibel splitten</li>
+                        <li>Bilder zu PDF und PDF zurück zu Bildern extrahieren</li>
+                        <li>128-Bit-AES-Passwortschutz gegen unbefugten Zugriff</li>
+                        <li>Tabellen (CSV) &amp; Markdown formatiert als PDF drucken</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🪄</div>
-                    <h3>Magische Bild-Optimierung</h3>
-                    <p>Optimiert Scans für beste Lesbarkeit: Automatische Farbkorrektur, kontrastreicher Schwarz-Weiß-Dokumentenmodus und Schatten-Entfernung.</p>
+                <!-- Feature 5: Tintensparer & Kompression -->
+                <div class="card">
+                    <div class="card-icon">🖨️</div>
+                    <h3>Tintensparer &amp; Komprimierung</h3>
+                    <p>Optimiere Dokumente vor dem Druck oder E-Mail-Versand. Spart teure Druckertinte und sorgt für kompakte Dateigrößen ohne Qualitätsverlust.</p>
+                    <ul>
+                        <li>Tintenspar-Filter spart bis zu 40 % Druckertinte</li>
+                        <li>Automatische Seitennummerierung (*„Seite 1 / 5“*)</li>
+                        <li>3 Komprimierungsstufen für E-Mail-Anhänge</li>
+                        <li>Konvertierung zwischen JPG, PNG und WebP</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Passwortschutz & Kompression</h3>
-                    <p>Schütze sensible Unterlagen mit sicherer PDF-Verschlüsselung und komprimiere Dateien für schnellen Mail- und Messenger-Versand.</p>
+                <!-- Feature 6: Biometrischer Tresor -->
+                <div class="card">
+                    <div class="card-icon">🔐</div>
+                    <h3>Biometrischer Dokumenten-Tresor</h3>
+                    <p>Schütze deine sensibelsten Unterlagen vor neugierigen Blicken. Der integrierte Safe sperrt Dokumente wahlweise mit PIN oder Fingerabdruck ab.</p>
+                    <ul>
+                        <li>Lokale SQLite/IndexedDB-Verschlüsselung</li>
+                        <li>Fingerabdruck- &amp; Gesichtserkennungs-Sperre</li>
+                        <li>Kategorien: Rechnung, Vertrag, Steuern, Beleg, Brief</li>
+                        <li>100 % lokal ohne Cloud-Konto und ohne Tracking</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- Technische Daten -->
+        <section id="specs">
+            <h2 class="section-title">Technische Exzellenz</h2>
+            <p class="section-desc">Entwickelt für unverfälschte Qualität, blitzschnelle lokale Verarbeitung und kompromisslose Privatsphäre.</p>
+
+            <table class="specs-table">
+                <tr>
+                    <td>Kanten- &amp; Entzerrungs-Engine</td>
+                    <td>Otsu-Histogramm-Segmentierung &amp; 3×3-Homographie-Matrix-Transformation</td>
+                </tr>
+                <tr>
+                    <td>Scan-Modi</td>
+                    <td>Dokument, Stapel-Scan (Batch), Buchseiten, 2-in-1 Ausweiskarte, Beleg/Quittung</td>
+                </tr>
+                <tr>
+                    <td>Texterkennung (OCR)</td>
+                    <td>Tesseract-Engine (lokal im Browser/WebView, Deutsch, Englisch, Französisch, Spanisch)</td>
+                </tr>
+                <tr>
+                    <td>PDF-Standard</td>
+                    <td>ISO 32000 konforme PDF/A-Struktur mit unsichtbarer, suchbarer Textebene</td>
+                </tr>
+                <tr>
+                    <td>Verschlüsselung</td>
+                    <td>Standard 128-Bit AES PDF-Verschlüsselung mit Nutzer- &amp; Berechtigungs-Passwort</td>
+                </tr>
+                <tr>
+                    <td>Tresor-Sicherheit</td>
+                    <td>SHA-256 gehashte PIN + native biometrische Geräte-Authentifizierung</td>
+                </tr>
+                <tr>
+                    <td>Dateiformate</td>
+                    <td>PDF, JPEG, PNG, WebP, Markdown, formatierte CSV-Tabellen</td>
+                </tr>
+                <tr>
+                    <td>Datenschutz &amp; Cloud</td>
+                    <td>100 % lokal auf dem Smartphone · Kein Datenverkehr zu externen Servern</td>
+                </tr>
+            </table>
+        </section>
+
         <!-- FAQ -->
-        <section class="faq-section">
-            <h2 class="section-title" style="margin-bottom: 24px;">Häufig gestellte Fragen (FAQ)</h2>
+        <section id="faq">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <p class="section-desc">Alles, was du über Aura PDF Scanner &amp; Konverter und die Sicherheitsfunktionen wissen musst.</p>
 
             <div class="faq-item">
-                <h4>Kann ich auch bereits vorhandene Fotos aus der Galerie in PDF umwandeln?</h4>
-                <p>Ja, absolut. Du kannst einzelne oder mehrere Fotos aus deiner Galerie auswählen und sie mit dem integrierten Konverter in Sekundenschnelle in ein sauberes, kompaktes PDF-Dokument zusammenführen.</p>
+                <div class="faq-q">Wie funktioniert der 2-in-1 Ausweis-Scan?</div>
+                <div class="faq-a">
+                    Im Ausweis-Modus fotografierst du zuerst die Vorderseite und anschließend die Rückseite deiner Karte (z. B. Personalausweis, Führerschein, Versichertenkarte). Die App erkennt die Umrisse beider Seiten automatisch, entzerrt sie und setzt sie auf ein einziges, druckfertiges A4-PDF – wahlweise untereinander oder nebeneinander. Das spart Papier und Zeit beim Einreichen bei Behörden oder Banken.
+                </div>
             </div>
 
             <div class="faq-item">
-                <h4>Werden meine vertraulichen Dokumente auf externe Server hochgeladen?</h4>
-                <p>Nein, niemals. Viele andere Scanner- und Konverter-Apps senden Dokumente zur Umwandlung auf fremde Server. Bei Aura PDF Scanner & Konverter erfolgt die gesamte Verarbeitung ausschließlich lokal auf deinem eigenen Smartphone.</p>
+                <div class="faq-q">Was ist der Vorteil von „Durchsuchbaren PDFs"?</div>
+                <div class="faq-a">
+                    Ein normales Foto eines Dokuments ist für den Computer nur ein Bild – man kann keinen Text markieren oder durchsuchen. Aura PDF Scanner &amp; Konverter führt auf Wunsch eine lokale OCR-Texterkennung durch und legt den erkannten Text als unsichtbare, millimetergenau ausgerichtete Textebene über das Bild. Dadurch sieht das Dokument gestochen scharf wie das Original aus, lässt sich aber in jedem PDF-Reader am PC oder Smartphone per Strg+F durchsuchen und der Text kann mit der Maus kopiert werden.
+                </div>
             </div>
 
             <div class="faq-item">
-                <h4>Werden Werbe-Wasserzeichen auf die erstellten PDFs gesetzt?</h4>
-                <p>Nein. Deine Dokumente gehören dir. Wir setzen keine störenden Wasserzeichen oder Markenlogos auf deine exportierten Dateien.</p>
+                <div class="faq-q">Werden meine Dokumente auf fremde Server hochgeladen?</div>
+                <div class="faq-a">
+                    Nein, zu keinem Zeitpunkt. Alle Bildverarbeitungen, Filterungen, Texterkennungen (OCR), PDF-Zusammenführungen und Verschlüsselungen finden zu 100 % lokal auf deinem eigenen Smartphone statt. Es gibt keine Cloud-Anbindung, keinen Login und keine Datenweitergabe.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Was bewirkt der Tintenspar-Modus?</div>
+                <div class="faq-a">
+                    Viele Scans haben einen leicht grauen oder gelblichen Hintergrund, der beim Ausdrucken auf dem Heimdrucker Unmengen an teurer Druckertinte verbraucht. Der Tintenspar-Modus bleicht den Hintergrund gezielt aus, wandelt Farben in sparsame Graustufen um und fügt eine dezente Seitennummerierung am unteren Rand hinzu. Das spart bis zu 40 % Druckertinte und schont die Umwelt.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Gibt es in der App ein wiederkehrendes Abonnement?</div>
+                <div class="faq-a">
+                    Nein. Aura Appworks setzt auf faire Konditionen. Alle Kernfunktionen sind dauerhaft kostenlos nutzbar. Mit dem optionalen Lifetime-Pass kannst du die App dauerhaft werbefrei schalten und alle erweiterten Profi-Werkzeuge ohne zeitliche Beschränkung freischalten – ein einziger Kauf, kein Abo.
+                </div>
             </div>
         </section>
 
@@ -470,4 +624,3 @@
 
 </body>
 </html>
-
