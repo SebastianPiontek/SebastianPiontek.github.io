@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Hauptseite / Homepage -->
   <url>
     <loc>https://sebastianpiontek.github.io/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 1. Aura QR & Barcode Scanner -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/qr-scanner.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 2. Aura Rechner Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/rechner-pro.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3. Aura Net Speed Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/net-speed.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 4. Aura PDF Scanner & Konverter -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/pdf-scanner.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 5. Aura Währungsrechner Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/waehrungsrechner.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 6. Aura Note Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/note-pro.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 7. Aura Dezibel Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/dezibel-pro.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 8. Aura Kompass Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/kompass-pro.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 9. Aura JSON & Base64 Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/json-base64.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 10. Aura Clean & Space Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/clean-space.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 11. Aura Precision Audio Pro -->
+  <url>
+    <loc>https://sebastianpiontek.github.io/apps/precision-audio.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
