@@ -1,1 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Note Pro – Smarte Notizen, Einkaufslisten & PIN-Tresor für Android | Aura Appworks</title>
+    <meta name="description" content="Die All-in-One Notizen- & Produktivitäts-App für Android. Sprachmemos, intelligente Einkaufslisten mit Budgetrechner und biometrischer PIN-Tresor. 100% lokal ohne Cloud. Kein Abo.">
+    <meta name="keywords" content="Notiz App Android ohne Cloud, Einkaufsliste mit Budgetrechner, Notizen mit PIN sperren, Sprachmemos App, Offline Notizbuch Android, Aura Appworks">
+    <meta name="author" content="Aura Appworks">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sebastianpiontek.github.io/apps/note-pro.html">
+
+    <!-- Open Graph für Social Media & Google -->
+    <meta property="og:title" content="Aura Note Pro – Aura Appworks">
+    <meta property="og:description" content="Gedanken, Einkäufe und Geheimnisse perfekt organisiert: Sprachmemos, Budget-Listen und PIN-Tresor in edlem Champagner-Gold.">
+    <meta property="og:image" content="../Bilder-Fotos/Aura-Note.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-black: #000000;
+            --surface-black: #070707;
+            --card-black: rgba(18, 18, 18, 0.75);
+            --gold-primary: #D4AF37;
+            --gold-light: #F4E4A6;
+            --gold-dark: #997A15;
+            --gold-gradient: linear-gradient(135deg, #F4E4A6 0%, #D4AF37 50%, #997A15 100%);
+            --text-main: #FFFFFF;
+            --text-muted: #A3A3A3;
+            --border-gold: rgba(212, 175, 55, 0.25);
+            --border-gold-hover: rgba(212, 175, 55, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--gold-light);
+            transform: translateX(-3px);
+        }
+
+        .brand-badge {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: var(--gold-light);
+            text-transform: uppercase;
+        }
+
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 110px;
+            height: 110px;
+            border-radius: 26px;
+            margin: 0 auto 24px;
+            border: 2px solid var(--border-gold);
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.25);
+            background: #000000;
+            display: block;
+            object-fit: cover;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 32px;
+            font-weight: 400;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold-gradient);
+            color: #000000;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.45);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-light);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 14px 26px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.12);
+            border-color: var(--gold-primary);
+            transform: translateY(-2px);
+        }
+
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 60px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .trust-item span {
+            color: var(--gold-primary);
+            font-weight: 700;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 40px;
+            font-size: 0.98rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 22px;
+            margin-bottom: 70px;
+        }
+
+        .feature-card {
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 18px;
+            padding: 28px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-gold-hover);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .faq-section {
+            background: rgba(12, 12, 12, 0.6);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            padding: 40px 32px;
+            margin-bottom: 70px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gold-light);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 40px 0;
+            text-align: center;
+            color: #666666;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--gold-light);
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2rem; }
+            .hero { padding: 40px 0 24px; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .trust-row { gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html" class="back-link">
+                ← Zurück zur Übersicht
+            </a>
+            <div class="brand-badge">AURA APPWORKS</div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <img src="../Bilder-Fotos/Aura-Note.webp" alt="Aura Note Pro App Icon" class="app-icon" onerror="this.src='../Bilder-Fotos/Aura_note_pro.png'">
+            <div class="hero-tag">Android Werkzeuge · v1.1 Pro</div>
+            <h1>Aura Note Pro</h1>
+            <p class="hero-subtitle">
+                Gedanken, Einkäufe und Geheimnisse perfekt organisiert. 
+                Rich-Text-Notizen, Sprachmemos, smarte Budget-Einkaufslisten und ein biometrischer PIN-Tresor – 100 % lokal ohne Cloud-Zwang.
+            </p>
+
+            <div class="btn-group">
+                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.277-.523-.69-.523-1.157V2.971c0-.467.195-.88.522-1.157zM15.207 13.414l2.457 2.457-11.45 6.467 8.993-8.924zm0-2.828L6.214 1.662l11.45 6.467-2.457 2.457zm1.414 1.414l3.197 1.808c.783.443.783 1.168 0 1.611l-3.197 1.808-2.283-2.283 2.283-2.544z"/></svg>
+                    Im Google Play Store laden
+                </a>
+                <a href="../index.html#apps" class="btn-secondary">
+                    🌐 Auf Hauptseite ansehen
+                </a>
+                <a href="#vorteile" class="btn-secondary">
+                    Funktionen entdecken
+                </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-row">
+                <div class="trust-item"><span>✓</span> 100% Offline & Privat</div>
+                <div class="trust-item"><span>✓</span> Biometrischer PIN-Tresor</div>
+                <div class="trust-item"><span>✓</span> Smarte Budget-Listen</div>
+                <div class="trust-item"><span>✓</span> Fairer Einmalkauf (Kein Abo)</div>
+            </div>
+        </header>
+
+        <!-- Vorteile / Features -->
+        <section id="vorteile">
+            <h2 class="section-title">Produktivität & Vertraulichkeit</h2>
+            <p class="section-desc">Entwickelt für Menschen, die ihre persönlichen Gedanken, Finanzen und Notizen niemals auf fremden Servern speichern wollen.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Aura Note Safe (PIN-Tresor)</h3>
+                    <p>Ein eigener, vollständig werbefreier Bereich für sensible Geheimnisse: Passwörter, Bank-PINs und Notfall-Codes. Geschützt durch 4-stellige PIN, Fingerabdruck und automatischen 60-Sekunden-Sicherheitstimer.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>Smarte Einkaufslisten & Budget</h3>
+                    <p>Sortiert Einträge vollautomatisch in Supermarkt-Kategorien (Obst, Milch, Backwaren, Getränke). Behalte dein monatliches Haushaltsbudget dank dynamischem Champagner-Gold-Balken immer im Griff.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Sprachmemos mit Live-Audio-Welle</h3>
+                    <p>Ideen unterwegs ohne Tippen festhalten: Hochwertige Sprachaufnahmen mit visueller Schallwellen-Animation direkt in die Notiz einbetten und jederzeit abspielen.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Obsidian-Verlinkung & Tags</h3>
+                    <p>Verknüpfe Gedanken und Projekte blitzschnell mit doppelten eckigen Klammern ([[Notiz-Titel]]). Finde alles in Sekundenschnelle über Tag-Filter und die lokale Volltextsuche.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👴</div>
+                    <h3>Senior- & Barrierefrei-Modus</h3>
+                    <p>Aktiviere auf Wunsch extragroße Touch-Ziele (XL-Targets), verstärkten Kontrast und optimierte Schriften für ein ermüdungsfreies und barrierefreies Leseerlebnis.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Verschlüsseltes Backup & PDF-Druck</h3>
+                    <p>Sichere alle Notizen mit einem Klick in eine verschlüsselte Backup-Datei oder drucke wichtige Einträge direkt als formatiertes PDF-Dokument aus.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2 class="section-title" style="margin-bottom: 24px;">Häufig gestellte Fragen (FAQ)</h2>
+
+            <div class="faq-item">
+                <h4>Können fremde Personen meine Notizen in der Cloud einsehen?</h4>
+                <p>Nein, ausgeschlossen. Aura Note Pro besitzt bewusst keine Anbindung an externe Cloud-Server. Alle Notizen, Einkaufslisten, Sprachaufnahmen und Tresor-Einträge bleiben verschlüsselt auf dem Speicher deines eigenen Smartphones.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Was passiert, wenn ich die App verlasse, während der Tresor offen ist?</h4>
+                <p>Der Aura Note Safe sperrt sich aus Sicherheitsgründen sofort automatisch, sobald die App minimiert wird oder 60 Sekunden lang keine Eingabe erfolgt. Beim erneuten Öffnen ist zwingend deine PIN oder der Fingerabdruck erforderlich.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Gibt es ein Limit für die Anzahl an Notizen oder Einkaufslisten?</h4>
+                <p>Nein. Du kannst beliebig viele Notizen, Ordner, Checklisten und Sprachmemos erstellen. Die App nutzt die gesamte Kapazität deines internen Speichers ohne künstliche Beschränkungen.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2027 Aura Appworks · Inhaber: Sebastian Piontek</p>
+            <p style="margin-top: 8px;">
+                <a href="../index.html">Startseite</a> ·
+                <a href="../index.html#impressum">Impressum</a> ·
+                <a href="../index.html#datenschutz">Datenschutz</a> ·
+                <a href="mailto:aura-appworks@web.de">Kontakt</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
 
