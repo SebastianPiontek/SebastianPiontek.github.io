@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura QR & Barcode Scanner – 100% Offline & Sicher für Android | Aura Appworks</title>
-    <meta name="description" content="Der Goldstandard für mobile Barcode- und QR-Erkennung auf Android. 100% Privatsphäre ohne Cloud, Phishing-Schutz, E-Nummern-Zusatzstoff-Check und Stapelscan.">
-    <meta name="keywords" content="QR Code Scanner Android, Barcode Scanner App, Offline QR Scanner, Phishing Schutz QR, E-Nummern Scanner, Aura Appworks">
-    <meta name="author" content="Aura Appworks">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://sebastianpiontek.github.io/apps/qr-scanner.html">
-
-    <!-- Open Graph für Social Media & Google -->
-    <meta property="og:title" content="Aura QR & Barcode Scanner – Aura Appworks">
-    <meta property="og:description" content="100% Privatsphäre, Phishing-Prüfung, E-Nummern-Check und Premium AMOLED-Design.">
-    <meta property="og:image" content="../Bilder-Fotos/Aura-Qr-Scanner.webp">
+    <title>Aura QR &amp; Barcode Scanner – Der Goldstandard für Android | Aura Appworks</title>
+    <meta name="description" content="Der Goldstandard für mobile Barcode- und QR-Erkennung auf Android: 17 Codeformate, Phishing-Schutz (Link-Guard), GS1-Länderherkunft, lokale E-Nummern-Datenbank, QR-Designstudio mit Logo-Upload und PDF-Inventurbericht. 100% offline.">
+    
+    <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Aura QR &amp; Barcode Scanner – Präzision, Sicherheit &amp; Design">
+    <meta property="og:description" content="Scannt 17 Formate, schützt mit Link-Guard vor Phishing, erkennt GS1-Länder, prüft Lebensmittel-Zusatzstoffe, generiert goldene QR-Codes mit Logo und exportiert PDF-Berichte.">
+    <meta property="og:image" content="../Bilder-Fotos/Aura%20Qr%20und%20Barcode%20Scanner.webp">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -52,7 +49,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Hintergrund-Atmosphäre */
         .ambient-glow {
             position: fixed;
             top: -120px;
@@ -61,14 +57,14 @@
             width: 700px;
             height: 450px;
             background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
-            pointer-events: none;
             z-index: 0;
+            pointer-events: none;
         }
 
         .container {
             max-width: 1080px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 24px 20px 80px;
             position: relative;
             z-index: 1;
         }
@@ -78,76 +74,74 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 40px;
         }
 
         .back-link {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--gold-primary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
             transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .back-link:hover {
-            color: var(--gold-light);
-            transform: translateX(-3px);
+            color: #FFFFFF;
+            transform: translateX(-4px);
         }
 
         .brand-badge {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
             letter-spacing: 2px;
-            color: var(--gold-light);
-            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
         }
 
-        /* Hero Bereich */
+        /* Hero */
         .hero {
-            padding: 60px 0 40px;
             text-align: center;
+            padding: 30px 0 60px;
         }
 
         .app-icon {
-            width: 110px;
-            height: 110px;
-            border-radius: 26px;
+            width: 128px;
+            height: 128px;
+            border-radius: 28px;
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.25);
             margin: 0 auto 24px;
-            border: 2px solid var(--border-gold);
-            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.25);
-            background: #000000;
             display: block;
             object-fit: cover;
+            background-color: #0d0d0d;
         }
 
         .hero-tag {
             display: inline-block;
-            padding: 6px 16px;
-            border-radius: 50px;
-            background: rgba(212, 175, 55, 0.08);
-            border: 1px solid var(--border-gold);
+            background: rgba(212, 175, 55, 0.1);
             color: var(--gold-light);
+            padding: 4px 14px;
+            border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            border: 1px solid var(--border-gold);
             margin-bottom: 16px;
         }
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 2.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 16px;
+            font-weight: 700;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
         .hero-subtitle {
@@ -155,203 +149,252 @@
             color: var(--text-muted);
             max-width: 680px;
             margin: 0 auto 32px;
-            font-weight: 400;
+            font-weight: 300;
         }
 
         /* Buttons */
         .btn-group {
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
         }
 
         .btn-primary {
+            background: var(--gold-gradient);
+            color: #000000;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--gold-gradient);
-            color: #000000;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 14px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.45);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.5);
         }
 
         .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gold-light);
+            font-weight: 600;
+            padding: 14px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: 1px solid var(--border-gold);
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-gold);
-            color: var(--gold-light);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 14px 26px;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+            gap: 8px;
+            transition: all 0.2s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(212, 175, 55, 0.12);
+            background: rgba(212, 175, 55, 0.1);
             border-color: var(--gold-primary);
-            transform: translateY(-2px);
+            color: #FFFFFF;
         }
 
-        /* Trust Badges */
+        /* Trust Row */
         .trust-row {
             display: flex;
             justify-content: center;
-            gap: 32px;
+            gap: 24px;
             flex-wrap: wrap;
-            padding: 20px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            margin-bottom: 60px;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            max-width: 860px;
+            margin: 0 auto;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
         .trust-item {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 0.88rem;
-            color: var(--text-muted);
+            gap: 6px;
         }
 
         .trust-item span {
             color: var(--gold-primary);
-            font-weight: 700;
+            font-weight: bold;
         }
 
-        /* Feature Grid */
+        /* Sections */
+        section {
+            margin-top: 70px;
+        }
+
         .section-title {
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Cinzel', serif;
             font-size: 1.8rem;
-            font-weight: 700;
+            color: var(--gold-light);
+            text-align: center;
             margin-bottom: 12px;
-            color: var(--text-main);
         }
 
         .section-desc {
             text-align: center;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto 40px;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
-        .features-grid {
+        /* Feature Cards */
+        .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 22px;
-            margin-bottom: 70px;
+            gap: 24px;
         }
 
-        .feature-card {
+        .card {
             background: var(--card-black);
             border: 1px solid var(--border-gold);
-            border-radius: 18px;
+            border-radius: 16px;
             padding: 28px;
-            backdrop-filter: blur(12px);
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            backdrop-filter: blur(10px);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .feature-card:hover {
+        .card:hover {
             transform: translateY(-4px);
             border-color: var(--border-gold-hover);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
         }
 
-        .feature-icon {
+        .card-icon {
             font-size: 2rem;
             margin-bottom: 16px;
             display: inline-block;
         }
 
-        .feature-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
+        .card h3 {
+            font-size: 1.25rem;
             color: var(--gold-light);
             margin-bottom: 10px;
+            font-family: 'Cinzel', serif;
         }
 
-        .feature-card p {
+        .card p {
             color: var(--text-muted);
             font-size: 0.92rem;
             line-height: 1.55;
         }
 
-        /* FAQ Bereich */
-        .faq-section {
-            background: rgba(12, 12, 12, 0.6);
+        .card ul {
+            list-style: none;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card li {
+            font-size: 0.85rem;
+            color: #d1d1d1;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        /* Tech Spec Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-black);
             border: 1px solid var(--border-gold);
-            border-radius: 20px;
-            padding: 40px 32px;
-            margin-bottom: 70px;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 24px;
         }
 
-        .faq-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 20px 0;
-        }
-
-        .faq-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .faq-item h4 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--gold-light);
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .faq-item p {
-            color: var(--text-muted);
+        .specs-table th, .specs-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
             font-size: 0.92rem;
         }
 
-        /* Fußbereich */
+        .specs-table th {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+        }
+
+        .specs-table td:first-child {
+            color: var(--gold-light);
+            font-weight: 600;
+            width: 38%;
+        }
+
+        .specs-table td:last-child {
+            color: var(--text-muted);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .faq-q {
+            color: var(--gold-light);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        /* Footer */
         footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 40px 0;
+            margin-top: 90px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-gold);
             text-align: center;
-            color: #666666;
+            color: var(--text-muted);
             font-size: 0.85rem;
         }
 
         footer a {
-            color: var(--gold-primary);
+            color: var(--gold-light);
             text-decoration: none;
-            margin: 0 10px;
+            transition: color 0.2s;
         }
 
         footer a:hover {
-            color: var(--gold-light);
+            color: #FFFFFF;
         }
 
-        @media (max-width: 640px) {
-            h1 { font-size: 2rem; }
-            .hero { padding: 40px 0 24px; }
-            .btn-group { flex-direction: column; width: 100%; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .btn-group { flex-direction: column; }
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
-            .trust-row { gap: 16px; }
+            .trust-row { flex-direction: column; gap: 8px; }
+            .specs-table td:first-child { width: 50%; }
         }
     </style>
 </head>
@@ -370,16 +413,15 @@
 
         <!-- Hero -->
         <header class="hero">
-            <img src="../Bilder-Fotos/Aura-Qr-Scanner.webp" alt="Aura QR & Barcode Scanner App Icon" class="app-icon" onerror="this.style.display='none'">
-            <div class="hero-tag">Android Werkzeuge · v1.1 Pro</div>
-            <h1>Aura QR & Barcode Scanner</h1>
+            <img src="../Bilder-Fotos/Aura%20Qr%20und%20Barcode%20Scanner.webp" alt="Aura QR &amp; Barcode Scanner App Icon" class="app-icon" onerror="this.src='../Bilder-Fotos/Aura-Appworks.webp'">
+            <div class="hero-tag">Android Barcode-Suite · v1.1 Pro</div>
+            <h1>Aura QR &amp; Barcode Scanner</h1>
             <p class="hero-subtitle">
-                Der Goldstandard für mobile Barcode- und QR-Erkennung auf Android. 
-                100 % Privatsphäre, kompromisslos ohne Cloud und mit fortschrittlicher Phishing-Prüfung.
+                Der Goldstandard für mobile Barcode- und QR-Erkennung auf Android. Erkennt 17 Industrieformate, schützt mit Link-Guard vor bösartigen Phishing-URLs, prüft GS1-Länderherkunft und Lebensmittel-Zusatzstoffe. 100 % lokal ohne Cloud-Zwang.
             </p>
 
             <div class="btn-group">
-                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <a href="https://play.google.com/store/apps/details?id=de.auraappworks.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.277-.523-.69-.523-1.157V2.971c0-.467.195-.88.522-1.157zM15.207 13.414l2.457 2.457-11.45 6.467 8.993-8.924zm0-2.828L6.214 1.662l11.45 6.467-2.457 2.457zm1.414 1.414l3.197 1.808c.783.443.783 1.168 0 1.611l-3.197 1.808-2.283-2.283 2.283-2.544z"/></svg>
                     Im Google Play Store laden
                 </a>
@@ -393,74 +435,178 @@
 
             <!-- Trust Badges -->
             <div class="trust-row">
-                <div class="trust-item"><span>✓</span> 100% Offline-fähig</div>
-                <div class="trust-item"><span>✓</span> Keine Server-Speicherung</div>
-                <div class="trust-item"><span>✓</span> Reines AMOLED-Schwarz</div>
-                <div class="trust-item"><span>✓</span> Fairer Einmalkauf (Kein Abo)</div>
+                <div class="trust-item"><span>✓</span> 17 Industrie- &amp; Barcodeformate</div>
+                <div class="trust-item"><span>✓</span> Link-Guard Phishing-Schutz</div>
+                <div class="trust-item"><span>✓</span> E-Nummern &amp; GS1-Länderprüfung</div>
+                <div class="trust-item"><span>✓</span> Designstudio mit eigenem Logo-Upload</div>
             </div>
         </header>
 
         <!-- Vorteile / Features -->
         <section id="vorteile">
-            <h2 class="section-title">Technologische Spitzenklasse</h2>
-            <p class="section-desc">Entwickelt für maximale Sicherheit, blitzschnelle Erkennung und null Daten-Spionage.</p>
+            <h2 class="section-title">Maximale Scan-Geschwindigkeit &amp; kompromisslose Sicherheit</h2>
+            <p class="section-desc">Entwickelt für den täglichen Einkauf, Lagerlogistik, Smart-Home-Einrichtung und sicheres Surfen ohne Abofallen.</p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Lokaler Phishing-Schutz</h3>
-                    <p>8-Punkte-Tiefenprüfung vor jedem Öffnen. Enttarnt verdächtige Adressen, Punycode-Buchstabenfälschungen, unsichere Kurz-Links und schützt vor betrügerischen Websites.</p>
+            <div class="grid-3">
+                <!-- Feature 1: Universal Scanner -->
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>17 Code-Formate &amp; Stapel-Scan</h3>
+                    <p>Liest QR-Codes, Data Matrix, PDF417, Aztec sowie alle 1D-Handels- und Logistikcodes (EAN, UPC, Code 128, ITF-14, GS1 DataBar) in Millisekunden.</p>
+                    <ul>
+                        <li>Kontinuierlicher Stapel-Scan (Batch) für Inventur</li>
+                        <li>Stufenloser optischer Zoom &amp; Taschenlampe</li>
+                        <li>Manueller Tap-to-Focus &amp; kontinuierlicher Autofokus</li>
+                        <li>Dekodieren von Screenshots &amp; Galerie-Fotos</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🥫</div>
-                    <h3>E-Nummern & Zusatzstoff-Check</h3>
-                    <p>Enthält eine komplette, lokale Offline-Datenbank für Lebensmittel-Zusatzstoffe. Erkennt E-Nummern sofort bei Barcode-Scans und zeigt verlässliche Risikobewertungen.</p>
+                <!-- Feature 2: Link-Guard -->
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Link-Guard Phishing-Schutz</h3>
+                    <p>Viele QR-Codes verbergen gefährliche Links (Quishing). Unser integrierter Link-Guard analysiert die Zieladresse heuristisch vor dem Öffnen.</p>
+                    <ul>
+                        <li>Erkennt unverschlüsselte HTTP-Seiten &amp; IP-Hostadressen</li>
+                        <li>Punycode-Schutz (warnt vor kyrillischen Fake-Zeichen)</li>
+                        <li>Subdomain-Tiefenprüfung &amp; Explizite Öffnungs-Freigabe</li>
+                        <li>Kein Tracking: Die URL wird niemals an Server gesendet</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Stapelscan für Profis</h3>
-                    <p>Scanne Dutzende Codes hintereinander ohne Unterbrechung. Ideal für Inventur, Lager oder Pakete mit direktem CSV- und TXT-Export.</p>
+                <!-- Feature 3: GS1 & E-Nummern -->
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>GS1-Länder &amp; E-Nummern-Ampel</h3>
+                    <p>Entdecke die Herkunft deiner Produkte und schütze deine Gesundheit beim Einkaufen durch unsere integrierte Offline-Wissensdatenbank.</p>
+                    <ul>
+                        <li>Erkennt das Herstellerland anhand des GS1-Präfixes</li>
+                        <li>Mathematische GTIN/EAN Modulo-10-Prüfziffernvalidierung</li>
+                        <li>Lebensmittel-Zusatzstoffe mit Ampel (Grün/Gelb/Rot)</li>
+                        <li>Warnt vor bedenklichen Farbstoffen &amp; Konservierungsstoffen</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Integrierter QR-Studio Generator</h3>
-                    <p>Erstelle hochwertige QR-Codes für WLAN, Visitenkarten (vCard), Events und Links. Auf Wunsch veredelt mit eigenem Firmen- oder Vereinslogo im Zentrum.</p>
+                <!-- Feature 4: Produktsuche & Smart Actions -->
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>6-Wege-Suche &amp; Smart Actions</h3>
+                    <p>Scanne Produkte und vergleiche Preise oder öffne Kalendertermine, Kontakte und WLAN-Netzwerke mit einer einzigen Berührung.</p>
+                    <ul>
+                        <li>Direktsuche auf Idealo, Amazon, eBay &amp; OpenFoodFacts</li>
+                        <li>WLAN-QR: Ein-Klick-Verbindung ohne Passworteingabe</li>
+                        <li>VCard-Visitenkarten als .vcf &amp; Termine als .ics öffnen</li>
+                        <li>Routenführung via Google Maps &amp; OpenStreetMap</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🏷️</div>
-                    <h3>Barcode- & Preisvergleich</h3>
-                    <p>Unterstützt alle GS1-Standards (EAN-13, EAN-8, UPC, Code 128) inklusive Prüfziffern-Validierung und direkter Ein-Klick-Suche bei Idealo und Google.</p>
+                <!-- Feature 5: Design-Studio -->
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>QR-Designstudio mit Logo-Upload</h3>
+                    <p>Erstelle edle QR-Codes im AMOLED-Gold-Stil oder klassischen Farben. Bette dein eigenes Firmenlogo oder Passfoto direkt ins Zentrum ein.</p>
+                    <ul>
+                        <li>10 Inhaltstypen (URL mit Auto-HTTPS, WLAN, VCard, PayPal)</li>
+                        <li>Mittensymbole: WLAN, Mail, Herz, Telefon, Aura-Symbol</li>
+                        <li>Eigenes Logo-Upload mit goldenem Rahmen &amp; Error-Correction H</li>
+                        <li>Clipboard-to-QR &amp; Hochauflösender PNG-Export</li>
+                    </ul>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>100% Privatsphäre & Local-First</h3>
-                    <p>Deine Scan-Historie verbleibt ausschließlich verschlüsselt auf deinem eigenen Gerät. Keine Benutzerkonten, kein Tracking, keine Weitergabe an Dritte.</p>
+                <!-- Feature 6: Verlauf & PDF-Bericht -->
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>Coupon-Tracker &amp; PDF-Report</h3>
+                    <p>Verwalte deine Scans in der lokalen Gerätedatenbank, behalte Gutschein-Fristen im Auge und exportiere strukturierte PDF-Berichte.</p>
+                    <ul>
+                        <li>Coupon-Ablaufmarker warnt vor verfallenden Gutscheinen</li>
+                        <li>Druckfertiger A4-PDF-Report mit Deckblatt &amp; Barcode-Grafiken</li>
+                        <li>CSV- &amp; TXT-Export für Excel und Warenwirtschaft</li>
+                        <li>100 % lokal ohne Cloud-Konto (Fairer Einmalkauf)</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ / Google Ratgeber-Bereich -->
-        <section class="faq-section">
-            <h2 class="section-title" style="margin-bottom: 24px;">Häufig gestellte Fragen (FAQ)</h2>
+        <!-- Technische Daten -->
+        <section id="specs">
+            <h2 class="section-title">Technische Exzellenz</h2>
+            <p class="section-desc">Entwickelt für höchste Erkennungsraten unter schwierigen Lichtverhältnissen und absolute Datenintegrität.</p>
+
+            <table class="specs-table">
+                <tr>
+                    <td>Unterstützte 2D-Codes</td>
+                    <td>QR Code, Micro QR, Data Matrix, Aztec, PDF417, MaxiCode</td>
+                </tr>
+                <tr>
+                    <td>Unterstützte 1D-Strichcodes</td>
+                    <td>EAN-13, EAN-8, UPC-A, UPC-E, Code 128, Code 39, Code 93, Codabar, ITF-14, GS1 DataBar</td>
+                </tr>
+                <tr>
+                    <td>Sicherheitsarchitektur</td>
+                    <td>Heuristischer Link-Guard mit 5-stufiger Phishing- &amp; Punycode-Prüfung</td>
+                </tr>
+                <tr>
+                    <td>Code-Generierung</td>
+                    <td>Fehlerkorrekturlevel H (High, bis zu 30 % Rekonstruktion) für Logo-Einbettung</td>
+                </tr>
+                <tr>
+                    <td>Produktsuche</td>
+                    <td>Idealo Preisvergleich, Amazon, eBay, OpenFoodFacts, Google, DuckDuckGo</td>
+                </tr>
+                <tr>
+                    <td>Prüfsummen-Validierung</td>
+                    <td>GS1 Modulo-10 Gewichtungs-Algorithmus für GTIN-8, GTIN-12, GTIN-13 und GTIN-14</td>
+                </tr>
+                <tr>
+                    <td>Zusatzstoff-Datenbank</td>
+                    <td>Lokale E-Nummern-Enzyklopädie mit Ampel-Klassifizierung (Risiko Niedrig/Mittel/Hoch)</td>
+                </tr>
+                <tr>
+                    <td>Datenschutz &amp; Cloud</td>
+                    <td>100 % lokal · Kamera-Feed bleibt im Speicher · Keine Datenweitergabe</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <p class="section-desc">Alles, was du über Aura QR &amp; Barcode Scanner und die Schutzfunktionen wissen musst.</p>
 
             <div class="faq-item">
-                <h4>Braucht der Aura QR-Scanner eine ständige Internetverbindung?</h4>
-                <p>Nein. Alle Scan-Prozesse, der QR-Generator, die E-Nummern-Datenbank sowie deine Scan-Historie funktionieren vollkommen offline ohne Netzempfang. Eine Internetverbindung wird lediglich für optionale Webseiten-Aufrufe oder Preisvergleiche benötigt.</p>
+                <div class="faq-q">Was unterscheidet den Link-Guard von anderen Scannern?</div>
+                <div class="faq-a">
+                    Viele Scanner leiten dich beim Scannen eines QR-Codes sofort und ungefragt auf die Ziel-Website weiter. Betrüger nutzen das aus („Quishing"), um Nutzer auf gefälschte Bankseiten oder Malware-Downloads zu locken. Unser Link-Guard stoppt diesen Prozess, prüft die Domain auf IP-Verschleierung, kryptische kyrillische Zeichen (Punycode) und unverschlüsselte Verbindungen und zeigt dir die echte Domain zur Bestätigung an, bevor dein Browser sie lädt.
+                </div>
             </div>
 
             <div class="faq-item">
-                <h4>Werden meine gescannten Daten auf externen Servern gespeichert?</h4>
-                <p>Niemals. Gemäß unserer Aura-Datenschutzphilosophie verbleiben 100 % aller Historien- und Kontaktdaten lokal auf dem internen Speicher deines Android-Smartphones.</p>
+                <div class="faq-q">Wie funktioniert die GS1-Länderprüfung?</div>
+                <div class="faq-a">
+                    Die ersten 2 bis 3 Ziffern eines EAN- oder UPC-Barcodes (das GS1-Präfix) kennzeichnen die nationale Organisation, bei der der Hersteller registriert ist (z. B. 400 bis 440 für Deutschland, 760 bis 769 für die Schweiz). Die App gleicht den Barcode in Sekundenbruchteilen mit ihrer internen Datenbank von über 100 Ländern ab und zeigt dir die passende Landesflagge direkt im Scan-Ergebnis an.
+                </div>
             </div>
 
             <div class="faq-item">
-                <h4>Wie schützt mich die App vor gefährlichen QR-Codes?</h4>
-                <p>Vor dem Öffnen eines Links führt die App eine automatische 8-Kriterien-Sicherheitsanalyse durch. Sie warnt vor unverschlüsseltem HTTP, verdeckten Kurz-Links (URL-Shortener) und gefälschten Bank-Adressen (Punycode-Angriffe).</p>
+                <div class="faq-q">Bleibt der QR-Code lesbar, wenn ich mein eigenes Logo einfüge?</div>
+                <div class="faq-a">
+                    Ja, absolut. Im Aura Design-Studio wird bei der Logo-Einbettung automatisch die höchste Fehlerkorrekturstufe H (High) aktiviert. Dadurch darf bis zu 30 Prozent der Code-Fläche durch ein zentrales Logo überdeckt sein, ohne dass Barcode-Scanner bei der Lesbarkeit ins Stocken geraten.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Wofür dient der PDF-Report-Export?</div>
+                <div class="faq-a">
+                    Wenn du für dein Unternehmen, dein Heimlager oder die Buchhaltung mehrere Artikel, Pakete oder Inventarnummern gescannt hast, kannst du diese gesammelten Daten mit einem Klick als mehrseitiges DIN-A4-Prüfprotokoll mit Deckblatt, Barcode-Grafiken und Zeitstempeln exportieren. Das spart zeitaufwändige manuelle Überträge.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Gibt es in der App ein wiederkehrendes Abonnement?</div>
+                <div class="faq-a">
+                    Nein. Aura Appworks bietet ausnahmslos faire Einmalkäufe an. Alle Standard-Scanfunktionen sind dauerhaft kostenlos. Mit dem optionalen Lifetime-Pass (5,99 €) entfernst du alle Werbebanner dauerhaft und schaltest das Design-Studio sowie den PDF-Sammel-Export für immer frei.
+                </div>
             </div>
         </section>
 
