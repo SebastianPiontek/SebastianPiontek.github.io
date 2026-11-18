@@ -1,1 +1,659 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Precision Audio Pro – Tongenerator, Binaurale Beats & Audio-Labor für Android | Aura Appworks</title>
+    <meta name="description" content="Professionelles Audio-Labor für Android: 1 Hz bis 22.000 Hz Tongenerator, 4 Wellenformen, WAV-Export, Binaurale Beats, Tinnitus-Kerbenfilter, Hörtest mit PDF-Audiogramm und Lautsprecher-Wasser-Auswerfer. 100% offline.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aura Precision Audio Pro – Das ultimative Audio-Labor für Android">
+    <meta property="og:description" content="Frequenzgenerator 1 Hz – 22 kHz, Gehirnwellen-Binauralbeats, Rauschgenerator mit Tinnitus-Notch, Hörselbsttest mit PDF-Export und 165-Hz-Wasser-Auswerfer.">
+    <meta property="og:image" content="../Bilder-Fotos/Aura%20Precision%20Audio.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-black: #000000;
+            --surface-black: #070707;
+            --card-black: rgba(18, 18, 18, 0.75);
+            --gold-primary: #D4AF37;
+            --gold-light: #F4E4A6;
+            --gold-dark: #997A15;
+            --gold-gradient: linear-gradient(135deg, #F4E4A6 0%, #D4AF37 50%, #997A15 100%);
+            --text-main: #FFFFFF;
+            --text-muted: #A3A3A3;
+            --border-gold: rgba(212, 175, 55, 0.25);
+            --border-gold-hover: rgba(212, 175, 55, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 24px 20px 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #FFFFFF;
+            transform: translateX(-4px);
+        }
+
+        .brand-badge {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 30px 0 60px;
+        }
+
+        .app-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 28px;
+            border: 2px solid var(--gold-primary);
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.25);
+            margin: 0 auto 24px;
+            display: block;
+            object-fit: cover;
+            background-color: #0d0d0d;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 1px solid var(--border-gold);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 32px;
+            font-weight: 300;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: #000000;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gold-light);
+            font-weight: 600;
+            padding: 14px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: 1px solid var(--border-gold);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--gold-primary);
+            color: #FFFFFF;
+        }
+
+        /* Trust Row */
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            max-width: 820px;
+            margin: 0 auto;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .trust-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .trust-item span {
+            color: var(--gold-primary);
+            font-weight: bold;
+        }
+
+        /* Section Styling */
+        section {
+            margin-top: 70px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 40px;
+            font-size: 0.95rem;
+        }
+
+        /* Feature Cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 16px;
+            padding: 28px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-gold-hover);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card li {
+            font-size: 0.85rem;
+            color: #d1d1d1;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        /* Tech Spec Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 24px;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+            font-size: 0.92rem;
+        }
+
+        .specs-table th {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+        }
+
+        .specs-table td:first-child {
+            color: var(--gold-light);
+            font-weight: 600;
+            width: 38%;
+        }
+
+        .specs-table td:last-child {
+            color: var(--text-muted);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-black);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .faq-q {
+            color: var(--gold-light);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+
+        /* Medical Disclaimer Box */
+        .disclaimer-box {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-top: 32px;
+            font-size: 0.85rem;
+            color: #c0c0c0;
+            line-height: 1.5;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .disclaimer-box span {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 90px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-gold);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--gold-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .btn-group { flex-direction: column; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .trust-row { flex-direction: column; gap: 8px; }
+            .specs-table td:first-child { width: 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html" class="back-link">
+                ← Zurück zur Übersicht
+            </a>
+            <div class="brand-badge">AURA APPWORKS</div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <img src="../Bilder-Fotos/Aura%20Precision%20Audio.webp" alt="Aura Precision Audio Pro App Icon" class="app-icon" onerror="this.src='../Bilder-Fotos/Aura-Appworks.webp'">
+            <div class="hero-tag">Android Audio-Labor &amp; Akustik-Suite · v1.0 Pro</div>
+            <h1>Aura Precision Audio Pro</h1>
+            <p class="hero-subtitle">
+                Das professionelle On-Device-Tonlabor für Android. Präziser Frequenzgenerator von 1 Hz bis 22.000 Hz, binaurale Gehirnwellen, Tinnitus-Kerbenfilter, Hörtest mit PDF-Audiogramm und Lautsprecher-Wasser-Auswerfer. 100 % offline.
+            </p>
+
+            <div class="btn-group">
+                <a href="https://play.google.com/store/apps/details?id=de.auraappworks.precisionaudio" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.328-.277-.523-.69-.523-1.157V2.971c0-.467.195-.88.522-1.157zM15.207 13.414l2.457 2.457-11.45 6.467 8.993-8.924zm0-2.828L6.214 1.662l11.45 6.467-2.457 2.457zm1.414 1.414l3.197 1.808c.783.443.783 1.168 0 1.611l-3.197 1.808-2.283-2.283 2.283-2.544z"/></svg>
+                    Im Google Play Store laden
+                </a>
+                <a href="../index.html#apps" class="btn-secondary">
+                    🌐 Auf Hauptseite ansehen
+                </a>
+                <a href="#vorteile" class="btn-secondary">
+                    Funktionen entdecken
+                </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-row">
+                <div class="trust-item"><span>✓</span> 1 Hz – 22.000 Hz Echtzeit-Synthese</div>
+                <div class="trust-item"><span>✓</span> 25ms Knackschutz &amp; Gehörschutz (-6dB)</div>
+                <div class="trust-item"><span>✓</span> 16-Bit WAV-Export direkt auf dem Gerät</div>
+                <div class="trust-item"><span>✓</span> 100% Offline (Kein Cloud-Zwang)</div>
+            </div>
+        </header>
+
+        <!-- Vorteile / Features -->
+        <section id="vorteile">
+            <h2 class="section-title">Fünf High-End-Audiowerkzeuge in einer App</h2>
+            <p class="section-desc">Entwickelt für Tontechniker, Musiker, Hifi-Liebhaber, Meditierende und alle, die das Maximum aus ihren Smartphone-Lautsprechern und Kopfhörern herausholen wollen.</p>
+
+            <div class="grid-3">
+                <!-- Feature 1: Oszillator -->
+                <div class="card">
+                    <div class="card-icon">🔊</div>
+                    <h3>Präzisions-Oszillator</h3>
+                    <p>Erzeuge reine Töne von 1 Hz bis 22.000 Hz. Wähle zwischen Sinus-, Rechteck-, Dreieck- und Sägezahnwellen mit stufenloser linearer oder logarithmischer Frequenzwahl.</p>
+                    <ul>
+                        <li>Automatischer 25 ms Cross-Fade verhindert Knackser</li>
+                        <li>Frequenz-Sweep (stufenloser Gleitton) mit Loop</li>
+                        <li>Solfeggio-Presets (432 Hz, 440 Hz, 528 Hz) &amp; Gitarrensaiten</li>
+                        <li>Verlustfreier 16-Bit WAV-Export auf Knopfdruck</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Binaurale Beats -->
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Binaurale Beats &amp; Fokus</h3>
+                    <p>Nutze die Kraft akustischer Gehirnwellen-Stimulation über Kopfhörer. Wähle gezielt Frequenzen zur Steigerung der Konzentration oder für tiefen, erholsamen Schlaf.</p>
+                    <ul>
+                        <li>Delta (1–4 Hz): Tiefschlaf &amp; Regeneration</li>
+                        <li>Theta (4–8 Hz) &amp; Alpha (8–13 Hz): Ruhe &amp; Meditation</li>
+                        <li>Beta (13–30 Hz) &amp; Gamma (30–50 Hz): High-End-Fokus</li>
+                        <li>Integrierter 4-7-8 Atemtrainer &amp; 60s Fade-Out Sleep-Timer</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Audiometrie & Tinnitus -->
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Audiometrie &amp; Tinnitus</h3>
+                    <p>Umfassende Akustik-Diagnostik: 3 Rauschgeneratoren, schmalbandige Tinnitus-Kerbenfilterung und ein strukturierter 10-Frequenzen-Hörtest für beide Ohren.</p>
+                    <ul>
+                        <li>Weißes, Rosa (1/f) und Braunes Rauschen</li>
+                        <li>Tinnitus-Finder &amp; Notched-Noise-Therapie</li>
+                        <li>Hörselbsttest (250 Hz bis 18 kHz) &amp; Hör-Alter</li>
+                        <li>Professioneller Audiogramm-Export als PDF</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4: Lautsprecher-Pflege -->
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Wasser- &amp; Staub-Auswerfer</h3>
+                    <p>Smartphone nass geworden oder Lautsprecher verstaubt? Ein spezieller 30-Sekunden-Zyklus befreit die Lautsprechermembran durch kontrollierte Resonanzschwingungen.</p>
+                    <ul>
+                        <li>165 Hz Resonanzfrequenz mit 2 Hz LFO-Modulation</li>
+                        <li>Kombiniert mit haptischen Druckstößen der Vibrationsmotoren</li>
+                        <li>Animierte Tropfenanzeige im Live-Oszilloskop</li>
+                        <li>Abschließender Klarheits-Soundcheck (C4–C7)</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 5: Akustik-Utilities -->
+                <div class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Stereo- &amp; Phasen-Check</h3>
+                    <p>Prüfe deine Lautsprecher, Studio-Monitore und Kopfhörer auf korrekte Verkabelung, exakte Kanal-Balance und phasenrichtige Wiedergabe.</p>
+                    <ul>
+                        <li>Kanal-Isolator: Links, Rechts und Stereo getrennt ansteuern</li>
+                        <li>Phasen-Check: In-Phase vs. Out-of-Phase (180° Invertierung)</li>
+                        <li>Hundepfeife &amp; Anti-Mücke bis 19,5 kHz</li>
+                        <li>Echtzeit-Oszilloskop &amp; 2048-Punkt-FFT-Spektrumanalysator</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 6: Datenschutz -->
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>100 % Lokal &amp; Fair</h3>
+                    <p>Kompromissloser Datenschutz im Aura-Standard. Alle Berechnungen erfolgen lokal auf deinem Smartphone – ohne Accounts, ohne Cloud und ohne Datenübertragung.</p>
+                    <ul>
+                        <li>100 % On-Device &amp; komplett offline nutzbar</li>
+                        <li>Touch-Sperre &amp; Master-Not-Aus-Mute-Bus</li>
+                        <li>12 integrierte Weltsprachen</li>
+                        <li>Fairer Lifetime-Pass (14,99 € einmalig, kein Abo)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="disclaimer-box">
+                <span>⚠️</span>
+                <div>
+                    <strong>Medizinischer Hinweis:</strong> Der in dieser App integrierte Hörselbsttest und der Tinnitus-Frequenz-Finder dienen ausschließlich der persönlichen akustischen Orientierung und Information. Sie stellen keine medizinische Diagnose dar und ersetzen keinesfalls eine fachärztliche Untersuchung durch einen Hals-Nasen-Ohren-Arzt oder lizenzierten Hörakustiker.
+                </div>
+            </div>
+        </section>
+
+        <!-- Technische Daten -->
+        <section id="specs">
+            <h2 class="section-title">Technische Exzellenz</h2>
+            <p class="section-desc">Für anspruchsvolle Anwender, die Wert auf unverfälschte Signalverarbeitung und maximale Sicherheit legen.</p>
+
+            <table class="specs-table">
+                <tr>
+                    <td>Frequenzbereich</td>
+                    <td>1 Hz bis 22.000 Hz (stufenlos linear / logarithmisch)</td>
+                </tr>
+                <tr>
+                    <td>Signal-Wellenformen</td>
+                    <td>Sinus, Rechteck (-6 dB Absenkung), Dreieck, Sägezahn</td>
+                </tr>
+                <tr>
+                    <td>Knack- &amp; Gehörschutz</td>
+                    <td>25 ms Cross-Fade bei jedem Frequenz- oder Wellenformwechsel</td>
+                </tr>
+                <tr>
+                    <td>Ultraschall-Schutz</td>
+                    <td>Automatische Sicherheitsgrenze bei 19,5 kHz bei Standard-Abtastraten</td>
+                </tr>
+                <tr>
+                    <td>Audio-Export</td>
+                    <td>16-Bit PCM unkomprimierte WAV-Dateien (lokale Generierung)</td>
+                </tr>
+                <tr>
+                    <td>Gehirnwellen-Bänder</td>
+                    <td>Delta (1–4 Hz), Theta (4–8 Hz), Alpha (8–13 Hz), Beta (13–30 Hz), Gamma (30–50 Hz)</td>
+                </tr>
+                <tr>
+                    <td>Rauschfilterung</td>
+                    <td>White, Pink (1/f), Brown (1/f²) + Notched Noise (Q = 4)</td>
+                </tr>
+                <tr>
+                    <td>Speaker-Cleaning</td>
+                    <td>165 Hz Sinusschwingung + 2 Hz LFO + abgestimmte haptische Impulse</td>
+                </tr>
+                <tr>
+                    <td>Datenschutz &amp; Cloud</td>
+                    <td>100 % offline · Keine Konten · Lokale Speicherung via IndexedDB</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <p class="section-desc">Alles, was du über die Funktionsweise und den sicheren Einsatz von Aura Precision Audio Pro wissen musst.</p>
+
+            <div class="faq-item">
+                <div class="faq-q">Wie funktioniert der Wasser- und Staub-Auswerfer?</div>
+                <div class="faq-a">
+                    Der Lautsprecher-Reiniger nutzt eine akustische Resonanzfrequenz von 165 Hz, moduliert durch einen niederfrequenten 2-Hz-LFO. Dieser tiefe, pulsierende Ton zwingt die Lautsprechermembran deines Smartphones zu maximaler mechanischer Auslenkung. Zusammen mit den synchronisierten Vibrationsmotoren werden Wassertropfen und lose Staubpartikel physikalisch aus dem Lautsprechergitter herausgeschleudert. Halte das Smartphone während des 30-Sekunden-Vorgangs mit dem Lautsprecher nach unten.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Warum ist der 25-ms-Knackschutz so wichtig?</div>
+                <div class="faq-a">
+                    Bei herkömmlichen Tongeneratoren entsteht beim abrupten Umschalten von Frequenzen oder Wellenformen ein sogenannter DC-Offset-Sprung, der als lautes Knacken hörbar ist. Das kann nicht nur unangenehm für das Gehör sein, sondern bei hoher Lautstärke auch empfindliche Smartphone-Lautsprecher oder Kopfhörertreiber beschädigen. Aura Precision Audio Pro blendet das Signal in 25 Millisekunden blitzschnell aus, schaltet absolut lautlos um und blendet es wieder ein.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Brauche ich für binaurale Beats zwingend Kopfhörer?</div>
+                <div class="faq-a">
+                    Ja. Binaurale Beats entstehen erst im Gehirn (im sogenannten oberen Olivenkern), wenn dem linken und dem rechten Ohr zwei leicht unterschiedliche Frequenzen zugeführt werden (z. B. 200 Hz links und 210 Hz rechts für eine 10-Hz-Alpha-Welle). Über gewöhnliche Smartphone-Lautsprecher würden sich die Schallwellen im Raum vermischen und lediglich als Monoschwebung wahrgenommen werden.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Was bewirkt der Tinnitus-Kerbenfilter (Notched Noise)?</div>
+                <div class="faq-a">
+                    In der modernen Akustikforschung wird sogenanntes „Tailor-Made Notched Sound Therapy" erforscht. Dabei hört der Betroffene ein angenehmes Rauschen (z. B. rosa oder braunes Rauschen), aus dem exakt die Frequenz seines persönlichen Ohrgeräuschs schmalbandig herausgefiltert wurde. Das Gehirn erhält dadurch in diesem Frequenzband keine Stimulation mehr, was dazu beitragen kann, überaktive neuronale Schleifen im auditorischen Kortex zu beruhigen.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Funktioniert die App wirklich komplett ohne Internet?</div>
+                <div class="faq-a">
+                    Ja, zu 100 %. Alle Töne, Rauschkurven, Sweeps und WAV-Dateien werden direkt in Echtzeit von der Audio-Hardware deines Smartphones berechnet. Deine Hörtests und Presets werden lokal in der internen Datenbank deines Telefons gesichert. Es werden keinerlei Audio- oder Nutzungsdaten übertragen.
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2027 Aura Appworks · Inhaber: Sebastian Piontek</p>
+            <p style="margin-top: 8px;">
+                <a href="../index.html">Startseite</a> ·
+                <a href="../index.html#impressum">Impressum</a> ·
+                <a href="../index.html#datenschutz">Datenschutz</a> ·
+                <a href="mailto:aura-appworks@web.de">Kontakt</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
 
