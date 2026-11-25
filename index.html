@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google" content="notranslate">
-<title>Aura Appworks | Erstklassige Android-Apps für deinen Alltag</title>
+<title>Aura AppWorks | Erstklassige Android-Apps für deinen Alltag</title>
 
 <!-- Canonical URL zur Vermeidung von Duplicate Content -->
 <link rel="canonical" href="https://sebastianpiontek.github.io/">
 
 <!-- SEO & Metadata -->
-<meta name="description" content="Aura Appworks Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. Datenschutzsicher und fair.">
+<meta name="description" content="Aura AppWorks Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. Datenschutzsicher und fair.">
 <meta name="author" content="Sebastian Piontek">
-<meta property="og:title" content="Aura Appworks App-Manufaktur">
+<meta property="og:title" content="Aura AppWorks Manufaktur">
 <meta property="og:description" content="Erstklassige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
 <meta property="og:image" content="https://sebastianpiontek.github.io/Bilder-Fotos/Aura-Appworks.webp">
 <meta property="og:url" content="https://sebastianpiontek.github.io/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aura Appworks App-Manufaktur">
+<meta name="twitter:title" content="Aura AppWorks Manufaktur">
 <meta name="twitter:description" content="Erstklassige Android-Apps im AMOLED-Gold-Design. Maximale Performance, bester Datenschutz und ohne Abofallen.">
 <meta name="twitter:image" content="https://sebastianpiontek.github.io/Bilder-Fotos/Aura-Appworks.webp">
 
@@ -26,12 +26,11 @@
 <link rel="icon" type="image/webp" href="Bilder-Fotos/Aura-Appworks.webp">
 
 <!-- Strukturierte JSON-LD Daten für Google, Local SEO & KI-Verständnis -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "Organization",
       "@id": "https://sebastianpiontek.github.io/#business",
       "name": "Aura Appworks",
       "image": "https://sebastianpiontek.github.io/Bilder-Fotos/Aura-Appworks.webp",
@@ -39,17 +38,10 @@
       "telephone": "+49 174 6222586",
       "email": "aura-appworks@web.de",
       "priceRange": "€",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Ruhrorter Straße 86",
-        "addressLocality": "Duisburg",
-        "postalCode": "47059",
-        "addressCountry": "DE"
-      },
       "founder": {
         "@type": "Person",
         "name": "Sebastian Piontek",
-        "jobTitle": "Gründer & App-Entwickler"
+        "jobTitle": "Gründer, App-Entwickler & Webdesigner"
       },
       "description": "Manufaktur für schlanke, offline-fähige Android-Apps im edlen AMOLED-Gold-Design. Datenschutzsicher und ohne Abofallen."
     },
@@ -150,12 +142,15 @@
       "name": "Aura Währungsrechner Pro",
       "operatingSystem": "Android",
       "applicationCategory": "FinanceApplication",
-      "offers": {"@type": "Offer","price": "0","priceCurrency": "EUR"},
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
       "url": "https://play.google.com/store/apps/details?id=de.auraappworks.waehrungsrechner"
     }
   ]
-}
-</script>
+}</script>
 
 <style>
 /* 100% LOKALER SYSTEM-SCHRIFT-STACK (0 EXTERNE SERVER-ANFRAGEN) */
@@ -927,7 +922,7 @@ footer {
 .cat-filter{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 auto 28px}
 .cat-btn{background:#0A0A0A;color:#E0E0E0;border:1px solid rgba(212,175,55,.45);border-radius:999px;padding:10px 18px;font-size:.9rem;font-weight:600;cursor:pointer;min-height:44px;font-family:inherit}
 .cat-btn.active,.cat-btn:hover{background:linear-gradient(135deg,#D4AF37,#F3E5AB);color:#000;border-color:#D4AF37}
-.app-card.hidden-cat{display:none}
+.app-card.hidden-cat{display:none !important}
 /* Aufklapp-Details */
 .app-details{margin:6px 0 14px;text-align:left}
 .app-details summary{cursor:pointer;color:#D4AF37;font-weight:600;font-size:.9rem;list-style:none;padding:6px 0}
@@ -946,6 +941,351 @@ footer {
 .shots-prev{left:-10px;top:50%}.shots-next{right:-10px;top:50%}
 .shots-count{color:#B0B0B0;font-size:.85rem;margin-top:10px}
 .shots-empty{color:#E0E0E0;padding:50px 20px;border:1px dashed rgba(212,175,55,.5);border-radius:18px}
+
+/* NEUE STYLES FÜR AKTUELLE STANDARDS (24 PUNKTE) */
+.badge-status {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+.status-januar {
+  background: rgba(212, 175, 55, 0.18);
+  color: #F3E5AB;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+.status-welle2 {
+  background: rgba(100, 100, 100, 0.25);
+  color: #B0B0B0;
+  border: 1px solid rgba(160, 160, 160, 0.35);
+}
+.badge-cat-pill {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 8px;
+  background: #1c1c1f;
+  color: #D4AF37;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  margin-right: 4px;
+}
+.app-meta-badges {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.btn-details-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 16px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  color: #050505;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+}
+.btn-details-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+  filter: brightness(1.05);
+}
+.ratgeber-preview-box {
+  max-width: 1160px;
+  margin: 60px auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.ratgeber-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  margin: 30px 0;
+  text-align: left;
+}
+.ratgeber-card {
+  background: #121212;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+.ratgeber-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+.ratgeber-card-tag {
+  color: #D4AF37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ratgeber-card h3 {
+  font-size: 1.15rem;
+  color: #FCF6BA;
+  margin: 10px 0;
+  line-height: 1.4;
+  font-family: 'Montserrat', sans-serif;
+}
+.ratgeber-card p {
+  font-size: 0.9rem;
+  color: #B0B0B0;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.ratgeber-card a.read-more {
+  color: #D4AF37;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ratgeber-card a.read-more:hover {
+  color: #FCF6BA;
+  text-decoration: underline;
+}
+.footer-multi-col {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 50px 20px 25px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 35px;
+  text-align: left;
+}
+.footer-col h4 {
+  color: #D4AF37;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col li {
+  margin-bottom: 10px;
+}
+.footer-col a {
+  color: #B0B0B0;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+.footer-col a:hover {
+  color: #FCF6BA;
+}
+.footer-bottom-bar {
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 24px 20px 35px 20px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+
+.card-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.card-actions-row .btn-shots {
+  margin-bottom: 0;
+  padding: 10px 8px;
+  font-size: 0.85rem;
+  min-height: 44px;
+}
+.card-actions-row .btn-store {
+  padding: 10px 8px;
+  font-size: 0.85rem;
+  min-height: 44px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn-store-soon {
+  background: rgba(212, 175, 55, 0.12) !important;
+  color: var(--gold-champagne) !important;
+  border: 1px dashed rgba(212, 175, 55, 0.5);
+  cursor: default;
+  pointer-events: none;
+}
+.btn-details-gold {
+  margin-top: 0 !important;
+  padding: 11px 14px !important;
+  font-size: 0.92rem;
+}
+
+
+/* Ultra-kompakte Kacheln & Klapp-Details */
+.app-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 24px 22px !important;
+  border-radius: 20px !important;
+}
+.app-details {
+  margin: 10px 0 16px !important;
+  text-align: left !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  transition: all 0.25s ease !important;
+}
+.app-details[open] {
+  background: rgba(212, 175, 55, 0.04) !important;
+  border-color: rgba(212, 175, 55, 0.45) !important;
+}
+.app-details summary {
+  cursor: pointer !important;
+  color: #D4AF37 !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  list-style: none !important;
+  padding: 9px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  user-select: none !important;
+  border-radius: 12px !important;
+  transition: color 0.2s ease, background 0.2s ease !important;
+}
+.app-details summary:hover {
+  color: #F7E7CE !important;
+  background: rgba(212, 175, 55, 0.08) !important;
+}
+.app-details summary::-webkit-details-marker { display: none !important; }
+.app-details summary::after {
+  content: "▾";
+  font-size: 0.95rem;
+  transition: transform 0.25s ease;
+  color: #D4AF37;
+}
+.app-details[open] summary::after {
+  transform: rotate(180deg);
+}
+.app-details-body {
+  padding: 0 12px 12px 12px !important;
+  border-top: 1px dashed rgba(212, 175, 55, 0.2) !important;
+}
+.app-details-body .details-desc {
+  color: #D8D8D8 !important;
+  font-size: 0.86rem !important;
+  line-height: 1.55 !important;
+  margin: 10px 0 8px 0 !important;
+}
+.app-details-body ul {
+  margin: 6px 0 0 16px !important;
+  padding: 0 !important;
+  color: #A0A0A0 !important;
+  font-size: 0.83rem !important;
+  line-height: 1.55 !important;
+}
+.app-details-body li {
+  margin-bottom: 4px;
+}
+
+/* Schlanker App-Details Button */
+.btn-details-gold {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  width: auto !important;
+  align-self: center !important;
+  margin: 6px auto 0 auto !important;
+  padding: 7px 18px !important;
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%) !important;
+  color: #050505 !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.02em !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25) !important;
+}
+.btn-details-gold:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.45) !important;
+  filter: brightness(1.08) !important;
+}
+
+/* Live Suche */
+.app-search-wrap {
+  max-width: 480px;
+  margin: 0 auto 20px auto;
+  padding: 0 15px;
+}
+.search-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-input-box .search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 0.95rem;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.app-search-input {
+  width: 100%;
+  padding: 10px 38px 10px 40px;
+  background: rgba(12, 12, 12, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 9999px;
+  color: #F5F5F5;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.app-search-input:focus {
+  border-color: #D4AF37;
+  background: rgba(18, 18, 18, 0.95);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.35);
+}
+.search-clear-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #A0A0A0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+.search-clear-btn:hover {
+  color: #D4AF37;
+}
+
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}.footer-links a{color:var(--gold-primary);overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -972,8 +1312,8 @@ footer {
   </div>
   <nav class="nav-links">
     <div class="nav-text-group">
-      <a href="#impressum" data-i18n="nav_impressum">Impressum</a>
-      <a href="#datenschutz" data-i18n="nav_datenschutz">Datenschutz</a>
+      <a href="impressum.html" data-i18n="nav_impressum">Impressum</a>
+      <a href="datenschutz.html" data-i18n="nav_datenschutz">Datenschutz</a>
       <a href="#entwickler" data-i18n="nav_dev">Über den Entwickler</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
     </div>
@@ -1037,7 +1377,7 @@ footer {
   <div class="dev-avatar-box">
     <img src="Bilder-Fotos/sebastian.webp" alt="Sebastian Piontek Gründer &amp; Entwickler" width="130" height="130" loading="lazy" class="dev-avatar">
     <h3 class="dev-name">Sebastian Piontek</h3>
-    <span class="dev-role" data-i18n="dev_role">Gründer &amp; App-Entwickler</span>
+    <span class="dev-role" data-i18n="dev_role">Gründer, App-Entwickler &amp; Webdesigner</span>
   </div>
   <div class="dev-text">
     <div class="badge-group">
@@ -1047,459 +1387,530 @@ footer {
     </div>
     <h2 data-i18n="dev_headline">Android-Apps ohne Datenhunger</h2>
     <p data-i18n="dev_p1">Guten Tag, mein Name ist <strong>Sebastian Piontek</strong>. Ich entwickle meine Applikationen persönlich, fair bepreist, verlässlich und im edlen Design.</p>
-    <p data-i18n="dev_p2">Ob clevere Alltagswerkzeuge oder mobile Scanner: Der Schutz deiner Privatsphäre steht an erster Stelle. Ohne unnötige Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes Handwerk aus Duisburg.</p>
+    <p data-i18n="dev_p2">Ob clevere Android-Werkzeuge, Prüfungs-Apps oder moderne Web-Lösungen: Der Schutz deiner Privatsphäre steht an erster Stelle. Ohne unnötige Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes digitales Handwerk – unabhängig, ehrlich und Made in Germany.</p>
   </div>
 </section>
 
 <!-- APP SHOWCASE (H2 -> H3) -->
 <section id="apps">
   <h2 class="section-title" data-i18n="apps_title">Meine Applikationen</h2>
+    <div class="app-search-wrap">
+    <div class="search-input-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="appSearchInput" class="app-search-input" placeholder="App suchen (z. B. Scanner, Rechner, IQ, NetSpeed, Note...)" autocomplete="off" aria-label="Apps durchsuchen">
+      <button type="button" id="appSearchClear" class="search-clear-btn" style="display:none;" title="Suche leeren">✕</button>
+    </div>
+  </div>
   <div class="cat-filter" role="tablist">
     <button type="button" class="cat-btn active" data-filter="all" data-i18n="cat_all">Alle Apps</button>
     <button type="button" class="cat-btn" data-filter="tools" data-i18n="cat_tools">Werkzeuge &amp; Messen</button>
     <button type="button" class="cat-btn" data-filter="office" data-i18n="cat_office">Büro &amp; Finanzen</button>
     <button type="button" class="cat-btn" data-filter="tech" data-i18n="cat_tech">Technik &amp; System</button>
+    <button type="button" class="cat-btn" data-filter="academy" data-i18n="cat_academy">Aura Akademie</button>
   </div>
-  <div class="app-grid">
+    <div class="app-grid">
     <!-- App 1: Aura Rechner Pro -->
-    <div class="app-card" data-cat="office">
+    <div class="app-card" data-cat="tools">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Rechner Pro.webp" alt="Aura Rechner Pro Logo" width="65" height="65" loading="lazy">
-        <h3>Aura Rechner Pro</h3>
+        <div>
+          <h3>Aura Rechner Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Werkzeuge &amp; Messen</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app1_desc">Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Präzise Grundrechenarten mit klarem AMOLED-Display</li><li>Prozent- und Rabattrechner für den Einkauf</li><li>Lokaler Rechenverlauf direkt auf dem Gerät</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('rechner','Aura Rechner Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.rechnerpro" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.</p>
+          <ul><li>Präzise Grundrechenarten mit klarem AMOLED-Display</li><li>Prozent- und Rabattrechner für den Einkauf</li><li>Lokaler Rechenverlauf direkt auf dem Gerät</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('rechner','Aura Rechner Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.rechnerpro" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/rechner-pro.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
     <!-- App 2: Aura PDF Scanner -->
     <div class="app-card" data-cat="office">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura PDF Scanner.webp" alt="Aura PDF Scanner Logo" width="65" height="65" loading="lazy">
-        <h3>Aura PDF Scanner &amp; Konverter</h3>
+        <div>
+          <h3>Aura PDF Scanner &amp; Konverter</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Büro &amp; Medien</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app2_desc">Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Automatische Kantenerkennung &amp; Zuschnitt</li><li>Digitale Unterschrift direkt auf dem Display</li><li>Export als PDF und Teilen in Sekunden</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('pdf-scanner','Aura PDF Scanner &amp; Konverter')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.</p>
+          <ul><li>Automatische Kantenerkennung &amp; Zuschnitt</li><li>Digitale Unterschrift direkt auf dem Display</li><li>Export als PDF und Teilen in Sekunden</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('pdf-scanner','Aura PDF Scanner &amp; Konverter')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.pdfscanner" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/pdf-scanner.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
     <!-- App 3: Aura QR Scanner -->
     <div class="app-card" data-cat="tools">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Qr und Barcode Scanner.webp" alt="Aura QR Scanner Logo" width="65" height="65" loading="lazy">
-        <h3>Aura QR &amp; Barcode Scanner Pro</h3>
+        <div>
+          <h3>Aura QR &amp; Barcode Scanner Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Werkzeuge &amp; Messen</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app3_desc">Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Alle gängigen 1D- &amp; 2D-Codes inkl. Galerie-Scan</li><li>Link-Schutz vor gefährlichen QR-Codes (Anti-Quishing)</li><li>QR-Generator mit Design-Studio &amp; eigenem Logo</li><li>E-Nummern-Ampel &amp; Coupon-Ablaufdatum im Verlauf</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('qr-scanner','Aura QR &amp; Barcode Scanner Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Blitzschnell scannen ohne Schnickschnack. Liest Webseiten-Links, verbindet dich direkt mit dem WLAN oder vergleicht Produktpreise mit nur einem Klick.</p>
+          <ul><li>Alle gängigen 1D- &amp; 2D-Codes inkl. Galerie-Scan</li><li>Link-Schutz vor gefährlichen QR-Codes (Anti-Quishing)</li><li>QR-Generator mit Design-Studio &amp; eigenem Logo</li><li>E-Nummern-Ampel &amp; Coupon-Ablaufdatum im Verlauf</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('qr-scanner','Aura QR &amp; Barcode Scanner Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.qrscanner" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/qr-scanner.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
     <!-- App 4: Aura NetSpeed Pro -->
     <div class="app-card" data-cat="tech">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Netspeed pro.webp" alt="Aura NetSpeed Pro Logo" width="65" height="65" loading="lazy">
-        <h3>Aura NetSpeed Pro</h3>
+        <div>
+          <h3>Aura NetSpeed Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Technik &amp; System</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app4_desc">Misst deine Internet- und WLAN-Geschwindigkeit präzise: Download, Upload und Ping auf einen Blick – übersichtlich und ohne Schnickschnack.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Download, Upload, Ping &amp; Jitter</li><li>Direkte Messung ohne Nutzerprofile</li><li>Lokaler Messverlauf zum Vergleichen</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('netspeed','Aura NetSpeed Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.netspeed" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Misst deine Internet- und WLAN-Geschwindigkeit präzise: Download, Upload und Ping auf einen Blick – übersichtlich und ohne Schnickschnack.</p>
+          <ul><li>Zuverlässige Download- &amp; Upload-Messung</li><li>Latenz- (Ping) &amp; Jitter-Analyse für Gamer</li><li>Offline-Verlauf aller bisherigen Messungen</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('netspeed','Aura NetSpeed Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.netspeed" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/net-speed.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
     <!-- App 5: Aura Note Pro -->
     <div class="app-card" data-cat="office">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Note Pro.webp" alt="Aura Note Pro Logo" width="65" height="65" loading="lazy">
-        <h3>Aura Note Pro</h3>
+        <div>
+          <h3>Aura Note Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Büro &amp; Medien</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app5_desc">Dein privater Notizblock für Gedanken, Ideen und Checklisten. Alle Notizen bleiben sicher auf deinem Gerät – schnell geschrieben, sofort wiedergefunden.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Notizen, Ideen &amp; Checklisten</li><li>Alle Inhalte bleiben auf deinem Gerät</li><li>Schnelle Suche und klare Ordnung</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('note','Aura Note Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.notepro" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Deine Gedanken und Listen in sicheren Händen. Funktioniert komplett ohne Cloud-Konto: Notizen bleiben privat auf deinem Smartphone.</p>
+          <ul><li>Vollwertige Textnotizen und Checklisten</li><li>Geheime Notizen mit PIN-Tresor schützen</li><li>Exportieren und Teilen ohne Cloud-Zwang</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('note','Aura Note Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.notepro" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/note-pro.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
     <!-- App 6: Aura Dezibel Pro -->
     <div class="app-card" data-cat="tools">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Dezibel.webp" alt="Aura Dezibel Pro Logo" width="65" height="65" loading="lazy">
-        <h3>Aura Dezibel Pro</h3>
+        <div>
+          <h3>Aura Dezibel Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Werkzeuge &amp; Messen</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app6_desc">Misst die Lautstärke deiner Umgebung in Dezibel – mit verständlicher Lärmskala, damit du auf einen Blick erkennst, wann es zu laut wird.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Echtzeit-Messung in Dezibel</li><li>Verständliche Lärmskala mit Farbstufen</li><li>Mikrofon-Signal wird nur flüchtig ausgewertet, nie gespeichert</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('dezibel','Aura Dezibel Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.dezibel" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Wie laut ist deine Umgebung wirklich? Misst Schallpegel in Echtzeit, warnt bei Gehörgefahr und speichert Spitzenwerte – ohne Tonaufnahmen.</p>
+          <ul><li>Echtzeit-Lautstärkemessung in Dezibel (dB)</li><li>Anschauliche Lärmskala von Flüstern bis Sirene</li><li>Min-, Max- und Durchschnittswerte auf einen Blick</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('dezibel','Aura Dezibel Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.dezibel" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/dezibel-pro.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
     <!-- App 7: Aura Kompass Pro -->
     <div class="app-card" data-cat="tools">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Kommpass.webp" alt="Aura Kompass Pro Logo" width="65" height="65" loading="lazy">
-        <h3>Aura Kompass Pro</h3>
+        <div>
+          <h3>Aura Kompass Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Werkzeuge &amp; Messen</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app7_desc">Der elegante Kompass für unterwegs. Zeigt dir zuverlässig die Himmelsrichtung an – ideal für Wanderungen, Reisen und Ausflüge in die Natur.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Präzise Himmelsrichtung über die Gerätesensoren</li><li>Ideal für Wanderungen &amp; Reisen</li><li>Funktioniert auch ohne Internet</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('kompass','Aura Kompass Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.kompass" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Immer die richtige Richtung im Blick. Zuverlässiger Sensor-Kompass für Outdoor, Wandern und Reisen – ganz ohne Internetverbindung.</p>
+          <ul><li>Präzise Richtungsanzeige mit Gradangabe</li><li>Integrierte Wasserwaage für Heimwerker</li><li>GPS-Koordinaten bei Bedarf mit einem Klick abrufbar</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('kompass','Aura Kompass Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.kompass" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/kompass-pro.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
     <!-- App 8: Aura Währungsrechner Pro -->
     <div class="app-card" data-cat="office">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura-Währungsrechner.webp" alt="Aura Währungsrechner Pro Logo" width="65" height="65" loading="lazy">
-        <h3>Aura Währungsrechner Pro</h3>
+        <div>
+          <h3>Aura Währungsrechner Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Büro &amp; Medien</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app8_desc">Rechnet Währungen weltweit blitzschnell um – mit aktuellen Wechselkursen bei Internetverbindung und zuletzt gespeicherten Kursen für unterwegs.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Über 150 Währungen weltweit</li><li>Aktuelle Kurse bei Internetverbindung</li><li>Zuletzt gespeicherte Kurse für unterwegs</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('waehrungsrechner','Aura Währungsrechner Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.waehrungsrechner" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Über 150 Währungen weltweit sekundenschnell umrechnen. Speichert Kurse für die Offline-Nutzung – perfekt für Urlaub und Auslandsreisen.</p>
+          <ul><li>Über 150 offizielle Weltwährungen integriert</li><li>Offline-Modus mit den zuletzt geladenen Kursen</li><li>Praktischer Einkaufshelfer für den Urlaub</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('waehrungsrechner','Aura Währungsrechner Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.waehrungsrechner" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/waehrungsrechner.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
-    <!-- App 9: Aura JSON &amp; Base64 Dev Studio -->
-    <div class="app-card" data-cat="tech">
-      <div class="app-header">
-        <img src="Bilder-Fotos/Aura JSON Base64.webp" alt="Aura JSON &amp; Base64 Dev Studio Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
-        <h3>Aura JSON &amp; Base64 Dev Studio</h3>
-      </div>
-      <p data-i18n="app9_desc">Das Taschen-Labor für Entwickler: JSON prüfen, schön formatieren und Base64 blitzschnell kodieren oder dekodieren – komplett offline auf deinem Gerät.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>JSON-Validierung mit klaren Fehlerhinweisen</li><li>Formatieren &amp; Minimieren per Fingertipp</li><li>Base64 kodieren &amp; dekodieren (Text und Dateien)</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('json-base64','Aura JSON & Base64 Dev Studio')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.jsonbase64" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
-      </div>
-    </div>
-
-    <!-- App 10: Aura Clean &amp; Space Pro -->
+    <!-- App 9: Aura Clean & Space Pro -->
     <div class="app-card" data-cat="tech">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Clean und Space.webp" alt="Aura Clean &amp; Space Pro Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
-        <h3>Aura Clean &amp; Space Pro</h3>
+        <div>
+          <h3>Aura Clean &amp; Space Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Technik &amp; System</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app10_desc">Schafft wieder Platz auf deinem Smartphone. Findet große Dateien, Duplikate und Datenmüll – du entscheidest selbst, was gelöscht wird.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Übersicht über belegten Speicherplatz</li><li>Große Dateien &amp; Duplikate finden</li><li>Nichts wird ohne deine Bestätigung gelöscht</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('clean-space','Aura Clean & Space Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.cleanspace" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Volle Kontrolle über deinen Speicher: Spüre große Dateien, doppelte Fotos und App-Caches auf – ohne automatische Löschung.</p>
+          <ul><li>Detaillierte Analyse des internen Speichers</li><li>Erkennt doppelte Dateien und alte Downloads</li><li>Transparente Empfehlungen: Du entscheidest, was gelöscht wird</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('clean-space','Aura Clean &amp; Space Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.cleanspace" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
       </div>
+      <a href="apps/clean-space.html" class="btn-details-gold">App-Details ➔</a>
     </div>
 
-    <!-- App 11: Aura Precision Audio Pro -->
-    <div class="app-card" data-cat="tools">
+    <!-- App 10: Aura Device Info & Phone Check -->
+    <div class="app-card" data-cat="tech">
+      <div class="app-header">
+        <img src="Bilder-Fotos/Aura Device Info.webp" alt="Aura Device Info Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
+        <div>
+          <h3>Aura Device Info &amp; Phone Check</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Technik &amp; System</span>
+          </div>
+        </div>
+      </div>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Umfassende Hardware-Diagnose für dein Android-Smartphone. Prüfe Display-Hz, Akku-Zustand, Sensoren &amp; Widevine – ideal für den Gebrauchtkauf.</p>
+          <ul><li>Echtzeit-Hardware-Monitor (CPU, RAM, Speicher)</li><li>Interaktive Sensortests &amp; Touchscreen-Diagnose</li><li>Gebrauchtkauf-Prüfbericht als PDF exportieren</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('device-info','Aura Device Info &amp; Phone Check')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.deviceinfo" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
+      </div>
+      <a href="apps/device-info.html" class="btn-details-gold">App-Details ➔</a>
+    </div>
+
+    <!-- App 11: Aura Image Converter Pro -->
+    <div class="app-card" data-cat="office">
+      <div class="app-header">
+        <img src="Bilder-Fotos/Aura Image Converter.webp" alt="Aura Image Converter Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
+        <div>
+          <h3>Aura Image Converter Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Büro &amp; Medien</span>
+          </div>
+        </div>
+      </div>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Offline Bilder konvertieren, verkleinern &amp; optimieren. Unterstützt JPG, PNG, WebP &amp; HEIC mit 12 Profilen, Wasserzeichen &amp; EXIF/GPS-Löschung.</p>
+          <ul><li>Lokale Stapel-Konvertierung ohne Cloud-Upload</li><li>GPS- und Metadaten-Entfernung für höchste Privatsphäre</li><li>Bewerbungs- &amp; Upload-Profile (z.B. unter 200 KB)</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('image-converter','Aura Image Converter Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.imageconverter" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
+      </div>
+      <a href="apps/image-converter.html" class="btn-details-gold">App-Details ➔</a>
+    </div>
+
+    <!-- App 12: Aura ZIP & Archive Extractor -->
+    <div class="app-card" data-cat="tech">
+      <div class="app-header">
+        <img src="Bilder-Fotos/Aura Zip Extractor.webp" alt="Aura ZIP Extractor Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
+        <div>
+          <h3>Aura ZIP &amp; Archive Extractor</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Technik &amp; System</span>
+          </div>
+        </div>
+      </div>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Leistungsstarker Archiv-Manager für ZIP, RAR, 7Z, TAR &amp; GZ. Entpacken, Archiv-Vorschau und sichere clientseitige AES-256-Verschlüsselung.</p>
+          <ul><li>Entpackt alle gängigen Archivformate blitzschnell</li><li>Archive erstellen mit sicherem AES-256-Passwortschutz</li><li>Vorschau von Dateien im Archiv ohne vorheriges Entpacken</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('zip-extractor','Aura ZIP &amp; Archive Extractor')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.zipextractor" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
+      </div>
+      <a href="apps/zip-extractor.html" class="btn-details-gold">App-Details ➔</a>
+    </div>
+
+    <!-- App 13: Aura E-Book Pro -->
+    <div class="app-card" data-cat="office">
+      <div class="app-header">
+        <img src="Bilder-Fotos/Aura E-Book Pro.webp" alt="Aura E-Book Pro Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
+        <div>
+          <h3>Aura E-Book Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Büro &amp; Medien</span>
+          </div>
+        </div>
+      </div>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Der augenschonende Offline-Reader für EPUB, PDF, CBZ &amp; TXT. Mit Sepia-Modus, lokaler Vorlesestimme (TTS) &amp; Zitat-Export ganz ohne Cloud-Zwang.</p>
+          <ul><li>Flüssiges Lesen mit anpassbarer Typografie &amp; Nachtmodus</li><li>Offline Text-to-Speech Vorlesefunktion über System-Engine</li><li>Unterstützt freie OPDS-Kataloge und Comic-Archive (CBZ)</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('ebook-pro','Aura E-Book Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.ebookpro" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
+      </div>
+      <a href="apps/ebook-pro.html" class="btn-details-gold">App-Details ➔</a>
+    </div>
+
+    <!-- App 14: Aura IQ Test & Logic Pro -->
+    <div class="app-card" data-cat="academy">
+      <div class="app-header">
+        <img src="Bilder-Fotos/Aura IQ Test.webp" alt="Aura IQ Test Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
+        <div>
+          <h3>Aura IQ Test &amp; Logic Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Aura Academy</span>
+          </div>
+        </div>
+      </div>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Trainiere dein logisches Denken in 5 kognitiven Disziplinen. Mit 12er-Express-Check, 36er-Standard-Audit, 5-Achsen-Radar und teilbarem Zertifikat.</p>
+          <ul><li>Muster-Matrizen, Zahlenreihen, räumliche Logik &amp; Syllogismen</li><li>Detailliertes 5-Achsen-Stärkenprofil mit Auswertung</li><li>Lokaler Trainingsmodus ohne Zeitdruck &amp; Prüfungs-Simulator</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('iq-test','Aura IQ Test &amp; Logic Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.iqtest" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
+      </div>
+      <a href="apps/iq-test.html" class="btn-details-gold">App-Details ➔</a>
+    </div>
+
+    <!-- App 15: Aura Einstellungstest-Trainer Pro -->
+    <div class="app-card" data-cat="academy">
+      <div class="app-header">
+        <img src="Bilder-Fotos/Aura Einstellungstrainer.webp" alt="Aura Einstellungstrainer Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
+        <div>
+          <h3>Aura Einstellungstest-Trainer Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Aura Academy</span>
+          </div>
+        </div>
+      </div>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Gezielte Vorbereitung auf Eignungstests in Polizei, Zoll, Bundeswehr, Verwaltung &amp; Bahn. Mit d2-Konzentrationstest, Steckbrief-Merktest &amp; Sport-Rechner.</p>
+          <ul><li>9 deutsche Zielberufs-Profile (mittlerer &amp; gehobener Dienst)</li><li>Originalgetreue Testmodule: Logik, Konzentration, Allgemeinwissen</li><li>Interview-Simulator mit 40 typischen Prüfungsfragen</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('einstellungstrainer','Aura Einstellungstest-Trainer Pro')">📸 <span>Screenshots</span></button>
+        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.einstellungstrainer" target="_blank" rel="noopener noreferrer" class="btn-store">Play Store</a>
+      </div>
+      <a href="apps/einstellungstrainer.html" class="btn-details-gold">App-Details ➔</a>
+    </div>
+
+    <!-- App 16: Aura Precision Audio Pro -->
+    <div class="app-card" data-cat="tech">
       <div class="app-header">
         <img src="Bilder-Fotos/Aura Precision Audio.webp" alt="Aura Precision Audio Pro Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
-        <h3>Aura Precision Audio Pro</h3>
+        <div>
+          <h3>Aura Precision Audio Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Technik &amp; System</span>
+            <span class="badge-status status-welle2">Demnächst</span>
+          </div>
+        </div>
       </div>
-      <p data-i18n="app11_desc">Dein Audio-Labor für die Hosentasche. Analysiert Klang und Frequenzen in Echtzeit – präzise, übersichtlich und ohne Aufnahmen zu speichern.</p>
-      <details class="app-details"><summary data-i18n="details_btn">Funktionen &amp; Details anzeigen ▼</summary><ul><li>Frequenz-Analyse in Echtzeit</li><li>Tongenerator &amp; Pegelanzeige</li><li>Mikrofon-Signal wird nur flüchtig im Arbeitsspeicher ausgewertet</li></ul></details>
-      <button type="button" class="btn-shots" onclick="openShots('precision-audio','Aura Precision Audio Pro')">📸 <span data-i18n="shots_btn">Screenshots ansehen</span></button>
-      <div class="store-button-single">
-        <a href="https://play.google.com/store/apps/details?id=de.auraappworks.precisionaudio" target="_blank" rel="noopener noreferrer" class="btn-store">
-          Play Store 
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3.61 2.31c-.34.36-.55.93-.55 1.69v16c0 .76.21 1.33.55 1.69l.09.08 9.34-9.34v-.22L3.7 2.23l-.09.08zm10.76 10.3l-2.6-2.6 2.6-2.6 3.09 1.76c.88.5.88 1.32 0 1.82l-3.09 1.62zm-1.44-1.44l-2.82-2.82L3.92 2.76c.3-.12.65-.07.97.11l10.48 5.96-2.44 2.34zm0 1.66l2.44 2.34-10.48 5.96c-.32.18-.67.23-.97.11l6.19-5.59 2.82-2.82z"/></svg> 
-          Google
-        </a>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Präziser Frequenzgenerator, Tongenerator &amp; Spektrum-Analysator. Akustische Diagnose und Lautsprecher-Tests in Studioqualität direkt auf dem Gerät.</p>
+          <ul><li>Oszillator von 1 Hz bis 22.000 Hz mit Sweep-Funktion</li><li>Echtzeit-FFT-Spektrumanalyse über das Mikrofon (RAM-only)</li><li>Lautsprecher-Pflege, Phasentests &amp; binaurale Frequenzen</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('precision-audio','Aura Precision Audio Pro')">📸 <span>Screenshots</span></button>
+        <span class="btn-store btn-store-soon">Demnächst</span>
       </div>
+      <a href="apps/precision-audio.html" class="btn-details-gold">App-Details ➔</a>
+    </div>
+
+    <!-- App 17: Aura JSON & Base64 Dev Studio -->
+    <div class="app-card" data-cat="tech">
+      <div class="app-header">
+        <img src="Bilder-Fotos/Aura JSON Base64.webp" alt="Aura JSON &amp; Base64 Dev Studio Logo" width="65" height="65" loading="lazy" onerror="this.onerror=null;this.src='Bilder-Fotos/Aura-Appworks.webp'">
+        <div>
+          <h3>Aura JSON &amp; Base64 Pro</h3>
+          <div class="app-meta-badges">
+            <span class="badge-cat-pill">Technik &amp; System</span>
+            <span class="badge-status status-welle2">Demnächst</span>
+          </div>
+        </div>
+      </div>
+      <details class="app-details">
+        <summary>Funktionen &amp; Details anzeigen</summary>
+        <div class="app-details-body">
+          <p class="details-desc">Das Schweizer Taschenmesser für Entwickler: JSON formatieren, validieren, manipulieren sowie Base64, Hashes und JWT dekodieren – 100% offline.</p>
+          <ul><li>Interaktiver JSON-Baum-Explorer mit Live-Validierung</li><li>Base64-Kodierer für Texte, Bilder und Binärdaten</li><li>JWT-Inspektor und kryptografische Prüfsummen ohne Cloud</li></ul>
+        </div>
+      </details>
+      <div class="card-actions-row">
+        <button type="button" class="btn-shots" onclick="openShots('json-base64','Aura JSON &amp; Base64 Pro')">📸 <span>Screenshots</span></button>
+        <span class="btn-store btn-store-soon">Demnächst</span>
+      </div>
+      <a href="apps/json-base64.html" class="btn-details-gold">App-Details ➔</a>
     </div>
   </div>
 </section>
 
 <!-- FAQ SECTION (H2) -->
+<!-- SEKTION: AKTUELLE RATGEBER & PRAXISTIPPS -->
+<section class="ratgeber-preview-box" id="ratgeber-vorschau">
+  <div class="badge-hero">Praxis-Wissen &amp; Anleitungen</div>
+  <h2 class="section-title" style="margin-bottom: 12px;">Aktuelle Ratgeber &amp; Praxistipps</h2>
+  <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0 auto 30px auto;">
+    Erfahre, wie du deine Privatsphäre schützt, sensible Daten sicher aufbewahrst und das Maximum aus deinem Smartphone herausholst – fundiert recherchiert und verständlich erklärt.
+  </p>
+
+  <div class="ratgeber-grid">
+    <!-- Ratgeber 1 -->
+    <div class="ratgeber-card">
+      <div>
+        <span class="ratgeber-card-tag">Recht &amp; Wohnen</span>
+        <h3>Lärmbelästigung im Mietrecht: Grenzwerte, Dezibel-Tabelle &amp; Protokoll</h3>
+        <p>Wann Ruhestörung vorliegt, welche Dezibel-Werte gelten und wie du ein rechtssicheres Lärmprotokoll ohne geeichte Spezialgeräte anfertigst.</p>
+      </div>
+      <a href="ratgeber/ratgeber-dezibel-pro.html" class="read-more">Ratgeber lesen ➔</a>
+    </div>
+
+    <!-- Ratgeber 2 -->
+    <div class="ratgeber-card">
+      <div>
+        <span class="ratgeber-card-tag">Hardware &amp; Kaufberatung</span>
+        <h3>Gebrauchtes Smartphone kaufen: Die 10-Punkte-Checkliste</h3>
+        <p>So überprüfst du Display, Akku-Gesundheit, Touch-Sensoren und verborgene Hardware-Mängel vor dem Kauf auf Herz und Nieren.</p>
+      </div>
+      <a href="ratgeber/ratgeber-device-info.html" class="read-more">Ratgeber lesen ➔</a>
+    </div>
+
+    <!-- Ratgeber 3 -->
+    <div class="ratgeber-card">
+      <div>
+        <span class="ratgeber-card-tag">Datenschutz &amp; Medien</span>
+        <h3>GPS-Daten aus Fotos löschen &amp; Bilder unter 200 KB komprimieren</h3>
+        <p>Schütze deine Privatsphäre beim Teilen von Bildern und optimiere Dokumente für Online-Bewerbungen ganz ohne Cloud-Upload.</p>
+      </div>
+      <a href="ratgeber/ratgeber-image-converter.html" class="read-more">Ratgeber lesen ➔</a>
+    </div>
+  </div>
+
+  <div style="margin-top: 25px;">
+    <a href="ratgeber/index.html" class="btn-store" style="width: auto; padding: 12px 32px; display: inline-flex;">
+      Alle 17 Praxis-Ratgeber ansehen ➔
+    </a>
+  </div>
+</section>
+
 <section class="faq-box" id="faq">
   <h2 class="section-title" data-i18n="faq_title">Hinter den Kulissen (FAQ)</h2>
   <details class="faq-item">
-    <summary class="faq-summary"><span data-i18n="faq_1_q">1. Wer steckt eigentlich hinter Aura Appworks?</span></summary>
-    <p data-i18n="faq_1_ans">Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).</p>
+    <summary class="faq-summary"><span data-i18n="faq_1_q">1. Wer steckt eigentlich hinter Aura AppWorks?</span></summary>
+    <p data-i18n="faq_1_ans">Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Anwendungen eigenhändig direkt hier in Deutschland.</p>
   </details>
   <details class="faq-item">
     <summary class="faq-summary"><span data-i18n="faq_2_q">2. Warum sind meine Apps im fairen Einmalkauf statt im Abo erhältlich?</span></summary>
-    <p data-i18n="faq_2_ans">Aus Überzeugung und für maximale Transparenz: Du kannst Funktionen durch kurze Belohnungsvideos temporär werbefrei nutzen – oder die App mit einem einmaligen, fairen Lifetime-Pass dauerhaft komplett freischalten. Keine Abos, keine versteckten Kosten.</p>
+    <p data-i18n="faq_2_ans">Aus Überzeugung für faire Software: Alle Grundfunktionen sind dauerhaft kostenlos und uneingeschränkt nutzbar – ganz ohne Werbevideos oder Zwangspausen. Wer erweiterte Profi-Funktionen (wie unbegrenzten Verlauf, PDF-Export oder Design-Studios) werbefrei nutzen möchte, kann sie mit einem einmaligen, fairen Lifetime-Pass dauerhaft freischalten. Keine Abos, keine versteckten Kosten.</p>
   </details>
   <details class="faq-item">
     <summary class="faq-summary"><span data-i18n="faq_3_q">3. Benötigen die Apps eine Internet- bzw. WLAN-Verbindung?</span></summary>
-    <p data-i18n="faq_3_ans">Die Kernfunktionen und deine persönlichen Daten (wie Notizen, Scans oder Berechnungen) verbleiben lokal und geschützt auf deinem Endgerät. Eine Internetverbindung wird jedoch für Werbung (Google AdMob), In-App-Käufe über Google Play sowie für optionale Online-Funktionen (wie aktuelle Wechselkurse oder Speedtests) benötigt. Im Offline-Betrieb kannst du deine lokalen Inhalte und Werkzeuge weiterhin nutzen.</p>
+    <p data-i18n="faq_3_ans">Die Kernfunktionen und deine persönlichen Daten (wie Notizen, Scans, Rechnungen oder Hardware-Messungen) verbleiben zu 100 % lokal auf deinem Endgerät. Eine Internetverbindung wird lediglich für die Bereitstellung von Google AdMob Werbung, den sicheren Kaufabgleich über Google Play Billing sowie optionale Online-Funktionen (z. B. tagesaktuelle EZB-Wechselkurse oder Speedtests) benötigt. Alle Werkzeuge funktionieren offline einwandfrei.</p>
   </details>
   <details class="faq-item">
     <summary class="faq-summary"><span data-i18n="faq_4_q">4. Nutze ich eigene Server oder Cloud-Speicher für deine Daten?</span></summary>
-    <p data-i18n="faq_4_ans">Nein. Aura Appworks betreibt keine eigenen Server oder Cloud-Speicher für Nutzerdaten. Deine persönlichen Inhalte werden nicht an mich übertragen. Lediglich für Dienste von Google (AdMob für Werbung, Google Play für In-App-Käufe) findet die dafür nötige Datenkommunikation gemäß den Google-Datenschutzbestimmungen statt.</p>
+    <p data-i18n="faq_4_ans">Nein. Aura AppWorks betreibt keine eigenen Server und keinen Cloud-Speicher für Nutzerdaten. Deine Dokumente, Notizen und Messungen werden niemals an mich übertragen. Lediglich für Standard-Dienste von Google (AdMob für Werbung, Google Play für In-App-Käufe) findet die dafür technisch notwendige Kommunikation gemäß den strengen Google-Datenschutzrichtlinien statt.</p>
   </details>
   <details class="faq-item">
-    <summary class="faq-summary"><span data-i18n="faq_5_q">5. Warum lege ich so großen Wert auf das edle AMOLED-Gold-Design?</span></summary>
-    <p data-i18n="faq_5_ans">Weil ein dunkles Echtschwarz-Design nicht nur extrem elegant aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und die Augen schützt.</p>
+    <summary class="faq-summary"><span data-i18n="faq_5_q">5. Wie stelle ich getätigte Käufe auf einem neuen Smartphone wieder her?</span></summary>
+    <p>Ganz einfach und automatisch: Da alle Käufe direkt mit deinem Google-Konto verknüpft sind, genügt es, in den App-Einstellungen auf „Käufe wiederherstellen“ zu tippen. Die App gleicht deinen Status mit Google Play ab und schaltet deinen Lifetime-Pass sofort wieder frei.</p>
   </details>
   <details class="faq-item">
-    <summary class="faq-summary"><span data-i18n="faq_6_q">6. Sind in Zukunft weitere Apps und Erweiterungen geplant?</span></summary>
-    <p data-i18n="faq_6_ans">Ja, auf jeden Fall! Ich tüftle ständig an neuen Ideen und Konzepten. Neue Apps und nützliche Erweiterungen werden Schritt für Schritt veröffentlicht, um mein Angebot stetig zu erweitern.</p>
-  </details>
-</section>
-
-<!-- FEEDBACK & SOCIAL SHARING (H2) -->
-<section class="feedback-box" id="feedback">
-  <span class="icon-svg">
-    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-  </span>
-  <h2 data-i18n="feedback_title">Deine Meinung ist mir wichtig</h2>
-  <p data-i18n="feedback_desc">Hast du Fragen, Verbesserungsvorschläge oder Feedback zu meinen Apps? Schreib mir direkt – ich freue mich über jede Nachricht.</p>
-  <div style="display: inline-block;">
-    <a href="mailto:&#97;&#117;&#114;&#97;&#45;&#97;&#112;&#112;&#119;&#111;&#114;&#107;&#115;&#64;&#119;&#101;&#98;&#46;&#100;&#101;?subject=Feedback%20zu%20Aura%20Appworks" class="btn-store" style="width: auto; padding: 12px 30px;">
-      <span data-i18n="feedback_btn">Feedback per E-Mail senden</span> 
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-    </a>
-  </div>
-
-  <!-- SOCIAL SHARING ZEILE (Datenschutzfreundlich, 0 Tracking) -->
-  <div class="social-share-wrap">
-    <div class="social-share-label" data-i18n="share_label">Seite teilen &amp; weiterempfehlen:</div>
-    <div class="social-share-btns">
-      <a href="https://api.whatsapp.com/send?text=Aura%20Appworks%20%E2%80%93%20Erstklassige%2C%20datenschutzsichere%20Android-Apps%3A%20https%3A%2F%2Fsebastianpiontek.github.io" target="_blank" rel="noopener noreferrer" class="btn-share" title="Per WhatsApp teilen">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16.75 13.96c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29zM12 2a10 10 0 0 0-8.6 15.1L2 22l5.05-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.1.81.83-3.02-.2-.31A8.2 8.2 0 1 1 12 20.2z"/></svg>
-        WhatsApp
-      </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsebastianpiontek.github.io%2F" target="_blank" rel="noopener noreferrer" class="btn-share" title="Auf Facebook teilen">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-        Facebook
-      </a>
-      <button type="button" class="btn-share" onclick="shareWebsite()" title="Teilen oder Link kopieren">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-        <span data-i18n="share_more">Teilen / Link kopieren</span>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- 4 GOLD-MEDAILLEN / GÜTESIEGEL (H2 -> H3) -->
-<section class="medallions-section">
-  <div class="badge-hero" data-i18n="medals_badge">Qualitäts- &amp; Sicherheitsgarantie</div>
-  <h2 class="section-title" style="margin-bottom: 10px;" data-i18n="medals_title">Geprüfte Manufaktur-Standards</h2>
-  <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 620px; margin: 0 auto 30px auto;" data-i18n="medals_sub">Jede Anwendung von Aura Appworks wird nach strengsten Maßstäben für Sicherheit, Geschwindigkeit und faire Kundenbeziehungen gefertigt.</p>
-
-  <div class="medallions-grid">
-    <!-- Medaillon 1 -->
-    <div class="medallion-card">
-      <div class="medallion-emblem">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12.99H5V6.3l7-2.33v8.02z"/></svg>
-      </div>
-      <h3 class="medallion-title" data-i18n="medal_1_t">100% On-Device</h3>
-      <p class="medallion-subtitle" data-i18n="medal_1_d">Keine Cloud • Null Tracking<br>Echte Privatsphäre</p>
-    </div>
-
-    <!-- Medaillon 2 -->
-    <div class="medallion-card">
-      <div class="medallion-emblem">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg>
-      </div>
-      <h3 class="medallion-title" data-i18n="medal_2_t">Lighthouse 100</h3>
-      <p class="medallion-subtitle" data-i18n="medal_2_d">High-Speed Performance<br>Maximale Akku-Schonung</p>
-    </div>
-
-    <!-- Medaillon 3 -->
-    <div class="medallion-card">
-      <div class="medallion-emblem">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-      </div>
-      <h3 class="medallion-title" data-i18n="medal_3_t">Made in Germany</h3>
-      <p class="medallion-subtitle" data-i18n="medal_3_d">Handwerk aus Duisburg<br>100% Inhabergeführt</p>
-    </div>
-
-    <!-- Medaillon 4 -->
-    <div class="medallion-card">
-      <div class="medallion-emblem">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1s.45-1 1-1h12c.55 0 1 .45 1 1z"/></svg>
-      </div>
-      <h3 class="medallion-title" data-i18n="medal_4_t">Abo-Frei Garantie</h3>
-      <p class="medallion-subtitle" data-i18n="medal_4_d">Faire Einmalkäufe<br>Keine versteckten Fallen</p>
-    </div>
-  </div>
-</section>
-
-<!-- IMPRESSUM (H2 -> H3) -->
-<section id="impressum" class="legal-box">
-  <h2>IMPRESSUM</h2>
-  <p><strong>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</strong></p>
-  <p>
-    Aura Appworks<br>
-    Inhaber: Sebastian Piontek<br>
-    Ruhrorter Straße 86<br>
-    47059 Duisburg<br>
-    Deutschland
-  </p>
-  <p>Die Fakturierung erfolgt gemäß § 19 Umsatzsteuergesetz als Kleinunternehmer (ohne Ausweis der Umsatzsteuer).</p>
-  <h3>Kontakt:</h3>
-  <p>
-    Telefon: +49 174 6222586 (erreichbar Mo–Fr, 10:00–16:00 Uhr)<br>
-    E-Mail: &#97;&#117;&#114;&#97;&#45;&#97;&#112;&#112;&#119;&#111;&#114;&#107;&#115;&#64;&#119;&#101;&#98;&#46;&#100;&#101;
-  </p>
-  <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h3>
-  <p>Sebastian Piontek, Ruhrorter Straße 86, 47059 Duisburg</p>
-  <h3>Verbraucherstreitbeilegung / Universalschlichtungsstelle:</h3>
-  <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-  <p style="color:#B0B0B0;font-size:.9rem;">Hinweis: Die frühere EU-Plattform zur Online-Streitbeilegung (OS-Plattform) wurde von der EU-Kommission zum 20. Juli 2025 eingestellt; ein Link darauf ist daher nicht mehr erforderlich.</p>
-</section>
-
-<hr>
-
-<!-- DATENSCHUTZERKLÄRUNG (H2 -> H3) -->
-<section id="datenschutz" class="legal-box">
-  <h2>DATENSCHUTZERKLÄRUNG</h2>
-  <p style="margin-bottom:20px;color:#B0B0B0;">Tippe auf einen Abschnitt, um die Details zu öffnen.</p>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>1. Website-Hosting &amp; Bereitstellung (GitHub Pages)</span></summary>
-    <div style="padding-top:10px;">
-  <p>Meine Website wird über den Hosting-Dienst <strong>GitHub Pages</strong> (bereitgestellt durch GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA, ein Unternehmen der Microsoft Corporation) gehostet.</p>
-  <p>Wenn du meine Website besuchst, erfasst GitHub automatisch technische Daten in sogenannten Server-Logfiles (z. B. IP-Adresse, Browser-Typ, Betriebssystem, Referrer-URL und Uhrzeit des Zugriffs). Dies ist technisch zwingend erforderlich, um dir die Website sicher, fehlerfrei und stabil anzuzeigen.</p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>2. Allgemeine Hinweise &amp; Verantwortlicher</span></summary>
-    <div style="padding-top:10px;">
-  <p>Der Schutz deiner persönlichen Daten ist mir ein wichtiges Anliegen. Die Anwendungen von „Aura Appworks“ arbeiten nach dem Grundsatz der Datensparsamkeit.</p>
-  <p><strong>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO):</strong><br>
-  Aura Appworks<br>
-  Sebastian Piontek<br>
-  Ruhrorter Straße 86<br>
-  47059 Duisburg<br>
-  Deutschland<br>
-  E-Mail: &#97;&#117;&#114;&#97;&#45;&#97;&#112;&#112;&#119;&#111;&#114;&#107;&#115;&#64;&#119;&#101;&#98;&#46;&#100;&#101;</p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>3. Lokale Datenverarbeitung (On-Device-Architektur)</span></summary>
-    <div style="padding-top:10px;">
-  <p>Sämtliche Kernfunktionen meiner Applikationen verarbeiten Eingaben, Berechnungen und Einstellungen ausschließlich lokal auf deinem Endgerät. Es findet zu keinem Zeitpunkt eine Übertragung deiner eingegebenen Inhaltsdaten an eigene Server oder Cloud-Infrastrukturen statt.</p>
-  <p><strong>Klarstellung zur Netzwerknutzung:</strong> Die Apps sind als Local-First-Anwendungen entwickelt und betreiben keine eigenen Cloud-Server. Für Werbeanzeigen (Google AdMob), In-App-Käufe (Google Play Billing) sowie optionale Online-Funktionen (z. B. aktuelle Wechselkurse oder Speedtests) wird jedoch eine Internetverbindung benötigt. Werbung wird in der EU erst nach deiner Auswahl im Einwilligungs-Banner (Google UMP) geladen.</p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>4. Kamerazugriff &amp; visuelle Datenverarbeitung</span></summary>
-    <div style="padding-top:10px;">
-  <p>Einige Applikationen von „Aura Appworks“ (wie z. B. Barcode- &amp; QR-Scanner, Dokumenten- &amp; PDF-Scanner, Aura Botanica &amp; Pflanzen-Erkennung sowie Kamera-Tools) benötigen zur Erfüllung ihrer Kernfunktion Zugriff auf die Gerätekamera deines Smartphones.</p>
-  <p><strong>Zweckgebundene Echtzeitverarbeitung:</strong> Der Kamerazugriff erfolgt ausschließlich zu dem von dir aktiv aufgerufenen Zweck (z. B. optisches Scannen von Codes, Erfassen von Dokumentenseiten, Analyse von Pflanzenmerkmalen oder Anfertigen von Aufnahmen).</p>
-  <p><strong>Reine On-Device-Verarbeitung (Keine Cloud):</strong> Die visuelle Erfassung und Bildanalyse (inklusive lokaler Bilderkennungsmodelle) erfolgt zu 100% lokal auf deinem Endgerät im flüchtigen Arbeitsspeicher.</p>
-  <p><strong>Kein unbemerktes Speichern oder Weiterleiten:</strong> Es werden zu keinem Zeitpunkt Bild- oder Videodaten im Hintergrund erfasst, heimlich gespeichert oder an eigene Server, externe Cloud-Dienste oder Dritte übertragen. Soweit eine Applikation das dauerhafte Speichern vorsieht (z. B. das Ablegen eines eingescannten PDF-Dokuments oder eines Pflanzenfotos in deiner lokalen Galerie), geschieht dies ausschließlich nach deiner ausdrücklichen Bestätigung und verbleibt lokal in deinem Gerätespeicher.</p>
-  <p><strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung zur Bereitstellung der gewünschten App-Funktion) bzw. Art. 6 Abs. 1 lit. a DSGVO durch deine ausdrückliche Erteilung der Berechtigung im Betriebssystem deines Smartphones. Du kannst diese Berechtigung jederzeit in den Systemeinstellungen deines Betriebssystems mit Wirkung für die Zukunft widerrufen.</p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>4b. Spezifische Geräte- und Sensorberechtigungen (Google Play Data Safety)</span></summary>
-    <div style="padding-top:10px;">
-  <p>Je nach Funktionsumfang der jeweiligen Applikation von „Aura Appworks“ können weitere geräteseitige Hardware-Berechtigungen erforderlich sein, die ausnahmslos zweckgebunden, datensparsam und rein lokal auf deinem Endgerät verarbeitet werden:</p>
-  <ul>
-    <li><strong>Mikrofonzugriff (z. B. Aura Dezibel Pro):</strong> Dient ausschließlich der Echtzeit-Berechnung des Umgebungsschalldruckpegels (Dezibel-Messung). Es werden zu keinem Zeitpunkt Ton- oder Sprachaufnahmen aufgezeichnet, dauerhaft gespeichert oder an externe Server übertragen. Die Roh-Audiodaten werden unmittelbar nach der Pegelberechnung im flüchtigen Arbeitsspeicher (RAM) verworfen. Rechtsgrundlage: Art. 6 Abs. 1 lit. a und lit. b DSGVO.</li>
-    <li><strong>Sensor- &amp; Bewegungsdaten (z. B. Aura Kompass Pro, Aura Botanica, 2D-Spiele):</strong> Daten des Magnetometers, Gyroskops und Beschleunigungsmessers werden rein lokal verarbeitet, um die physikalische Himmelsrichtung (Kompassnadel), Verwacklungsschutz bei Kameraaufnahmen oder physikalische Neigungs- und Tasteffekte in Echtzeit darzustellen.</li>
-    <li><strong>Dateisystem- &amp; Speicherzugriff (z. B. Aura Explorer Pro, Aura Clean &amp; Space Pro, PDF-Scanner):</strong> Dient ausschließlich der lokalen Verwaltung von Dateien (z. B. Speichern und Anzeigen erstellter PDF-Dateien) sowie dem Berechnen von Verzeichnisgrößen und temporären Cache-Dateien zur manuellen Speicherplatz-Optimierung. Es findet zu keinem Zeitpunkt ein Auslesen, Hochladen oder inhaltliches Analysieren persönlicher Dateien statt.</li>
-    <li><strong>Netzwerkstatus &amp; Verbindungsanalyse (z. B. Aura Net Speed Pro):</strong> Ermittelt Latenzzeiten (Ping) und Übertragungsgeschwindigkeiten (Download/Upload) deiner aktiven Internetverbindung. Es werden keinerlei Verläufe besuchter Webseiten oder Nutzer-Verhaltensprofile erfasst oder gespeichert.</li>
-    <li><strong>Vibrationsmotor / Haptik (Spiele &amp; Werkzeuge):</strong> Dient der taktilen Bestätigung von Eingaben, Tastenberührungen und Spielmechaniken (Haptic Feedback) zur Verbesserung der barrierefreien Bedienung.</li>
-  </ul>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>4c. Mikrofon, Kamera &amp; Online-Messungen (flüchtige Verarbeitung)</span></summary>
-    <p>Kamera- und Mikrofonsignale (z. B. beim Scannen von Codes oder bei Dezibel- und Audio-Messungen) werden ausschließlich flüchtig im Arbeitsspeicher (RAM) deines Geräts ausgewertet. Es werden keine Bild- oder Tonaufnahmen gespeichert oder an mich übertragen.</p>
-    <p>Bei Online-Funktionen wie Speedtests oder aktuellen Wechselkursen baut die App eine direkte technische Verbindung zum jeweiligen Messserver bzw. Kursanbieter auf. Dabei wird technisch bedingt deine IP-Adresse an diesen Anbieter übermittelt. Ich erstelle daraus keine Nutzerprofile und führe keine Verhaltensanalyse durch (Art. 6 Abs. 1 lit. b bzw. f DSGVO).</p>
-  </details>
-  <details class="faq-item">
-    <summary class="faq-summary"><span>5. Einbindung von Drittanbieter-Diensten</span></summary>
-    <div style="padding-top:10px;">
-  <p><strong>a) Werbeeinblendungen via Google AdMob (Google Ireland Limited):</strong><br>
-  Zur Finanzierung meiner kostenfreien Apps nutze ich den Werbedienst Google AdMob. Google AdMob verarbeitet technische Informationen wie IP-Adresse und Geräte-Identifikatoren (z. B. Android-Werbe-ID) sowie Nutzungsdaten, um Anzeigen bereitzustellen und deren Leistung zu messen. Die Verarbeitung erfolgt auf Grundlage deiner ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die beim ersten App-Start über mein Einwilligungs-Banner abgefragt wird. Du kannst diese in den App-Einstellungen jederzeit widerrufen.<br>
-  Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
-  <p><strong>b) Abwicklung von In-App-Käufen via Google Play (Google Ireland Limited):</strong><br>
-  Sofern du dich für den Kauf einer kostenpflichtigen Erweiterung (z. B. Lifetime Pass) entscheidest, wird die Zahlungsabwicklung direkt über den Google Play Store (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) abgewickelt. Ich erhalte zu keinem Zeitpunkt deine Bank- oder Kreditkartendaten, sondern lediglich eine Bestätigung von Google über den erfolgreichen Erwerb zur dauerhaften Freischaltung der Funktion. Rechtsgrundlage ist die Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).<br>
-  Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>6. Übersicht der App-Berechtigungen</span></summary>
-    <div style="padding-top:10px;">
-  <p>Sollte eine Applikation Zugriff auf Hardware-Funktionen (wie Kamera, Mikrofon oder Sensoren) anfordern, erfolgt dieser ausschließlich zur unmittelbaren Ausführung der von dir aktiv gestarteten Funktion. Alle Berechtigungen können jederzeit in den Systemeinstellungen deines Smartphones eingesehen und widerrufen werden. Es findet keinerlei verdeckte Hintergrundaktivität statt.</p>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>7. Rechte der betroffenen Personen (Betroffenenrechte nach DSGVO)</span></summary>
-    <div style="padding-top:10px;">
-  <p>Als betroffene Person stehen dir nach der Datenschutz-Grundverordnung (DSGVO) umfangreiche Schutzrechte zu, die du jederzeit formlos geltend machen kannst:</p>
-  <ul>
-    <li><strong>Recht auf Auskunft (Art. 15 DSGVO):</strong> Du hast das Recht, eine Bestätigung darüber zu verlangen, ob und welche personenbezogenen Daten ich über dich verarbeite, zu welchen Zwecken dies geschieht und wie lange sie gespeichert werden.</li>
-    <li><strong>Recht auf Berichtigung (Art. 16 DSGVO):</strong> Du kannst verlangen, dass unrichtige oder unvollständige personenbezogene Daten unverzüglich korrigiert werden.</li>
-    <li><strong>Recht auf Löschung („Recht auf Vergessenwerden“, Art. 17 DSGVO):</strong> Du kannst verlangen, dass deine bei mir gespeicherten personenbezogenen Daten gelöscht werden, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
-    <li><strong>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO):</strong> Du hast das Recht, die Einschränkung der Verarbeitung deiner Daten zu fordern, beispielsweise wenn du die Richtigkeit der Daten bestreitest oder Widerspruch eingelegt hast.</li>
-    <li><strong>Recht auf Datenübertragbarkeit (Art. 20 DSGVO):</strong> Du kannst verlangen, deine Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder an einen Dritten übermitteln zu lassen.</li>
-    <li><strong>Recht auf Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO):</strong> Eine einmal erteilte datenschutzrechtliche Einwilligung kannst du jederzeit für die Zukunft widerrufen.</li>
-    <li><strong>Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO):</strong> Du hast unbeschadet eines anderweitigen Rechtsbehelfs das Recht auf Beschwerde bei einer Aufsichtsbehörde. Die für mein Unternehmen zuständige Datenschutzbehörde ist die <em>Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), Kavalleriestraße 2–4, 40213 Düsseldorf</em>.</li>
-  </ul>
-    </div>
-  </details>
-
-  <details class="faq-item">
-    <summary class="faq-summary"><span>8. Kontaktaufnahme per E-Mail oder Telefon</span></summary>
-    <div style="padding-top:10px;">
-  <p>Wenn du mich per E-Mail oder Telefon kontaktierst, wird deine Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (z. B. Name, E-Mail-Adresse, Anliegen) zum Zwecke der Bearbeitung deines Anliegens bei mir gespeichert und verarbeitet. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf meinem berechtigten Interesse an der effektiven Bearbeitung der an mich gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
-    </div>
+    <summary class="faq-summary"><span data-i18n="faq_6_q">6. Warum lege ich so großen Wert auf das edle AMOLED-Gold-Design?</span></summary>
+    <p data-i18n="faq_6_ans">Weil ein dunkles Echtschwarz-Design nicht nur unverwechselbar edel aussieht, sondern auf modernen OLED-Displays auch spürbar den Akku schont und deine Augen bei schlechten Lichtverhältnissen schützt.</p>
   </details>
 </section>
 
@@ -1511,10 +1922,7 @@ footer {
   </a>
 </div>
 
-<footer>
-  <p>© 2027 Aura Appworks. Alle Rechte vorbehalten.</p>
-  <p class="footer-verify-links"><a href="ads.txt">ads.txt</a> &bull; <a href="app-ads.txt">app-ads.txt</a></p>
-</footer>
+<footer><div class="footer-bottom-bar"><p>© 2026 Aura Appworks · Sebastian Piontek</p><p class="footer-links"><a href="mailto:aura-appworks@web.de">aura-appworks@web.de</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></p></div></footer>
 </div>
 
 <!-- TOAST FÜR LINK KOPIEREN -->
@@ -1546,10 +1954,10 @@ const translations = {
     "usp_3_desc": "Echtschwarz kombiniert mit edlen Metallic- und Gold-Akzenten.",
     "usp_4_title": "Offizieller Play Store",
     "usp_4_desc": "Sicher und direkt über den offiziellen Google Play Store beziehbar.",
-    "dev_role": "Gründer & App-Entwickler",
+    "dev_role": "Gründer, App-Entwickler & Webdesigner",
     "dev_headline": "Android-Apps ohne Datenhunger",
     "dev_p1": "Guten Tag, mein Name ist Sebastian Piontek. Ich entwickle meine Applikationen persönlich, fair bepreist, verlässlich und im edlen Design.",
-    "dev_p2": "Ob clevere Alltagswerkzeuge oder mobile Scanner: Der Schutz deiner Privatsphäre steht an erster Stelle. Ohne unnötige Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes Handwerk aus Duisburg.",
+    "dev_p2": "Ob clevere Alltagswerkzeuge oder mobile Scanner: Der Schutz deiner Privatsphäre steht an erster Stelle. Ohne unnötige Cloud-Infrastrukturen und ohne Datenhunger erhältst du sauberes Handwerk – unabhängig, ehrlich und Made in Germany.",
     "apps_title": "Meine Applikationen",
     "app1_desc": "Der elegante Taschenrechner für deinen Alltag. Rechnet garantiert fehlerfrei, hilft dir beim Rabatt-Sparen beim Einkaufen und behält dein Budget im Blick.",
     "app2_desc": "Dein mobiles Büro für die Hosentasche. Dokumente und Verträge einfach fotografieren, sauber zuschneiden, direkt auf dem Display unterschreiben und sofort verschicken.",
@@ -1557,9 +1965,9 @@ const translations = {
     "app4_desc": "Misst deine Internet- und WLAN-Geschwindigkeit präzise: Download, Upload und Ping auf einen Blick – übersichtlich und ohne Schnickschnack.",
     "faq_title": "Hinter den Kulissen (FAQ)",
     "faq_1_q": "1. Wer steckt eigentlich hinter Aura Appworks?",
-    "faq_1_ans": "Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland (Duisburg).",
+    "faq_1_ans": "Kein anonymer Großkonzern, sondern pure Handarbeit. Als Einzelunternehmer konzipiere, programmiere und betreue ich alle Apps eigenhändig direkt hier in Deutschland.",
     "faq_2_q": "2. Warum sind meine Apps im fairen Einmalkauf statt im Abo erhältlich?",
-    "faq_2_ans": "Aus Überzeugung und für maximale Transparenz: Du kannst Funktionen durch kurze Belohnungsvideos temporär werbefrei nutzen – oder die App mit einem einmaligen, fairen Lifetime-Pass dauerhaft komplett freischalten. Keine Abos, keine versteckten Kosten.",
+    "faq_2_ans": "Aus Überzeugung und für maximale Transparenz: Alle Apps sind 100 % werbefrei – oder die App mit einem einmaligen, fairen Lifetime-Pass dauerhaft komplett freischalten. Keine Abos, keine versteckten Kosten.",
     "faq_3_q": "3. Benötigen die Apps eine Internet- bzw. WLAN-Verbindung?",
     "faq_3_ans": "Die Kernfunktionen und deine persönlichen Daten (wie Notizen, Scans oder Berechnungen) verbleiben lokal und geschützt auf deinem Endgerät. Eine Internetverbindung wird jedoch für Werbung (Google AdMob), In-App-Käufe über Google Play sowie für optionale Online-Funktionen (wie aktuelle Wechselkurse oder Speedtests) benötigt. Im Offline-Betrieb kannst du deine lokalen Inhalte und Werkzeuge weiterhin nutzen.",
     "faq_4_q": "4. Nutze ich eigene Server oder Cloud-Speicher für deine Daten?",
@@ -1579,7 +1987,7 @@ const translations = {
     "medal_2_t": "Lighthouse 100",
     "medal_2_d": "High-Speed Performance<br>Maximale Akku-Schonung",
     "medal_3_t": "Made in Germany",
-    "medal_3_d": "Handwerk aus Duisburg<br>100% Inhabergeführt",
+    "medal_3_d": "Echtes Handwerk<br>100% Inhabergeführt",
     "medal_4_t": "Abo-Frei Garantie",
     "medal_4_d": "Faire Einmalkäufe<br>Keine versteckten Fallen",
     "app5_desc": "Dein privater Notizblock für Gedanken, Ideen und Checklisten. Alle Notizen bleiben sicher auf deinem Gerät – schnell geschrieben, sofort wiedergefunden.",
@@ -1591,6 +1999,7 @@ const translations = {
     "cat_tools": "Werkzeuge & Messen",
     "cat_office": "Büro & Finanzen",
     "cat_tech": "Technik & System",
+    "cat_academy": "Aura Akademie",
     "details_btn": "Funktionen & Details anzeigen ▼",
     "shots_btn": "Screenshots ansehen",
     "shots_soon": "Screenshots folgen in Kürze.",
@@ -1623,10 +2032,10 @@ const translations = {
     "usp_3_desc": "Pure black combined with refined metallic and gold accents.",
     "usp_4_title": "Official Play Store",
     "usp_4_desc": "Securely available directly through the official Google Play Store.",
-    "dev_role": "Founder & App Developer",
+    "dev_role": "Founder, App Developer & Web Designer",
     "dev_headline": "Android apps without data hunger",
     "dev_p1": "Hello, my name is Sebastian Piontek. I build my applications personally, fairly priced, reliable, and in an elegant design.",
-    "dev_p2": "Whether smart utility tools or mobile scanners: protecting your privacy comes first. Without unnecessary cloud infrastructures or data hunger, you receive genuine craftsmanship from Duisburg.",
+    "dev_p2": "Whether smart utility tools or mobile scanners: protecting your privacy comes first. Without unnecessary cloud infrastructures or data hunger, you receive genuine craftsmanship – independent, honest and Made in Germany.",
     "apps_title": "My Applications",
     "app1_desc": "The elegant pocket calculator for everyday life. Guarantees error-free math, helps you calculate shopping discounts, and keeps your budget in check.",
     "app2_desc": "Your mobile office right in your pocket. Easily photograph documents and contracts, crop neatly, sign directly on screen, and send immediately.",
@@ -1634,11 +2043,11 @@ const translations = {
     "app4_desc": "Measures your internet and Wi-Fi speed precisely: download, upload and ping at a glance – clear and without clutter.",
     "faq_title": "Behind the Scenes (FAQ)",
     "faq_1_q": "1. Who is behind Aura Appworks?",
-    "faq_1_ans": "No faceless corporate giant, but pure craftsmanship. As a solo entrepreneur, I design, code, and maintain all apps personally right here in Germany (Duisburg).",
+    "faq_1_ans": "No faceless corporate giant, but pure craftsmanship. As a solo entrepreneur, I design, code, and maintain all apps personally right here in Germany.",
     "faq_2_q": "2. Why are my apps available as fair one-time purchases instead of subscriptions?",
-    "faq_2_ans": "Out of conviction and for maximum transparency: You can unlock features temporarily ad-free by watching short reward videos – or permanently unlock the app with a fair one-time Lifetime Pass. No recurring fees, no traps.",
+    "faq_2_ans": "Out of conviction and for maximum transparency: All apps are 100% ad-free – or permanently unlock the app with a fair one-time Lifetime Pass. No recurring fees, no traps.",
     "faq_3_q": "3. Do the apps require an internet or Wi-Fi connection?",
-    "faq_3_ans": "Your personal data remains 100% local on your device – without mandatory cloud or external servers. An internet connection is only needed to view reward videos for temporary ad-free time, activate the one-time Lifetime Pass via Google Play, or fetch optional online info like live currency rates and price comparisons.",
+    "faq_3_ans": "Your personal data remains 100% local on your device – without mandatory cloud or external servers. An internet connection is only needed to activate the one-time Lifetime Pass via Google Play or fetch optional online info like live currency rates and price comparisons.",
     "faq_4_q": "4. Do I use cloud storage or external servers for your data?",
     "faq_4_ans": "No. Aura Appworks runs no backend servers or cloud infrastructures. Your personal data stays where it belongs: protected on your own device.",
     "faq_5_q": "5. Why do I focus so much on the AMOLED Gold design?",
@@ -1656,7 +2065,7 @@ const translations = {
     "medal_2_t": "Lighthouse 100",
     "medal_2_d": "High-Speed Performance<br>Maximum Battery Saving",
     "medal_3_t": "Made in Germany",
-    "medal_3_d": "Crafted in Duisburg<br>100% Owner-operated",
+    "medal_3_d": "Genuine Craftsmanship<br>100% Owner-operated",
     "medal_4_t": "No-Subscription Guarantee",
     "medal_4_d": "Fair One-Time Purchases<br>No Hidden Traps",
     "app5_desc": "Your private notepad for thoughts, ideas and checklists. All notes stay safely on your device – quickly written, instantly found.",
@@ -1668,6 +2077,7 @@ const translations = {
     "cat_tools": "Tools & Measuring",
     "cat_office": "Office & Finance",
     "cat_tech": "Tech & System",
+    "cat_academy": "Aura Academy",
     "details_btn": "Show features & details ▼",
     "shots_btn": "View screenshots",
     "shots_soon": "Screenshots coming soon.",
@@ -1780,7 +2190,7 @@ const translations = {
     "dev_role": "Fundador y Desarrollador de apps",
     "dev_headline": "Apps Android sin recopilación de datos",
     "dev_p1": "Hola, me llamo Sebastian Piontek. Desarrollo mis aplicaciones personalmente, con precios justos, máxima fiabilidad y un diseño sofisticado.",
-    "dev_p2": "Ya sean herramientas o escáneres móviles: la protección de tu privacidad es lo primordial. Sin servidores innecesarios ni consumo de datos, directamente desde Duisburgo.",
+    "dev_p2": "Ya sean herramientas o escáneres móviles: la protección de tu privacidad es lo primordial. Sin servidores innecesarios ni consumo de datos, artesanía digital independiente, honesta y Made in Germany.",
     "apps_title": "Mis Aplicaciones",
     "app1_desc": "La calculadora de bolsillo elegante para tu día a día. Cálculos fiables, descuentos en compras y control de presupuesto sin errores.",
     "app2_desc": "Tu oficina móvil en el bolsillo. Fotografía documentos y contratos, recórtalos con precisión, fírmalos en pantalla y envíalos de inmediato.",
@@ -1788,9 +2198,9 @@ const translations = {
     "app4_desc": "Mide con precisión la velocidad de tu internet y Wi-Fi: descarga, subida y ping de un vistazo, claro y sin complicaciones.",
     "faq_title": "Preguntas Frecuentes (FAQ)",
     "faq_1_q": "1. ¿Quién está detrás de Aura Appworks?",
-    "faq_1_ans": "No es una gran corporación anónima, sino dedicación artesanal. Como emprendedor individual, diseño, programo y mantengo cada app personalmente en Alemania (Duisburgo).",
+    "faq_1_ans": "No es una gran corporación anónima, sino dedicación artesanal. Como emprendedor individual, diseño, programo y mantengo cada app personalmente en Alemania.",
     "faq_2_q": "2. ¿Por qué mis apps son de pago único en lugar de suscripción?",
-    "faq_2_ans": "Por convicción y transparencia: puedes desbloquear funciones temporalmente sin anuncios viendo breves vídeos recompensados, o adquirir el Pase de por vida por un pago único. Sin cuotas mensuales ni trampas.",
+    "faq_2_ans": "Por convicción y transparencia: todas las aplicaciones son 100% sin publicidad o adquirir el Pase de por vida por un pago único. Sin cuotas mensuales ni trampas.",
     "faq_3_q": "3. ¿Requieren las aplicaciones conexión a Internet o Wi-Fi?",
     "faq_3_ans": "Tus datos personales se quedan al 100 % en tu dispositivo, sin servidores en la nube. Solo se usa Internet para ver vídeos de recompensa, activar el pase de por vida en Google Play o consultar funciones en línea opcionales (como tipos de cambio o precios).",
     "faq_4_q": "4. ¿Utilizo servidores en la nube para almacenar tus datos?",
@@ -1810,7 +2220,7 @@ const translations = {
     "medal_2_t": "Lighthouse 100",
     "medal_2_d": "Rendimiento óptimo<br>Máximo ahorro de energía",
     "medal_3_t": "Made in Germany",
-    "medal_3_d": "Creado en Duisburgo<br>100% Propietario independiente",
+    "medal_3_d": "Auténtica Artesanía<br>100% Propietario independiente",
     "medal_4_t": "Garantía Sin Suscripción",
     "medal_4_d": "Pago único transparente<br>Sin cargos ocultos",
     "app5_desc": "Tu bloc de notas privado para pensamientos, ideas y listas de tareas. Todas las notas se quedan en tu dispositivo: escritas al instante, encontradas al momento.",
@@ -1857,7 +2267,7 @@ const translations = {
     "dev_role": "Fondatore & Sviluppatore",
     "dev_headline": "App Android senza consumo inutile di dati",
     "dev_p1": "Ciao, mi chiamo Sebastian Piontek. Sviluppo personalmente ogni applicazione, con prezzi equi, affidabilità e design di pregio.",
-    "dev_p2": "Che si tratti di strumenti quotidiani o scanner mobili: la tua privacy viene prima di tutto. Senza server cloud e senza tracciamento, pura qualità da Duisburg.",
+    "dev_p2": "Che si tratti di strumenti quotidiani o scanner mobili: la tua privacy viene prima di tutto. Senza server cloud e senza tracciamento, pura qualità artigianale, indipendente e Made in Germany.",
     "apps_title": "Le mie Applicazioni",
     "app1_desc": "L'elegante calcolatrice per la vita di tutti i giorni. Calcoli perfetti, sconti per gli acquisti e controllo del budget.",
     "app2_desc": "Il tuo ufficio tascabile. Scansiona documenti e contratti, ritaglia con precisione, firma su schermo e condividi all'istante.",
@@ -1865,9 +2275,9 @@ const translations = {
     "app4_desc": "Misura con precisione la velocità di Internet e Wi-Fi: download, upload e ping a colpo d'occhio – chiaro e senza fronzoli.",
     "faq_title": "Dietro le quinte (FAQ)",
     "faq_1_q": "1. Chi c'è dietro Aura Appworks?",
-    "faq_1_ans": "Nessuna multinazionale anonima, ma cura artigianale. Come sviluppatore indipendente, creo e gestisco tutte le app personalmente in Germania (Duisburg).",
+    "faq_1_ans": "Nessuna multinazionale anonima, ma cura artigianale. Come sviluppatore indipendente, creo e gestisco tutte le app personalmente in Germania.",
     "faq_2_q": "2. Perché le app sono ad acquisto singolo e non in abbonamento?",
-    "faq_2_ans": "Per massima trasparenza: puoi sbloccare le funzioni senza pubblicità guardando brevi video premio – o acquistare il Pass a Vita a prezzo fisso. Nessun abbonamento.",
+    "faq_2_ans": "Per massima trasparenza: tutte le app sono al 100% prive di pubblicità – oppure acquistare il Pass a Vita a prezzo fisso. Nessun abbonamento.",
     "faq_3_q": "3. Le app richiedono una connessione Internet o Wi-Fi?",
     "faq_3_ans": "I tuoi dati restano al 100% sul tuo dispositivo, senza cloud. Internet serve solo per visualizzare video premio, attivare il Pass a Vita su Google Play o usare funzioni opzionali (cambi valuta, confronto prezzi).",
     "faq_4_q": "4. Vengono usati server cloud per i tuoi dati personali?",
@@ -1887,7 +2297,7 @@ const translations = {
     "medal_2_t": "Lighthouse 100",
     "medal_2_d": "Prestazioni elevate<br>Risparmio batteria massimo",
     "medal_3_t": "Made in Germany",
-    "medal_3_d": "Realizzato a Duisburg<br>100% Indipendente",
+    "medal_3_d": "Vero Artigianato<br>100% Indipendente",
     "medal_4_t": "Garanzia Senza Abbonamenti",
     "medal_4_d": "Acquisto unico trasparente<br>Nessun costo nascosto",
     "app5_desc": "Il tuo blocco note privato per pensieri, idee e liste di controllo. Tutte le note restano sul tuo dispositivo – scritte in fretta, ritrovate subito.",
@@ -1934,7 +2344,7 @@ const translations = {
     "dev_role": "Fundador & Desenvolvedor",
     "dev_headline": "Apps Android sem consumo excessivo de dados",
     "dev_p1": "Olá, meu nome é Sebastian Piontek. Desenvolvo pessoalmente as minhas aplicações, com preços justos, confiabilidade e acabamento premium.",
-    "dev_p2": "Sejam ferramentas práticas ou leitores móveis: a sua privacidade vem sempre em primeiro lugar. Sem servidores externos e sem rastreamento, feito em Duisburg.",
+    "dev_p2": "Sejam ferramentas práticas ou leitores móveis: a sua privacidade vem sempre em primeiro lugar. Sem servidores externos e sem rastreamento, feito com dedicação artesanal, independente e Made in Germany.",
     "apps_title": "Minhas Aplicações",
     "app1_desc": "A calculadora elegante para o dia a dia. Cálculos precisos, descontos em compras e controle de orçamento sem complicações.",
     "app2_desc": "Seu escritório móvel no bolso. Fotografe documentos e contratos, ajuste bordas, assine na tela e envie em segundos.",
@@ -1942,9 +2352,9 @@ const translations = {
     "app4_desc": "Mede com precisão a velocidade da sua internet e Wi-Fi: download, upload e ping num relance – claro e sem complicações.",
     "faq_title": "Nos bastidores (FAQ)",
     "faq_1_q": "1. Quem está por trás da Aura Appworks?",
-    "faq_1_ans": "Não é uma corporação anônima, mas dedicação artesanal. Como empreendedor individual, crio e mantenho todos os aplicativos pessoalmente na Alemanha (Duisburg).",
+    "faq_1_ans": "Não é uma corporação anônima, mas dedicação artesanal. Como empreendedor individual, crio e mantenho todos os aplicativos pessoalmente na Alemanha.",
     "faq_2_q": "2. Por que os apps são de compra única em vez de assinatura?",
-    "faq_2_ans": "Por transparência total: você pode desbloquear recursos temporariamente sem anúncios assistindo a vídeos curtos – ou adquirir o Passe Vitalício de compra única. Sem assinaturas.",
+    "faq_2_ans": "Por transparência total: todos os aplicativos são 100% livres de anúncios – ou adquirir o Passe Vitalício de compra única. Sem assinaturas.",
     "faq_3_q": "3. Os aplicativos exigem conexão com a Internet ou Wi-Fi?",
     "faq_3_ans": "Seus dados pessoais permanecem 100% locais no aparelho, sem nuvem obrigatória. A internet é necessária apenas para vídeos de recompensa, ativação do Passe Vitalício no Google Play ou recursos online opcionais (câmbio, comparação de preços).",
     "faq_4_q": "4. Meus dados são enviados para servidores em nuvem?",
@@ -1964,7 +2374,7 @@ const translations = {
     "medal_2_t": "Lighthouse 100",
     "medal_2_d": "Alto desempenho<br>Economia máxima de bateria",
     "medal_3_t": "Made in Germany",
-    "medal_3_d": "Criado em Duisburg<br>100% Independente",
+    "medal_3_d": "Verdadeiro Artesanato<br>100% Independente",
     "medal_4_t": "Garantia Sem Assinaturas",
     "medal_4_d": "Compra única justa<br>Sem cobranças ocultas",
     "app5_desc": "O seu bloco de notas privado para pensamentos, ideias e listas de verificação. Todas as notas ficam no seu dispositivo – escritas depressa, encontradas na hora.",
@@ -2088,7 +2498,7 @@ const translations = {
     "dev_role": "Założyciel & Programista",
     "dev_headline": "Aplikacje na Androida szanujące Twoje dane",
     "dev_p1": "Dzień dobry, nazywam się Sebastian Piontek. Tworzę aplikacje osobiście, w uczciwych cenach, niezawodne i o eleganckim wyglądzie.",
-    "dev_p2": "Zarówno narzędzia codziennego użytku, jak i mobilne skanery: Twoja prywatność jest na pierwszym miejscu. Bez zbędnych chmur i zbierania danych, rzemiosło z Duisburga.",
+    "dev_p2": "Zarówno narzędzia codziennego użytku, jak i mobilne skanery: Twoja prywatność jest na pierwszym miejscu. Bez zbędnych chmur i zbierania danych, niezależne, uczciwe rzemiosło – Made in Germany.",
     "apps_title": "Moje Aplikacje",
     "app1_desc": "Elegancki kalkulator na co dzień. Bezproblemowe liczenie, obliczanie rabatów na zakupach i kontrola domowego budżetu.",
     "app2_desc": "Mobilne biuro w Twojej kieszeni. Fotografuj dokumenty i umowy, precyzyjnie kadruj, podpisuj na ekranie i wysyłaj od razu.",
@@ -2096,9 +2506,9 @@ const translations = {
     "app4_desc": "Precyzyjnie mierzy prędkość internetu i Wi-Fi: pobieranie, wysyłanie i ping w jednym miejscu – przejrzyście i bez zbędnych dodatków.",
     "faq_title": "Za kulisami (FAQ)",
     "faq_1_q": "1. Kto stoi za Aura Appworks?",
-    "faq_1_ans": "Żadna bezduszna korporacja, lecz prawdziwe rzemiosło. Jako niezależny twórca projektuję, programuję i rozwijam wszystkie aplikacje osobiście w Niemczech (Duisburg).",
+    "faq_1_ans": "Żadna bezduszna korporacja, lecz prawdziwe rzemiosło. Jako niezależny twórca projektuję, programuję i rozwijam wszystkie aplikacje osobiście w Niemczech.",
     "faq_2_q": "2. Dlaczego aplikacje są dostępne w formule jednorazowego zakupu, a nie w abonamencie?",
-    "faq_2_ans": "Z przekonania i dla pełnej przejrzystości: możesz tymczasowo wyłączyć reklamy, oglądając krótkie wideo z nagrodą – lub odblokować aplikację na zawsze uczciwym Lifetime Pass. Bez abonamentów.",
+    "faq_2_ans": "Z przekonania i dla pełnej przejrzystości: wszystkie aplikacje są w 100% wolne od reklam – lub odblokować aplikację na zawsze uczciwym Lifetime Pass. Bez abonamentów.",
     "faq_3_q": "3. Czy aplikacje wymagają połączenia z Internetem lub Wi-Fi?",
     "faq_3_ans": "Twoje dane osobiste pozostają w 100% lokalnie na Twoim urządzeniu. Internet jest potrzebny jedynie do wyświetlania wideo z nagrodami, zakupu Lifetime Pass w Google Play lub opcjonalnych funkcji (kursy walut, porównywanie cen).",
     "faq_4_q": "4. Czy moje dane są wysyłane do chmury lub na zewnętrzne serwery?",
@@ -2118,7 +2528,7 @@ const translations = {
     "medal_2_t": "Lighthouse 100",
     "medal_2_d": "Wysoka wydajność<br>Maksymalna ochrona baterii",
     "medal_3_t": "Made in Germany",
-    "medal_3_d": "Tworzone w Duisburgu<br>100% Niezależne",
+    "medal_3_d": "Prawdziwe Rzemiosło<br>100% Niezależne",
     "medal_4_t": "Gwarancja Bez Subskrypcji",
     "medal_4_d": "Uczciwy zakup jednorazowy<br>Brak ukrytych opłat",
     "app5_desc": "Twój prywatny notatnik na myśli, pomysły i listy kontrolne. Wszystkie notatki zostają bezpiecznie na urządzeniu – szybko zapisane, od razu odnalezione.",
@@ -2165,7 +2575,7 @@ const translations = {
     "dev_role": "Kurucu & Uygulama Geliştiricisi",
     "dev_headline": "Veri toplamayan Android uygulamaları",
     "dev_p1": "Merhaba, adım Sebastian Piontek. Uygulamalarımı bizzat kendim, adil fiyatlarla, güvenilir ve kaliteli tasarımla geliştiriyorum.",
-    "dev_p2": "İster pratik araçlar ister mobil tarayıcılar olsun: Gizliliğiniz her zaman ilk sırada gelir. Bulut sunucuları olmadan Duisburg'dan dürüst işçilik.",
+    "dev_p2": "İster pratik araçlar ister mobil tarayıcılar olsun: Gizliliğiniz her zaman ilk sırada gelir. Bulut sunucuları olmadan Almanya'dan bağımsız ve dürüst işçilik.",
     "apps_title": "Uygulamalarım",
     "app1_desc": "Günlük kullanım için zarif cep hesap makinesi. Kusursuz hesaplamalar, alışveriş indirimleri ve bütçe kontrolü.",
     "app2_desc": "Cebinizdeki mobil ofis. Belgeleri fotoğraflayın, kenarları düzeltin, ekranda imzalayın ve hemen paylaşın.",
@@ -2173,9 +2583,9 @@ const translations = {
     "app4_desc": "İnternet ve Wi-Fi hızınızı hassas şekilde ölçer: indirme, yükleme ve ping tek bakışta – sade ve anlaşılır.",
     "faq_title": "Kamera Arkası (SSS)",
     "faq_1_q": "1. Aura Appworks'ın arkasında kim var?",
-    "faq_1_ans": "Büyük şirketler değil, kişisel el emeği. Bağımsız geliştirici olarak Almanya'da (Duisburg) tüm uygulamaları bizzat tasarlıyor ve kodluyorum.",
+    "faq_1_ans": "Büyük şirketler değil, kişisel el emeği. Bağımsız geliştirici olarak Almanya'da tüm uygulamaları bizzat tasarlıyor ve kodluyorum.",
     "faq_2_q": "2. Neden abonelik yerine tek seferlik satın alma var?",
-    "faq_2_ans": "Şeffaflık adına: Kısa ödüllü videolar izleyerek özellikleri geçici olarak reklamsız kullanabilir veya tek seferlik Ömür Boyu Geçiş ile sonsuza dek kilidi açabilirsiniz.",
+    "faq_2_ans": "Şeffaflık adına: Tüm uygulamalar %100 reklamsızdır veya tek seferlik Ömür Boyu Geçiş ile sonsuza dek kilidi açabilirsiniz.",
     "faq_3_q": "3. Uygulamalar internet veya Wi-Fi bağlantısı gerektirir mi?",
     "faq_3_ans": "Kişisel verileriniz %100 yerel olarak cihazınızda kalır. İnternet yalnızca ödüllü videolar, Google Play üzerinden ömür boyu lisans veya isteğe bağlı çevrimiçi veriler (döviz kurları, fiyatlar) için kullanılır.",
     "faq_4_q": "4. Verileriniz için bulut sunucuları kullanıyor muyum?",
@@ -2195,7 +2605,7 @@ const translations = {
     "medal_2_t": "Lighthouse 100",
     "medal_2_d": "Yüksek performans<br>Maksimum pil tasarrufu",
     "medal_3_t": "Made in Germany",
-    "medal_3_d": "Duisburg'da üretildi<br>%100 Bağımsız",
+    "medal_3_d": "Gerçek İşçilik<br>%100 Bağımsız",
     "medal_4_t": "Aboneliksiz Garanti",
     "medal_4_d": "Adil tek seferlik satın alma<br>Gizli ücret yok",
     "app5_desc": "Düşünceleriniz, fikirleriniz ve kontrol listeleriniz için özel not defteriniz. Tüm notlar cihazınızda güvende kalır – hızlıca yazılır, anında bulunur.",
@@ -2520,12 +2930,11 @@ document.addEventListener('click', e => {
   const b = e.target.closest('.cat-btn');
   if (!b) return;
   document.querySelectorAll('.cat-btn').forEach(x => x.classList.toggle('active', x === b));
-  const f = b.dataset.filter;
-  document.querySelectorAll('.app-card[data-cat]').forEach(c => c.classList.toggle('hidden-cat', f !== 'all' && c.dataset.cat !== f));
+  filterApps();
 });
 
 function copyWebsiteLink() {
-  const url = 'https://sebastianpiontek.github.io';
+  const url = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : 'https://sebastianpiontek.github.io';
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(url).then(showToast);
   } else {
@@ -2560,6 +2969,58 @@ document.addEventListener('DOMContentLoaded', () => {
   if (select) select.value = targetLang;
   changeLanguage(targetLang);
 });
+
+
+// LIVE-SUCHE & KATEGORIEN-FILTER
+function filterApps() {
+  const searchInput = document.getElementById('appSearchInput');
+  const searchClear = document.getElementById('appSearchClear');
+  const term = (searchInput ? searchInput.value.trim().toLowerCase() : '');
+  const activeBtn = document.querySelector('.cat-btn.active');
+  const cat = activeBtn ? activeBtn.dataset.filter : 'all';
+
+  if (searchClear) {
+    searchClear.style.display = term ? 'inline-block' : 'none';
+  }
+
+  document.querySelectorAll('.app-card[data-cat]').forEach(c => {
+    const cardCat = c.dataset.cat;
+    const matchesCat = (cat === 'all' || cardCat === cat);
+    const cardText = c.textContent.toLowerCase();
+    const matchesTerm = (!term || cardText.includes(term));
+
+    if (matchesCat && matchesTerm) {
+      c.classList.remove('hidden-cat');
+    } else {
+      c.classList.add('hidden-cat');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('appSearchInput');
+  const searchClear = document.getElementById('appSearchClear');
+  if (searchInput) {
+    searchInput.addEventListener('input', filterApps);
+  }
+  if (searchClear) {
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      filterApps();
+      searchInput.focus();
+    });
+  }
+});
+
+// AUTOMATISCHES ÖFFNEN DES DATENSCHUTZ-AKKORDEONS BEI ANKER-AUFRUF
+function checkHashAndOpen() {
+  const hash = window.location.hash;
+  if (hash === '#impressum') window.location.replace('impressum.html');
+  else if (hash === '#datenschutz' || /^#ds-[0-9]+$/.test(hash)) window.location.replace('datenschutz.html' + hash);
+}
+window.addEventListener('hashchange', checkHashAndOpen);
+window.addEventListener('DOMContentLoaded', checkHashAndOpen);
+
 </script>
 <div class="shots-modal" id="shots-modal" onclick="if(event.target===this)closeShots()">
   <div class="shots-inner">
